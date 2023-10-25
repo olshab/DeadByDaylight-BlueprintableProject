@@ -1,0 +1,52 @@
+#pragma once
+
+#include "CoreMinimal.h"
+#include "BaseLockerInteraction.h"
+#include "ClosetHideInteraction.generated.h"
+
+class AActor;
+class ADBDPlayer;
+class UInteractor;
+
+UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
+class DBDGAMEPLAY_API UClosetHideInteraction : public UBaseLockerInteraction
+{
+	GENERATED_BODY()
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _rushed;
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void SetPlayerInCloset(ADBDPlayer* player);
+
+	UFUNCTION(BlueprintCallable)
+	void SetOtherInteractorsUsable(const bool isEnabled);
+
+	UFUNCTION(BlueprintCallable)
+	void SetCollisionWithCloset(const bool isEnable);
+
+	UFUNCTION(BlueprintPure)
+	bool IsRushed() const;
+
+	UFUNCTION(BlueprintPure)
+	bool IsOccupied() const;
+
+	UFUNCTION(BlueprintPure)
+	bool IsInteractingPlayerInsideCloset(ADBDPlayer* player) const;
+
+	UFUNCTION(BlueprintPure)
+	ADBDPlayer* GetPlayerInCloset() const;
+
+	UFUNCTION(BlueprintPure)
+	UInteractor* GetInsideInteractor() const;
+
+	UFUNCTION(BlueprintCallable)
+	void FireSoundEventFromInteractor(AActor* instigator, ADBDPlayer* instigatingPlayer);
+
+public:
+	UClosetHideInteraction();
+};
+
+FORCEINLINE uint32 GetTypeHash(const UClosetHideInteraction) { return 0; }

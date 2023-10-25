@@ -1,0 +1,39 @@
+{
+	"FileVersion": 1,
+
+	"FriendlyName": "BHVR UserInterface Mobile",
+	"Version": 1,
+	"VersionName": "1.0",
+	"CreatedBy": "Behaviour Interactive",
+	"CreatedByURL": "http://www.bhvr.com/",
+	"EngineVersion": "",
+	"Description": "User interface plugin specific to DBD Mobile",
+	"Category": "BHVR Modules",
+	"CanContainContent": false,
+	"EnabledByDefault": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "DBDUIViewsMobile",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"BlacklistTargetConfigurations": [
+				"Server"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "DBDUICommon",
+			"Enabled": true
+		},
+		{
+			"Name": "Wwise",
+			"Enabled": true
+		},
+		{
+			"Name": "Paper2D",
+			"Enabled": true
+		}
+	]
+}

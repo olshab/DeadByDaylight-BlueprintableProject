@@ -1,0 +1,33 @@
+#pragma once
+
+#include "CoreMinimal.h"
+#include "DBDTunableRowHandle.h"
+#include "InteractionDefinition.h"
+#include "HideInSnowmanInteraction.generated.h"
+
+class ADBDPlayer;
+
+UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
+class SNOWMANWINTEREVENT_API UHideInSnowmanInteraction : public UInteractionDefinition
+{
+	GENERATED_BODY()
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FDBDTunableRowHandle _timeToEnterSnowman;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FDBDTunableRowHandle _attachToPlayerDelay;
+
+protected:
+	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+	void Multicast_StopControllingSnowman(ADBDPlayer* player);
+
+	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+	void Multicast_StartControllingSnowman(ADBDPlayer* player);
+
+public:
+	UHideInSnowmanInteraction();
+};
+
+FORCEINLINE uint32 GetTypeHash(const UHideInSnowmanInteraction) { return 0; }

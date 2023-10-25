@@ -1,0 +1,38 @@
+{
+	"FileVersion": 3,
+
+	"FriendlyName": "Editor Asset Validator",
+	"Version": 1,
+	"VersionName": "1.0",
+	"CreatedBy": "Behaviour Interactive",
+	"CreatedByURL": "http://www.bhvr.com/",
+	"EngineVersion": "",
+	"Description": "Set of asset validators to enforce consistency, cleanliness and performances on the project",
+	"Category": "Editor",
+	"EnabledByDefault": true,
+
+	"Plugins": [
+		{
+			"Name": "AssetManagerEditor",
+			"Enabled": true
+		},
+		{
+			"Name": "DataValidation",
+			"Enabled": true
+		},
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		},
+		{
+			"Name": "Simplygon",
+			"Enabled": true
+		},
+		{
+			"Name": "TileEditor",
+			"Enabled": true
+		}
+	],
+
+	"CanContainContent": false
+}

@@ -1,0 +1,7 @@
+#include "Addon_K22Power_14.h"
+
+UAddon_K22Power_14::UAddon_K22Power_14()
+{
+	this->_brokenStatusEffectClass = NULL;
+	this->_brokenDuration = 0.000000;
+}

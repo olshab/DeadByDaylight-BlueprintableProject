@@ -2,4 +2,5 @@
 
 FAITrackedEnemyData::FAITrackedEnemyData()
 {
+	this->EnemyTargetPrediction = NULL;
 }

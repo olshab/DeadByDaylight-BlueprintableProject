@@ -2,13 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/ScriptInterface.h"
+#include "Templates/SubclassOf.h"
 #include "HUDWidgetsFadeOutCompleted.h"
 #include "CoreHudRootWidget.generated.h"
 
 class UOverlay;
-class UCurveFloat;
 class UScaleBox;
 class ICoreBaseViewInterface;
 
@@ -32,15 +31,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float UnfocusedOpacity;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UCurveFloat* Test4kDpiScalingCurve;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<UUserWidget> Test4kDpiCurveClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
-	UUserWidget* Test4kDpiCurveWidget;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))

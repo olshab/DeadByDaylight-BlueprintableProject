@@ -24,6 +24,8 @@ UProceduralGenerationData::UProceduralGenerationData()
 	this->CharacterCollisionRadius = 0.000000;
 	this->SpawnerCollisionRadius = 100.000000;
 	this->TotemVisualHeight = 100.000000;
+	this->ClosestSurvivorDistanceWeight = 1.000000;
+	this->KillerDistanceWeight = 1.500000;
 	this->SpecialBehaviourPopulation_DEPRECATED = TArray<FSpecialBehaviourPopulation>();
 	this->_eventProperties_DEPRECATED = TArray<FEventSubstitionData>();
 }

@@ -6,11 +6,6 @@ void ACoreMemoryChallengePlayerSpecificController::StartQuest()
 
 }
 
-void ACoreMemoryChallengePlayerSpecificController::OnRep_Fragments()
-{
-
-}
-
 void ACoreMemoryChallengePlayerSpecificController::OnRep_Controller()
 {
 
@@ -37,4 +32,5 @@ ACoreMemoryChallengePlayerSpecificController::ACoreMemoryChallengePlayerSpecific
 	this->_controller = NULL;
 	this->_fragments = TArray<UCoreMemoryFragmentComponent*>();
 	this->_numFragmentsToCollect = 0;
+	this->_fragmentsSpawnedBeforeBehavioursWereSetup = TArray<TWeakObjectPtr<ACoreMemoryFragment>>();
 }

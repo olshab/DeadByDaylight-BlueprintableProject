@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "Components/ActorComponent.h"
 #include "LaunchInfo.h"
 #include "UObject/ScriptInterface.h"
@@ -18,6 +19,10 @@ UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
 class PROJECTILE_API UBaseProjectileLauncher : public UActorComponent
 {
 	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere)
+	FGameplayTag IsOutOfAmmoTag;
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

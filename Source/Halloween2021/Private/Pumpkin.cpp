@@ -26,4 +26,5 @@ APumpkin::APumpkin()
 	this->_pumpkinTrickEffect = NULL;
 	this->_pumpkinStatusEffect = NULL;
 	this->_minDistanceToFollowPlayer = 85.000000;
+	this->_maxDistanceToFollowPlayer = 3200.000000;
 }

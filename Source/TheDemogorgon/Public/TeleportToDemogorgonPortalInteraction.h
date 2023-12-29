@@ -19,7 +19,10 @@ class UTeleportToDemogorgonPortalInteraction : public UChargeableInteractionDefi
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float TeleportToPortalSoundRange;
+	float _teleportToPortalSoundRange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _inputReleaseChargePercentAllowance;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))

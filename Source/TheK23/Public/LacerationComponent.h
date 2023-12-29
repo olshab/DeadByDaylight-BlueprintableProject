@@ -61,6 +61,12 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _thresholdForGraceTimerScoreEvent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FDBDTunableRowHandle _minThresholdForLowLacerationScoreEvent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FDBDTunableRowHandle _maxThresholdForLowLacerationScoreEvent;
+
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnRepLaceration(float oldLaceration);

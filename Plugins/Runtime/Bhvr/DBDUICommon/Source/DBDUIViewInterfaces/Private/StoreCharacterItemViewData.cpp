@@ -7,6 +7,7 @@ UStoreCharacterItemViewData::UStoreCharacterItemViewData()
 	this->Biography = FText::GetEmpty();
 	this->PlayerRole = EPlayerRole::VE_None;
 	this->Difficulty = ECharacterDifficulty::VE_None;
+	this->KillerPowerId = NAME_None;
 	this->IsUnlocked = false;
 	this->UnlockInfo = 0;
 	this->ItemsOwned = 0;

@@ -15,6 +15,8 @@ public class DBDUIViewInterfaces : ModuleRules {
 			"Engine",
 			"GameplayTags",
 			"InputCore",
+			"MediaAssets",
+			"RemoteContentCache",
 			"UMG",
 		});
 	}

@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "EventObjectComponent.generated.h"
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
@@ -11,7 +12,7 @@ class DEADBYDAYLIGHT_API UEventObjectComponent : public UActorComponent
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName _eventId;
+	FColor _eventOutlineColour;
 
 public:
 	UEventObjectComponent();

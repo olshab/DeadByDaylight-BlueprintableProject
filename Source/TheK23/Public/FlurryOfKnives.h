@@ -40,6 +40,9 @@ private:
 	UCurveFloat* _throwRateModifierByKnivesThrown;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FDBDTunableRowHandle _superModeDeactivationBuffer;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _superModeThrowRateModifier;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))

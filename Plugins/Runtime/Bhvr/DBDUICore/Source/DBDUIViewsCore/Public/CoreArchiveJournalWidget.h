@@ -40,6 +40,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UCoreInputSwitcherWidget* RightArrowInputSwitcher;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool AreInputsEnabled;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TSoftObjectPtr<UTexture2D> DebugRewardImage;
 

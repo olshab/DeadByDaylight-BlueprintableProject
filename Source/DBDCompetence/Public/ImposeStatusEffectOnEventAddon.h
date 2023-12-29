@@ -12,6 +12,12 @@ class DBDCOMPETENCE_API UImposeStatusEffectOnEventAddon : public UOnEventBaseAdd
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool _requireEventInstigatorToMatchAddonOwnerToImposeStatusEffects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool _requireEventTargetToMatchAddonOwnerToImposeStatusEffects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TArray<FStatusEffectInfo> _statusEffects;
 
 public:

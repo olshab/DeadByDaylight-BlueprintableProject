@@ -55,6 +55,7 @@ public class Lunar2022 : ModuleRules {
 			"PlatformsProviders",
 			"Projectile",
 			"QueryService",
+			"RemoteContentCache",
 			"ReversibleActionSystem",
 			"RewardUtilities",
 			"ScaleformUI",

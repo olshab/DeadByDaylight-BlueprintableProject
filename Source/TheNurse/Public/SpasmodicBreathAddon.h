@@ -16,6 +16,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UStatusEffect> _spasmodicBreathIndicatorStatusEffect;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _speedEffectClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	UStatusEffect* _speedEffect;
 

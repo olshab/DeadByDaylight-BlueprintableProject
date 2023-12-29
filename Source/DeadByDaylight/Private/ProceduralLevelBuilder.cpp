@@ -41,6 +41,12 @@ AProceduralLevelBuilder::AProceduralLevelBuilder()
 {
 	this->PathToMapDirectory = TEXT("");
 	this->PathToTilesDirectory = TEXT("");
+	this->PathToEventSpawnablesDirectory = TEXT("");
+	this->EventSpawnablesParentDirectories = TArray<FString>();
+	this->EventSpawnablePositionWeightCoefficient = 4.000000;
+	this->EventSpawnablePositionWeightPowerBase = 0.500000;
+	this->StaticActorSpawnerDecorationBudgets = TMap<EGameplayElementType, float>();
+	this->StaticSpawnPointDecorationBudgets = TMap<ETileSpawnPointType, float>();
 	this->KillerMinProximityFromCamper = 3.000000;
 	this->SurvivorMinProximityFromOtherCamper = 1.000000;
 	this->MinProximityBetweenGenerators = 0.500000;
@@ -67,6 +73,7 @@ AProceduralLevelBuilder::AProceduralLevelBuilder()
 	this->_outOfWorldTiles = TArray<ATile*>();
 	this->_ambientAudioBank = NULL;
 	this->_availableTilesLibrary = NULL;
+	this->_availableEventSpawnablesLibrary = NULL;
 	this->_availableDerivedTileLibrary = NULL;
 	this->DesignTunableClass = NULL;
 	this->_designTunables = NULL;
@@ -77,6 +84,7 @@ AProceduralLevelBuilder::AProceduralLevelBuilder()
 	this->_chestItemAssetReferences = TArray<TSubclassOf<AActor>>();
 	this->_slasherPawn = NULL;
 	this->_tilesThatHaveBeenSpawned = TArray<ATile*>();
+	this->_eventSpawnablesThatHaveBeenStreamed = TArray<AActor*>();
 	this->_debugProceduralDatas = NULL;
 	this->_syncer = NULL;
 	this->_blackboardComp = NULL;

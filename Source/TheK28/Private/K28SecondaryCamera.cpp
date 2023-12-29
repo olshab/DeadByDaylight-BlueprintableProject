@@ -53,5 +53,6 @@ AK28SecondaryCamera::AK28SecondaryCamera()
 	this->_minTimeBetweenCameraRotationUpdateRPC = 0.050000;
 	this->_survivorGrabTransition_CameraRotationEndPercentage = 0.400000;
 	this->_survivorGrabTransition_DistanceFromLocker = 300.000000;
+	this->_stateTagsToDisableNightMode = TArray<FGameplayTag>();
 	this->_isKillerPlayerViewTarget = false;
 }

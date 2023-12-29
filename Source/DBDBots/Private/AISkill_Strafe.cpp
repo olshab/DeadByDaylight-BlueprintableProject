@@ -8,6 +8,8 @@ UAISkill_Strafe::UAISkill_Strafe()
 	this->StopMaxRangeAgainstRangedHostileStimulus = 800.000000;
 	this->StrafeBackwardRange = 0.000000;
 	this->StrafeFowardRange = 450.000000;
+	this->DodgeDirectionSweepTestStartMultiplier = 1.300000;
+	this->DodgeDirectionSweepTestEndMultiplier = 2.000000;
 	this->IgnoreUnderNavLinkStartRange = 300.000000;
 	this->PauseStrafeOnAnimation = true;
 }

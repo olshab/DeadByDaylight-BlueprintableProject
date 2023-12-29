@@ -19,6 +19,9 @@ public:
 	FString MaterialChannel;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString OpacityChannel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EOpacityChannelComponent OpacityChannelComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -28,13 +31,13 @@ public:
 	EFillMode FillMode;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString OpacityChannel;
+	int32 Dilation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 UseMultisampling : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float DistanceScaling;
+	EOutputPixelFormat OutputPixelFormat;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EOutputImageFileFormat OutputImageFileFormat;
@@ -43,13 +46,13 @@ public:
 	EOutputDDSCompressionType OutputDDSCompressionType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 Dilation;
+	float DistanceScaling;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 GenerateScalarDisplacement : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	EOutputPixelFormat OutputPixelFormat;
+	uint8 OutputToTessellatedAttributes : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 GenerateTangentSpaceDisplacement : 1;

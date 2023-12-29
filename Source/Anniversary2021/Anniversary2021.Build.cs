@@ -55,6 +55,7 @@ public class Anniversary2021 : ModuleRules {
 			"PlatformsProviders",
 			"Projectile",
 			"QueryService",
+			"RemoteContentCache",
 			"ReversibleActionSystem",
 			"RewardUtilities",
 			"ScaleformUI",

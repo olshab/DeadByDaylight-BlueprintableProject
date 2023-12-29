@@ -62,6 +62,7 @@ public class TheK28 : ModuleRules {
 			"PlatformsProviders",
 			"Projectile",
 			"QueryService",
+			"RemoteContentCache",
 			"ReversibleActionSystem",
 			"RewardUtilities",
 			"ScaleformUI",

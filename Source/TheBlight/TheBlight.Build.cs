@@ -60,6 +60,7 @@ public class TheBlight : ModuleRules {
 			"PlatformsProviders",
 			"Projectile",
 			"QueryService",
+			"RemoteContentCache",
 			"ReversibleActionSystem",
 			"RewardUtilities",
 			"ScaleformUI",

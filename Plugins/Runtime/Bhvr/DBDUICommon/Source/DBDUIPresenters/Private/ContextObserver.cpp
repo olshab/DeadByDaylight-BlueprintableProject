@@ -2,5 +2,5 @@
 
 UContextObserver::UContextObserver()
 {
-	this->ObservedContextSection = EContextSection::None;
+	this->ObservedContexts = TArray<EContext>();
 }

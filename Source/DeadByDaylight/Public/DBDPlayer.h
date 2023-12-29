@@ -692,13 +692,7 @@ public:
 	bool Local_IsInteractionInputPressed(EInputInteractionType interactionType) const;
 
 	UFUNCTION(BlueprintCallable)
-	bool K2_SetActorLocationByBottomCapsule(FVector NewLocation, bool bSweep, FHitResult& SweepHitResult);
-
-	UFUNCTION(BlueprintCallable)
-	void ItemUseReleased();
-
-	UFUNCTION(BlueprintCallable)
-	void ItemUsePressed();
+	bool K2_SetActorLocationByBottomCapsule(FVector newLocation, bool bSweep, FHitResult& sweepHitResult);
 
 	UFUNCTION(BlueprintPure)
 	bool IsRunning() const;
@@ -750,12 +744,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool IsAllowedNavigation() const;
-
-	UFUNCTION(BlueprintCallable)
-	void InteractionInputReleased();
-
-	UFUNCTION(BlueprintCallable)
-	void InteractionInputPressed();
 
 	UFUNCTION(BlueprintPure)
 	bool HasMoveInput() const;
@@ -860,7 +848,7 @@ public:
 	float GetGrassEffectRadiusMultiplier() const;
 
 	UFUNCTION(BlueprintPure)
-	UActorComponent* GetFirstComponentByClass(TSubclassOf<UActorComponent> ComponentClass) const;
+	UActorComponent* GetFirstComponentByClass(TSubclassOf<UActorComponent> componentClass) const;
 
 	UFUNCTION(BlueprintPure)
 	FVector GetFeetPosition() const;
@@ -908,22 +896,10 @@ public:
 	APlayerState* GetAssociatedPlayerState() const;
 
 	UFUNCTION(BlueprintPure)
-	FVector GetActorLocationFromFeetLocation(const FVector FeetLocation) const;
+	FVector GetActorLocationFromFeetLocation(const FVector feetLocation) const;
 
 	UFUNCTION(BlueprintPure)
 	ADBDPlayer* FindClosestSlashablePlayerInDetectionZone(EDetectionZone detectionZoneID) const;
-
-	UFUNCTION(BlueprintCallable)
-	void FastInteractionInputReleased();
-
-	UFUNCTION(BlueprintCallable)
-	void FastInteractionInputPressed();
-
-	UFUNCTION(BlueprintCallable)
-	void EventAbilityInputReleased();
-
-	UFUNCTION(BlueprintCallable)
-	void EventAbilityInputPressed();
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void Dissolve(bool dissolve);
@@ -1005,15 +981,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void AddDetectionZone(EDetectionZone detectionZoneID, UPrimitiveComponent* zone);
-
-	UFUNCTION(BlueprintCallable)
-	void AbilityTwoInputReleased();
-
-	UFUNCTION(BlueprintCallable)
-	void AbilityTwoInputPressed();
-
-	UFUNCTION(BlueprintCallable)
-	void AbilityInputReleased();
 
 public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;

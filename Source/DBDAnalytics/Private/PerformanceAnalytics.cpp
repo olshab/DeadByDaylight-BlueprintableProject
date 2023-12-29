@@ -75,7 +75,24 @@ FPerformanceAnalytics::FPerformanceAnalytics()
 	this->MinStandardDeviation = 0.0f;
 	this->MaxStandardDeviation = 0.0f;
 	this->DeviceProfile = TEXT("");
-	this->MaxMemoryUsedKilobytes = 0;
+	this->AverageMemoryAvailablePhysicalMB = 0.0f;
+	this->MinMemoryAvailablePhysicalMB = 0.0f;
+	this->MaxMemoryAvailablePhysicalMB = 0.0f;
+	this->AverageMemoryAvailableVirtualMB = 0.0f;
+	this->MinMemoryAvailableVirtualMB = 0.0f;
+	this->MaxMemoryAvailableVirtualMB = 0.0f;
+	this->AverageMemoryTotalPhysicalMB = 0.0f;
+	this->MinMemoryTotalPhysicalMB = 0.0f;
+	this->MaxMemoryTotalPhysicalMB = 0.0f;
+	this->AverageMemoryTotalVirtualMB = 0.0f;
+	this->MinMemoryTotalVirtualMB = 0.0f;
+	this->MaxMemoryTotalVirtualMB = 0.0f;
+	this->AverageMemoryUsedPhysicalMB = 0.0f;
+	this->MinMemoryUsedPhysicalMB = 0.0f;
+	this->MaxMemoryUsedPhysicalMB = 0.0f;
+	this->AverageMemoryUsedVirtualMB = 0.0f;
+	this->MinMemoryUsedVirtualMB = 0.0f;
+	this->MaxMemoryUsedVirtualMB = 0.0f;
 	this->AveragePing = 0.0f;
 	this->MinPing = 0.0f;
 	this->MaxPing = 0.0f;
@@ -90,6 +107,8 @@ FPerformanceAnalytics::FPerformanceAnalytics()
 	this->AntiAliasingMode = 0;
 	this->FrameCap = 0.0f;
 	this->isVsyncEnable = false;
+	this->isFSREnabled = false;
+	this->SharpnessValue = 0.0f;
 	this->ShadowQuality = 0;
 	this->TextureQuality = 0;
 	this->EffectsQuality = 0;
@@ -104,4 +123,7 @@ FPerformanceAnalytics::FPerformanceAnalytics()
 	this->GpuAdapter = TEXT("");
 	this->MatchId = TEXT("");
 	this->RHIName = TEXT("");
+	this->IsSample = false;
+	this->GameFlowStep = TEXT("");
+	this->KrakenMatchId = TEXT("");
 }

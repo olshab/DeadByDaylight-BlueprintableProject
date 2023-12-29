@@ -25,6 +25,8 @@ enum class SettingsId : int64
 	HUDConstrainedAspectRatio,
 	VSync,
 	AntiAliasingMode,
+	EnableFSR,
+	SharpnessValue,
 	MenuScaleFactor,
 	HudScaleFactor,
 	SkillCheckScaleFactor,

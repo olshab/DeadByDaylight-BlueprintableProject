@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/SoftObjectPtr.h"
 #include "MaterialMapForFade.generated.h"
 
@@ -14,10 +15,16 @@ struct FMaterialMapForFade: public FDBDTableRowBase
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSoftObjectPtr<UMaterialInterface> SrcMaterial;
+	FString OriginalMaterialPath;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSoftObjectPtr<UMaterialInterface> DstMaterial;
+	TSoftObjectPtr<UMaterialInterface> GeneratedMaterial;
+
+	UPROPERTY(EditAnywhere)
+	TMap<FGuid, bool> StaticSwitches;
+
+	UPROPERTY(EditAnywhere)
+	TMap<FGuid, FName> StaticSwitchesName;
 
 public:
 	DEADBYDAYLIGHT_API FMaterialMapForFade();

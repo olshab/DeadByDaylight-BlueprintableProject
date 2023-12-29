@@ -37,6 +37,11 @@ TArray<ADBDPlayer*> UCharacterCollectionUtilities::GetInGamePlayers(const UObjec
 	return TArray<ADBDPlayer*>();
 }
 
+TArray<ADBDPlayer*> UCharacterCollectionUtilities::GetInGameOtherCharacters(const UObject* worldContextObject)
+{
+	return TArray<ADBDPlayer*>();
+}
+
 TArray<ADBDPlayer*> UCharacterCollectionUtilities::GetCharactersByPlayerTeam(EPlayerTeam playerTeam, const UObject* worldContextObject)
 {
 	return TArray<ADBDPlayer*>();

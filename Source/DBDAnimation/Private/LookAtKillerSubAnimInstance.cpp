@@ -20,6 +20,7 @@ ULookAtKillerSubAnimInstance::ULookAtKillerSubAnimInstance()
 	this->_blendTime = 0.100000;
 	this->_animYaw = 0.000000;
 	this->_enableTurnInPlace = false;
+	this->_shouldResetLookAtOnAnyMontagePlay = false;
 	this->_shouldTurnLeft = false;
 	this->_shouldTurnRight = false;
 	this->_turnInPlaceThresholdAngle = 45.000000;

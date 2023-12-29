@@ -14,4 +14,9 @@ enum class EGeometryDataFieldType : uint8
 	Colors,
 	TriangleIds,
 	MaterialIds,
+	VertexIds,
+	UserVertexField,
+	UserCornerField,
+	UserTriangleField,
+	CustomField,
 };

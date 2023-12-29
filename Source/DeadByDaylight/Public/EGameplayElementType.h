@@ -24,5 +24,6 @@ enum class EGameplayElementType : uint8
 	Basement_Attachments,
 	SteamPipe,
 	SteamPipeButton,
+	EventSpawner,
 	Count,
 };

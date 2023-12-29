@@ -59,6 +59,7 @@ public class DBDBots : ModuleRules {
 			"PlatformsProviders",
 			"Projectile",
 			"QueryService",
+			"RemoteContentCache",
 			"ReversibleActionSystem",
 			"RewardUtilities",
 			"ScaleformUI",

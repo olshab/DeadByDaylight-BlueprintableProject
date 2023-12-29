@@ -31,6 +31,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsOnlyPlayingOnce;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool HasSubtitles;
+
 public:
 	DEADBYDAYLIGHT_API FDialogClipSettings();
 };

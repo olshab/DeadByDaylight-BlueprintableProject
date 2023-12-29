@@ -3,7 +3,6 @@
 #include "CoreMinimal.h"
 #include "CombinedSpecialEventData.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "UObject/NoExportTypes.h"
 #include "CombinedSpecialEventDataUtilities.generated.h"
 
 UCLASS(Blueprintable)
@@ -14,9 +13,6 @@ class DEADBYDAYLIGHT_API UCombinedSpecialEventDataUtilities : public UBlueprintF
 public:
 	UFUNCTION(BlueprintPure)
 	static FName GetSpecialMusicState(const FCombinedSpecialEventData& data);
-
-	UFUNCTION(BlueprintPure)
-	static FColor GetObjectOutlineColour(const FCombinedSpecialEventData& data);
 
 public:
 	UCombinedSpecialEventDataUtilities();

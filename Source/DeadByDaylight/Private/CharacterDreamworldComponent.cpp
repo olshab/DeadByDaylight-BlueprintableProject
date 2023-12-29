@@ -19,7 +19,7 @@ bool UCharacterDreamworldComponent::IsInDreamworld() const
 	return false;
 }
 
-ADBDPlayer* UCharacterDreamworldComponent::GetLocallyObservedOrLocalCharacter(UObject* WorldContextObject)
+ADBDPlayer* UCharacterDreamworldComponent::GetLocallyObservedOrLocalCharacter(UObject* worldContextObject)
 {
 	return NULL;
 }

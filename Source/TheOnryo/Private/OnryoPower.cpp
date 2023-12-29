@@ -6,7 +6,6 @@ void AOnryoPower::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(AOnryoPower, _televisionTargeter);
 	DOREPLIFETIME(AOnryoPower, _manifestationComponent);
 	DOREPLIFETIME(AOnryoPower, _televisions);
 }

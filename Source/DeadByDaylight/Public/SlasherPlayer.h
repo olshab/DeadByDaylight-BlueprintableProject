@@ -53,6 +53,9 @@ public:
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _setFirstPersonModeEnabledOnKillerIntroCompleted;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector PutDownTraceLocation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -197,6 +200,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	ACamperPlayer* _survivorBeingKilled;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UFirstPersonViewComponent> _firstPersonViewComponentClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	UFirstPersonViewComponent* _firstPersonViewComponent;

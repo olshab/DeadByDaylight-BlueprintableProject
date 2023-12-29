@@ -50,11 +50,6 @@ void UDBDCharacterMovementComponent::Server_SetIgnorePawnCollisionOverride_Imple
 
 }
 
-void UDBDCharacterMovementComponent::Server_SetGroundFriction_Implementation(float timestamp, float value)
-{
-
-}
-
 void UDBDCharacterMovementComponent::Server_SetAdditiveMaxSpeedScalar_Implementation(float timestamp, float value)
 {
 
@@ -105,16 +100,6 @@ void UDBDCharacterMovementComponent::OnMontageStarted(const FMontagePlaybackDefi
 
 }
 
-void UDBDCharacterMovementComponent::DBD_SimulateHack_LocalSurvivorMaxSpeedMultiplierUsingServerRPC(const float maxSpeedMultiplier)
-{
-
-}
-
-void UDBDCharacterMovementComponent::DBD_SimulateHack_LocalLaunch(const float xVelocity, const float yVelocity, const float zVelocity)
-{
-
-}
-
 void UDBDCharacterMovementComponent::Client_TeleportTo_Implementation(FVector_NetQuantize100 location, FYawAndPitchRotator_NetQuantize32 rotation)
 {
 
@@ -131,6 +116,11 @@ void UDBDCharacterMovementComponent::Client_RequestAllIncreaseMovementSpeed_Impl
 }
 
 void UDBDCharacterMovementComponent::Client_PreventMovement_Implementation(const bool value)
+{
+
+}
+
+void UDBDCharacterMovementComponent::Client_Cheat_SetMaxSpeedMultiplier_Implementation(const float maxSpeedMultiplier)
 {
 
 }

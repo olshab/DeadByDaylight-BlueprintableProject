@@ -1,14 +1,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/SoftObjectPtr.h"
 #include "GameFramework/Actor.h"
 #include "OriginalMaterials.h"
 #include "UObject/NoExportTypes.h"
 #include "FadeManager.generated.h"
 
 class UDataTable;
-class UMaterialInterface;
 class UMeshComponent;
 
 UCLASS(Blueprintable)
@@ -24,12 +22,6 @@ private:
 	UDataTable* _fadeMaterials;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	TMap<TSoftObjectPtr<UMaterialInterface>, TSoftObjectPtr<UMaterialInterface>> _originalToFade;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	TMap<TSoftObjectPtr<UMaterialInterface>, TSoftObjectPtr<UMaterialInterface>> _fadeToOriginal;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TArray<FOriginalMaterials> _fadedMeshes;
 
 public:
@@ -37,10 +29,13 @@ public:
 	void RemoveFadeMaterials();
 
 	UFUNCTION(BlueprintCallable)
-	void FadeAt(FVector CameraLocation);
+	void FadeAt(FVector Location);
 
 	UFUNCTION(BlueprintCallable, Exec)
-	void DBD_ActivateFadeCamera(bool isActivated);
+	void DBD_TurnCameraAroundPlayerWithFading(bool isTurning);
+
+	UFUNCTION(BlueprintCallable, Exec)
+	void DBD_FadeAtCurrentCameraLocation(bool isEnabled);
 
 public:
 	AFadeManager();

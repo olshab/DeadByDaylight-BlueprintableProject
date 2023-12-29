@@ -30,6 +30,12 @@ public:
 	float StrafeFowardRange;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DodgeDirectionSweepTestStartMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DodgeDirectionSweepTestEndMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float IgnoreUnderNavLinkStartRange;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

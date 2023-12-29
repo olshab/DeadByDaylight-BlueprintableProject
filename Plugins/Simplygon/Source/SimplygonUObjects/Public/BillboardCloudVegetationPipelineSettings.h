@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "SimplygonPipelineSettings.h"
 #include "BillboardCloudSettings.h"
+#include "AttributeTessellationSettings.h"
 #include "MappingImageSettings.h"
 #include "BillboardCloudVegetationPipelineSettings.generated.h"
 
@@ -16,6 +17,9 @@ struct FBillboardCloudVegetationPipelineSettings: public FSimplygonPipelineSetti
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FBillboardCloudSettings BillboardCloudSettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAttributeTessellationSettings AttributeTessellationSettings;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FMappingImageSettings MappingImageSettings;

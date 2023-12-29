@@ -5,14 +5,12 @@
 #include "MindFocusObjectEntry.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "GameplayTagContainer.h"
-#include "DistanceToTargetData.h"
 #include "UObject/NoExportTypes.h"
 #include "WeightedWishedObjectMapContainer.h"
 #include "DBDBlackboardComponent.generated.h"
 
 class UAISkill;
 class UObject;
-class AActor;
 class APallet;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
@@ -41,9 +39,6 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TSet<UObject*> _intentionValidators;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	TMap<AActor*, FDistanceToTargetData> _killerToTargetDistances;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TSet<APallet*> _convincingDreamPallets;

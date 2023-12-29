@@ -10,6 +10,7 @@ public class PhysicsUtilities : ModuleRules {
 			"Core",
 			"CoreUObject",
 			"Engine",
+			"GameplayTags",
 		});
 	}
 }

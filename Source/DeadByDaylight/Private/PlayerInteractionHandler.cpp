@@ -1,21 +1,14 @@
 #include "PlayerInteractionHandler.h"
 #include "StoredInteraction.h"
-#include "ESkillCheckCustomType.h"
 #include "EInputInteractionType.h"
 #include "EInteractionValidationState.h"
 #include "Engine/EngineTypes.h"
 #include "ERequestState.h"
 
-class USkillCheck;
 class ADBDPlayer;
 class UInterruptionDefinition;
 class UInteractionDefinition;
 class AActor;
-
-void UPlayerInteractionHandler::SetScanForInteractionsEnabled(bool enabled)
-{
-
-}
 
 void UPlayerInteractionHandler::Server_StoreInterruption_Interruptor_Implementation(ADBDPlayer* interruptionOtherParty, UInterruptionDefinition* interruptionDefinition)
 {
@@ -62,11 +55,6 @@ bool UPlayerInteractionHandler::Server_AnswerInterruption_Interruptee_Validate(E
 	return true;
 }
 
-void UPlayerInteractionHandler::ResetSuccessiveSkillCheckCount()
-{
-
-}
-
 void UPlayerInteractionHandler::RemoveInteraction(UInteractionDefinition* interaction)
 {
 
@@ -75,11 +63,6 @@ void UPlayerInteractionHandler::RemoveInteraction(UInteractionDefinition* intera
 void UPlayerInteractionHandler::OnAttachedInteractorOwnerEndPlay(AActor* actor, TEnumAsByte<EEndPlayReason::Type> endPlayReason)
 {
 
-}
-
-int32 UPlayerInteractionHandler::NumInteractionsInZone() const
-{
-	return 0;
 }
 
 void UPlayerInteractionHandler::Multicast_StoreInterruption_Interruptor_Implementation(ADBDPlayer* interruptionOtherParty, UInterruptionDefinition* interruptionDefinition)
@@ -117,11 +100,6 @@ void UPlayerInteractionHandler::Multicast_CancelCurrentInteractionByInput_Implem
 
 }
 
-void UPlayerInteractionHandler::IncrementSuccessiveSkillCheckCount()
-{
-
-}
-
 bool UPlayerInteractionHandler::HasAvailableInteraction(EInputInteractionType interactionType)
 {
 	return false;
@@ -132,32 +110,12 @@ bool UPlayerInteractionHandler::HasActiveSkillCheck() const
 	return false;
 }
 
-USkillCheck* UPlayerInteractionHandler::GetSkillCheck() const
-{
-	return NULL;
-}
-
 float UPlayerInteractionHandler::GetMultiplicativeSkillCheckProbabilityModifier() const
 {
 	return 0.0f;
 }
 
-UInteractionDefinition* UPlayerInteractionHandler::GetCurrentInteractionOfType(EInputInteractionType interactionInputType) const
-{
-	return NULL;
-}
-
 UInteractionDefinition* UPlayerInteractionHandler::GetCurrentInteraction() const
-{
-	return NULL;
-}
-
-void UPlayerInteractionHandler::GetAvailableInteractions(TArray<UInteractionDefinition*>& result) const
-{
-
-}
-
-UInteractionDefinition* UPlayerInteractionHandler::GetAvailableInteractionByID(const FString& interactionID) const
 {
 	return NULL;
 }
@@ -170,11 +128,6 @@ UInteractionDefinition* UPlayerInteractionHandler::GetAvailableInteraction(EInpu
 float UPlayerInteractionHandler::GetAdditiveSkillCheckProbabilityModifier() const
 {
 	return 0.0f;
-}
-
-void UPlayerInteractionHandler::Client_StopSkillCheck_Implementation()
-{
-
 }
 
 void UPlayerInteractionHandler::Client_NotifyChargeCompleted_Implementation(const UInteractionDefinition* interaction)
@@ -192,37 +145,12 @@ void UPlayerInteractionHandler::CleanInteractionArray(AActor* destroyedActor)
 
 }
 
-bool UPlayerInteractionHandler::CanPerformInteraction(const FString& interactionName) const
-{
-	return false;
-}
-
 void UPlayerInteractionHandler::Broadcast_Multicast_ConfirmChargedCompleted_Implementation(bool chargeComplete)
 {
 
 }
 
-void UPlayerInteractionHandler::Authority_UnPauseSkillCheckTimer()
-{
-
-}
-
-void UPlayerInteractionHandler::Authority_TriggerCustomSkillCheck(const ESkillCheckCustomType type, float warningSoundDelay)
-{
-
-}
-
-void UPlayerInteractionHandler::Authority_PauseSkillCheckTimer()
-{
-
-}
-
 void UPlayerInteractionHandler::Authority_ClearPlayerDependency(ADBDPlayer* playerDependency)
-{
-
-}
-
-void UPlayerInteractionHandler::Authority_ClearPlayerDependencies()
 {
 
 }

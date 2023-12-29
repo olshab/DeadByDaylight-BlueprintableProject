@@ -2,7 +2,6 @@
 
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
-#include "CustomizationRewardViewData.h"
 #include "EventEntryPopupSkinUIData.h"
 #include "CustomizationItemPreviewAreaViewData.h"
 #include "CustomizationItemOriginViewData.h"
@@ -12,6 +11,7 @@ class UCustomizationItemGridContainer;
 class UCoreImagePreviewAreaWidget;
 class UCoreKeyListenerInputPromptWidget;
 class UCustomizationItemOriginWidget;
+class UStoreCustomizationItemViewData;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIVIEWSCORE_API UEventEntryRewardsDisplayWidget : public UCoreBaseUserWidget
@@ -19,6 +19,9 @@ class DBDUIVIEWSCORE_API UEventEntryRewardsDisplayWidget : public UCoreBaseUserW
 	GENERATED_BODY()
 
 protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _layoutMask;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UCustomizationItemGridContainer* RewardGrid;
 
@@ -42,13 +45,10 @@ public:
 	void SetPreviewAreaData(const FCustomizationItemPreviewAreaViewData& viewData);
 
 	UFUNCTION(BlueprintCallable)
-	void SetItemsData(const TArray<FCustomizationRewardViewData>& customizationRewardsData, const int32 selectedIndex);
+	void SetItemsData(const TArray<UStoreCustomizationItemViewData*>& customizationRewardsData, const int32 selectedIndex);
 
 	UFUNCTION(BlueprintCallable)
 	void SetInstructionWidgetData(const FCustomizationItemOriginViewData& viewData);
-
-	UFUNCTION(BlueprintCallable)
-	void HideTimeTexts();
 
 	UFUNCTION(BlueprintCallable)
 	void DisableInstructionStoreButton();

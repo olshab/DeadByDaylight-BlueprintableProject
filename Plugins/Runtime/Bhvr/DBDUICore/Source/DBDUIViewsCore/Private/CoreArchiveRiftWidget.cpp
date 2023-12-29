@@ -77,6 +77,7 @@ UCoreArchiveRiftWidget::UCoreArchiveRiftWidget()
 	this->PaginationTB = NULL;
 	this->PaginationPreviousButton = NULL;
 	this->PaginationNextButton = NULL;
+	this->ImagePreviewArea = NULL;
 	this->_tierItemPool = TArray<UCoreArchiveRiftTierItem*>();
 	this->_contentVisbilityTween = NULL;
 	this->_pageSwitchVisbilityTween = NULL;

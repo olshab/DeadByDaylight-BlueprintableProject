@@ -36,6 +36,9 @@ public:
 	static TArray<ADBDPlayer*> GetInGamePlayers(const UObject* worldContextObject);
 
 	UFUNCTION(BlueprintPure)
+	static TArray<ADBDPlayer*> GetInGameOtherCharacters(const UObject* worldContextObject);
+
+	UFUNCTION(BlueprintPure)
 	static TArray<ADBDPlayer*> GetCharactersByPlayerTeam(EPlayerTeam playerTeam, const UObject* worldContextObject);
 
 	UFUNCTION(BlueprintPure)

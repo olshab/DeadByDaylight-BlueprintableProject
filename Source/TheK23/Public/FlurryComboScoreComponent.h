@@ -4,7 +4,11 @@
 #include "GameplayTagContainer.h"
 #include "DBDTunableRowHandle.h"
 #include "Components/ActorComponent.h"
+#include "TunableStat.h"
+#include "Templates/SubclassOf.h"
 #include "FlurryComboScoreComponent.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UFlurryComboScoreComponent : public UActorComponent
@@ -16,25 +20,13 @@ private:
 	float _comboScore;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _timeForCombo;
+	FDBDTunableRowHandle _timeAddedByComboRank;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _baseKnifeComboScore;
+	FTunableStat _timeForCombo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _maximumKnifeMultiplier;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _fillLacerationComboScore;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _longRangeThreshold;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _closeRangeScoreMultiplier;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _longRangeScoreMultiplier;
+	FDBDTunableRowHandle _consecutiveHitsRequiredScore;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TArray<float> _thresholds;
@@ -44,6 +36,9 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	TArray<FGameplayTag> _comboScoreEvents;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _comboExtendSuperModeStatusEffectClass;
 
 private:
 	UFUNCTION(BlueprintCallable)

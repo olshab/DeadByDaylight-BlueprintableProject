@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{06CFBF2F-4648-EB67-4498-A5B8ABA1F0FE}",
+	"EngineAssociation": "4.27",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -176,6 +176,11 @@
 		},
 		{
 			"Name": "Halloween2022",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Halloween2023",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -365,6 +370,11 @@
 			]
 		},
 		{
+			"Name": "TheK34",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "TheLegion",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
@@ -462,82 +472,7 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "Competence",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "DBDAnimationBudgetAllocator",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "VFXUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "GameplayUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "Projectile",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "SystemUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "SocialParty",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "ReversibleActionSystem",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "FiniteStateMachine",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "InputUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "SimpleStateMachine",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "ScaleformUI",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "CoreUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "UnitTestUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "TimeUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "GameplayTagUtilities",
+			"Name": "WinterEvent2023",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -547,17 +482,12 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "PhysicsUtilities",
+			"Name": "CampaignEvents",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "NetworkUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "TickUtilities",
+			"Name": "Competence",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -567,17 +497,22 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "CoreUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "DataTableUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "DBDAnimationBudgetAllocator",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "DBDInput",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "S3Command",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "CampaignEvents",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -587,7 +522,17 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "DynamicContent",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "ExperimentalFeatures",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "FiniteStateMachine",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -597,12 +542,52 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "GameplayTagUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "GameplayUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "GameSessionDS",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "GenericGameMessages",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "InputUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "Interaction",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "MatchHistory",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "MathUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "NetEaseAnalytics",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "NetworkUtilities",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -627,7 +612,17 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "PhysicsUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "PlayerNames",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Projectile",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -637,57 +632,17 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "PurchasableItems",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "RetentionRewardsUtilities",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "SharedAuthenticationUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "SocialBlockList",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "Toasts",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "WwiseUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "DynamicContent",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "MatchHistory",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "NetEaseAnalytics",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "SubscriptionSubsystem",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "MathUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "StatSystem",
+			"Name": "ReversibleActionSystem",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -697,17 +652,82 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "GenericGameMessages",
+			"Name": "S3Command",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "DataTableUtilities",
+			"Name": "ScaleformUI",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "PurchasableItems",
+			"Name": "Sentry",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "SharedAuthenticationUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "SimpleStateMachine",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "SocialBlockList",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "SocialParty",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "StatSystem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "SubscriptionSubsystem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "SystemUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "TickUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "TimeUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Toasts",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "UnitTestUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "VFXUtilities",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "WwiseUtilities",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
@@ -739,50 +759,6 @@
 			]
 		},
 		{
-			"Name": "OnlineSubsystemApple",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"Android",
-				"iOS"
-			],
-			"SupportedTargetPlatforms": [
-				"Mac",
-				"IOS",
-				"TVOS"
-			]
-		},
-		{
-			"Name": "OnlineSubsystemIOS",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"iOS"
-			],
-			"SupportedTargetPlatforms": [
-				"IOS",
-				"TVOS"
-			]
-		},
-		{
-			"Name": "OnlineSubsystemPS4",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"PS4"
-			],
-			"SupportedTargetPlatforms": [
-				"PS4"
-			]
-		},
-		{
-			"Name": "OnlineSubsystemGDK",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"Mac"
-			],
-			"SupportedTargetPlatforms": [
-				"Mac"
-			]
-		},
-		{
 			"Name": "OnlineSubsystemSteam",
 			"Enabled": true,
 			"WhitelistPlatforms": [
@@ -790,26 +766,6 @@
 				"Win64",
 				"Mac",
 				"Linux"
-			]
-		},
-		{
-			"Name": "OnlineSubsystemLive",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"XboxOne"
-			],
-			"SupportedTargetPlatforms": [
-				"XboxOne"
-			]
-		},
-		{
-			"Name": "OnlineSubsystemGooglePlay",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"Android"
-			],
-			"SupportedTargetPlatforms": [
-				"Android"
 			]
 		},
 		{
@@ -825,152 +781,12 @@
 			"Enabled": true
 		},
 		{
-			"Name": "LinuxDeviceProfileSelector",
-			"Enabled": false
-		},
-		{
-			"Name": "PS4DeviceProfileSelector",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"PS4"
-			],
-			"SupportedTargetPlatforms": [
-				"PS4"
-			]
-		},
-		{
 			"Name": "SpeedTreeImporter",
 			"Enabled": true
 		},
 		{
-			"Name": "UObjectPlugin",
-			"Enabled": false
-		},
-		{
-			"Name": "ArchVisCharacter",
-			"Enabled": false
-		},
-		{
-			"Name": "AlembicImporter",
-			"Enabled": false
-		},
-		{
-			"Name": "AndroidMedia",
-			"Enabled": false
-		},
-		{
-			"Name": "AvfMedia",
-			"Enabled": false
-		},
-		{
-			"Name": "HTML5Networking",
-			"Enabled": false
-		},
-		{
-			"Name": "MacGraphicsSwitching",
-			"Enabled": false
-		},
-		{
-			"Name": "EpicSurvey",
-			"Enabled": false
-		},
-		{
-			"Name": "SlateRemote",
-			"Enabled": false
-		},
-		{
-			"Name": "AndroidMoviePlayer",
-			"Enabled": false
-		},
-		{
-			"Name": "AppleMoviePlayer",
-			"Enabled": false
-		},
-		{
-			"Name": "KDevelopSourceCodeAccess",
-			"Enabled": false
-		},
-		{
-			"Name": "NullSourceCodeAccess",
-			"Enabled": false
-		},
-		{
-			"Name": "XCodeSourceCodeAccess",
-			"Enabled": false
-		},
-		{
-			"Name": "CodeLiteSourceCodeAccess",
-			"Enabled": false
-		},
-		{
-			"Name": "CableComponent",
-			"Enabled": false
-		},
-		{
-			"Name": "GitSourceControl",
-			"Enabled": false
-		},
-		{
-			"Name": "SubversionSourceControl",
-			"Enabled": false
-		},
-		{
 			"Name": "BeUtil",
 			"Enabled": true
-		},
-		{
-			"Name": "PS4Media",
-			"Enabled": false,
-			"WhitelistPlatforms": [
-				"PS4"
-			]
-		},
-		{
-			"Name": "PS5Media",
-			"Enabled": false,
-			"WhitelistPlatforms": [
-				"PS4"
-			],
-			"SupportedTargetPlatforms": [
-				"PS4"
-			]
-		},
-		{
-			"Name": "MfMedia",
-			"Enabled": false,
-			"WhitelistPlatforms": [
-				"XboxOne"
-			]
-		},
-		{
-			"Name": "PS4MoviePlayer",
-			"Enabled": false,
-			"WhitelistPlatforms": [
-				"PS4"
-			],
-			"SupportedTargetPlatforms": [
-				"PS4"
-			]
-		},
-		{
-			"Name": "PS5MoviePlayer",
-			"Enabled": false,
-			"WhitelistPlatforms": [
-				"PS4"
-			],
-			"SupportedTargetPlatforms": [
-				"PS4"
-			]
-		},
-		{
-			"Name": "XboxCommonGDKMoviePlayer",
-			"Enabled": false,
-			"WhitelistPlatforms": [
-				"XboxGDK"
-			],
-			"SupportedTargetPlatforms": [
-				"XboxGDK"
-			]
 		},
 		{
 			"Name": "BeData",
@@ -1001,13 +817,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "WebMMoviePlayer",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"PS4"
-			]
-		},
-		{
 			"Name": "RenderDocPlugin",
 			"Enabled": true
 		},
@@ -1018,19 +827,6 @@
 		{
 			"Name": "AESHandlerComponent",
 			"Enabled": true
-		},
-		{
-			"Name": "SteamVR",
-			"Enabled": false
-		},
-		{
-			"Name": "OculusVR",
-			"Enabled": false
-		},
-		{
-			"Name": "Substance",
-			"Enabled": false,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2f6439c2f9584f49809d9b13b16c2ba4"
 		},
 		{
 			"Name": "StaticMeshEditorExtension",
@@ -1069,42 +865,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "IronSourceAds",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"Android",
-				"iOS"
-			],
-			"SupportedTargetPlatforms": [
-				"Android",
-				"Win64",
-				"IOS",
-				"Mac"
-			]
-		},
-		{
-			"Name": "AppCenter",
-			"Enabled": true,
-			"WhitelistPlatforms": [
-				"Android",
-				"iOS"
-			]
-		},
-		{
-			"Name": "Gauntlet",
-			"Enabled": true,
-			"BlacklistTargetConfigurations": [
-				"Shipping"
-			]
-		},
-		{
-			"Name": "FunctionalTestingEditor",
-			"Enabled": true,
-			"BlacklistTargetConfigurations": [
-				"Shipping"
-			]
-		},
-		{
 			"Name": "Simplygon",
 			"Enabled": true
 		},
@@ -1117,45 +877,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "OpenXR",
-			"Enabled": false
-		},
-		{
-			"Name": "OpenXREyeTracker",
-			"Enabled": false
-		},
-		{
-			"Name": "OpenXRHandTracking",
-			"Enabled": false
-		},
-		{
-			"Name": "MagicLeap",
-			"Enabled": false
-		},
-		{
-			"Name": "MagicLeapMedia",
-			"Enabled": false
-		},
-		{
-			"Name": "MagicLeapPassableWorld",
-			"Enabled": false
-		},
-		{
-			"Name": "ImpostorBaker",
-			"Enabled": false
-		},
-		{
-			"Name": "LuminPlatformFeatures",
-			"Enabled": false,
-			"SupportedTargetPlatforms": [
-				"Lumin"
-			]
-		},
-		{
-			"Name": "MLSDK",
-			"Enabled": false
-		},
-		{
 			"Name": "CascadeToNiagaraConverter",
 			"Enabled": true
 		},
@@ -1164,42 +885,20 @@
 			"Enabled": true
 		},
 		{
-			"Name": "WmfMedia",
-			"Enabled": false
-		},
-		{
-			"Name": "SwitchMedia",
-			"Enabled": false
-		},
-		{
 			"Name": "SentryIo",
 			"Enabled": true
 		},
 		{
-			"Name": "Sentry",
-			"Enabled": false,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/99f5c02de5fa49ab97976a3a852e5408",
-			"WhitelistPlatforms": [
-				"Linux"
-			],
-			"SupportedTargetPlatforms": [
-				"Linux"
-			]
+			"Name": "BhvrCheatMenu",
+			"Enabled": true
+		},
+		{
+			"Name": "RemoteContentCache",
+			"Enabled": true
+		},
+		{
+			"Name": "DBDAssetExclusion",
+			"Enabled": true
 		}
-	],
-	"TargetPlatforms": [
-		"PS4",
-		"WindowsNoEditor",
-		"XboxOne",
-		"XboxOneGDK",
-		"Android",
-		"iOS",
-		"Mac",
-		"Stadia",
-		"EGS",
-		"GDK",
-		"WinGDK",
-		"XSX",
-		"Switch"
 	]
 }

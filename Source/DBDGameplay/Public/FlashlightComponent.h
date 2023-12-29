@@ -56,7 +56,7 @@ public:
 	void TurnOff();
 
 private:
-	UFUNCTION(BlueprintCallable, Server, Reliable, WithValidation)
+	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_SetAndUpdateAutonomousLitFlashlightables(const TArray<UFlashlightableComponent*>& newLitFlashlightables);
 
 	UFUNCTION(BlueprintCallable)

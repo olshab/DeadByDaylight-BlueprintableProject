@@ -10,7 +10,6 @@ FSpecialEventData::FSpecialEventData()
 	this->IsTrackedOnline = false;
 	this->UseSpecialEventLoadingScreen = false;
 	this->Objectives = TArray<FSpecialEventObjectiveData>();
-	this->ObjectOutlineColour = FColor{};
 	this->LobbyName = TEXT("");
 	this->ShopName = TEXT("");
 	this->AdditionalLobbyNames = TArray<FString>();

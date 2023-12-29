@@ -56,6 +56,9 @@ protected:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnSurvivorVomit_Aesthetic();
 
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void OnSurvivorDisguisedOrUndisguised(bool isDisguised);
+
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnSurvivorBecomesInfected_Aesthetic();
 

@@ -2,7 +2,6 @@
 
 FInteractionPlayerProperties::FInteractionPlayerProperties()
 {
-	this->AverageVelocityAtStart = FVector_NetQuantize{};
 	this->PlayerPositionAtStart = FVector_NetQuantize{};
 	this->PlayerRotationAtStart = FRotator{};
 	this->Requester = NULL;

@@ -17,32 +17,14 @@ private:
 	float _healingSpeedGainPercentage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	bool _canSelfHeal;
-
-	UPROPERTY(EditAnywhere)
-	float _selfHealSpeedPenalty;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UStatusEffect> _healingSpeedIncreaseEffect;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	TSubclassOf<UStatusEffect> _allowSelfHealEffectClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	TSubclassOf<UStatusEffect> _selfHealSpeedPenaltyEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UStatusEffect> _revealInjuredPlayersInBoonRangeEffectClass;
 
 public:
 	UFUNCTION(BlueprintPure)
-	float GetSelfHealSpeedPenaltyAtLevel() const;
-
-	UFUNCTION(BlueprintPure)
 	float GetHealingSpeedGainPercentageAtLevel() const;
-
-	UFUNCTION(BlueprintPure)
-	bool CanSelfHeal() const;
 
 public:
 	US28P02();

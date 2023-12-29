@@ -12,4 +12,6 @@ enum class ESnowmanDestructionType : uint8
 	KillerCancelExit,
 	KillerAttackWhileControlled,
 	KillerAttackWhileEmpty,
+	NonDamagingAttackWhileControlled,
+	NonDamagingAttackWhileEmpty,
 };

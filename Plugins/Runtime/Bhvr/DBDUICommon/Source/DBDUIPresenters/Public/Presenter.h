@@ -59,10 +59,10 @@ protected:
 	void OnContextUnfocus(EContext context);
 
 	UFUNCTION(BlueprintCallable)
-	void OnContextSectionChanged(EContext context);
+	void OnContextFocus(EContext context);
 
 	UFUNCTION(BlueprintCallable)
-	void OnContextFocus(EContext context);
+	void OnContextChanged(EContext context);
 
 	UFUNCTION(BlueprintCallable)
 	bool IsPlayerStateReady() const;

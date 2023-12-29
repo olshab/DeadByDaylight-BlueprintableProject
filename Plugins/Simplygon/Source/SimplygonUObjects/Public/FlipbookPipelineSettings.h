@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "SimplygonPipelineSettings.h"
 #include "FlipbookSettings.h"
+#include "AttributeTessellationSettings.h"
 #include "MappingImageSettings.h"
 #include "FlipbookPipelineSettings.generated.h"
 
@@ -16,6 +17,9 @@ struct FFlipbookPipelineSettings: public FSimplygonPipelineSettings
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FFlipbookSettings FlipbookSettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAttributeTessellationSettings AttributeTessellationSettings;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FMappingImageSettings MappingImageSettings;

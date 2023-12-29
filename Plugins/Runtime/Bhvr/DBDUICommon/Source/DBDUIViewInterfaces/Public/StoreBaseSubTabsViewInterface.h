@@ -17,6 +17,12 @@ class DBDUIVIEWINTERFACES_API IStoreBaseSubTabsViewInterface : public IInterface
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void UpdateTabData(const int32 subTabId, const FTabWidgetData tabWidgetData);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void UnselectCurrentTab();
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetSubTabsData(const TArray<FTabWidgetData>& tabsData);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

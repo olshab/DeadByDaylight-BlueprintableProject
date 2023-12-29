@@ -2,11 +2,14 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Templates/SubclassOf.h"
 #include "ETileSpawnPointType.h"
 #include "LamentConfigurationSpawnInfo.h"
 #include "LamentConfigurationSpawnStrategy.generated.h"
 
+class UTileSpawnPoint;
 class AHatch;
+class AActor;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class ULamentConfigurationSpawnStrategy : public UActorComponent
@@ -60,8 +63,17 @@ protected:
 	float _navmeshCheckRadius;
 
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
 	TArray<FLamentConfigurationSpawnInfo> _cached_spawnsInfo;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
+	UTileSpawnPoint* _lastUsedSpawnPoint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TArray<TSubclassOf<AActor>> _actorsInMapToAvoid;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _minDistanceFromActorsToAvoid;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TArray<AHatch*> _hatches;

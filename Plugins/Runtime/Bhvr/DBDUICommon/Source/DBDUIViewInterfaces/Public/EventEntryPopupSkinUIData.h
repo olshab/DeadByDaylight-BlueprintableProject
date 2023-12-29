@@ -54,6 +54,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSoftObjectPtr<UMaterialInstance> MilestoneTrackerHighlightBar;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FLinearColor PreviewBGTintColor;
+
 public:
 	DBDUIVIEWINTERFACES_API FEventEntryPopupSkinUIData();
 };

@@ -78,7 +78,7 @@ public:
 
 protected:
 	UFUNCTION(BlueprintCallable)
-	void OnRep_TickableConditionsData();
+	void OnRep_TickableConditionsData(const FModifierTickableConditionReplicatedData& oldTickableConditionsData);
 
 	UFUNCTION(BlueprintCallable)
 	void OnRep_ModifierData();

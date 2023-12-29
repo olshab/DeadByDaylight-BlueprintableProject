@@ -5,6 +5,7 @@
 #include "ELoadingTransitionType.h"
 #include "PresenterManager.generated.h"
 
+class APlayerState;
 class UPresenterGroup;
 
 UCLASS(Blueprintable)
@@ -22,6 +23,9 @@ private:
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnViewportCreated();
+
+	UFUNCTION(BlueprintCallable)
+	void OnPlayerStateChanged(const APlayerState* playerState);
 
 	UFUNCTION(BlueprintCallable)
 	void OnLoadingTransition(const ELoadingTransitionType transitionType);

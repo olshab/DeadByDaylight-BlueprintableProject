@@ -25,6 +25,16 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _hasteStatusEffectPercent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
+	UStatusEffect* _hasteEffect;
+
+public:
+	UFUNCTION(BlueprintPure)
+	float GetUndetectableAndHasteStatusEffectDurationAtLevel() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetHasteStatusEffectPercent() const;
+
 public:
 	UFurtiveChase();
 };

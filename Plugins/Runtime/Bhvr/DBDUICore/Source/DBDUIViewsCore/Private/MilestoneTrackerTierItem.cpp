@@ -9,11 +9,6 @@ void UMilestoneTrackerTierItem::UpdateBackground(const TSoftObjectPtr<UMaterialI
 
 }
 
-void UMilestoneTrackerTierItem::SetIsOwned_Implementation(bool isOwned, bool useAnimation)
-{
-
-}
-
 void UMilestoneTrackerTierItem::SetData(const FMilestoneTrackerItemViewData& data)
 {
 

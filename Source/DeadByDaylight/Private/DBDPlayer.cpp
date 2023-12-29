@@ -401,19 +401,9 @@ bool ADBDPlayer::Local_IsInteractionInputPressed(EInputInteractionType interacti
 	return false;
 }
 
-bool ADBDPlayer::K2_SetActorLocationByBottomCapsule(FVector NewLocation, bool bSweep, FHitResult& SweepHitResult)
+bool ADBDPlayer::K2_SetActorLocationByBottomCapsule(FVector newLocation, bool bSweep, FHitResult& sweepHitResult)
 {
 	return false;
-}
-
-void ADBDPlayer::ItemUseReleased()
-{
-
-}
-
-void ADBDPlayer::ItemUsePressed()
-{
-
 }
 
 bool ADBDPlayer::IsRunning() const
@@ -499,16 +489,6 @@ bool ADBDPlayer::IsBeingInterrupted() const
 bool ADBDPlayer::IsAllowedNavigation() const
 {
 	return false;
-}
-
-void ADBDPlayer::InteractionInputReleased()
-{
-
-}
-
-void ADBDPlayer::InteractionInputPressed()
-{
-
 }
 
 bool ADBDPlayer::HasMoveInput() const
@@ -681,7 +661,7 @@ float ADBDPlayer::GetGrassEffectRadiusMultiplier_Implementation() const
 	return 0.0f;
 }
 
-UActorComponent* ADBDPlayer::GetFirstComponentByClass(TSubclassOf<UActorComponent> ComponentClass) const
+UActorComponent* ADBDPlayer::GetFirstComponentByClass(TSubclassOf<UActorComponent> componentClass) const
 {
 	return NULL;
 }
@@ -761,7 +741,7 @@ APlayerState* ADBDPlayer::GetAssociatedPlayerState_Implementation() const
 	return NULL;
 }
 
-FVector ADBDPlayer::GetActorLocationFromFeetLocation(const FVector FeetLocation) const
+FVector ADBDPlayer::GetActorLocationFromFeetLocation(const FVector feetLocation) const
 {
 	return FVector{};
 }
@@ -769,26 +749,6 @@ FVector ADBDPlayer::GetActorLocationFromFeetLocation(const FVector FeetLocation)
 ADBDPlayer* ADBDPlayer::FindClosestSlashablePlayerInDetectionZone(EDetectionZone detectionZoneID) const
 {
 	return NULL;
-}
-
-void ADBDPlayer::FastInteractionInputReleased()
-{
-
-}
-
-void ADBDPlayer::FastInteractionInputPressed()
-{
-
-}
-
-void ADBDPlayer::EventAbilityInputReleased()
-{
-
-}
-
-void ADBDPlayer::EventAbilityInputPressed()
-{
-
 }
 
 void ADBDPlayer::DetachInteractor()
@@ -902,21 +862,6 @@ void ADBDPlayer::AttachInteractor(UInteractor* interactor)
 }
 
 void ADBDPlayer::AddDetectionZone(EDetectionZone detectionZoneID, UPrimitiveComponent* zone)
-{
-
-}
-
-void ADBDPlayer::AbilityTwoInputReleased()
-{
-
-}
-
-void ADBDPlayer::AbilityTwoInputPressed()
-{
-
-}
-
-void ADBDPlayer::AbilityInputReleased()
 {
 
 }

@@ -39,6 +39,9 @@ protected:
 	bool _enableTurnInPlace;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _shouldResetLookAtOnAnyMontagePlay;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _shouldTurnLeft;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

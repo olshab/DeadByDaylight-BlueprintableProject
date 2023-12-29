@@ -5,9 +5,7 @@
 #include "UObject/ScriptInterface.h"
 #include "StoreCollectionsViewInterface.generated.h"
 
-class IStoreCollectionsAllViewInterface;
-class IStoreCollectionsSpecialViewInterface;
-class IStoreCollectionsFeaturedViewInterface;
+class IStoreCollectionsListViewInterface;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UStoreCollectionsViewInterface : public UInterface
@@ -21,12 +19,12 @@ class DBDUIVIEWINTERFACES_API IStoreCollectionsViewInterface : public IInterface
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreCollectionsSpecialViewInterface> GetTabSpecialInterface() const;
+	TScriptInterface<IStoreCollectionsListViewInterface> GetTabSpecialInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreCollectionsFeaturedViewInterface> GetTabFeaturedInterface() const;
+	TScriptInterface<IStoreCollectionsListViewInterface> GetTabFeaturedInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreCollectionsAllViewInterface> GetTabAllInterface() const;
+	TScriptInterface<IStoreCollectionsListViewInterface> GetTabAllInterface() const;
 
 };

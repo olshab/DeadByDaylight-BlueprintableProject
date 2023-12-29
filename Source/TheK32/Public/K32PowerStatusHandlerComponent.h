@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "DBDTunableRowHandle.h"
 #include "Components/ActorComponent.h"
 #include "TunableStat.h"
@@ -52,6 +53,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TMap<ACamperPlayer*, FFastTimer> _assimilationCooldownTimers;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FGameplayTag> _survivorTagsToPreventPositionStorage;
 
 private:
 	UFUNCTION(BlueprintCallable)

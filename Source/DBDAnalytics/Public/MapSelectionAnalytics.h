@@ -21,6 +21,12 @@ public:
 	int32 MapSeed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SelectedMapOdds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float TotalMapWeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FMapSelectionWeight> MapWeights;
 
 public:

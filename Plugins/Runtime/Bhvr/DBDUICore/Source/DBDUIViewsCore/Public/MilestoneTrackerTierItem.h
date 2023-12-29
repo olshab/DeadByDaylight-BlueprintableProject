@@ -2,15 +2,15 @@
 
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
+#include "MilestoneTrackerItemViewData.h"
 #include "UObject/SoftObjectPtr.h"
 #include "EMilestoneTrackerItemState.h"
-#include "MilestoneTrackerItemViewData.h"
 #include "MilestoneTrackerTierItem.generated.h"
 
-class UCoreCustomizationRewardWidget;
+class UMaterialInstance;
+class UCoreStoreCustomizationItemWidget;
 class UDBDImage;
 class UEventPointsWidget;
-class UMaterialInstance;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UMilestoneTrackerTierItem : public UCoreBaseUserWidget
@@ -19,7 +19,7 @@ class UMilestoneTrackerTierItem : public UCoreBaseUserWidget
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UCoreCustomizationRewardWidget* Reward;
+	UCoreStoreCustomizationItemWidget* Reward;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UEventPointsWidget* EventPointsWidget;
@@ -33,9 +33,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void SetVisualState(const EMilestoneTrackerItemState state);
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetIsOwned(bool isOwned, bool useAnimation);
 
 	UFUNCTION(BlueprintCallable)
 	void SetData(const FMilestoneTrackerItemViewData& data);

@@ -9,7 +9,6 @@ UDBDBlackboardComponent::UDBDBlackboardComponent()
 	this->_objectWishListMap = TMap<FGameplayTag, FWeightedWishedObjectMapContainer>();
 	this->_discoveredObjects = TSet<UObject*>();
 	this->_intentionValidators = TSet<UObject*>();
-	this->_killerToTargetDistances = TMap<AActor*, FDistanceToTargetData>();
 	this->_convincingDreamPallets = TSet<APallet*>();
 	this->_dropItemLocks = TArray<UAISkill*>();
 }

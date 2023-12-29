@@ -388,6 +388,7 @@ UInteractionDefinition::UInteractionDefinition()
 	this->CancelOnHit = false;
 	this->CancelOnAttack = false;
 	this->HideItem = true;
+	this->ContinueCachingLastSafeItemDropLocation = false;
 	this->AutoBindToParentInteractor = true;
 	this->AutoBindToParentZone = true;
 	this->CancelOnMoveInitialDelay = 0.000000;

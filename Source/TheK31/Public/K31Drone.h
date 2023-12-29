@@ -13,6 +13,7 @@ class USceneComponent;
 class UDBDSkeletalMeshComponentBudgeted;
 class UAuthoritativePoolableActorComponent;
 class UK31DroneLaserController;
+class UMapActorComponent;
 class UChildActorComponent;
 class UK31DroneHackableAvoidanceSensor;
 class UStaticMeshComponent;
@@ -89,6 +90,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
 	UK31DroneDangerPredictionComponent* _dangerPredictionComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	UMapActorComponent* _droneMapActorComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	ADBDPlayer* _lastOwner;

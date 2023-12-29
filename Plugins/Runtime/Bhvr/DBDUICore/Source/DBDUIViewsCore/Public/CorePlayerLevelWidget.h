@@ -15,7 +15,7 @@ public:
 	void SetData(const FPlayerLevelViewData& viewData);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void Animate();
+	void AnimateLevelUp();
 
 public:
 	UCorePlayerLevelWidget();

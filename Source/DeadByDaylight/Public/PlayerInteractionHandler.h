@@ -10,7 +10,6 @@
 #include "Components/ActorComponent.h"
 #include "EInteractionLayer.h"
 #include "EInputInteractionType.h"
-#include "ESkillCheckCustomType.h"
 #include "GameplayTagContainer.h"
 #include "ERequestState.h"
 #include "Engine/EngineTypes.h"
@@ -24,7 +23,7 @@ class ADBDPlayer;
 class UInterruptionDefinition;
 class AActor;
 
-UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class DEADBYDAYLIGHT_API UPlayerInteractionHandler : public UActorComponent, public IInteractionPerformer
 {
 	GENERATED_BODY()
@@ -109,10 +108,6 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TMap<UObject*, FGameplayTagContainer> _disableInteractionSourcesToExceptions;
 
-public:
-	UFUNCTION(BlueprintCallable)
-	void SetScanForInteractionsEnabled(bool enabled);
-
 private:
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_StoreInterruption_Interruptor(ADBDPlayer* interruptionOtherParty, UInterruptionDefinition* interruptionDefinition);
@@ -142,20 +137,12 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable)
-	void ResetSuccessiveSkillCheckCount();
-
-	UFUNCTION(BlueprintCallable)
 	void RemoveInteraction(UInteractionDefinition* interaction);
 
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnAttachedInteractorOwnerEndPlay(AActor* actor, TEnumAsByte<EEndPlayReason::Type> endPlayReason);
 
-public:
-	UFUNCTION(BlueprintPure)
-	int32 NumInteractionsInZone() const;
-
-private:
 	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
 	void Multicast_StoreInterruption_Interruptor(ADBDPlayer* interruptionOtherParty, UInterruptionDefinition* interruptionDefinition);
 
@@ -179,40 +166,22 @@ public:
 	void Multicast_CancelCurrentInteractionByInput();
 
 	UFUNCTION(BlueprintCallable)
-	void IncrementSuccessiveSkillCheckCount();
-
-	UFUNCTION(BlueprintCallable)
 	bool HasAvailableInteraction(EInputInteractionType interactionType);
 
 	UFUNCTION(BlueprintPure)
 	bool HasActiveSkillCheck() const;
 
 	UFUNCTION(BlueprintPure)
-	USkillCheck* GetSkillCheck() const;
-
-	UFUNCTION(BlueprintPure)
 	float GetMultiplicativeSkillCheckProbabilityModifier() const;
 
 	UFUNCTION(BlueprintPure)
-	UInteractionDefinition* GetCurrentInteractionOfType(EInputInteractionType interactionInputType) const;
-
-	UFUNCTION(BlueprintPure)
 	UInteractionDefinition* GetCurrentInteraction() const;
-
-	UFUNCTION(BlueprintPure)
-	void GetAvailableInteractions(TArray<UInteractionDefinition*>& result) const;
-
-	UFUNCTION(BlueprintPure)
-	UInteractionDefinition* GetAvailableInteractionByID(const FString& interactionID) const;
 
 	UFUNCTION(BlueprintPure)
 	UInteractionDefinition* GetAvailableInteraction(EInputInteractionType interactionType) const;
 
 	UFUNCTION(BlueprintPure)
 	float GetAdditiveSkillCheckProbabilityModifier() const;
-
-	UFUNCTION(BlueprintCallable, Client, Reliable)
-	void Client_StopSkillCheck();
 
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_NotifyChargeCompleted(const UInteractionDefinition* interaction);
@@ -223,26 +192,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void CleanInteractionArray(AActor* destroyedActor);
 
-	UFUNCTION(BlueprintPure)
-	bool CanPerformInteraction(const FString& interactionName) const;
-
 	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
 	void Broadcast_Multicast_ConfirmChargedCompleted(bool chargeComplete);
 
-	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
-	void Authority_UnPauseSkillCheckTimer();
-
-	UFUNCTION(BlueprintCallable)
-	void Authority_TriggerCustomSkillCheck(const ESkillCheckCustomType type, float warningSoundDelay);
-
-	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
-	void Authority_PauseSkillCheckTimer();
-
 	UFUNCTION(BlueprintCallable)
 	void Authority_ClearPlayerDependency(ADBDPlayer* playerDependency);
-
-	UFUNCTION(BlueprintCallable)
-	void Authority_ClearPlayerDependencies();
 
 	UFUNCTION(BlueprintCallable)
 	void AddInteraction(UInteractionDefinition* interaction);

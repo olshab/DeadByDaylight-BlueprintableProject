@@ -44,9 +44,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float SecondFogHeightOffset;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	//TArray<FHeightFogGradientEntry> FogGradient;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bReplaceVolumetricFogAlbedoWithColorGradient;
 

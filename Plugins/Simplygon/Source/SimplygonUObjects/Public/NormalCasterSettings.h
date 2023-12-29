@@ -6,6 +6,7 @@
 #include "EOutputPixelFormat.h"
 #include "EDitherType.h"
 #include "EFillMode.h"
+#include "EFlipBackfacingMode.h"
 #include "EOutputImageFileFormat.h"
 #include "NormalCasterSettings.generated.h"
 
@@ -19,6 +20,9 @@ public:
 	FString MaterialChannel;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString OpacityChannel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EOpacityChannelComponent OpacityChannelComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -28,13 +32,13 @@ public:
 	EFillMode FillMode;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString OpacityChannel;
+	int32 Dilation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 UseMultisampling : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 FlipBackfacingNormals : 1;
+	EOutputPixelFormat OutputPixelFormat;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EOutputImageFileFormat OutputImageFileFormat;
@@ -43,13 +47,13 @@ public:
 	EOutputDDSCompressionType OutputDDSCompressionType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 Dilation;
+	uint8 FlipBackfacingNormals : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EFlipBackfacingMode FlipBackfacingMode;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 GenerateTangentSpaceNormals : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	EOutputPixelFormat OutputPixelFormat;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 FlipGreen : 1;

@@ -2,7 +2,6 @@
 
 UStoreCustomizationItemViewData::UStoreCustomizationItemViewData()
 {
-	this->Category = ECustomizationCategory::None;
 	this->MirrorsId = NAME_None;
 	this->DisplayName = TEXT("");
 	this->DisplayCollectionName = TEXT("");
@@ -12,5 +11,6 @@ UStoreCustomizationItemViewData::UStoreCustomizationItemViewData()
 	this->ParentBundleIds = TArray<FName>();
 	this->ChildrenItemIds = TArray<FName>();
 	this->IsVisceral = false;
+	this->IsLocked = false;
 	this->AssociatedRole = EPlayerRole::VE_None;
 }

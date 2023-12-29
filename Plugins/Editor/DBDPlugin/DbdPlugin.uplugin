@@ -1,30 +1,30 @@
 {
-    "FileVersion": 3,
-
-    "FriendlyName": "Dbd Plugin",
-    "Version": 1,
-    "VersionName": "1.0",
-    "CreatedBy": "Behaviour Interactive",
-    "CreatedByURL": "http://www.bhvr.com/",
-    "EngineVersion": "",
-    "Description": "BHVR custom plugin for DBD tools",
-    "Category": "Editor",
-    "EnabledByDefault": true,
-
-    "Plugins": [
-		{
-			"Enabled": true,
-			"Name": "OnlineSubsystem"
-		},
-		{
-			"Enabled": true,
-			"Name": "EditorScriptingUtilities"
-		},
-		{
-			"Enabled": true,
-			"Name": "BhvrSlateWidgets"
-		}
-    ],
-
-    "CanContainContent" : false
+  "FileVersion": "3",
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Dbd Plugin",
+  "Description": "BHVR custom plugin for DBD tools",
+  "Category": "Editor",
+  "CreatedBy": "Behaviour Interactive",
+  "CreatedByURL": "http://www.bhvr.com/",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": true,
+  "CanContainContent": false,
+  "Installed": false,
+  "Plugins": [
+    {
+      "Name": "OnlineSubsystem",
+      "Enabled": true
+    },
+    {
+      "Name": "EditorScriptingUtilities",
+      "Enabled": true
+    },
+    {
+      "Name": "BhvrSlateWidgets",
+      "Enabled": true
+    }
+  ]
 }

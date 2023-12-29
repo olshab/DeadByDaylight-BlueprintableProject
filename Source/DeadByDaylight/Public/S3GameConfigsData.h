@@ -148,6 +148,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool EnableAntiCamping;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool EnableConsumableQueryFromKraken;
+
 public:
 	DEADBYDAYLIGHT_API FS3GameConfigsData();
 };

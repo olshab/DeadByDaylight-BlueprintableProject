@@ -1,8 +1,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CustomizationRewardViewData.h"
 #include "CustomizationItemPreviewAreaViewData.generated.h"
+
+class UStoreCustomizationItemViewData;
 
 USTRUCT(BlueprintType)
 struct FCustomizationItemPreviewAreaViewData
@@ -11,10 +12,10 @@ struct FCustomizationItemPreviewAreaViewData
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FCustomizationRewardViewData PreviewItem;
+	UStoreCustomizationItemViewData* PreviewItem;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FCustomizationRewardViewData> ItemsData;
+	TArray<UStoreCustomizationItemViewData*> ItemsData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsOutfit;

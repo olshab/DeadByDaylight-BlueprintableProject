@@ -60,4 +60,5 @@ AUnstableRift::AUnstableRift()
 	this->_rangeToPreventItemDrop = 200.000000;
 	this->_stateTagsToGivePlayersOnItemDropPreventionArea = TArray<FGameplayTag>();
 	this->_spawnElementTrackerComponent = CreateDefaultSubobject<USpawnElementTrackerComponent>(TEXT("SpawnElementTrackerComponent"));
+	this->_maxDistanceToFollowPlayer = 3200.000000;
 }

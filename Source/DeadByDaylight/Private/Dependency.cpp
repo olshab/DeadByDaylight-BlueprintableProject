@@ -10,6 +10,6 @@ FDependency::FDependency()
 	this->_spawnConditionsName = NAME_None;
 	this->_elementTag = FGameplayTag{};
 	this->_allowFallback = false;
-	this->_priority = 0;
+	this->_spawnOrder = 0;
 	this->_iterativeWeightAdjustmentStrategyClass = NULL;
 }

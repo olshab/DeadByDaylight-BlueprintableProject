@@ -14,6 +14,10 @@ private:
 	float _perkCooldownTime;
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetCooldownTimeAtLevel() const;
+
+public:
 	US39P03();
 };
 

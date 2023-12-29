@@ -9,18 +9,15 @@ class UTricksterChainedThrowsAddon : public UItemAddon
 {
 	GENERATED_BODY()
 
-private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient)
+	int32 _consecutiveHits;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _resetOnEnteringFlurryInteraction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	float _lacerationPenaltyRangeThreshold;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	float _closeRangeLacerationPenalty;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	float _maximumMultiplier;
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 public:
 	UTricksterChainedThrowsAddon();

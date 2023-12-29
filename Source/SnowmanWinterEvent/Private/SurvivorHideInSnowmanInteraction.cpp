@@ -12,12 +12,14 @@ void USurvivorHideInSnowmanInteraction::GetLifetimeReplicatedProps(TArray<FLifet
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(USurvivorHideInSnowmanInteraction, _shouldRunOutOfSnowman);
-	DOREPLIFETIME(USurvivorHideInSnowmanInteraction, _isSnowmanShieldDamaged);
+	DOREPLIFETIME(USurvivorHideInSnowmanInteraction, _shouldScreamOnExit);
 }
 
 USurvivorHideInSnowmanInteraction::USurvivorHideInSnowmanInteraction()
 {
 	this->_shouldRunOutOfSnowman = false;
-	this->_isSnowmanShieldDamaged = false;
-	this->_nonDamagingSnowmanDestroyingEvents = TArray<FGameplayTag>();
+	this->_nonDamagingKillerSnowmanDestroyingEvents = TArray<FGameplayTag>();
+	this->_gameEventsToCauseScream = TArray<FGameplayTag>();
+	this->_overridingKillerInteractionIds = TArray<FString>();
+	this->_shouldScreamOnExit = false;
 }

@@ -10,6 +10,10 @@ class STARTUPINITIALIZER_API UClientStartupInitializer : public UStartupInitiali
 {
 	GENERATED_BODY()
 
+private:
+	UFUNCTION(BlueprintCallable)
+	void OnDynamicContentLoaded(bool success);
+
 public:
 	UClientStartupInitializer();
 };

@@ -16,6 +16,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName _noseJointName;
 
+protected:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void OnSurvivorDisguisedOrUndisguised(bool isDisguised);
+
 private:
 	UFUNCTION()
 	void OnKillerNoLongerLocksOnToSurvivor(const FGameplayTag gameEventType, const FGameEventData& gameEventData);

@@ -6,13 +6,15 @@
 #include "Templates/SubclassOf.h"
 #include "StoreMenuPresenter.generated.h"
 
+class UStoreSpecialPacksSubPresenter;
 class UStoreCollectionsSubPresenter;
 class UShopManager;
-class UUserWidget;
 class UStoreCharactersSubPresenter;
-class UStoreSubPresenter;
+class UStoreSpecialsSubPresenter;
+class UUserWidget;
 class UStoreFeaturedSubPresenter;
-class UStoreBundlesSubPresenter;
+class UStoreSubPresenter;
+class USubPresenter;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIPRESENTERS_API UStoreMenuPresenter : public UPresenter
@@ -34,10 +36,13 @@ private:
 	UStoreFeaturedSubPresenter* _storeFeaturedSubPresenter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	UStoreSpecialsSubPresenter* _storeSpecialsSubPresenter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	UStoreCollectionsSubPresenter* _storeCollectionsSubPresenter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	UStoreBundlesSubPresenter* _storeBundlesSubPresenter;
+	UStoreSpecialPacksSubPresenter* _storeSpecialPacksSubPresenter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	UStoreCharactersSubPresenter* _storeCharactersSubPresenter;
@@ -51,6 +56,18 @@ private:
 private:
 	UFUNCTION(BlueprintCallable)
 	void OpenRedeemCodePopup();
+
+	UFUNCTION(BlueprintCallable)
+	void OpenAuricCellsOverlay();
+
+	UFUNCTION(BlueprintCallable)
+	void OnStopSubPresenterAsyncOperation(USubPresenter* subPresenter);
+
+	UFUNCTION(BlueprintCallable)
+	void OnStartSubPresenterAsyncOperation(USubPresenter* subPresenter);
+
+	UFUNCTION(BlueprintCallable)
+	void OnMoveToCharactersPageRequested(int32 characterIndex);
 
 	UFUNCTION(BlueprintCallable)
 	void OnMenuTabSelected(EStoreMenuState menuState, bool alreadySelected);

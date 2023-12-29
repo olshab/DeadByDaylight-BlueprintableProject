@@ -43,7 +43,7 @@ protected:
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	int32 _priority;
+	int32 _spawnOrder;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSoftClassPtr<UIterativeWeightAdjustmentStrategy> _iterativeWeightAdjustmentStrategyClass;

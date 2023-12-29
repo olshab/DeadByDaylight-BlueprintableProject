@@ -1,5 +1,15 @@
 #include "SetBearTrap.h"
 
+float USetBearTrap::GetHasteEffectMovementSpeedIncrease() const
+{
+	return 0.0f;
+}
+
+float USetBearTrap::GetHasteEffectDurationSeconds() const
+{
+	return 0.0f;
+}
+
 USetBearTrap::USetBearTrap()
 {
 	this->_enterMontageIDForBeartrap = TEXT("BearTrapSet_In");

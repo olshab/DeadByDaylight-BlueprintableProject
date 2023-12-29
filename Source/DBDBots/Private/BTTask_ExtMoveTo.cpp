@@ -23,6 +23,7 @@ UBTTask_ExtMoveTo::UBTTask_ExtMoveTo()
 	this->RepathInterval = 3.000000;
 	this->UseAccelerationForPaths = true;
 	this->PathReachedPointRadius = 70.000000;
+	this->NearPathFilterRadius = 200.000000;
 	this->UseContextualAcceptableRadius = NAME_None;
 	this->FindRelevantDangerInterval = 2.000000;
 	this->UpdateTraverseStatesInterval = 0.100000;

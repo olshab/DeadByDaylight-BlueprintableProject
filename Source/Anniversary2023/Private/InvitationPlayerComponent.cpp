@@ -24,11 +24,6 @@ void UInvitationPlayerComponent::Multicast_CosmeticOnInvitationInteractionActiva
 
 }
 
-float UInvitationPlayerComponent::GetInvitationCharges() const
-{
-	return 0.0f;
-}
-
 void UInvitationPlayerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);

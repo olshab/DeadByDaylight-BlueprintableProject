@@ -3,8 +3,11 @@
 #include "CoreMinimal.h"
 #include "BTService_FindInteractor.h"
 #include "EFindInteractableCamperFilter.h"
+#include "Templates/SubclassOf.h"
 #include "AITunableParameter.h"
 #include "BTService_FindInteractor_Camper.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class DBDBOTS_API UBTService_FindInteractor_Camper : public UBTService_FindInteractor
@@ -14,6 +17,9 @@ class DBDBOTS_API UBTService_FindInteractor_Camper : public UBTService_FindInter
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EFindInteractableCamperFilter StatusFilter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<TSubclassOf<UStatusEffect>> IgnoreWhenTargetStatusEffects;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FAITunableParameter AllyDangerStateGoalWeight;

@@ -6,12 +6,17 @@ void AFadeManager::RemoveFadeMaterials()
 
 }
 
-void AFadeManager::FadeAt(FVector CameraLocation)
+void AFadeManager::FadeAt(FVector Location)
 {
 
 }
 
-void AFadeManager::DBD_ActivateFadeCamera(bool isActivated)
+void AFadeManager::DBD_TurnCameraAroundPlayerWithFading(bool isTurning)
+{
+
+}
+
+void AFadeManager::DBD_FadeAtCurrentCameraLocation(bool isEnabled)
 {
 
 }
@@ -20,7 +25,5 @@ AFadeManager::AFadeManager()
 {
 	this->_meshComponents = TSet<UMeshComponent*>();
 	this->_fadeMaterials = NULL;
-	this->_originalToFade = TMap<TSoftObjectPtr<UMaterialInterface>, TSoftObjectPtr<UMaterialInterface>>();
-	this->_fadeToOriginal = TMap<TSoftObjectPtr<UMaterialInterface>, TSoftObjectPtr<UMaterialInterface>>();
 	this->_fadedMeshes = TArray<FOriginalMaterials>();
 }

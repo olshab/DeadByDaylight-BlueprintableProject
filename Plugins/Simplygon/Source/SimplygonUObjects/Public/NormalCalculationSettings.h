@@ -13,13 +13,13 @@ public:
 	uint8 ReplaceNormals : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 ReplaceTangents : 1;
+	uint8 RepairInvalidNormals : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float HardEdgeAngle;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 RepairInvalidNormals : 1;
+	uint8 ReplaceTangents : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 ReorthogonalizeTangentSpace : 1;

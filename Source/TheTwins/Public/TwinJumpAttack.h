@@ -3,10 +3,8 @@
 #include "CoreMinimal.h"
 #include "PounceAttack.h"
 #include "DBDTunableRowHandle.h"
-#include "UObject/NoExportTypes.h"
 #include "TwinJumpAttack.generated.h"
 
-class UPhysicalMaterial;
 class ADBDPlayer;
 class UCurveFloat;
 class AConjoinedTwin;
@@ -60,7 +58,7 @@ public:
 	void Cosmetic_OnJumpStarted(AConjoinedTwin* owningTwin);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
-	void Cosmetic_OnJumpObstructed(AConjoinedTwin* owningTwin, UPhysicalMaterial* physicalMaterial, FVector position, FVector normal);
+	void Cosmetic_OnJumpObstructed(AConjoinedTwin* owningTwin);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
 	void Cosmetic_OnJumpLanded(AConjoinedTwin* owningTwin);

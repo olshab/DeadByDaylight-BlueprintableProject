@@ -31,7 +31,7 @@ protected:
 	UDBDTextBlock* AmountTextBlock;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UDBDTextBlock* NameTextBlock;
+	UDBDTextBlock* TitleTextBlock;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UPanelWidget* BonusPanel;
@@ -40,7 +40,7 @@ protected:
 	UDBDTextBlock* BonusTextBlock;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UDBDTextBlock* IncludesTextBlock;
+	UDBDTextBlock* InfoTextBlock;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UDBDImage* IconImage;

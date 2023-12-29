@@ -6,7 +6,6 @@
 #include "VaultDefinition.generated.h"
 
 class ADBDPlayer;
-class UCurveFloat;
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
 class DEADBYDAYLIGHT_API UVaultDefinition : public UInteractionDefinition
@@ -27,15 +26,6 @@ protected:
 	float _allowedHeightDelta;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float _animationPlayRate;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float _scaledElapsedTime;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UCurveFloat* _vaultSpeedCurve;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _isFall;
 
 protected:
@@ -47,9 +37,6 @@ protected:
 
 	UFUNCTION(BlueprintPure)
 	bool IsWindowVaultable() const;
-
-	UFUNCTION(BlueprintPure)
-	UCurveFloat* GetSpeedCurveToUse() const;
 
 public:
 	UVaultDefinition();

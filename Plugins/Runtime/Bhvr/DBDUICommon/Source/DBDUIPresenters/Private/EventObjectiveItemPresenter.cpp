@@ -2,5 +2,6 @@
 
 UEventObjectiveItemPresenter::UEventObjectiveItemPresenter()
 {
-	this->CoreHudEventObjectiveItemWidgetClass = NULL;
+	this->DefaultCoreHudEventObjectiveItemWidgetClass = NULL;
+	this->CoreHudEventObjectiveItemWidgetClassMapping = TMap<FName, TSubclassOf<UUserWidget>>();
 }

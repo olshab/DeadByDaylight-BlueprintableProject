@@ -29,6 +29,7 @@ enum class EInteractionAnimation : uint8
 	VE_RemoveReverseBearTrap,
 	VE_DestroyPortal,
 	VE_OniDash,
+	VE_K34SliceAndDiceDash,
 	VE_PickUpAnniversaryCrown,
 	VE_InteractWithGlyph,
 	VE_InteractWithUnstableRift,

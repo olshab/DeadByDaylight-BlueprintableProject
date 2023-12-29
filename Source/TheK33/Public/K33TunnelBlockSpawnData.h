@@ -1,9 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "K33TunnelGridCellData.h"
-#include "UObject/NoExportTypes.h"
-#include "EK33TunnelBlockType.h"
+#include "K33TunnelBlockSpawnDatum.h"
 #include "K33TunnelBlockSpawnData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -11,15 +9,12 @@ struct FK33TunnelBlockSpawnData
 {
 	GENERATED_BODY()
 
-private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FRotator _worldRotation;
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FK33TunnelBlockSpawnDatum> Data;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	EK33TunnelBlockType _blockType;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FK33TunnelGridCellData _gridInfo;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsDataSet;
 
 public:
 	THEK33_API FK33TunnelBlockSpawnData();

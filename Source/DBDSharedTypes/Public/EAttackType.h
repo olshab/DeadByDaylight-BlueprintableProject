@@ -25,4 +25,5 @@ enum class EAttackType : uint8
 	VE_TwinJump,
 	VE_K24WhipAttack,
 	VE_K33TailAttack,
+	VE_K34SliceAndDiceAttack,
 };

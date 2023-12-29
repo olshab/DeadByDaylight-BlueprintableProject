@@ -16,7 +16,7 @@ public:
 	float TJuncDist;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float WeldDist;
+	uint8 UseWelding : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 WeldOnlyBorderVertices : 1;
@@ -31,7 +31,7 @@ public:
 	uint8 WeldOnlyBetweenSceneNodes : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 UseWelding : 1;
+	float WeldDist;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 ProgressivePasses;

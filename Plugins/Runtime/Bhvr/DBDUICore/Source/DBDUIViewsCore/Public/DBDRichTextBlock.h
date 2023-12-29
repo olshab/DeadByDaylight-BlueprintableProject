@@ -60,6 +60,9 @@ protected:
 	void PreviewLargeText();
 
 	UFUNCTION(BlueprintCallable)
+	void PreviewHTMLText();
+
+	UFUNCTION(BlueprintCallable)
 	void OnSwitchDockStateChanged(bool isDocked);
 
 	UFUNCTION(BlueprintCallable)

@@ -4,11 +4,12 @@
 #include "SimplygonPipelineSettings.h"
 #include "VertexWeightSettings.h"
 #include "ReductionSettings.h"
-#include "MappingImageSettings.h"
 #include "RepairSettings.h"
 #include "BoneSettings.h"
 #include "NormalCalculationSettings.h"
 #include "VisibilitySettings.h"
+#include "AttributeTessellationSettings.h"
+#include "MappingImageSettings.h"
 #include "ReductionPipelineSettings.generated.h"
 
 class USimplygonMaterialCaster;
@@ -36,6 +37,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVertexWeightSettings VertexWeightSettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAttributeTessellationSettings AttributeTessellationSettings;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FMappingImageSettings MappingImageSettings;

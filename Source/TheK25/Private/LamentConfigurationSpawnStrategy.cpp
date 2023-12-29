@@ -26,5 +26,8 @@ ULamentConfigurationSpawnStrategy::ULamentConfigurationSpawnStrategy()
 	this->_rayCastZOffet = 150.000000;
 	this->_navmeshCheckRadius = 100.000000;
 	this->_cached_spawnsInfo = TArray<FLamentConfigurationSpawnInfo>();
+	this->_lastUsedSpawnPoint = NULL;
+	this->_actorsInMapToAvoid = TArray<TSubclassOf<AActor>>();
+	this->_minDistanceFromActorsToAvoid = 150.000000;
 	this->_hatches = TArray<AHatch*>();
 }

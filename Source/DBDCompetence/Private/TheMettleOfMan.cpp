@@ -11,6 +11,11 @@ void UTheMettleOfMan::OnRep_CurrentPhase()
 
 }
 
+float UTheMettleOfMan::GetRevealOutsideRangeAtLevel() const
+{
+	return 0.0f;
+}
+
 void UTheMettleOfMan::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);

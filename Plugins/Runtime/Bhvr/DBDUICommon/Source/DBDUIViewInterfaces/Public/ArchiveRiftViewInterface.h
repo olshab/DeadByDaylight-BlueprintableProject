@@ -5,6 +5,7 @@
 #include "CurrencyProgressionTooltipViewData.h"
 #include "ArchivesRiftGenericViewData.h"
 #include "ArchiveRiftTierRewardsViewData.h"
+#include "CustomizationItemPreviewAreaViewData.h"
 #include "ArchivesRiftUnlockSequenceData.h"
 #include "ArchiveRiftViewInterface.generated.h"
 
@@ -27,6 +28,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetMatchmakingSoftlockState(bool isInMatchmakingSoftlock);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetImagePreviewAreaData(const FCustomizationItemPreviewAreaViewData& viewData);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetData(const FArchivesRiftGenericViewData& data);

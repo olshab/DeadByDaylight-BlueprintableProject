@@ -7,9 +7,6 @@ UCoreHudRootWidget::UCoreHudRootWidget() : UUserWidget(FObjectInitializer::Get()
 	this->SpectateContainer = NULL;
 	this->ScaleHud = NULL;
 	this->UnfocusedOpacity = 0.200000;
-	this->Test4kDpiScalingCurve = NULL;
-	this->Test4kDpiCurveClass = NULL;
-	this->Test4kDpiCurveWidget = NULL;
 	this->EquippedItemWidgetClass = NULL;
 	this->EquippedPowerWidgetClass = NULL;
 	this->ExternalEffectsWidgetClass = NULL;

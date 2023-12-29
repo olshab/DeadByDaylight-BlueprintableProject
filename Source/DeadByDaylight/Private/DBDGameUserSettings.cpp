@@ -101,8 +101,10 @@ UDBDGameUserSettings::UDBDGameUserSettings()
 	this->ChallengeProgression = true;
 	this->ChallengeCompletion = true;
 	this->FPSLimitMode = 60;
-	this->AntiAliasingMode = 0;
-	this->MainVolume = 80;
+	this->AntiAliasingMode = 2;
+	this->EnableFSR = false;
+	this->SharpnessValue = 3.000000;
+	this->MainVolume = 100;
 	this->MainVolumeOn = true;
 	this->MenuMusicVolume = 100;
 	this->MenuMusicVolumeOn = true;
@@ -111,9 +113,9 @@ UDBDGameUserSettings::UDBDGameUserSettings()
 	this->HapticsVibrationPS5 = true;
 	this->KillerCameraSensitivity = 50;
 	this->SurvivorCameraSensitivity = 50;
-	this->KillerMouseSensitivity = 50;
+	this->KillerMouseSensitivity = 60;
 	this->SurvivorMouseSensitivity = 75;
-	this->KillerControllerSensitivity = 50;
+	this->KillerControllerSensitivity = 100;
 	this->SurvivorControllerSensitivity = 50;
 	this->AimAssist = true;
 	this->ControlType = 1;
@@ -124,7 +126,7 @@ UDBDGameUserSettings::UDBDGameUserSettings()
 	this->SprintToCancel = false;
 	this->Language = TEXT("en");
 	this->LanguageIsDefinedByPlayer = false;
-	this->HighestWeightSeenNews = 44605;
+	this->HighestWeightSeenNews = 45080;
 	this->LastPanelContextId = 0;
 	this->ArchivesAutoPlayVoiceOver = true;
 	this->ArchivesFullscreenTextVisibility = true;
@@ -140,7 +142,7 @@ UDBDGameUserSettings::UDBDGameUserSettings()
 	this->PartyPrivacyState = TEXT("friends");
 	this->ColorBlindMode = 0;
 	this->ColorBlindModeIntensity = 0;
-	this->BeginnerMode = true;
+	this->BeginnerMode = false;
 	this->Subtitles = false;
 	this->SubtitlesBackgroundOpacity = 1;
 	this->SubtitlesSize = 1;
@@ -148,4 +150,5 @@ UDBDGameUserSettings::UDBDGameUserSettings()
 	this->HideYourName = true;
 	this->HideOtherNames = false;
 	this->HiddenMatchmakingDelay = false;
+	this->PlayerCardAnimationMode = 0;
 }

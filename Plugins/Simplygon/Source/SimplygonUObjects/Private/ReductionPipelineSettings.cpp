@@ -8,6 +8,7 @@ FReductionPipelineSettings::FReductionPipelineSettings()
 	this->VisibilitySettings = FVisibilitySettings{};
 	this->BoneSettings = FBoneSettings{};
 	this->VertexWeightSettings = FVertexWeightSettings{};
+	this->AttributeTessellationSettings = FAttributeTessellationSettings{};
 	this->MappingImageSettings = FMappingImageSettings{};
 	this->MaterialPropertyCasters = TArray<USimplygonMaterialCaster*>();
 }

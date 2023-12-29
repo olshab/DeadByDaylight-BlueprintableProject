@@ -38,4 +38,6 @@ UUnstableRiftTeleportationComponent::UUnstableRiftTeleportationComponent()
 	this->_capsuleHalfHeight = 44.000000;
 	this->_ignoreTouches = true;
 	this->_isAllowedToTeleport = true;
+	this->_actorsInMapToAvoid = TArray<TSubclassOf<AActor>>();
+	this->_minDistanceFromActorsToAvoid = 150.000000;
 }

@@ -4,6 +4,7 @@ UDBDAIPerceptionComponent::UDBDAIPerceptionComponent()
 {
 	this->RangedAttackTypes = TArray<EAttackType>();
 	this->RangedKillerAbilities = TArray<EKillerAbilities>();
+	this->FastVaultKillerAbilities = TArray<EKillerAbilities>();
 	this->UseSimulatedCameraLocationForStimulusReceiverLocation = false;
 	this->CameraOffset = 170.000000;
 	this->StimulusHalfFOV = 40.000000;

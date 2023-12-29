@@ -18,9 +18,9 @@ UCoreAuricCellsBundleWidget::UCoreAuricCellsBundleWidget()
 	this->BuyButton = NULL;
 	this->BaseAmountTextBlock = NULL;
 	this->AmountTextBlock = NULL;
-	this->NameTextBlock = NULL;
+	this->TitleTextBlock = NULL;
 	this->BonusPanel = NULL;
 	this->BonusTextBlock = NULL;
-	this->IncludesTextBlock = NULL;
+	this->InfoTextBlock = NULL;
 	this->IconImage = NULL;
 }

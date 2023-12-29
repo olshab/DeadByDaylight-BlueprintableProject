@@ -13,15 +13,6 @@ struct FRemeshingSettings
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float RemeshingModeManualPositionZ;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float RemeshingModeManualPositionY;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float RemeshingModeManualPositionX;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 OnScreenSize;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -37,22 +28,40 @@ public:
 	float HardEdgeAngle;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 ForceSoftEdgesWithinTextureCharts : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 TransferNormals : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 TransferColors : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 ProcessSelectionSetID;
+	uint8 PopulateAttributeTessellationDisplacement : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GeometricalAccuracy;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float TopologicalAccuracy;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float RemeshingModeManualPositionX;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float RemeshingModeManualPositionY;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float RemeshingModeManualPositionZ;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString ProcessSelectionSetName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 ProcessSelectionSetID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 KeepUnprocessedSceneMeshes : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 ForceSoftEdgesWithinTextureCharts : 1;
 
 public:
 	SIMPLYGONUOBJECTS_API FRemeshingSettings();

@@ -16,5 +16,4 @@ UCorePlayerRankWidget::UCorePlayerRankWidget()
 	this->_showTooltipOnHover = true;
 	this->LevelBG = NULL;
 	this->RankNumberImage = NULL;
-	this->LevelTB = NULL;
 }

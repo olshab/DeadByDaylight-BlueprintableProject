@@ -2,9 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "UObject/ScriptInterface.h"
+#include "StoreCharactersSelectionViewData.h"
 #include "StoreCharactersSelectionViewInterface.generated.h"
 
-class UStoreCharacterItemViewData;
+class IStoreCharactersFilterViewInterface;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UStoreCharactersSelectionViewInterface : public UInterface
@@ -18,9 +20,9 @@ class DBDUIVIEWINTERFACES_API IStoreCharactersSelectionViewInterface : public II
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetData(const TArray<UStoreCharacterItemViewData*>& characters, int32 selectedCharacterIndex);
+	void SetData(const FStoreCharactersSelectionViewData& data);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void Reset();
+	TScriptInterface<IStoreCharactersFilterViewInterface> GetStoreCharactersFilterInterface() const;
 
 };

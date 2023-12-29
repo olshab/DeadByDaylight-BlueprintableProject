@@ -16,6 +16,11 @@ void UTricksterSuperModeComponent::OnRepIsInCooldown()
 
 }
 
+void UTricksterSuperModeComponent::InitSuperModeMaxCharge()
+{
+
+}
+
 void UTricksterSuperModeComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
@@ -30,4 +35,5 @@ UTricksterSuperModeComponent::UTricksterSuperModeComponent()
 	this->_isInSuperMode = false;
 	this->_isSuperModeReady = false;
 	this->_isInCooldown = false;
+	this->_comboExtendSuperModeStatusEffectClass = NULL;
 }

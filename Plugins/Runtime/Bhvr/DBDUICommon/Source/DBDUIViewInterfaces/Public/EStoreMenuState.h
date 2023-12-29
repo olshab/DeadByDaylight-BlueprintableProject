@@ -7,8 +7,9 @@ UENUM(BlueprintType)
 enum class EStoreMenuState : uint8
 {
 	Featured,
+	Specials,
 	Collections,
-	Bundles,
+	SpecialPacks,
 	Killers,
 	Survivors,
 };

@@ -82,9 +82,6 @@ private:
 	void Server_SetIgnorePawnCollisionOverride(float timestamp, bool isIgnoringPawnCollision, int32 ignoringCollisionCallCount);
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)
-	void Server_SetGroundFriction(float timestamp, float value);
-
-	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_SetAdditiveMaxSpeedScalar(float timestamp, float value);
 
 protected:
@@ -113,12 +110,6 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void OnMontageStarted(const FMontagePlaybackDefinition& montageDefinition, const UAnimMontage* montage);
 
-	UFUNCTION(BlueprintCallable, Exec)
-	void DBD_SimulateHack_LocalSurvivorMaxSpeedMultiplierUsingServerRPC(const float maxSpeedMultiplier);
-
-	UFUNCTION(BlueprintCallable, Exec)
-	void DBD_SimulateHack_LocalLaunch(const float xVelocity, const float yVelocity, const float zVelocity);
-
 protected:
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_TeleportTo(FVector_NetQuantize100 location, FYawAndPitchRotator_NetQuantize32 rotation);
@@ -133,6 +124,10 @@ private:
 protected:
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_PreventMovement(const bool value);
+
+public:
+	UFUNCTION(BlueprintCallable, Client, Reliable)
+	void Client_Cheat_SetMaxSpeedMultiplier(const float maxSpeedMultiplier);
 
 public:
 	UDBDCharacterMovementComponent();

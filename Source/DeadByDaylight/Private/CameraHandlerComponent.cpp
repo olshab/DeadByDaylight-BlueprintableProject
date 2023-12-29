@@ -21,6 +21,11 @@ void UCameraHandlerComponent::PlayVFXOnCurrentCamera(UParticleSystemComponent* c
 
 }
 
+void UCameraHandlerComponent::OnFirstPersonViewChanged(bool isFirstPerson)
+{
+
+}
+
 EDBDCameraSocketID UCameraHandlerComponent::GetSocketID()
 {
 	return EDBDCameraSocketID::VE_None;

@@ -5,6 +5,7 @@ FAICamperDodgeTunableRowData::FAICamperDodgeTunableRowData()
 	this->CharacterId = 0;
 	this->Description = FText::GetEmpty();
 	this->BestDodgeType = EAIDodgeType::FORWARD_SIDE_STEP;
+	this->DodgeTechniques = TArray<EAIDodgeTechnique>();
 	this->RequireInSight = false;
 	this->RequireAttackState = false;
 	this->Duration = 0.0f;

@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "SimplygonPipelineSettings.h"
 #include "ImpostorFromSingleViewSettings.h"
+#include "AttributeTessellationSettings.h"
 #include "MappingImageSettings.h"
 #include "ImpostorFromSingleViewPipelineSettings.generated.h"
 
@@ -16,6 +17,9 @@ struct FImpostorFromSingleViewPipelineSettings: public FSimplygonPipelineSetting
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FImpostorFromSingleViewSettings ImpostorFromSingleViewSettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAttributeTessellationSettings AttributeTessellationSettings;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FMappingImageSettings MappingImageSettings;

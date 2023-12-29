@@ -15,4 +15,6 @@ enum class ECustomizationCategory : uint8
 	KillerWeapon,
 	Outfits,
 	Charm,
+	Badge,
+	Banner,
 };

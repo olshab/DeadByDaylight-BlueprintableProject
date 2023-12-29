@@ -1,15 +1,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "SlasherVaultDefinition.h"
+#include "KillerVaultDefinition.h"
 #include "K29KillerVaultInteractionDefinition.generated.h"
 
-class ADBDPlayer;
 class AActor;
 class ACamperPlayer;
+class ADBDPlayer;
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class UK29KillerVaultInteractionDefinition : public USlasherVaultDefinition
+class UK29KillerVaultInteractionDefinition : public UKillerVaultDefinition
 {
 	GENERATED_BODY()
 

@@ -24,9 +24,6 @@ public:
 	float GetDrainTimerPercentLeft() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
-	void Authority_SetDrainTimerPercentLeft(float percentTime);
-
-	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void Authority_DebugSetHookEscapeAutoSuccess(const bool success);
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)

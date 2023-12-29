@@ -11,9 +11,13 @@ class DBDUIVIEWSCORE_API UCoreStoreCharacterItemWidget : public UCoreStoreItemWi
 {
 	GENERATED_BODY()
 
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UStoreCharacterItemViewData* _data;
+
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetCharacterData(UStoreCharacterItemViewData* data);
+	void SetStoreCharacterItemData(UStoreCharacterItemViewData* data);
 
 public:
 	UCoreStoreCharacterItemWidget();

@@ -20,11 +20,6 @@ float UHookableComponent::GetDrainTimerPercentLeft() const
 	return 0.0f;
 }
 
-void UHookableComponent::Authority_SetDrainTimerPercentLeft(float percentTime)
-{
-
-}
-
 void UHookableComponent::Authority_DebugSetHookEscapeAutoSuccess(const bool success)
 {
 

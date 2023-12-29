@@ -6,6 +6,5 @@
 UENUM(BlueprintType)
 enum class EMovementCurveType : uint8
 {
-	AdditiveSpeedCurve,
 	MultiplicativeSpeedCurve,
 };

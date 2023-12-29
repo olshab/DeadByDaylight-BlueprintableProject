@@ -9,11 +9,14 @@ void UCoreStoreCharactersSelectionWidget::OnCharacterSelected(UCoreSelectableBut
 
 UCoreStoreCharactersSelectionWidget::UCoreStoreCharactersSelectionWidget()
 {
-	this->_tileWidgetClass = NULL;
+	this->_itemWidgetClass = NULL;
 	this->_numberOfColumns = 1;
-	this->_tileScale = 1.000000;
+	this->_itemScale = 1.000000;
+	this->_layoutMask = 0;
 	this->Scroll = NULL;
 	this->Container = NULL;
-	this->_tiles = TArray<UCoreStoreCharacterItemWidget*>();
-	this->_selectedTile = NULL;
+	this->FiltersWidget = NULL;
+	this->_preConstructedItemsCount = 40;
+	this->_selectedItem = NULL;
+	this->_characterList = NULL;
 }

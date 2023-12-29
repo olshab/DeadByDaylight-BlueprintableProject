@@ -6,7 +6,6 @@
 #include "StoreFeaturedSubPresenter.generated.h"
 
 class IStoreFeaturedViewInterface;
-class UStoreSpecialOfferItemViewData;
 
 UCLASS(Blueprintable)
 class DBDUIPRESENTERS_API UStoreFeaturedSubPresenter : public UStoreSubPresenter
@@ -16,10 +15,6 @@ class DBDUIPRESENTERS_API UStoreFeaturedSubPresenter : public UStoreSubPresenter
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TScriptInterface<IStoreFeaturedViewInterface> _storeFeaturedWidget;
-
-private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	TArray<UStoreSpecialOfferItemViewData*> _cachedSpecialOfferItems;
 
 public:
 	UFUNCTION(BlueprintCallable)

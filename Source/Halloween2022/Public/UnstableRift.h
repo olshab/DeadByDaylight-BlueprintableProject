@@ -107,6 +107,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	USpawnElementTrackerComponent* _spawnElementTrackerComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _maxDistanceToFollowPlayer;
+
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnRep_IsInteractionAvailable();

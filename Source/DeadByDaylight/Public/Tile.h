@@ -6,6 +6,7 @@
 #include "UObject/NoExportTypes.h"
 #include "EPathType.h"
 #include "EscapeStrategyType.h"
+#include "TileEventSpawnerSettingData.h"
 #include "EQuadrantSpawnType.h"
 #include "ETileType.h"
 #include "EDensity.h"
@@ -96,6 +97,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsOutOfWorldTile;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool UseTileEventSpawnerSettingOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FTileEventSpawnerSettingData TileEventSpawnerSettingOverride;
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_Initialized, Transient)

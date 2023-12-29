@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EReductionPerformanceMode.h"
 #include "EDataCreationPreferences.h"
 #include "EReductionTargetStopCondition.h"
 #include "EReductionHeuristics.h"
@@ -38,6 +39,9 @@ public:
 	int32 ReductionTargetOnScreenSize;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EReductionPerformanceMode ReductionPerformanceMode;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EReductionTargetStopCondition ReductionTargetStopCondition;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -68,39 +72,6 @@ public:
 	float SkinningImportance;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float CurvatureImportance;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 CreateGeomorphGeometry : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 AllowDegenerateTexCoords : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 KeepSymmetry : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 UseAutomaticSymmetryDetection : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 UseSymmetryQuadRetriangulator : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	ESymmetryAxis SymmetryAxis;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float SymmetryOffset;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float SymmetryDetectionTolerance;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	EDataCreationPreferences DataCreationPreferences;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 GenerateGeomorphData : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float OutwardMoveMultiplier;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -110,7 +81,43 @@ public:
 	float MaxEdgeLength;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 KeepSymmetry : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 UseSymmetryQuadRetriangulator : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 UseAutomaticSymmetryDetection : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SymmetryDetectionTolerance;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ESymmetryAxis SymmetryAxis;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SymmetryOffset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 CreateGeomorphGeometry : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 GenerateGeomorphData : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EDataCreationPreferences DataCreationPreferences;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 UseHighQualityNormalCalculation : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 LockGeometricBorder : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 MergeGeometries : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 AllowDegenerateTexCoords : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 ProcessSelectionSetID;
@@ -119,13 +126,10 @@ public:
 	FString ProcessSelectionSetName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 MergeGeometries : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 KeepUnprocessedSceneMeshes : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 LockGeometricBorder : 1;
+	uint8 PreserveQuadFlags : 1;
 
 public:
 	SIMPLYGONUOBJECTS_API FReductionSettings();

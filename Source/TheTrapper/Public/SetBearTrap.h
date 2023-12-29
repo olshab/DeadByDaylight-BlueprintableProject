@@ -39,6 +39,13 @@ protected:
 	float _hasteEffectDurationSeconds;
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetHasteEffectMovementSpeedIncrease() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetHasteEffectDurationSeconds() const;
+
+public:
 	USetBearTrap();
 };
 

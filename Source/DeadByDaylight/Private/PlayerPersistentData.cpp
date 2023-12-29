@@ -8,4 +8,6 @@ FPlayerPersistentData::FPlayerPersistentData()
 	this->SavedData = FPlayerSavedProfileData{};
 	this->PlayerPlatform = EPlatformFlag::None;
 	this->PlayerProvider = EProviderFlag::None;
+	this->_equippedBanner = TEXT("");
+	this->_equippedBadge = TEXT("");
 }

@@ -99,6 +99,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float TotemVisualHeight;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ClosestSurvivorDistanceWeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float KillerDistanceWeight;
+
 private:
 	UPROPERTY()
 	TArray<FSpecialBehaviourPopulation> SpecialBehaviourPopulation_DEPRECATED;

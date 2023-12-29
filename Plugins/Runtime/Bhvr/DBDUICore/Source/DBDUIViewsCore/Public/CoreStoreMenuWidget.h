@@ -5,6 +5,7 @@
 #include "StoreRedeemCodeButtonDelegate.h"
 #include "CoreBaseUserWidget.h"
 #include "StoreMenuBackActionDelegate.h"
+#include "StoreGetAuricCellsButtonDelegate.h"
 #include "StoreMenuTabSelectedDelegate.h"
 #include "CoreStoreMenuWidget.generated.h"
 
@@ -27,6 +28,9 @@ public:
 	UCoreKeyListenerButtonWidget* RedeemCodeButton;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
+	UCoreKeyListenerButtonWidget* GetAuricCellsButton;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
 	UCoreInputSwitcherWidget* BackInputSwitcher;
 
 protected:
@@ -39,6 +43,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FStoreRedeemCodeButtonDelegate _redeemCodeButtonDelegate;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FStoreGetAuricCellsButtonDelegate _getAuricCellsButtonDelegate;
+
 protected:
 	UFUNCTION(BlueprintCallable)
 	void OnRedeemCodeButtonClicked(UCoreButtonWidget* selectedButton);
@@ -48,6 +55,9 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void OnMenuTabSelected(UCoreSelectableButtonWidget* selectedButton);
+
+	UFUNCTION(BlueprintCallable)
+	void OnGetAuricCellsClicked(UCoreButtonWidget* buttonTarget);
 
 	UFUNCTION(BlueprintCallable)
 	void OnBackAction();

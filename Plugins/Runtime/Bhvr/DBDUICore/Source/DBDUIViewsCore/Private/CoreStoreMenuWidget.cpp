@@ -18,6 +18,11 @@ void UCoreStoreMenuWidget::OnMenuTabSelected(UCoreSelectableButtonWidget* select
 
 }
 
+void UCoreStoreMenuWidget::OnGetAuricCellsClicked(UCoreButtonWidget* buttonTarget)
+{
+
+}
+
 void UCoreStoreMenuWidget::OnBackAction()
 {
 
@@ -27,5 +32,6 @@ UCoreStoreMenuWidget::UCoreStoreMenuWidget()
 {
 	this->StoreMenuTabs = NULL;
 	this->RedeemCodeButton = NULL;
+	this->GetAuricCellsButton = NULL;
 	this->BackInputSwitcher = NULL;
 }

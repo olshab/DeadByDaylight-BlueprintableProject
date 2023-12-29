@@ -19,14 +19,15 @@
 #include "ETierType.h"
 #include "CoreArchiveRiftWidget.generated.h"
 
+class UCoreImagePreviewAreaWidget;
 class UHorizontalBox;
-class UCoreSelectableButtonWidget;
 class UCoreToggleButtonWidget;
 class UCoreArchiveRiftTierItem;
 class UDBDTextBlock;
 class UCoreInputSwitcherWidget;
 class UDBDRichTextBlock;
 class UUITweenInstance;
+class UCoreSelectableButtonWidget;
 class UCoreButtonWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -140,6 +141,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UCoreInputSwitcherWidget* PaginationNextButton;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UCoreImagePreviewAreaWidget* ImagePreviewArea;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))

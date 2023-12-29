@@ -15,4 +15,5 @@ FEventEntryPopupSkinUIData::FEventEntryPopupSkinUIData()
 	this->HeaderBackgroundMaterial = NULL;
 	this->MilestoneTrackerBackground = NULL;
 	this->MilestoneTrackerHighlightBar = NULL;
+	this->PreviewBGTintColor = FLinearColor{};
 }

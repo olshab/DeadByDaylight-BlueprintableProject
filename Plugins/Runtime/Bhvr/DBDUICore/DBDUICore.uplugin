@@ -1,35 +1,37 @@
 {
-    "FileVersion": 1,
-
-    "FriendlyName": "BHVR UserInterface Core",
-    "Version": 1,
-    "VersionName": "1.0",
-    "CreatedBy": "Behaviour Interactive",
-    "CreatedByURL": "http://www.bhvr.com/",
-    "EngineVersion": "",
-    "Description": "User interface plugin specific to DBD Core",
-    "Category": "BHVR Modules",
-    "CanContainContent" : true,
-    "EnabledByDefault": true,
-    "Installed" : true,
-	"Modules": [
-		{
-			"Name": "DBDUIViewsCore",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"BlacklistTargets": [
-				"Server"
-			]
-		}
-	],
-	"Plugins": [
-		{
-			"Name": "DBDUICommon",
-			"Enabled": true
-		},
-		{
-			"Name": "Wwise",
-			"Enabled": true
-		}
-	]
+  "FileVersion": "1",
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "BHVR UserInterface Core",
+  "Description": "User interface plugin specific to DBD Core",
+  "Category": "BHVR Modules",
+  "CreatedBy": "Behaviour Interactive",
+  "CreatedByURL": "http://www.bhvr.com/",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": true,
+  "CanContainContent": true,
+  "Installed": true,
+  "Modules": [
+    {
+      "Name": "DBDUIViewsCore",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "DBDUICommon",
+      "Enabled": true
+    },
+    {
+      "Name": "RemoteContentCache",
+      "Enabled": true
+    },
+    {
+      "Name": "Wwise",
+      "Enabled": true
+    }
+  ]
 }

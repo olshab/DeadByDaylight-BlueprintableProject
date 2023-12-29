@@ -64,9 +64,6 @@ public:
 	UStatusEffect* GetStatusEffectByClass(const UClass* type) const;
 
 	UFUNCTION(BlueprintPure)
-	UStatusEffect* GetStatusEffect(FName id) const;
-
-	UFUNCTION(BlueprintPure)
 	UGameplayModifierContainer* GetSourceWithModifier(FGameplayTag type) const;
 
 	UFUNCTION(BlueprintPure)

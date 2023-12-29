@@ -45,4 +45,5 @@ UChaserCharacterComponent::UChaserCharacterComponent()
 	this->_chasedPlayers = TArray<ADBDPlayer*>();
 	this->_authority_survivorsWhoStunnedKillerByPalletDuringChase = TArray<ADBDPlayer*>();
 	this->_camperSensorUsesActorRotation = false;
+	this->_camperSensorLocationUsesEyesViewPoint = false;
 }

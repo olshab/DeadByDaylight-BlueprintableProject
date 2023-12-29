@@ -54,6 +54,7 @@ public class DeadByDaylightTarget : TargetRules {
 			"Halloween2020",
 			"Halloween2021",
 			"Halloween2022",
+			"Halloween2023",
 			"InputUtilities",
 			"Interaction",
 			"Lunar2022",
@@ -77,6 +78,7 @@ public class DeadByDaylightTarget : TargetRules {
 			"RewardUtilities",
 			"S3Command",
 			"ScaleformUI",
+			"Sentry",
 			"SharedAuthenticationUtilities",
 			"SignificanceUtilities",
 			"SimpleStateMachine",
@@ -110,6 +112,7 @@ public class DeadByDaylightTarget : TargetRules {
 			"TheK31",
 			"TheK32",
 			"TheK33",
+			"TheK34",
 			"TheLegion",
 			"TheNightmare",
 			"TheNurse",
@@ -129,6 +132,7 @@ public class DeadByDaylightTarget : TargetRules {
 			"UIBackendData",
 			"UnitTestUtilities",
 			"VFXUtilities",
+			"WinterEvent2023",
 			"WwiseUtilities",
 		});
 	}

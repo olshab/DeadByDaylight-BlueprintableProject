@@ -2,10 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "HideInSnowmanInteraction.h"
-#include "ECamperDamageState.h"
-#include "DBDTunableRowHandle.h"
 #include "GameplayTagContainer.h"
+#include "DBDTunableRowHandle.h"
+#include "ECamperDamageState.h"
 #include "SurvivorHideInSnowmanInteraction.generated.h"
+
+class ADBDPlayer;
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
 class USurvivorHideInSnowmanInteraction : public UHideInSnowmanInteraction
@@ -15,12 +17,6 @@ class USurvivorHideInSnowmanInteraction : public UHideInSnowmanInteraction
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
 	bool _shouldRunOutOfSnowman;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
-	bool _isSnowmanShieldDamaged;
-
-	UPROPERTY(EditAnywhere)
-	TArray<FGameplayTag> _nonDamagingSnowmanDestroyingEvents;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _minimumTimeToRunAndExit;
@@ -33,6 +29,22 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _timeToZoomExit;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FGameplayTag> _nonDamagingKillerSnowmanDestroyingEvents;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FGameplayTag> _gameEventsToCauseScream;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TArray<FString> _overridingKillerInteractionIds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
+	bool _shouldScreamOnExit;
+
+protected:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnSurvivorScreamFromExit(ADBDPlayer* playerExiting);
 
 private:
 	UFUNCTION(BlueprintCallable)

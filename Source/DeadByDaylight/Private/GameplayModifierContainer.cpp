@@ -1,8 +1,9 @@
 #include "GameplayModifierContainer.h"
 #include "EInventoryItemType.h"
 #include "GameplayTagContainer.h"
-#include "GameEventData.h"
+#include "ModifierTickableConditionReplicatedData.h"
 #include "StatusViewSource.h"
+#include "GameEventData.h"
 #include "Templates/SubclassOf.h"
 #include "Net/UnrealNetwork.h"
 
@@ -55,7 +56,7 @@ void UGameplayModifierContainer::RemoveAllFlags()
 
 }
 
-void UGameplayModifierContainer::OnRep_TickableConditionsData()
+void UGameplayModifierContainer::OnRep_TickableConditionsData(const FModifierTickableConditionReplicatedData& oldTickableConditionsData)
 {
 
 }

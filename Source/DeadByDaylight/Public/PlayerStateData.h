@@ -22,6 +22,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<int32> EquipedPerkLevels;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString EquippedBannerId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString EquippedBadgeId;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	EGameState _playerGameState;

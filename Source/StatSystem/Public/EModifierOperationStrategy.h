@@ -10,4 +10,5 @@ enum class EModifierOperationStrategy : uint8
 	Subs,
 	Mult,
 	Div,
+	MultIncludingZero,
 };

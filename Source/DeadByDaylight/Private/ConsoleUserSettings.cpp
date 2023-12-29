@@ -53,4 +53,5 @@ FConsoleUserSettings::FConsoleUserSettings()
 	this->HideOtherNames = false;
 	this->HiddenMatchmakingDelay = false;
 	this->HasAcceptedHapticsVibrationPopup = false;
+	this->PlayerCardAnimationMode = 0;
 }

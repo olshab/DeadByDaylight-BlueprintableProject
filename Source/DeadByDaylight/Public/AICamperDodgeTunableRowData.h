@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
 #include "EAIDodgeType.h"
+#include "EAIDodgeTechnique.h"
 #include "AICamperDodgeTunableRowData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -19,6 +20,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EAIDodgeType BestDodgeType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<EAIDodgeTechnique> DodgeTechniques;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool RequireInSight;

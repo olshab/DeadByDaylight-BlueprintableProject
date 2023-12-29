@@ -6,11 +6,6 @@ class ADBDPlayerState;
 class ADBDPlayer;
 class APawn;
 
-void ADBDPlayerController::SetShouldMoveInputReplicateToServer(bool shouldReplicate)
-{
-
-}
-
 void ADBDPlayerController::ServerViewPlayer_Implementation(const FString& playerName)
 {
 
@@ -46,17 +41,12 @@ void ADBDPlayerController::Server_SetReadyToTravel_Implementation()
 
 }
 
-void ADBDPlayerController::Server_SetHasMoveInputThisFrame_Implementation(bool hasMoveInputThisFrame)
-{
-
-}
-
-bool ADBDPlayerController::Server_SetHasMoveInputThisFrame_Validate(bool hasMoveInputThisFrame)
-{
-	return true;
-}
-
 void ADBDPlayerController::Server_RequestEndGame_Implementation()
+{
+
+}
+
+void ADBDPlayerController::Server_NotifyHasMoved_Implementation()
 {
 
 }

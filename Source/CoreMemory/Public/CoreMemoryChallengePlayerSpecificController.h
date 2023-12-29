@@ -4,6 +4,7 @@
 #include "GameFramework/Info.h"
 #include "CoreMemoryChallengePlayerSpecificController.generated.h"
 
+class ACoreMemoryFragment;
 class UCoreMemoryController;
 class UCoreMemoryFragmentComponent;
 class ADBDPlayer;
@@ -20,20 +21,20 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_Controller, Transient, Export, meta=(AllowPrivateAccess=true))
 	UCoreMemoryController* _controller;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_Fragments, Transient, Export, meta=(AllowPrivateAccess=true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, Export, meta=(AllowPrivateAccess=true))
 	TArray<UCoreMemoryFragmentComponent*> _fragments;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
 	int32 _numFragmentsToCollect;
+
+	UPROPERTY(EditAnywhere, Transient)
+	TArray<TWeakObjectPtr<ACoreMemoryFragment>> _fragmentsSpawnedBeforeBehavioursWereSetup;
 
 public:
 	UFUNCTION(BlueprintCallable)
 	void StartQuest();
 
 private:
-	UFUNCTION(BlueprintCallable)
-	void OnRep_Fragments();
-
 	UFUNCTION(BlueprintCallable)
 	void OnRep_Controller();
 

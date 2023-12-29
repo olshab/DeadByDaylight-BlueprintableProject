@@ -44,6 +44,10 @@ private:
 	void OnRep_CurrentPhase();
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetRevealOutsideRangeAtLevel() const;
+
+public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 public:

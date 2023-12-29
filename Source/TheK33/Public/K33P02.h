@@ -22,6 +22,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _hasteAmount;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
+	UStatusEffect* _hasteEffect;
+
 public:
 	UK33P02();
 };

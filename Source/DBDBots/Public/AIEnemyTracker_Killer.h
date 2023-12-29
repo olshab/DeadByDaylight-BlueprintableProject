@@ -4,7 +4,7 @@
 #include "AIEnemyTracker.h"
 #include "AIEnemyTracker_Killer.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, EditInlineNew)
 class DBDBOTS_API UAIEnemyTracker_Killer : public UAIEnemyTracker
 {
 	GENERATED_BODY()

@@ -13,4 +13,5 @@ enum class EFrenzyEndReason : uint8
 	Mori,
 	Blinded,
 	ChainComplete,
+	PowerPrevented,
 };

@@ -2,5 +2,5 @@
 
 FLamentConfigurationSpawnInfo::FLamentConfigurationSpawnInfo()
 {
-	this->_worldLocation = FVector{};
+	this->_spawnPoint = NULL;
 }

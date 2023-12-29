@@ -25,6 +25,9 @@ public:
 	TArray<EKillerAbilities> RangedKillerAbilities;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<EKillerAbilities> FastVaultKillerAbilities;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool UseSimulatedCameraLocationForStimulusReceiverLocation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

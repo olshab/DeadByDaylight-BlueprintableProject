@@ -3,10 +3,11 @@
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
 #include "CustomizationItemPreviewAreaViewData.h"
-#include "CustomizationRewardViewData.h"
 #include "CustomizationItemOriginViewData.h"
 #include "EventEntryPopupSkinUIData.h"
 #include "EventCollectionViewInterface.generated.h"
+
+class UStoreCustomizationItemViewData;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UEventCollectionViewInterface : public UInterface
@@ -26,16 +27,13 @@ public:
 	void SetPreviewAreaData(const FCustomizationItemPreviewAreaViewData& viewData);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetItemsData(const TArray<FCustomizationRewardViewData>& customizationRewardsData, const int32 selectedIndex);
+	void SetItemsData(const TArray<UStoreCustomizationItemViewData*>& customizationRewardsData, const int32 selectedIndex);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetInstructionWidgetData(const FCustomizationItemOriginViewData& viewData);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void Init(const FEventEntryPopupSkinUIData& skinData);
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void HideTimeTexts();
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void DisableInstructionStoreButton();

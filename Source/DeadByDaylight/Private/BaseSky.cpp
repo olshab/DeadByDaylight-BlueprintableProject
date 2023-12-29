@@ -2,11 +2,12 @@
 #include "UObject/NoExportTypes.h"
 
 class AActor;
+class UDirectionalLightComponent;
+class UExponentialHeightFogComponent;
+class USceneComponent;
 class UStaticMeshComponent;
 class USkyLightComponent;
 class UPostProcessComponent;
-class UDirectionalLightComponent;
-class UExponentialHeightFogComponent;
 
 void ABaseSky::SetProbesTint(FLinearColor inColor, float inSaturation)
 {
@@ -31,6 +32,11 @@ void ABaseSky::OnFadeBegin_Implementation(AActor* other)
 void ABaseSky::OnAlphaChanged_Implementation(float newAlpha, AActor* other)
 {
 
+}
+
+USceneComponent* ABaseSky::GetVistasAndEnvironmentElements_Implementation()
+{
+	return NULL;
 }
 
 UPostProcessComponent* ABaseSky::GetPostprocessComponent_Implementation()

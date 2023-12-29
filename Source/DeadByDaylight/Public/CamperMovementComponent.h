@@ -46,16 +46,6 @@ public:
 	UFUNCTION(BlueprintPure)
 	FRotator GetDefaultRotationRate() const;
 
-private:
-	UFUNCTION(BlueprintCallable, Exec)
-	void DBD_SurvivorMaxSpeedMultiplier(const float maxSpeedMultiplier);
-
-	UFUNCTION(BlueprintCallable, Exec)
-	void DBD_SimulateHack_LocalSurvivorMaxSpeedMultiplier(const float maxSpeedMultiplier);
-
-	UFUNCTION(BlueprintCallable, Client, Reliable)
-	void Client_Debug_SetSurvivorMaxSpeedMultiplier(const float maxSpeedMultiplier);
-
 public:
 	UCamperMovementComponent();
 };

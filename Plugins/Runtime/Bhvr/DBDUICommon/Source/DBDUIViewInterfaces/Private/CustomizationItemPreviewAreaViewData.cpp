@@ -2,7 +2,7 @@
 
 FCustomizationItemPreviewAreaViewData::FCustomizationItemPreviewAreaViewData()
 {
-	this->PreviewItem = FCustomizationRewardViewData{};
-	this->ItemsData = TArray<FCustomizationRewardViewData>();
+	this->PreviewItem = NULL;
+	this->ItemsData = TArray<UStoreCustomizationItemViewData*>();
 	this->IsOutfit = false;
 }

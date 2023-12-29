@@ -13,7 +13,6 @@ FDirectionalHeightFogInterpolationValues::FDirectionalHeightFogInterpolationValu
 	this->SecondFogDensity = 0.0f;
 	this->SecondFogHeightFalloff = 0.0f;
 	this->SecondFogHeightOffset = 0.0f;
-	//this->FogGradient = TArray<FHeightFogGradientEntry>();
 	this->bReplaceVolumetricFogAlbedoWithColorGradient = false;
 	this->VolumetricFogGradientIntensityMultiplier = 0.0f;
 	this->DistanceUntilFlatFog = 0.0f;

@@ -32,6 +32,10 @@ private:
 	TSubclassOf<UStatusEffect> _movementSpeedBonusEffectClass;
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetAntiCampTrapImmunityDuration() const;
+
+public:
 	UAntiCampSelfUnhook();
 };
 

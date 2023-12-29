@@ -6,6 +6,9 @@ FItemUIData::FItemUIData()
 	this->Description = FText::GetEmpty();
 	this->IconFilePathList = TArray<FString>();
 	this->IconAssetList = TArray<TSoftObjectPtr<UTexture2D>>();
+	this->SecondaryIcon = TEXT("");
+	this->animationWidgetRef = NULL;
+	this->AnimationLinkageId = TEXT("");
 	this->CustomTransformation = FCustomTransformation{};
 	this->PlatformsUnlicensedNameOverride = 0;
 	this->PlatformsUnlicensedDescriptionOverride = 0;

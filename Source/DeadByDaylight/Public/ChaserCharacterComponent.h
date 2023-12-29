@@ -35,6 +35,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool _camperSensorUsesActorRotation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool _camperSensorLocationUsesEyesViewPoint;
+
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnKillerLocallyObservedChanged(bool locallyObserved);

@@ -15,6 +15,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TMap<UAISkill*, UBehaviorTree*> AISkillDynamicSubtreeMap;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UBehaviorTree* ConnectingSubtree;
+
 public:
 	DBDBOTS_API FAISkillDynamicSubtreeStruct();
 };

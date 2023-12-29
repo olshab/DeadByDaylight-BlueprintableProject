@@ -15,6 +15,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool isAOneLiner;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool hasDurationOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	float durationOverride;
+
 public:
 	DBDUIPRESENTERS_API FSubtitlesEntry();
 };

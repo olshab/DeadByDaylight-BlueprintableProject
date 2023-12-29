@@ -20,6 +20,9 @@ public:
 	FString MaterialChannel;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString OpacityChannel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EOpacityChannelComponent OpacityChannelComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -29,13 +32,13 @@ public:
 	EFillMode FillMode;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString OpacityChannel;
+	int32 Dilation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 UseMultisampling : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 OutputSRGB : 1;
+	EOutputPixelFormat OutputPixelFormat;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EOutputImageFileFormat OutputImageFileFormat;
@@ -44,13 +47,13 @@ public:
 	EOutputDDSCompressionType OutputDDSCompressionType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 Dilation;
+	uint8 OutputSRGB : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 OutputToTessellatedAttributes : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EOutputOpacityType OutputOpacityType;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	EOutputPixelFormat OutputPixelFormat;
 
 public:
 	SIMPLYGONUOBJECTS_API FOpacityCasterSettings();

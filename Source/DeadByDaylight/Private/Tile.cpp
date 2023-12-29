@@ -37,5 +37,6 @@ ATile::ATile()
 	this->ActorSpawnersCache = TArray<UActorSpawner*>();
 	this->ActorVariationSpawnersCache = TArray<UActorVariationSpawner*>();
 	this->IsOutOfWorldTile = false;
+	this->UseTileEventSpawnerSettingOverride = false;
 	this->_initialized = false;
 }

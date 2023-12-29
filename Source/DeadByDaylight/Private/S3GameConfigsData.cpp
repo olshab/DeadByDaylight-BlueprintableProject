@@ -42,4 +42,5 @@ FS3GameConfigsData::FS3GameConfigsData()
 	this->SocialCrossprogressionPlatforms = TMap<FString, bool>();
 	this->EnableMoriPreviewButton = false;
 	this->EnableAntiCamping = false;
+	this->EnableConsumableQueryFromKraken = false;
 }

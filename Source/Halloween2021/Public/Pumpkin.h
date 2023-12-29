@@ -85,6 +85,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _minDistanceToFollowPlayer;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _maxDistanceToFollowPlayer;
+
 protected:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnInteractionCompleted(ADBDPlayer* interactingPlayer);

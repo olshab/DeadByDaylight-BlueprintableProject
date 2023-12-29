@@ -217,6 +217,9 @@ public:
 	bool HideItem;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool ContinueCachingLastSafeItemDropLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool AutoBindToParentInteractor;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

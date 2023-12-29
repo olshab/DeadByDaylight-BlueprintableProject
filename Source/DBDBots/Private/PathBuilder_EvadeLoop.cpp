@@ -22,6 +22,10 @@ UPathBuilder_EvadeLoop::UPathBuilder_EvadeLoop()
 	this->LureableDangerObjectWeightDropoffPerDistance = 2000.000000;
 	this->SidekickToLoopInvalidateDistance = 400.000000;
 	this->TrapToLoopInvalidateDistance = 100.000000;
+	this->EvadeInteractableHeightAmplifierActivationHeight = 150.000000;
+	this->EvadeInteractableHeightAmplifier = 3.000000;
+	this->QuerierReachFallEndBeforeChaserBufferTime = 3.500000;
+	this->ChaserReachFallStartTimeBeforeQuerierFall = 1.500000;
 	this->_originalEvadeLoopWorkPath = NULL;
 	this->_querierWorkPathA = NULL;
 	this->_querierWorkPathB = NULL;

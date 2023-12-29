@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EventObjectItemWidgetInterface.h"
 #include "AnniversaryPlayerComponentInterface.h"
 #include "DBDTunableRowHandle.h"
 #include "GameplayTagContainer.h"
@@ -8,12 +9,12 @@
 #include "SpeedBasedNetSyncedValue.h"
 #include "InvitationPlayerComponent.generated.h"
 
-class UTimerObject;
 class ADBDPlayer;
+class UTimerObject;
 class AActor;
 
 UCLASS(Blueprintable, Abstract, meta=(BlueprintSpawnableComponent))
-class ANNIVERSARY2023_API UInvitationPlayerComponent : public UActorComponent, public IAnniversaryPlayerComponentInterface
+class ANNIVERSARY2023_API UInvitationPlayerComponent : public UActorComponent, public IAnniversaryPlayerComponentInterface, public IEventObjectItemWidgetInterface
 {
 	GENERATED_BODY()
 
@@ -64,11 +65,6 @@ protected:
 	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
 	void Multicast_CosmeticOnInvitationInteractionActivate(ADBDPlayer* player, AActor* target);
 
-public:
-	UFUNCTION(BlueprintPure)
-	float GetInvitationCharges() const;
-
-protected:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
 	void Cosmetic_SetVFXParticlesVisibility(bool isVisible);
 

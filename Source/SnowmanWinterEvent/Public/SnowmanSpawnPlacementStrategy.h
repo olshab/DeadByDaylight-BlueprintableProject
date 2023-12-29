@@ -13,7 +13,7 @@ class AHatch;
 class APallet;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
-class USnowmanSpawnPlacementStrategy : public UActorComponent
+class SNOWMANWINTEREVENT_API USnowmanSpawnPlacementStrategy : public UActorComponent
 {
 	GENERATED_BODY()
 

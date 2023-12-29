@@ -6,6 +6,7 @@
 #include "AggregationSettings.h"
 #include "VisibilitySettings.h"
 #include "GeometryCullingSettings.h"
+#include "AttributeTessellationSettings.h"
 #include "MappingImageSettings.h"
 #include "GenerateLightmapTexCoordSettings.h"
 #include "AggregationPipelineSettings.generated.h"
@@ -29,6 +30,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVertexWeightSettings VertexWeightSettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAttributeTessellationSettings AttributeTessellationSettings;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FMappingImageSettings MappingImageSettings;

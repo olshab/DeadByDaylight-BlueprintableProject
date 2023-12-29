@@ -1,8 +1,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "EContextSection.h"
 #include "UIComponent.h"
+#include "EContext.h"
 #include "ContextObserver.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -12,7 +12,7 @@ class DBDUIPRESENTERS_API UContextObserver : public UUIComponent
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	EContextSection ObservedContextSection;
+	TArray<EContext> ObservedContexts;
 
 public:
 	UContextObserver();

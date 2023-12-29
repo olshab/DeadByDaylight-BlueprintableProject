@@ -5,11 +5,13 @@
 #include "DBDTunableRowHandle.h"
 #include "Components/ActorComponent.h"
 #include "EGameplayElementType.h"
-#include "ETileSpawnPointType.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
+#include "ETileSpawnPointType.h"
 #include "UnstableRiftTeleportationComponent.generated.h"
 
 class AUnstableRift;
+class AActor;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UUnstableRiftTeleportationComponent : public UActorComponent
@@ -49,6 +51,12 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_IsAllowedToTeleport, meta=(AllowPrivateAccess=true))
 	bool _isAllowedToTeleport;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TArray<TSubclassOf<AActor>> _actorsInMapToAvoid;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _minDistanceFromActorsToAvoid;
 
 private:
 	UFUNCTION(BlueprintCallable)

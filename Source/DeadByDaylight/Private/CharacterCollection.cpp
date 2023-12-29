@@ -9,6 +9,11 @@ TSet<ACamperPlayer*> UCharacterCollection::GetSurvivors() const
 	return TSet<ACamperPlayer*>();
 }
 
+TSet<ADBDPlayer*> UCharacterCollection::GetOtherCharacters() const
+{
+	return TSet<ADBDPlayer*>();
+}
+
 TSet<ADBDPlayer*> UCharacterCollection::GetMainDBDPlayers() const
 {
 	return TSet<ADBDPlayer*>();

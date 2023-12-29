@@ -11,6 +11,11 @@ void UAntiCampSelfUnhookMeterComponent::Multicast_SetCosmetics_Implementation(co
 
 }
 
+float UAntiCampSelfUnhookMeterComponent::GetProgress() const
+{
+	return 0.0f;
+}
+
 UAntiCampSelfUnhookMeterComponent::UAntiCampSelfUnhookMeterComponent()
 {
 

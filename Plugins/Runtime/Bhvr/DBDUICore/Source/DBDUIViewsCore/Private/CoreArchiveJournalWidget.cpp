@@ -72,6 +72,7 @@ UCoreArchiveJournalWidget::UCoreArchiveJournalWidget()
 	this->VignetteCinematicsContainer = NULL;
 	this->LeftArrowInputSwitcher = NULL;
 	this->RightArrowInputSwitcher = NULL;
+	this->AreInputsEnabled = true;
 	this->DebugRewardImage = NULL;
 	this->RewardImageMaxDescriptionLength = 50;
 }

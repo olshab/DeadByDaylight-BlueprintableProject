@@ -6,6 +6,7 @@
 #include "BoneSettings.h"
 #include "GeometryCullingSettings.h"
 #include "VisibilitySettings.h"
+#include "AttributeTessellationSettings.h"
 #include "MappingImageSettings.h"
 #include "RemeshingPipelineSettings.generated.h"
 
@@ -28,6 +29,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVisibilitySettings VisibilitySettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAttributeTessellationSettings AttributeTessellationSettings;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FMappingImageSettings MappingImageSettings;

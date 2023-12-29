@@ -13,6 +13,9 @@ public:
 	uint8 SeparateTrunkAndFoliage : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 MaintainLeafConnections : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float SeparateFoliageTriangleRatio;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

@@ -2,8 +2,9 @@
 
 #include "CoreMinimal.h"
 #include "EMilestoneTrackerItemState.h"
-#include "CustomizationRewardViewData.h"
 #include "MilestoneTrackerItemViewData.generated.h"
+
+class UStoreCustomizationItemViewData;
 
 USTRUCT(BlueprintType)
 struct FMilestoneTrackerItemViewData
@@ -18,7 +19,7 @@ public:
 	EMilestoneTrackerItemState State;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FCustomizationRewardViewData RewardData;
+	UStoreCustomizationItemViewData* RewardData;
 
 public:
 	DBDUIVIEWINTERFACES_API FMilestoneTrackerItemViewData();

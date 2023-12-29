@@ -18,6 +18,10 @@ private:
 	void Multicast_SetCosmetics(const EAntiCampSelfUnhookMeterState aimingCrosshairState, const float progress);
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetProgress() const;
+
+public:
 	UAntiCampSelfUnhookMeterComponent();
 };
 

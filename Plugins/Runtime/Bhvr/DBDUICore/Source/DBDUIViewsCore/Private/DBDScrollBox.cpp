@@ -23,6 +23,11 @@ void UDBDScrollBox::OnControlModeChanged(EControlMode controlMode)
 
 }
 
+bool UDBDScrollBox::IsScrollBarNeeded() const
+{
+	return false;
+}
+
 bool UDBDScrollBox::IsMouseOver()
 {
 	return false;

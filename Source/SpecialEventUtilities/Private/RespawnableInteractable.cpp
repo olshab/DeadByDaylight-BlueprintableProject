@@ -1,7 +1,17 @@
 #include "RespawnableInteractable.h"
 #include "Net/UnrealNetwork.h"
 
+void ARespawnableInteractable::OnUnhidden_Implementation()
+{
+
+}
+
 void ARespawnableInteractable::OnRep_IsHidden()
+{
+
+}
+
+void ARespawnableInteractable::OnHidden_Implementation()
 {
 
 }

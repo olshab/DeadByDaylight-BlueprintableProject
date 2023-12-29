@@ -2,5 +2,6 @@
 
 UCoreStoreCharactersBioWidget::UCoreStoreCharactersBioWidget()
 {
-
+	this->TextContent = NULL;
+	this->Scroll = NULL;
 }

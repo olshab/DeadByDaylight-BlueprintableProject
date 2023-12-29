@@ -50,6 +50,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void PlayVFXOnCurrentCamera(UParticleSystemComponent* component);
 
+private:
+	UFUNCTION(BlueprintCallable)
+	void OnFirstPersonViewChanged(bool isFirstPerson);
+
+public:
 	UFUNCTION(BlueprintCallable)
 	EDBDCameraSocketID GetSocketID();
 

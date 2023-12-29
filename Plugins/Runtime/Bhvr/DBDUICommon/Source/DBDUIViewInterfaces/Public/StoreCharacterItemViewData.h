@@ -36,6 +36,9 @@ public:
 	FSpecialEventInfoViewData EventInfo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FName KillerPowerId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool IsUnlocked;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

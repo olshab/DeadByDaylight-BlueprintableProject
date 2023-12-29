@@ -230,7 +230,58 @@ public:
 	FString DeviceProfile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 MaxMemoryUsedKilobytes;
+	float AverageMemoryAvailablePhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinMemoryAvailablePhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxMemoryAvailablePhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AverageMemoryAvailableVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinMemoryAvailableVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxMemoryAvailableVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AverageMemoryTotalPhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinMemoryTotalPhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxMemoryTotalPhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AverageMemoryTotalVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinMemoryTotalVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxMemoryTotalVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AverageMemoryUsedPhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinMemoryUsedPhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxMemoryUsedPhysicalMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AverageMemoryUsedVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinMemoryUsedVirtualMB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaxMemoryUsedVirtualMB;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float AveragePing;
@@ -275,6 +326,12 @@ public:
 	bool isVsyncEnable;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool isFSREnabled;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SharpnessValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 ShadowQuality;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -315,6 +372,15 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString RHIName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsSample;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString GameFlowStep;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString KrakenMatchId;
 
 public:
 	DBDANALYTICS_API FPerformanceAnalytics();

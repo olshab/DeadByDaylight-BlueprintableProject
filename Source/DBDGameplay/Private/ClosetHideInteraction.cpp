@@ -14,7 +14,7 @@ void UClosetHideInteraction::SetOtherInteractorsUsable(const bool isEnabled)
 
 }
 
-void UClosetHideInteraction::SetCollisionWithCloset(const bool isEnable)
+void UClosetHideInteraction::SetCollisionWithCloset(const bool isEnabled, ADBDPlayer* player) const
 {
 
 }

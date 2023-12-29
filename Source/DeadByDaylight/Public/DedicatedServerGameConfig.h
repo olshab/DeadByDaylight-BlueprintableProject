@@ -12,15 +12,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 LatencyRetryCooldownSeconds;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool NewContentShutdown;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 NewContentShutdownMaxMinutes;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 NewContentShutdownMinMinutes;
-
 public:
 	DEADBYDAYLIGHT_API FDedicatedServerGameConfig();
 };

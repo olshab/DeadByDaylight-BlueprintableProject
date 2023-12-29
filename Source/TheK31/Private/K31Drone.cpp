@@ -17,6 +17,7 @@
 #include "K31TrapProximitySensor.h"
 #include "K31DroneHackableComponent.h"
 #include "DBDNavModifierComponent.h"
+#include "MapActorComponent.h"
 
 void AK31Drone::OnAcquiredChanged(const bool acquired)
 {
@@ -49,6 +50,7 @@ AK31Drone::AK31Drone()
 	this->_deployInteraction = NULL;
 	this->_navModifierComponent = CreateDefaultSubobject<UDBDNavModifierComponent>(TEXT("Nav Modifier Component"));
 	this->_dangerPredictionComponent = CreateDefaultSubobject<UK31DroneDangerPredictionComponent>(TEXT("Danger Prediction Component"));
+	this->_droneMapActorComponent = CreateDefaultSubobject<UMapActorComponent>(TEXT("DroneMapActorComponent"));
 	this->_lastOwner = NULL;
 	this->_localPlayerTracker = NULL;
 }

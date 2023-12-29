@@ -470,6 +470,7 @@ void ASlasherPlayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 
 ASlasherPlayer::ASlasherPlayer()
 {
+	this->_setFirstPersonModeEnabledOnKillerIntroCompleted = true;
 	this->DefaultSlasherPower = NAME_None;
 	this->LoudNoiseDisplayTime = 5.000000;
 	this->ShouldDisplayAttackZones = false;
@@ -508,7 +509,8 @@ ASlasherPlayer::ASlasherPlayer()
 	this->_basicAttackType = EAttackType::VE_None;
 	this->_armIKSensorComponent = CreateDefaultSubobject<UArmIKSensorComponent>(TEXT("ArmIKSensor"));
 	this->_survivorBeingKilled = NULL;
-	this->_firstPersonViewComponent = CreateDefaultSubobject<UFirstPersonViewComponent>(TEXT("FirstPersonViewComponent"));
+	this->_firstPersonViewComponentClass = UFirstPersonViewComponent::StaticClass();
+	this->_firstPersonViewComponent = NULL;
 	this->_killerIntroComponent = CreateDefaultSubobject<UKillerIntroComponent>(TEXT("KillerIntroComponent"));
 	this->_blindingFXComponent = CreateDefaultSubobject<UKillerBlindingFXComponent>(TEXT("Blinding FX Component"));
 	this->_redStainUpdateStrategy = CreateDefaultSubobject<UKillerRedStainUpdateStrategy>(TEXT("KillerRedStainUpdateStrategy"));

@@ -3,9 +3,9 @@
 FNormalCalculationSettings::FNormalCalculationSettings()
 {
 	this->ReplaceNormals = false;
-	this->ReplaceTangents = false;
-	this->HardEdgeAngle = 0.0f;
 	this->RepairInvalidNormals = false;
+	this->HardEdgeAngle = 0.0f;
+	this->ReplaceTangents = false;
 	this->ReorthogonalizeTangentSpace = false;
 	this->ScaleByArea = false;
 	this->ScaleByAngle = false;

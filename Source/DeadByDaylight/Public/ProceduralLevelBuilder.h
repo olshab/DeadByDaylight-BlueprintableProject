@@ -3,23 +3,24 @@
 #include "CoreMinimal.h"
 #include "ETileSpawnPointType.h"
 #include "GameFramework/Actor.h"
-#include "GeneratedLevelData.h"
+#include "EGameplayElementType.h"
 #include "UObject/NoExportTypes.h"
 #include "Templates/SubclassOf.h"
+#include "GeneratedLevelData.h"
 #include "GenerationParams.h"
 #include "ProceduralLevelBuilder.generated.h"
 
 class UAkAudioBank;
 class UDBDDesignTunables;
-class UEdgeObjectHandlingStrategy;
-class UTileBank;
-class UObjectLibrary;
-class ATile;
-class UPaperTileMap;
+class UMapData;
 class UTileMatrix;
 class ADBDClientSyncer;
 class UProceduralGenerationData;
-class UMapData;
+class ATile;
+class UPaperTileMap;
+class UEdgeObjectHandlingStrategy;
+class UTileBank;
+class UObjectLibrary;
 class UActorSpawner;
 class AProceduralLevelData;
 class UBlackboardComponent;
@@ -35,6 +36,24 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString PathToTilesDirectory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString PathToEventSpawnablesDirectory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FString> EventSpawnablesParentDirectories;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float EventSpawnablePositionWeightCoefficient;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float EventSpawnablePositionWeightPowerBase;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TMap<EGameplayElementType, float> StaticActorSpawnerDecorationBudgets;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TMap<ETileSpawnPointType, float> StaticSpawnPointDecorationBudgets;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float KillerMinProximityFromCamper;
@@ -116,6 +135,9 @@ private:
 	UObjectLibrary* _availableTilesLibrary;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	UObjectLibrary* _availableEventSpawnablesLibrary;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	UObjectLibrary* _availableDerivedTileLibrary;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
@@ -147,6 +169,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TArray<ATile*> _tilesThatHaveBeenSpawned;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	TArray<AActor*> _eventSpawnablesThatHaveBeenStreamed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	AProceduralLevelData* _debugProceduralDatas;

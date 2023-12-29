@@ -7,11 +7,12 @@
 #include "PerPlatformProperties.h"
 #include "BaseSky.generated.h"
 
+class UExponentialHeightFogComponent;
+class UDirectionalLightComponent;
+class USceneComponent;
 class UStaticMeshComponent;
 class USkyLightComponent;
 class UPostProcessComponent;
-class UExponentialHeightFogComponent;
-class UDirectionalLightComponent;
 
 UCLASS(Blueprintable)
 class DEADBYDAYLIGHT_API ABaseSky : public AActor, public IFadeable
@@ -57,6 +58,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void OnAlphaChanged(float newAlpha, AActor* other);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	USceneComponent* GetVistasAndEnvironmentElements();
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	UPostProcessComponent* GetPostprocessComponent();

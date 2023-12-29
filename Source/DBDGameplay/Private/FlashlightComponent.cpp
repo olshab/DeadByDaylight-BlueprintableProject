@@ -18,11 +18,6 @@ void UFlashlightComponent::Server_SetAndUpdateAutonomousLitFlashlightables_Imple
 
 }
 
-bool UFlashlightComponent::Server_SetAndUpdateAutonomousLitFlashlightables_Validate(const TArray<UFlashlightableComponent*>& newLitFlashlightables)
-{
-	return true;
-}
-
 void UFlashlightComponent::OnRep_ReplicatedLitFlashlightables()
 {
 

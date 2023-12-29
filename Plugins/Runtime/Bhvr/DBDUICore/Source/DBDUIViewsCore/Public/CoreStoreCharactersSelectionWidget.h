@@ -7,10 +7,12 @@
 #include "Templates/SubclassOf.h"
 #include "CoreStoreCharactersSelectionWidget.generated.h"
 
-class UCoreSelectableButtonWidget;
 class UCoreStoreCharacterItemWidget;
 class UUniformGridPanel;
 class UScrollBox;
+class UCoreStoreCharactersFilterWidget;
+class UCorePreConstructableList;
+class UCoreSelectableButtonWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIVIEWSCORE_API UCoreStoreCharactersSelectionWidget : public UCoreBaseUserWidget, public IStoreCharactersSelectionViewInterface
@@ -22,13 +24,16 @@ protected:
 	FStoreCharacterSelectedDelegate _characterSelectedDelegate;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
-	TSubclassOf<UCoreStoreCharacterItemWidget> _tileWidgetClass;
+	TSubclassOf<UCoreStoreCharacterItemWidget> _itemWidgetClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 _numberOfColumns;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float _tileScale;
+	float _itemScale;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _layoutMask;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UScrollBox* Scroll;
@@ -36,11 +41,18 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UUniformGridPanel* Container;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
-	TArray<UCoreStoreCharacterItemWidget*> _tiles;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UCoreStoreCharactersFilterWidget* FiltersWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	int32 _preConstructedItemsCount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
-	UCoreStoreCharacterItemWidget* _selectedTile;
+	UCoreStoreCharacterItemWidget* _selectedItem;
+
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	UCorePreConstructableList* _characterList;
 
 protected:
 	UFUNCTION(BlueprintCallable)

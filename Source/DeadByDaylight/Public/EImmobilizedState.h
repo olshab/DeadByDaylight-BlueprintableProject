@@ -12,6 +12,5 @@ enum class EImmobilizedState : uint8
 	VE_Hiding,
 	VE_Dead,
 	VE_InDeathBed,
-	VE_HidingInLocker,
 	VE_TwinImmobilized,
 };

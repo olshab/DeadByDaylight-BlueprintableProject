@@ -3,11 +3,11 @@
 #include "CoreMinimal.h"
 #include "SubPresenter.h"
 #include "UObject/ScriptInterface.h"
-#include "CustomizationRewardViewData.h"
 #include "EventEntryRewardsSubPresenter.generated.h"
 
 class UEventEntryPresenter;
 class IEventCollectionViewInterface;
+class UStoreCustomizationItemViewData;
 
 UCLASS(Blueprintable)
 class UEventEntryRewardsSubPresenter : public USubPresenter
@@ -19,10 +19,10 @@ protected:
 	TScriptInterface<IEventCollectionViewInterface> _tabWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TArray<FCustomizationRewardViewData> _rewardsGridData;
+	TArray<UStoreCustomizationItemViewData*> _rewardsGridData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TArray<FCustomizationRewardViewData> _previewAreaRewardsData;
+	TArray<UStoreCustomizationItemViewData*> _previewAreaRewardsData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
 	UEventEntryPresenter* _parentPresenter;

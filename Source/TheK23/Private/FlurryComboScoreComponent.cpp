@@ -19,4 +19,5 @@ UFlurryComboScoreComponent::UFlurryComboScoreComponent()
 	this->_thresholds = TArray<float>();
 	this->_thresholdsScoreForAudio = TArray<float>();
 	this->_comboScoreEvents = TArray<FGameplayTag>();
+	this->_comboExtendSuperModeStatusEffectClass = NULL;
 }

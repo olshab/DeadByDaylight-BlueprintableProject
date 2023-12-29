@@ -1,16 +1,20 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EGameplayElementType.h"
+#include "EventSpawnablePositionDropdown.h"
 #include "WeightedElement.h"
 #include "SpawnElement.h"
-#include "ActorSpawnedDelegate.h"
 #include "ActorSpawnerProperties.h"
-#include "EGameplayElementType.h"
 #include "Components/SceneComponent.h"
 #include "UObject/SoftObjectPtr.h"
+#include "DataTableDropdown.h"
+#include "UObject/NoExportTypes.h"
+#include "ActorSpawnedDelegate.h"
 #include "ActorSpawner.generated.h"
 
 class AActor;
+class UBoxComponent;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class DEADBYDAYLIGHT_API UActorSpawner : public USceneComponent, public IWeightedElement, public ISpawnElement
@@ -43,6 +47,18 @@ public:
 	int32 SpawnPriorityTier;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FEventSpawnablePositionDropdown EventSpawnablePosition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FDataTableDropdown EventSpawnableShapePreset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector MinBoundOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector MaxBoundOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FName> TagsToBePassedOverToActor;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -66,6 +82,12 @@ private:
 
 	UPROPERTY(EditAnywhere, Transient)
 	TWeakObjectPtr<AActor> _spawnedActorOnAuthority;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	UBoxComponent* _minBoundBox;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	UBoxComponent* _maxBoundBox;
 
 public:
 	UFUNCTION(BlueprintPure)

@@ -22,4 +22,6 @@ FTallyPlayerResultData::FTallyPlayerResultData()
 	this->IsOffNetwork = false;
 	this->ShowPortraitBorder = false;
 	this->IsABot = false;
+	this->EquippedBanner = FPlayerCardItemData{};
+	this->EquippedBadge = FPlayerCardItemData{};
 }

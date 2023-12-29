@@ -40,9 +40,6 @@ private:
 	EPlayerRole _controllerGameRole;
 
 public:
-	UFUNCTION(BlueprintCallable)
-	void SetShouldMoveInputReplicateToServer(bool shouldReplicate);
-
 	UFUNCTION(BlueprintCallable, Server, Unreliable, WithValidation)
 	void ServerViewPlayer(const FString& playerName);
 
@@ -57,11 +54,11 @@ public:
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_SetReadyToTravel();
 
-	UFUNCTION(BlueprintCallable, Server, Reliable, WithValidation)
-	void Server_SetHasMoveInputThisFrame(bool hasMoveInputThisFrame);
-
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_RequestEndGame();
+
+	UFUNCTION(BlueprintCallable, Server, Reliable)
+	void Server_NotifyHasMoved();
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_LeaveGame(bool joiningLobby);

@@ -2,6 +2,8 @@
 
 FMaterialMapForFade::FMaterialMapForFade()
 {
-	this->SrcMaterial = NULL;
-	this->DstMaterial = NULL;
+	this->OriginalMaterialPath = TEXT("");
+	this->GeneratedMaterial = NULL;
+	this->StaticSwitches = TMap<FGuid, bool>();
+	this->StaticSwitchesName = TMap<FGuid, FName>();
 }

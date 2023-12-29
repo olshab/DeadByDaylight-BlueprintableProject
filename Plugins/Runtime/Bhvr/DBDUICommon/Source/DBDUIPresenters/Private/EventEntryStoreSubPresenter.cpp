@@ -2,5 +2,5 @@
 
 UEventEntryStoreSubPresenter::UEventEntryStoreSubPresenter()
 {
-
+	this->_storeItems = TArray<UStoreCustomizationItemViewData*>();
 }

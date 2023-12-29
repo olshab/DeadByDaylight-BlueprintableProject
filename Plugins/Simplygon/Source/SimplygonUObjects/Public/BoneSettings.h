@@ -14,40 +14,40 @@ public:
 	uint8 UseBoneReducer : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 BoneReductionTargetBoneRatioEnabled : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 RemoveUnusedBones : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 LimitBonesPerVertex : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 BoneReductionTargetBoneCountEnabled : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 BoneReductionTargetMaxDeviationEnabled : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 MaxBonePerVertex;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 BoneReductionTargetOnScreenSizeEnabled : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	EBoneReductionTargetStopCondition BoneReductionTargetStopCondition;
+	uint8 BoneReductionTargetBoneRatioEnabled : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float BoneReductionTargetBoneRatio;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 BoneReductionTargetBoneCountEnabled : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 BoneReductionTargetBoneCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 BoneReductionTargetMaxDeviationEnabled : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float BoneReductionTargetMaxDeviation;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 BoneReductionTargetOnScreenSizeEnabled : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 BoneReductionTargetOnScreenSize;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EBoneReductionTargetStopCondition BoneReductionTargetStopCondition;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 LockBoneSelectionSetID;

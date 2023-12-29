@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "DBDTableRowBase.h"
 #include "PlatformDlcData.generated.h"
 
@@ -17,10 +18,16 @@ public:
 	FText UnlockDescription;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString Description;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 UISortOrder;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FSoftObjectPath BannerImage;
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

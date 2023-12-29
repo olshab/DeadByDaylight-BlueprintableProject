@@ -13,6 +13,16 @@ bool ADBDPlayerControllerBase::Server_UpdateReplicatedPips_Validate(int32 pipsTo
 	return true;
 }
 
+void ADBDPlayerControllerBase::Server_SetPlayerCard_Implementation(const FString& badgeId, const FString& bannerId)
+{
+
+}
+
+bool ADBDPlayerControllerBase::Server_SetPlayerCard_Validate(const FString& badgeId, const FString& bannerId)
+{
+	return true;
+}
+
 void ADBDPlayerControllerBase::Server_SetConsecutiveMatchStreak_Implementation(int32 consecutiveMatch)
 {
 

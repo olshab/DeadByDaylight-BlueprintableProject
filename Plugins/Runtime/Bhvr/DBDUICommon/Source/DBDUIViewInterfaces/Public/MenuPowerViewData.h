@@ -5,9 +5,16 @@
 #include "MenuPowerViewData.generated.h"
 
 UCLASS(Blueprintable)
-class UMenuPowerViewData : public UMenuLoadoutPartViewData
+class DBDUIVIEWINTERFACES_API UMenuPowerViewData : public UMenuLoadoutPartViewData
 {
 	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText EventName;
 
 public:
 	UMenuPowerViewData();

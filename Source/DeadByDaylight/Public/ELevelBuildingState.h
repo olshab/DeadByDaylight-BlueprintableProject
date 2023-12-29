@@ -13,6 +13,7 @@ enum class ELevelBuildingState : uint8
 	PendingGettingItems,
 	GettingLevelsDone,
 	PendingPremadeMapStreaming,
+	GetAvailableEventSpawnables,
 	GetThemedTiles,
 	PendingGettingTiles,
 	SpawnEscapeTiles,

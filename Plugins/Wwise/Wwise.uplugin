@@ -1,34 +1,29 @@
 {
-	"FileVersion" : 1,
-	
-	"FriendlyName" : "Wwise Unreal Engine Integration",
-	"Version" : 202112505,
-	"VersionName" : "2021.1.12.7973.2505",
-	"CreatedBy" : "Audiokinetic, Inc.",
-	"CreatedByURL" : "http://audiokinetic.com",
-	"@BHVR-BEGIN jleboulanger DBDL-108110 | Task | 4.27 integration: 4.27.2 hotfix | add __ before EngineVersion to remove the parameter":  "",
-	"__EngineVersion" : "4.27.0",
-	"@BHVR-END jleboulanger DBDL-108110 | Task | 4.27 integration: 4.27.2 hotfix": "",
-	"Description" : "Wwise integration for Unreal Engine",
-	"Category" : "Audio",
-	"EnabledByDefault" : true,
-	
-	"Modules" :
-	[
-		{
-			"Name" : "AkAudio",
-			"Type" : "Runtime",
-			"LoadingPhase" : "PreDefault"
-		}
-	],
-	
-	"Plugins":
-	[
-		{
-			"Name": "GeometryMode",
-			"Enabled": true
-		}
-	],
-	
-	"CanContainContent" : true
+  "FileVersion": "1",
+  "Version": 202112505,
+  "VersionName": "2021.1.12.7973.2505",
+  "FriendlyName": "Wwise Unreal Engine Integration",
+  "Description": "Wwise integration for Unreal Engine",
+  "Category": "Audio",
+  "CreatedBy": "Audiokinetic, Inc.",
+  "CreatedByURL": "http://audiokinetic.com",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": true,
+  "CanContainContent": true,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "AkAudio",
+      "Type": "Runtime",
+      "LoadingPhase": "PreDefault"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "GeometryMode",
+      "Enabled": true
+    }
+  ]
 }

@@ -19,6 +19,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSoftObjectPtr<UAkAudioEvent> AudioEvent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<float> durationOverride;
+
 public:
 	DEADBYDAYLIGHT_API FSubtitlesDescription();
 };

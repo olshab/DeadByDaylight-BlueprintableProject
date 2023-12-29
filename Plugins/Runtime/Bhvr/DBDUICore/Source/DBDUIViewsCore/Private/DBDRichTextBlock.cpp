@@ -20,6 +20,11 @@ void UDBDRichTextBlock::PreviewLargeText()
 
 }
 
+void UDBDRichTextBlock::PreviewHTMLText()
+{
+
+}
+
 void UDBDRichTextBlock::OnSwitchDockStateChanged(bool isDocked)
 {
 

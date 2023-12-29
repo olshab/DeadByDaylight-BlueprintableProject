@@ -6,6 +6,7 @@ FAggregationPipelineSettings::FAggregationPipelineSettings()
 	this->VisibilitySettings = FVisibilitySettings{};
 	this->GeometryCullingSettings = FGeometryCullingSettings{};
 	this->VertexWeightSettings = FVertexWeightSettings{};
+	this->AttributeTessellationSettings = FAttributeTessellationSettings{};
 	this->MappingImageSettings = FMappingImageSettings{};
 	this->GenerateLightmapTexCoordSettings = FGenerateLightmapTexCoordSettings{};
 	this->MaterialPropertyCasters = TArray<USimplygonMaterialCaster*>();

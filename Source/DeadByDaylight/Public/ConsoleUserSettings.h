@@ -165,6 +165,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
 	bool HasAcceptedHapticsVibrationPopup;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
+	int32 PlayerCardAnimationMode;
+
 public:
 	DEADBYDAYLIGHT_API FConsoleUserSettings();
 };

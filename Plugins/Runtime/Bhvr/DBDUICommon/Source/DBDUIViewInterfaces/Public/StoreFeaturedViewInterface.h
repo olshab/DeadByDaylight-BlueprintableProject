@@ -6,7 +6,6 @@
 #include "StoreFeaturedViewInterface.generated.h"
 
 class UStoreCustomizationItemViewData;
-class UStoreSpecialOfferItemViewData;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UStoreFeaturedViewInterface : public UInterface
@@ -20,12 +19,12 @@ class DBDUIVIEWINTERFACES_API IStoreFeaturedViewInterface : public IInterface
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetSpecialOffersData(const TArray<UStoreSpecialOfferItemViewData*>& specialOffersData);
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void InitFeaturedCustomizationItems(const TArray<UStoreCustomizationItemViewData*>& viewDataArray);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void InitFeaturedCharacters(const TArray<FStoreFeaturedCharacterViewData>& characterViewDataArray);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void FocusFeaturedCharacter(int32 characterIndex);
 
 };

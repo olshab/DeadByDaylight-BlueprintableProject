@@ -57,7 +57,6 @@ FRPCCountAnalytics::FRPCCountAnalytics()
 	this->Server_SetCustomizationMeshes_Count = 0;
 	this->Server_SetEquipedPerks_Count = 0;
 	this->Server_SetEquipment_Count = 0;
-	this->Server_SetGroundFriction_Count = 0;
 	this->Server_SetInteractionToSwapTo_Count = 0;
 	this->Server_SetIntroCompleted_Count = 0;
 	this->Server_SetIsReadyToPlay_Count = 0;

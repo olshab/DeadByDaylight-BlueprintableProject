@@ -1,7 +1,14 @@
 #include "PresenterManager.h"
 #include "ELoadingTransitionType.h"
 
+class APlayerState;
+
 void UPresenterManager::OnViewportCreated()
+{
+
+}
+
+void UPresenterManager::OnPlayerStateChanged(const APlayerState* playerState)
 {
 
 }

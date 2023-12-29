@@ -1,23 +1,26 @@
 #include "Snowman.h"
-#include "Interactor.h"
 #include "GameplayTagContainer.h"
-#include "SnowmanSpawnData.h"
-#include "GameEventData.h"
-#include "ESnowmanDestructionType.h"
+#include "Interactor.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/SphereComponent.h"
+#include "GameEventData.h"
+#include "ESnowmanDestructionType.h"
 #include "DBDOutlineComponent.h"
 #include "Engine/EngineTypes.h"
 #include "DBDSkeletalMeshComponentBudgeted.h"
 #include "Net/UnrealNetwork.h"
 #include "Components/CapsuleComponent.h"
-#include "BaseActorAttackableComponent.h"
 
-class ASlasherPlayer;
-class ADBDPlayer;
-class ACamperPlayer;
 class UPrimitiveComponent;
+class ADBDPlayer;
+class ASlasherPlayer;
+class ACamperPlayer;
 class AActor;
+
+void ASnowman::OnTransitionBackToKillerFinished(const ASlasherPlayer* killer)
+{
+
+}
 
 void ASnowman::OnRep_SnowmanState()
 {
@@ -50,21 +53,6 @@ void ASnowman::OnFinishedPlaying(const FGameplayTag gameEventType, const FGameEv
 }
 
 void ASnowman::Multicast_StartSnowmanDestruction_Implementation(ESnowmanDestructionType snowmanDestructionType, bool unlockRequirementsSatisfiedForSurvivor, bool unlockRequirementsSatisfiedForKiller, ADBDPlayer* playerInSnowman)
-{
-
-}
-
-void ASnowman::Multicast_SpawnSnowman_Implementation(FSnowmanSpawnData spawnData)
-{
-
-}
-
-void ASnowman::Multicast_SetSnowmanMaterialVariant_Implementation(const int32 materialVariantIndex)
-{
-
-}
-
-void ASnowman::Multicast_SetSnowmanHiddenInGame_Implementation(bool isHidden)
 {
 
 }
@@ -124,11 +112,10 @@ ASnowman::ASnowman()
 	this->_snowmanOutlineComponent = CreateDefaultSubobject<UDBDOutlineComponent>(TEXT("SnowmanOutlineComponent"));
 	this->_snowmanCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("SnowmanCapsule"));
 	this->_snowmanHandCapsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("SnowmanHandCapsule"));
-	this->_hideInSnowmanInteractionChargeable = NULL;
 	this->_snowmanInteractor = CreateDefaultSubobject<UInteractor>(TEXT("SnowmanInteractor"));
 	this->_snowmanInteractionZone = CreateDefaultSubobject<USphereComponent>(TEXT("SnowmanInteractionZone"));
-	this->_attackableComponent = CreateDefaultSubobject<UBaseActorAttackableComponent>(TEXT("AttackableComponent"));
-	this->_isAcquiredFromPool = false;
+	this->_thirdPersonPerspectiveTransitionTime = 1.000000;
+	this->_playerMeshRotationOffset = 90.000000;
 	this->_isMoving = false;
 	this->_highFiveFollower = NULL;
 }

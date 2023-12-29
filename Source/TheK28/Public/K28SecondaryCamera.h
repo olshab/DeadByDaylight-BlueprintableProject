@@ -4,6 +4,7 @@
 #include "SpectatingActorLinker.h"
 #include "GameFramework/Actor.h"
 #include "EK28NightCycleState.h"
+#include "GameplayTagContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "K28SecondaryCamera.generated.h"
 
@@ -35,6 +36,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _survivorGrabTransition_DistanceFromLocker;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FGameplayTag> _stateTagsToDisableNightMode;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
 	bool _isKillerPlayerViewTarget;

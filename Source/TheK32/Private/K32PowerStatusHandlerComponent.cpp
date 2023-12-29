@@ -50,4 +50,5 @@ UK32PowerStatusHandlerComponent::UK32PowerStatusHandlerComponent()
 	this->_survivorLocationOverlapAvoidanceDistance = 10.000000;
 	this->_survivorStatusList = TArray<FK32SurvivorStatus>();
 	this->_assimilationCooldownTimers = TMap<ACamperPlayer*, FFastTimer>();
+	this->_survivorTagsToPreventPositionStorage = TArray<FGameplayTag>();
 }

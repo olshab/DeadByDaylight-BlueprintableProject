@@ -75,10 +75,25 @@ public:
 	FAITunableParameter MinSafetyRatingAgainstRangedHostileStimulus;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ExtraMinSafetyRatingAgainstFastVaultHostileStimulus;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float SidekickToLoopInvalidateDistance;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float TrapToLoopInvalidateDistance;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float EvadeInteractableHeightAmplifierActivationHeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float EvadeInteractableHeightAmplifier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float QuerierReachFallEndBeforeChaserBufferTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ChaserReachFallStartTimeBeforeQuerierFall;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))

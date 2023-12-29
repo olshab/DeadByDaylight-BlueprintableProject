@@ -86,6 +86,9 @@ public:
 	float PathReachedPointRadius;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float NearPathFilterRadius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName UseContextualAcceptableRadius;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

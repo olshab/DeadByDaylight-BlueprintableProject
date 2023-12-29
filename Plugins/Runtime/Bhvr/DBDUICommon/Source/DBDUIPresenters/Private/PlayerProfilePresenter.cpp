@@ -24,6 +24,11 @@ void UPlayerProfilePresenter::RefreshWallet()
 
 }
 
+void UPlayerProfilePresenter::RefreshPlayerCard()
+{
+
+}
+
 void UPlayerProfilePresenter::OnWalletUpdated(const TArray<FShopWalletUpdate>& walletUpdates)
 {
 
@@ -35,11 +40,6 @@ void UPlayerProfilePresenter::OnUpdatePlayerProfileFilter(const uint8 filter)
 }
 
 void UPlayerProfilePresenter::OnUpdatePlayerProfileCurrencyFilter(const uint8 currencyFilter)
-{
-
-}
-
-void UPlayerProfilePresenter::OnShowImageViewer(bool voiceOverIsPlaying)
 {
 
 }
@@ -59,7 +59,7 @@ void UPlayerProfilePresenter::OnPlayerProfileCurrencyClicked(ECurrencyType curre
 
 }
 
-void UPlayerProfilePresenter::OnHideImageViewer()
+void UPlayerProfilePresenter::OnPlayerProfileClicked()
 {
 
 }

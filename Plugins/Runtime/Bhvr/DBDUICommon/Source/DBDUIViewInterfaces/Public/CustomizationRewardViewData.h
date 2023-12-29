@@ -3,8 +3,9 @@
 #include "CoreMinimal.h"
 #include "RewardViewData.h"
 #include "PriceTagViewData.h"
-#include "EItemRarity.h"
 #include "CustomizationTooltipViewData.h"
+#include "UObject/NoExportTypes.h"
+#include "EItemRarity.h"
 #include "ECustomizationCategory.h"
 #include "CustomizationRewardViewData.generated.h"
 
@@ -19,6 +20,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FName OutfitId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FDateTime ReleaseDate;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	EItemRarity Rarity;
@@ -49,6 +53,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool IsEnabled;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool GrantsMilestonePointOnUnlock;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<FPriceTagViewData> PriceTagData;

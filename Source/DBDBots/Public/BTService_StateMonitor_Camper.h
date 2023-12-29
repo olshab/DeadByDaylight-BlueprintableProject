@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AITunableParameter.h"
 #include "BTService_StateMonitor.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BTService_StateMonitor_Camper.generated.h"
@@ -45,9 +46,6 @@ public:
 	FBlackboardKeySelector BBIsHoldingEmptyItem;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float EmptyItemChargeThreshold;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FBlackboardKeySelector BBSpecialItemID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -78,9 +76,6 @@ public:
 	FBlackboardKeySelector BBIsInDeathTimer;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float DeathTimerEndGamePrecent;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FBlackboardKeySelector BBHasCrowAttached;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -96,10 +91,52 @@ public:
 	FBlackboardKeySelector BBIgnoreGoalPressure;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float EmptyItemChargeThreshold;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DeathTimerEndGamePercent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float ChaseUnseenMinimumKillerRange;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float ChaseSeenMinimumKillerRange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ChasedMinimumScore;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerAtMinimumDistance;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerDistanceMaxRange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerWhenUnknownLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScorePredictedTarget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerLastKnownDirection;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerMaxDirectionAngle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreSurvivorWhenVisible;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreSurvivorVisibilityTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerUndetectable;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerRangedAndDash;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ChasedScoreKillerChaseTarget;
 
 public:
 	UBTService_StateMonitor_Camper();

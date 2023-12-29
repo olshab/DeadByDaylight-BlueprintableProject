@@ -1,11 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "InputMaterialSettings.h"
 #include "ChartAggregatorSettings.h"
+#include "InputMaterialSettings.h"
 #include "ETexCoordGeneratorType.h"
-#include "OutputMaterialSettings.h"
 #include "ParameterizerSettings.h"
+#include "OutputMaterialSettings.h"
 #include "MappingImageSettings.generated.h"
 
 USTRUCT(BlueprintType)
@@ -24,25 +24,13 @@ public:
 	uint8 GenerateTangents : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 InputMaterialCount;
+	uint8 ReplaceMappingImages : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 UseFullRetexturing : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 ApplyNewMaterialIds : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 OutputMaterialCount;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 ReplaceMappingImages : 1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 MaximumLayers;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 AllowTransparencyMapping : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	uint8 UseAutomaticTextureSize : 1;
@@ -57,6 +45,12 @@ public:
 	uint8 OnlyParameterizeInvalidUVs : 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 AllowTransparencyMapping : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MaximumLayers;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 TexCoordLevel;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -66,16 +60,22 @@ public:
 	ETexCoordGeneratorType TexCoordGeneratorType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FInputMaterialSettings> InputMaterialSettings;
+	int32 OutputMaterialCount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FOutputMaterialSettings> OutputMaterialSettings;
+	int32 InputMaterialCount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FChartAggregatorSettings ChartAggregatorSettings;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FParameterizerSettings ParameterizerSettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FInputMaterialSettings> InputMaterialSettings;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FOutputMaterialSettings> OutputMaterialSettings;
 
 public:
 	SIMPLYGONUOBJECTS_API FMappingImageSettings();

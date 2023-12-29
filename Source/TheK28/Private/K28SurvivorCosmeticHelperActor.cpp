@@ -7,5 +7,5 @@ void AK28SurvivorCosmeticHelperActor::OnLevelReadyToPlay()
 
 AK28SurvivorCosmeticHelperActor::AK28SurvivorCosmeticHelperActor()
 {
-
+	this->_stateTagsToDisableNightMode = TArray<FGameplayTag>();
 }

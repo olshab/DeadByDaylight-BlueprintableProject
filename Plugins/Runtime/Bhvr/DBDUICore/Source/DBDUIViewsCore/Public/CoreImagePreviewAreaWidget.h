@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
+#include "ECustomizationCategory.h"
 #include "CustomizationItemPreviewAreaViewData.h"
 #include "CoreImagePreviewAreaWidget.generated.h"
 
@@ -19,12 +20,21 @@ protected:
 	UDBDImage* PreviewArea;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UDBDImage* PreviewAreaBG;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UDBDRichTextBlock* ItemContainerText;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UCustomizationItemGridContainer* ItemContainer;
 
 public:
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void ShowBGImage();
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetPreviewContainerVisual(const ECustomizationCategory customizationCategory);
+
 	UFUNCTION(BlueprintCallable)
 	void SetData(const FCustomizationItemPreviewAreaViewData& viewData);
 

@@ -1,9 +1,15 @@
 #include "TricksterChainedThrowsAddon.h"
+#include "Net/UnrealNetwork.h"
+
+void UTricksterChainedThrowsAddon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UTricksterChainedThrowsAddon, _consecutiveHits);
+}
 
 UTricksterChainedThrowsAddon::UTricksterChainedThrowsAddon()
 {
+	this->_consecutiveHits = 0;
 	this->_resetOnEnteringFlurryInteraction = false;
-	this->_lacerationPenaltyRangeThreshold = 1600.000000;
-	this->_closeRangeLacerationPenalty = -0.500000;
-	this->_maximumMultiplier = 1.000000;
 }

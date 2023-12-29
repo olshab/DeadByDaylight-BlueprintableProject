@@ -24,8 +24,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetOtherInteractorsUsable(const bool isEnabled);
 
-	UFUNCTION(BlueprintCallable)
-	void SetCollisionWithCloset(const bool isEnable);
+	UFUNCTION(BlueprintPure=false, BlueprintCallable)
+	void SetCollisionWithCloset(const bool isEnabled, ADBDPlayer* player) const;
 
 	UFUNCTION(BlueprintPure)
 	bool IsRushed() const;

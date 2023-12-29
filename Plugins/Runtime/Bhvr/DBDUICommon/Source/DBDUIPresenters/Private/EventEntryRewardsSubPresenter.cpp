@@ -18,7 +18,7 @@ void UEventEntryRewardsSubPresenter::OnInstructionButtonClicked()
 UEventEntryRewardsSubPresenter::UEventEntryRewardsSubPresenter()
 {
 	this->_tabWidget = NULL;
-	this->_rewardsGridData = TArray<FCustomizationRewardViewData>();
-	this->_previewAreaRewardsData = TArray<FCustomizationRewardViewData>();
+	this->_rewardsGridData = TArray<UStoreCustomizationItemViewData*>();
+	this->_previewAreaRewardsData = TArray<UStoreCustomizationItemViewData*>();
 	this->_parentPresenter = NULL;
 }

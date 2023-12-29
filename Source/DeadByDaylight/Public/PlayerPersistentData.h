@@ -32,6 +32,13 @@ public:
 	UPROPERTY(EditAnywhere)
 	EProviderFlag PlayerProvider;
 
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	FString _equippedBanner;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	FString _equippedBadge;
+
 public:
 	DEADBYDAYLIGHT_API FPlayerPersistentData();
 };

@@ -15,7 +15,6 @@ void UK33TunnelProceduralGenerationComponent::GetLifetimeReplicatedProps(TArray<
 
 UK33TunnelProceduralGenerationComponent::UK33TunnelProceduralGenerationComponent()
 {
-	this->_blocksSpawnData = TArray<FK33TunnelBlockSpawnData>();
 	this->_tunnelBlockAssetsReferences = TMap<EK33TunnelBlockType, TSoftClassPtr<AK33TunnelBlock>>();
 	this->_tunnelBlockAssetClasses = TMap<EK33TunnelBlockType, UClass*>();
 	this->_tunnelBlocks = TArray<AK33TunnelBlock*>();

@@ -56,6 +56,9 @@ protected:
 	void OnControlModeChanged(EControlMode controlMode);
 
 public:
+	UFUNCTION(BlueprintPure)
+	bool IsScrollBarNeeded() const;
+
 	UFUNCTION(BlueprintCallable)
 	bool IsMouseOver();
 

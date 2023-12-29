@@ -14,6 +14,12 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FLinearColor _survivorAuraColor;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FLinearColor _killerHiddenAuraColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FLinearColor _killerExposedAuraColor;
+
 public:
 	UDemogorgonPortalOutlineUpdateStrategy();
 };

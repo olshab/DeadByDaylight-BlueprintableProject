@@ -38,6 +38,9 @@ public:
 	TSet<ACamperPlayer*> GetSurvivors() const;
 
 	UFUNCTION(BlueprintPure)
+	TSet<ADBDPlayer*> GetOtherCharacters() const;
+
+	UFUNCTION(BlueprintPure)
 	TSet<ADBDPlayer*> GetMainDBDPlayers() const;
 
 	UFUNCTION(BlueprintPure)

@@ -14,7 +14,8 @@ void UTeleportToDemogorgonPortalInteraction::OnLocallyObservedChanged(const bool
 
 UTeleportToDemogorgonPortalInteraction::UTeleportToDemogorgonPortalInteraction()
 {
-	this->TeleportToPortalSoundRange = 1600.000000;
+	this->_teleportToPortalSoundRange = 1600.000000;
+	this->_inputReleaseChargePercentAllowance = 0.980000;
 	this->_enterPortalPhaseDuration = 0.000000;
 	this->_cancelTeleportingPhaseDuration = 0.100000;
 	this->_redMossStatusEffectClass = NULL;

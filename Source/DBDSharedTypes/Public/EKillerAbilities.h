@@ -41,4 +41,5 @@ enum class EKillerAbilities : uint8
 	VE_K31Power,
 	VE_K32Power,
 	VE_K33Power,
+	VE_K34Power,
 };

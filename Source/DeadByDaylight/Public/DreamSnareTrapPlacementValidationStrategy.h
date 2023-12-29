@@ -11,13 +11,13 @@ class UDreamSnareTrapPlacementValidationStrategy : public UDefaultObjectPlacemen
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	float NumberOfGroundTest;
+	float _numberOfGroundTest;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	float TrapRadius;
+	float _trapRadius;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	float MaxElevationDifferentialOnTrapEdge;
+	float _maxElevationDifferentialOnTrapEdge;
 
 public:
 	UDreamSnareTrapPlacementValidationStrategy();

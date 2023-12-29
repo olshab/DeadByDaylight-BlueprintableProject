@@ -177,9 +177,6 @@ public:
 	int32 Server_SetEquipment_Count;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 Server_SetGroundFriction_Count;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 Server_SetInteractionToSwapTo_Count;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

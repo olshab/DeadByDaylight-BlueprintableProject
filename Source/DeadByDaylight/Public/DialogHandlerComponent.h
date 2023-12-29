@@ -27,6 +27,9 @@ private:
 	UPROPERTY(EditAnywhere)
 	TArray<FGameplayTag> _stopAudioGameplayEvents;
 
+	UPROPERTY(EditAnywhere)
+	FGameplayTagQuery _allowingDialogueStartStateTagQuery;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	UAkAudioEvent* _stopAudioClip;
 

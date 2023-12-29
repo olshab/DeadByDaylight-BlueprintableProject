@@ -44,7 +44,7 @@ public:
 	bool IsInDreamworld() const;
 
 	UFUNCTION(BlueprintPure)
-	static ADBDPlayer* GetLocallyObservedOrLocalCharacter(UObject* WorldContextObject);
+	static ADBDPlayer* GetLocallyObservedOrLocalCharacter(UObject* worldContextObject);
 
 	UFUNCTION(BlueprintCallable)
 	void FireWakeUpScoreEvent(ADBDPlayer* instigator);

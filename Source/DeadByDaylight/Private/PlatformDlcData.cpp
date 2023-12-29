@@ -4,8 +4,10 @@ FPlatformDlcData::FPlatformDlcData()
 {
 	this->ID = TEXT("");
 	this->UnlockDescription = FText::GetEmpty();
+	this->DisplayName = FText::GetEmpty();
 	this->Description = TEXT("");
 	this->UISortOrder = 0;
+	this->BannerImage = FSoftObjectPath{};
 	this->HeritageID = TEXT("");
 	this->DlcIdSteam = TEXT("");
 	this->DlcIdEpic = TEXT("");

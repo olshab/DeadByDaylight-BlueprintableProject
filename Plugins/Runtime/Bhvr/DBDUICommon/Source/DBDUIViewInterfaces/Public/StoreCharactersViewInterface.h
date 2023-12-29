@@ -2,11 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
-#include "EStoreCharactersMenuState.h"
-#include "TabWidgetData.h"
+#include "EPlayerRole.h"
 #include "UObject/ScriptInterface.h"
 #include "StoreCharactersViewInterface.generated.h"
 
+class UMenuPowerViewData;
+class UCharacterPerkViewData;
 class IStoreCharactersBioViewInterface;
 class IStoreCharactersCustomizationsViewInterface;
 class IStoreCharactersSelectionViewInterface;
@@ -23,19 +24,10 @@ class DBDUIVIEWINTERFACES_API IStoreCharactersViewInterface : public IInterface
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetTabSelected(int32 key);
+	void SetKillerPower(UMenuPowerViewData* killerPower);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetTabsData(const TArray<FTabWidgetData>& tabsData, int32 selectedKey);
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetTabEnabled(int32 key, bool enabled);
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetMenuState(EStoreCharactersMenuState state);
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetCharacterName(const FText& characterName);
+	void SetCharacterData(const FText& characterName, EPlayerRole role, const TArray<UCharacterPerkViewData*>& characterPerks);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreCharactersSelectionViewInterface> GetStoreCharactersSelectionInterface() const;

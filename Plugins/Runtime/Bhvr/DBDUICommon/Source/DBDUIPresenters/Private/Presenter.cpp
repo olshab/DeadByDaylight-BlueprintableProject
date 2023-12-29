@@ -11,12 +11,12 @@ void UPresenter::OnContextUnfocus(EContext context)
 
 }
 
-void UPresenter::OnContextSectionChanged(EContext context)
+void UPresenter::OnContextFocus(EContext context)
 {
 
 }
 
-void UPresenter::OnContextFocus(EContext context)
+void UPresenter::OnContextChanged(EContext context)
 {
 
 }

@@ -7,10 +7,11 @@
 #include "UObject/ScriptInterface.h"
 #include "StoreMenuViewInterface.generated.h"
 
+class IStoreSpecialsViewInterface;
 class IStoreCharactersViewInterface;
-class IStoreFeaturedViewInterface;
 class IStoreCollectionsViewInterface;
-class IStoreBundlesViewInterface;
+class IStoreSpecialPacksViewInterface;
+class IStoreFeaturedViewInterface;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UStoreMenuViewInterface : public UInterface
@@ -36,6 +37,12 @@ public:
 	void SetMenuState(EStoreMenuState state);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	TScriptInterface<IStoreSpecialsViewInterface> GetStoreSpecialsInterface() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	TScriptInterface<IStoreSpecialPacksViewInterface> GetStoreSpecialPacksInterface() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreFeaturedViewInterface> GetStoreFeaturedInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -43,8 +50,5 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreCharactersViewInterface> GetStoreCharactersInterface() const;
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreBundlesViewInterface> GetStoreBundlesInterface() const;
 
 };

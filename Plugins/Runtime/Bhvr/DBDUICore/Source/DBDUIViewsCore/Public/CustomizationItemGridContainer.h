@@ -2,13 +2,14 @@
 
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
-#include "CustomizationRewardViewData.h"
 #include "Templates/SubclassOf.h"
 #include "CustomizationItemGridContainer.generated.h"
 
-class UCoreSelectableButtonWidget;
-class UCoreCustomizationRewardWidget;
+class UCoreStoreCustomizationItemWidget;
 class UGridPanel;
+class UCoreSelectableButtonWidget;
+class UUserWidget;
+class UStoreCustomizationItemViewData;
 class UDBDScrollBox;
 class UCoreKeyListenerInputPromptWidget;
 
@@ -22,7 +23,10 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
-	TSubclassOf<UCoreCustomizationRewardWidget> _customizationRewardWidgetClass;
+	TSubclassOf<UCoreStoreCustomizationItemWidget> _customizationRewardWidgetClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSubclassOf<UUserWidget> _emptyRewardWidgetClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _setSmallTemplate;
@@ -34,7 +38,13 @@ protected:
 	float _customizationTileScale;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _layoutMask;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 _rowCountToShowScrollBar;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _fillGridWithEmptyItems;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
 	UGridPanel* GridContainer;
@@ -45,10 +55,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText _scrollLabelText;
 
-public:
-	UFUNCTION(BlueprintCallable)
-	void SetSmallTemplate(const bool setSmallTemplate);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
+	TArray<UCoreStoreCustomizationItemWidget*> _customizationRewards;
 
+public:
 	UFUNCTION(BlueprintCallable)
 	void SetSelectedItem(const int32 selectedIndex);
 
@@ -56,19 +66,17 @@ public:
 	void SetScrollPrompt(UCoreKeyListenerInputPromptWidget* displayPrompt);
 
 	UFUNCTION(BlueprintCallable)
-	void SetData(const TArray<FCustomizationRewardViewData>& customizationRewardsData, const int32 selectedIndex);
+	void SetItemsLayout(int32 layoutMask);
+
+	UFUNCTION(BlueprintCallable)
+	void SetData(const TArray<UStoreCustomizationItemViewData*>& customizationRewardsData, const int32 selectedIndex);
 
 protected:
 	UFUNCTION(BlueprintCallable)
 	void OnItemClicked(UCoreSelectableButtonWidget* buttonTarget, bool isSelected);
 
-public:
-	UFUNCTION(BlueprintPure=false, BlueprintCallable)
-	void HideMilestonePointIcons() const;
-
-protected:
-	UFUNCTION(BlueprintPure=false, BlueprintCallable)
-	void ClearGrid() const;
+	UFUNCTION(BlueprintCallable)
+	void ClearGrid();
 
 public:
 	UCustomizationItemGridContainer();

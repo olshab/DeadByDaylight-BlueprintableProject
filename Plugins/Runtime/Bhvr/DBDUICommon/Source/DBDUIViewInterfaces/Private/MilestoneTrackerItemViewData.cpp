@@ -4,5 +4,5 @@ FMilestoneTrackerItemViewData::FMilestoneTrackerItemViewData()
 {
 	this->EventPoints = 0;
 	this->State = EMilestoneTrackerItemState::Unlocked;
-	this->RewardData = FCustomizationRewardViewData{};
+	this->RewardData = NULL;
 }

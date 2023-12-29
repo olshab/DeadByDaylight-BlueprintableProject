@@ -19,6 +19,9 @@ public:
 	static bool IsWilliamBillOverbeck(const ADBDBasePlayer* targetPlayer);
 
 	UFUNCTION(BlueprintPure)
+	static bool IsTheYerkes(const ADBDBasePlayer* targetPlayer);
+
+	UFUNCTION(BlueprintPure)
 	static bool IsTheWraith(const ADBDBasePlayer* targetPlayer);
 
 	UFUNCTION(BlueprintPure)
@@ -44,6 +47,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	static bool IsThePig(const ADBDBasePlayer* targetPlayer);
+
+	UFUNCTION(BlueprintPure)
+	static bool IsTheOnryo(const ADBDBasePlayer* targetPlayer);
 
 	UFUNCTION(BlueprintPure)
 	static bool IsTheOni(const ADBDBasePlayer* targetPlayer);

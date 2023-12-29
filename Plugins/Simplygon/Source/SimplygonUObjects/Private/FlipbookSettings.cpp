@@ -5,5 +5,9 @@ FFlipbookSettings::FFlipbookSettings()
 	this->NumberOfViews = 0;
 	this->ViewDirection = FVector{};
 	this->UpVector = FVector{};
-	this->VerticalAngle = 0.0f;
+	this->NumberOfColumns = 0;
+	this->NumberOfRows = 0;
+	this->FlipRowColumnOrder = false;
+	this->OverrideFlipbookTextureWidth = 0;
+	this->PivotAroundOrigin = false;
 }

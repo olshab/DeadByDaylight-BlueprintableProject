@@ -16,9 +16,6 @@ class DBDUIVIEWINTERFACES_API IStoreCharactersBioViewInterface : public IInterfa
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetData();
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void Reset();
+	void SetData(const FText& characterBio);
 
 };

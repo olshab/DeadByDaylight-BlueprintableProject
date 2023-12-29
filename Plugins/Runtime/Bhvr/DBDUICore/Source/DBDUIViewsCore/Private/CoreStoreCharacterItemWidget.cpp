@@ -2,12 +2,12 @@
 
 class UStoreCharacterItemViewData;
 
-void UCoreStoreCharacterItemWidget::SetCharacterData_Implementation(UStoreCharacterItemViewData* data)
+void UCoreStoreCharacterItemWidget::SetStoreCharacterItemData_Implementation(UStoreCharacterItemViewData* data)
 {
 
 }
 
 UCoreStoreCharacterItemWidget::UCoreStoreCharacterItemWidget()
 {
-
+	this->_data = NULL;
 }

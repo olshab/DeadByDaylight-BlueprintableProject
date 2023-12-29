@@ -23,4 +23,5 @@ void UK28PlayerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
 UK28PlayerComponent::UK28PlayerComponent()
 {
 	this->_dayNightComponent = NULL;
+	this->_stateTagsToDisableNightMode = TArray<FGameplayTag>();
 }

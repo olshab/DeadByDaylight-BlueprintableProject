@@ -63,11 +63,6 @@ UStatusEffect* UPerkManager::GetStatusEffectByClass(const UClass* type) const
 	return NULL;
 }
 
-UStatusEffect* UPerkManager::GetStatusEffect(FName id) const
-{
-	return NULL;
-}
-
 UGameplayModifierContainer* UPerkManager::GetSourceWithModifier(FGameplayTag type) const
 {
 	return NULL;

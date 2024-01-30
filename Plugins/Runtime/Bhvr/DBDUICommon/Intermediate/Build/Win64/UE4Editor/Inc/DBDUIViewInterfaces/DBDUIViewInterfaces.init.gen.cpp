@@ -1,0 +1,255 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/GeneratedCppIncludes.h"
+#ifdef _MSC_VER
+#pragma warning (push)
+#pragma warning (disable : 4883)
+#endif
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+void EmptyLinkFunctionForGeneratedCodeDBDUIViewInterfaces_init() {}
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveBackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveChallengeReminderClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveInfoClicked__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveMenuTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnBonusTierTooltipShown__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnOutfitClicked__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnPurchasePremiumPassClicked__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnPurchaseTierClicked__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnRewardCurrencyClicked__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnRewardItemClicked__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveSlotSelectionSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveSlotSelectorClosed__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveTomeEditorSwitchCompleteDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveTomeMenuTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_AuricCellsBackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_AuricCellsBuyActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_AuricCellsSpecialOtherOptionsActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_BackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_BackButtonClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ChangeAccountActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ChapterPackBuyButtonActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ClaimedAllRitualsDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ClaimedRitualDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_CompletedFadeOutDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ConfirmPurchase__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_CreditsBackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_DisplayStandRotationEvent__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_EventEntryBackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_EventEntryTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_EventInfoTabArchivesButtonClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ExampleButtonClickDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerBackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerTextVisibilityActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerVoiceOverAutoplay__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerVoiceOverPlayed__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_InstructionButtonClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_LoadoutMenuSlotIsSelected__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_MenuTabSelectedAgainDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_MenuTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_MilestoneTrackerItemSelected__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_NewActiveTomePopupButtonClicked__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_NotifTutoConfirmButtonClickDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnboardingMenuTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCinematicFadeInDone__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCinematicFadeOutDone__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCinematicSubtitleUpdate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnClearFiltersClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCompendiumClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCustomizationItemClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnFeaturedCharacterClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnHemorrhageAnimationCompleteEvent__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuInventorySlotClick__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuLeftArrowClick__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuPresetSlotClick__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuRightArrowClick__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuSlotClick__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnMuteBackgroundAudio__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnOnboardingGameManualCategoryShown__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnOutOfDailyRitualsDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPaginationAnimationCompleted__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPlayerProfileCustomizationItemClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPlayerProfileCustomizationSortingChanged__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPlayerProfileEquipButtonClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnSelectedCharacterChanged__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnStoreFiltersChangedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnVideoPlaybackDone__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnVideoPlaybackStarted__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PlayerProfileClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PlayerProfileCurrencyClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PopupAction__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PopupBackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ProgressAnimationDone__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_QuitGameActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_RemovedDailyRitualDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_RewardAlertSequenceCompletedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SettingsActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SettingsButtonClickedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpecialPackBuyActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpectateLeaveTriggeredDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpectateLeftArrowTriggeredDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpectateRightArrowTriggeredelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StartSequenceFadeOutCompleted__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCategorySelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCharacterSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCharactersMenuTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCustomizationSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreGetAuricCellsButtonDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreMenuBackActionDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreMenuTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreRedeemCodeButtonDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreSubTabSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelAnimationDoneDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelRewardAnimationDoneDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelUnlockedAnimationDoneDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestEditorSaveDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestMapCreatedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestNodeHoveredDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestNodeSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestNodeUnhoveredDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TutorialSelectedDelegate__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteCinematicPlayed__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteEntrySelected__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteSelected__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteShowImageViewer__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteVoiceOverAutoplay__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteVoiceOverPlayed__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_WidgetClosingDone__DelegateSignature();
+	DBDUIVIEWINTERFACES_API UFunction* Z_Construct_UDelegateFunction_DBDUIViewInterfaces_WidgetOpeningDone__DelegateSignature();
+	UPackage* Z_Construct_UPackage__Script_DBDUIViewInterfaces()
+	{
+		static UPackage* ReturnPackage = nullptr;
+		if (!ReturnPackage)
+		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveBackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveChallengeReminderClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveInfoClicked__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveMenuTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnBonusTierTooltipShown__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnOutfitClicked__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnPurchasePremiumPassClicked__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnPurchaseTierClicked__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnRewardCurrencyClicked__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveRiftOnRewardItemClicked__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveSlotSelectionSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveSlotSelectorClosed__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveTomeEditorSwitchCompleteDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ArchiveTomeMenuTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_AuricCellsBackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_AuricCellsBuyActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_AuricCellsSpecialOtherOptionsActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_BackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_BackButtonClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ChangeAccountActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ChapterPackBuyButtonActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ClaimedAllRitualsDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ClaimedRitualDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_CompletedFadeOutDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ConfirmPurchase__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_CreditsBackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_DisplayStandRotationEvent__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_EventEntryBackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_EventEntryTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_EventInfoTabArchivesButtonClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ExampleButtonClickDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerBackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerTextVisibilityActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerVoiceOverAutoplay__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ImageViewerVoiceOverPlayed__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_InstructionButtonClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_LoadoutMenuSlotIsSelected__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_MenuTabSelectedAgainDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_MenuTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_MilestoneTrackerItemSelected__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_NewActiveTomePopupButtonClicked__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_NotifTutoConfirmButtonClickDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnboardingMenuTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCinematicFadeInDone__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCinematicFadeOutDone__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCinematicSubtitleUpdate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnClearFiltersClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCompendiumClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnCustomizationItemClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnFeaturedCharacterClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnHemorrhageAnimationCompleteEvent__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuInventorySlotClick__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuLeftArrowClick__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuPresetSlotClick__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuRightArrowClick__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnLoadoutMenuSlotClick__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnMuteBackgroundAudio__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnOnboardingGameManualCategoryShown__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnOutOfDailyRitualsDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPaginationAnimationCompleted__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPlayerProfileCustomizationItemClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPlayerProfileCustomizationSortingChanged__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnPlayerProfileEquipButtonClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnSelectedCharacterChanged__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnStoreFiltersChangedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnVideoPlaybackDone__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_OnVideoPlaybackStarted__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PlayerProfileClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PlayerProfileCurrencyClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PopupAction__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_PopupBackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_ProgressAnimationDone__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_QuitGameActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_RemovedDailyRitualDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_RewardAlertSequenceCompletedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SettingsActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SettingsButtonClickedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpecialPackBuyActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpectateLeaveTriggeredDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpectateLeftArrowTriggeredDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_SpectateRightArrowTriggeredelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StartSequenceFadeOutCompleted__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCategorySelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCharacterSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCharactersMenuTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreCustomizationSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreGetAuricCellsButtonDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreMenuBackActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreMenuTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreRedeemCodeButtonDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_StoreSubTabSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelAnimationDoneDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelRewardAnimationDoneDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeLevelUnlockedAnimationDoneDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestEditorSaveDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestMapCreatedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestNodeHoveredDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestNodeSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TomeQuestNodeUnhoveredDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_TutorialSelectedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteCinematicPlayed__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteEntrySelected__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteSelected__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteShowImageViewer__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteVoiceOverAutoplay__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_VignetteVoiceOverPlayed__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_WidgetClosingDone__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_DBDUIViewInterfaces_WidgetOpeningDone__DelegateSignature,
+			};
+			static const UE4CodeGen_Private::FPackageParams PackageParams = {
+				"/Script/DBDUIViewInterfaces",
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
+				PKG_CompiledIn | 0x00000000,
+				0x21ECEE21,
+				0x8426D665,
+				METADATA_PARAMS(nullptr, 0)
+			};
+			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
+		}
+		return ReturnPackage;
+	}
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+#ifdef _MSC_VER
+#pragma warning (pop)
+#endif

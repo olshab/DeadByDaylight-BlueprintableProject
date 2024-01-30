@@ -1,0 +1,10 @@
+{
+	"BuildId": "17155196",
+	"Modules": 
+	{
+		"DBDUIManagers": "UE4Editor-DBDUIManagers.dll",
+		"DBDUIPresenters": "UE4Editor-DBDUIPresenters.dll",
+		"DBDUIViewInterfaces": "UE4Editor-DBDUIViewInterfaces.dll",
+		"UITween": "UE4Editor-UITween.dll"
+	}
+}

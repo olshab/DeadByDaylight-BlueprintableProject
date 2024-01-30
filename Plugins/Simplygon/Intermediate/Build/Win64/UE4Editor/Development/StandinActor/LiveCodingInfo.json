@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.StandinActor.cpp.obj": [
+			"StandinActorModule.cpp.obj",
+			"StandInMeshActor.cpp.obj",
+			"StandinProxyContainer.cpp.obj",
+			"StandinProxyEntry.cpp.obj"
+		],
+		"Module.StandinActor.gen.cpp.obj": [
+			"StandinActor.init.gen.cpp.obj",
+			"StandInMeshActor.gen.cpp.obj",
+			"StandinProxyContainer.gen.cpp.obj",
+			"StandinProxyEntry.gen.cpp.obj"
+		]
+	}
+}

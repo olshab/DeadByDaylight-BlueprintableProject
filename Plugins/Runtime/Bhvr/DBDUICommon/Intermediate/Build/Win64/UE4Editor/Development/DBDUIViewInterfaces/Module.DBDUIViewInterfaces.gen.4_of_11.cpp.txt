@@ -1,0 +1,191 @@
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Development\DBDUIViewInterfaces\Definitions.DBDUIViewInterfaces.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/DisplayStandRotationEvent.gen.cpp
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/DisplayStandRotationEvent.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\DisplayStandRotationEvent.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/DisplayStandViewData.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/DisplayStandViewData.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/CanvasPanelSlot.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Layout/Anchors.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\Anchors.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Layout/SConstraintCanvas.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/PanelSlot.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Visual.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Visual.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\PanelSlot.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\CanvasPanelSlot.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\DisplayStandViewData.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/DisplayStandViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/DisplayStandViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\DisplayStandViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/DoctorStatusData.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/DoctorStatusData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\KillerStatusData.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\AssetRegistry/ARFilter.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\KillerStatusData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\EAfflictionLevel.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\EAfflictionLevel.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\DoctorStatusData.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EAimingCrosshairState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EAimingCrosshairState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EAimingCrosshairState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EAntiCampSelfUnhookMeterState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EAntiCampSelfUnhookMeterState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EAntiCampSelfUnhookMeterState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EArchivePathStatus.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EArchivePathStatus.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EArchivePathStatus.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EArchiveTomeMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EArchiveTomeMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EArchiveTomeMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EArchiveTomeType.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EArchiveTomeType.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EArchiveTomeType.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EditorInterfaces.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EditorInterfaces.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EditorInterfaces.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EEventEntryTabState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EEventEntryTabState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EEventEntryTabState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EGameManualMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EGameManualMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EGameManualMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EHudStatusEffectAlertViewType.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EHudStatusEffectAlertViewType.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EHudStatusEffectAlertViewType.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EInteractionPromptType.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EInteractionPromptType.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EInteractionPromptType.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EMilestoneTrackerItemState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EMilestoneTrackerItemState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EMilestoneTrackerItemState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EndGameCollapseBarViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EndGameCollapseBarViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EndGameCollapseBarViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EOnboardingMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EOnboardingMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EOnboardingMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EOriginWidgetState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EOriginWidgetState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EOriginWidgetState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EProfileMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EProfileMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EProfileMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EquippedItemViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EquippedItemViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\ItemBundleViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\ItemViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\BaseLoadoutPartViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\EItemRarity.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\EItemRarity.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\BaseLoadoutPartViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ItemViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\AddonViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\EStatusEffectType.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\EStatusEffectType.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\ELoadoutPartState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\ELoadoutPartState.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\AddonViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ItemBundleViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EquippedItemViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EquippedPowerViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EquippedPowerViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\PowerBundleViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\PowerViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\PowerViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\PowerBundleViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EquippedPowerViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/ESingleHookState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/ESingleHookState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ESingleHookState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EStoreCharactersMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EStoreCharactersMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EStoreCharactersMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EStoreCollectionsMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EStoreCollectionsMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EStoreCollectionsMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EStoreItemLayout.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EStoreItemLayout.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EStoreItemLayout.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EStoreMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EStoreMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EStoreMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EStoreSpecialPacksMenuState.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EStoreSpecialPacksMenuState.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EStoreSpecialPacksMenuState.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/ETestBuildFlagPosition.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/ETestBuildFlagPosition.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ETestBuildFlagPosition.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/ETierType.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/ETierType.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ETierType.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventCollectionViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventCollectionViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\CustomizationItemPreviewAreaViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\CustomizationItemPreviewAreaViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\CustomizationItemOriginViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\PriceTagViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\ECurrencyType.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\ECurrencyType.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\PriceTagViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\CustomizationItemOriginViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\EventEntryPopupSkinUIData.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventEntryPopupSkinUIData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventCollectionViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventDetailsViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventDetailsViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\DetailsTabViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\EDetailsTabLayout.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\EDetailsTabLayout.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\SpecialEventDetailsTabContentData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Source\DBDSharedTypes\Public\EPlayerTeam.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\EPlayerTeam.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Intermediate\Build\Win64\UE4Editor\Inc\DBDSharedTypes\SpecialEventDetailsTabContentData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\DetailsTabViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventDetailsViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventEntryBackActionDelegate.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventEntryBackActionDelegate.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventEntryBackActionDelegate.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventEntryPopupSkinUIData.gen.cpp
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventEntryTabSelectedDelegate.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventEntryTabSelectedDelegate.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventEntryTabSelectedDelegate.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventEntryViewData.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventEntryViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventEntryViewData.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventEntryViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventEntryViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\TabWidgetData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\TabWidgetData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\MilestoneTrackerViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces\Public\MilestoneTrackerItemViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\MilestoneTrackerItemViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\MilestoneTrackerViewData.generated.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventEntryViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventInfoTabArchivesButtonClickedDelegate.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventInfoTabArchivesButtonClickedDelegate.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventInfoTabArchivesButtonClickedDelegate.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventInfoViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventInfoViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventInfoViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/EventTabViewData.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/EventTabViewData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\EventTabViewData.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/ExampleButtonClickDelegate.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/ExampleButtonClickDelegate.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ExampleButtonClickDelegate.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/ExampleViewInterface.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/ExampleViewInterface.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ExampleViewInterface.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/DBDUICommon/Intermediate/Build/Win64/UE4Editor/Inc/DBDUIViewInterfaces/ExecutionerStatusData.gen.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Source\DBDUIViewInterfaces/Public/ExecutionerStatusData.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\DBDUICommon\Intermediate\Build\Win64\UE4Editor\Inc\DBDUIViewInterfaces\ExecutionerStatusData.generated.h

@@ -1,0 +1,1 @@
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\MirrorsSdk\Intermediate\Build\Win64\UE4Editor\Development\MirrorsSdk\Definitions.MirrorsSdk.h

@@ -17,7 +17,7 @@ public class DBDUIPresenters : ModuleRules {
 			"CoreUObject",
 			"CoreUtilities",
 			"Customization",
-			"DBDAnimationBudgetAllocator",
+			"DBDAnimationBudgetAllocator", 
 			"DBDAudio",
 			"DBDInput",
 			"DBDSharedTypes",

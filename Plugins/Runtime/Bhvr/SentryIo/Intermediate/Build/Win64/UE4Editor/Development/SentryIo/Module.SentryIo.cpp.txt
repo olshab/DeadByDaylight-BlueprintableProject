@@ -1,0 +1,11 @@
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\SentryIo\Intermediate\Build\Win64\UE4Editor\Development\SentryIo\Definitions.SentryIo.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/SentryIo/Source/SentryIo/Private/SentryIoBaseSubsystem.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\SentryIo\Source\SentryIo\Public\SentryIoBaseSubsystem.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\SentryIo\Intermediate\Build\Win64\UE4Editor\Inc\SentryIo\SentryIoBaseSubsystem.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/SentryIo/Source/SentryIo/Private/SentryIoLinuxSubsystem.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\SentryIo\Source\SentryIo\Public\SentryIoLinuxSubsystem.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\SentryIo\Intermediate\Build\Win64\UE4Editor\Inc\SentryIo\SentryIoLinuxSubsystem.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/SentryIo/Source/SentryIo/Private/SentryIoModule.cpp
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/SentryIo/Source/SentryIo/Private/SentryIoSubsystem.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\SentryIo\Source\SentryIo\Public\SentryIoSubsystem.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\SentryIo\Intermediate\Build\Win64\UE4Editor\Inc\SentryIo\SentryIoSubsystem.generated.h

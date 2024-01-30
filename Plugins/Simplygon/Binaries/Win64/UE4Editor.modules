@@ -1,0 +1,8 @@
+{
+	"BuildId": "17155196",
+	"Modules": 
+	{
+		"SimplygonUObjects": "UE4Editor-SimplygonUObjects.dll",
+		"StandinActor": "UE4Editor-StandinActor.dll"
+	}
+}

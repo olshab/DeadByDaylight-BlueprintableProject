@@ -1,0 +1,17 @@
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\OnlinePresence\Intermediate\Build\Win64\UE4Editor\Development\OnlinePresence\Definitions.OnlinePresence.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/OnlinePresence/Source/OnlinePresence/Private/MirrorsConfig.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\OnlinePresence\Source\OnlinePresence\Public\MirrorsConfig.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\AssetRegistry/ARFilter.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\OnlinePresence\Intermediate\Build\Win64\UE4Editor\Inc\OnlinePresence\MirrorsConfig.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/OnlinePresence/Source/OnlinePresence/Private/OnlinePresenceExternalCommands.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\OnlinePresence\Source\OnlinePresence\Public\OnlinePresenceExternalCommands.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\OnlinePresence\Intermediate\Build\Win64\UE4Editor\Inc\OnlinePresence\OnlinePresenceExternalCommands.generated.h
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/OnlinePresence/Source/OnlinePresence/Private/OnlinePresenceModule.cpp
+C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/OnlinePresence/Source/OnlinePresence/Private/SteamConfig.cpp
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\OnlinePresence\Source\OnlinePresence\Public\SteamConfig.h
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\OnlinePresence\Intermediate\Build\Win64\UE4Editor\Inc\OnlinePresence\SteamConfig.generated.h

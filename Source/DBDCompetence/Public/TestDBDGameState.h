@@ -10,9 +10,9 @@ class ATestDBDGameState : public ADBDGameState
 	GENERATED_BODY()
 
 public:
-	DECLARE_DYNAMIC_DELEGATE(FOnIntroCompleteDelegate);
-
 	DECLARE_DYNAMIC_DELEGATE(FOnLevelReadyToPlayDelegate);
+
+	DECLARE_DYNAMIC_DELEGATE(FOnIntroCompleteDelegate);
 
 public:
 	ATestDBDGameState();

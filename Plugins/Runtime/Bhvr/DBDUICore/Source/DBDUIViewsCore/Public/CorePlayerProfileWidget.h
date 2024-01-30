@@ -61,7 +61,7 @@ private:
 	void OnPlayerCardButtonHovered(UCoreButtonWidget* button);
 
 public:
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION()
 	virtual void SetPlayerCardEnabled(bool isEnabled) override PURE_VIRTUAL(SetPlayerCardEnabled,);
 
 public:

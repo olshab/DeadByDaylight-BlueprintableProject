@@ -1,0 +1,1 @@
+C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\PlatformsProviders\Intermediate\Build\Win64\UE4Editor\Development\PlatformsProviders\Definitions.PlatformsProviders.h

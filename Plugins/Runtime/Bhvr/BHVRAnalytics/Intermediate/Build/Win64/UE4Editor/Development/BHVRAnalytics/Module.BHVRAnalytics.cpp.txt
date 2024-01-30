@@ -1,8 +1,0 @@
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\BHVRAnalytics\Intermediate\Build\Win64\UE4Editor\Development\BHVRAnalytics\Definitions.BHVRAnalytics.h
-C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/BHVRAnalytics/Source/BHVRAnalytics/Private/BaseSingleStructIndexAnalytics.cpp
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\BHVRAnalytics\Source\BHVRAnalytics\Public\BaseSingleStructIndexAnalytics.h
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\BHVRAnalytics\Intermediate\Build\Win64\UE4Editor\Inc\BHVRAnalytics\BaseSingleStructIndexAnalytics.generated.h
-C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/BHVRAnalytics/Source/BHVRAnalytics/Private/BHVRAnalytics.cpp
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\BHVRAnalytics\Source\BHVRAnalytics\Public\BHVRAnalytics.h
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\BHVRAnalytics\Intermediate\Build\Win64\UE4Editor\Inc\BHVRAnalytics\BHVRAnalytics.generated.h
-C:/Users/Oleg/Desktop/DeadByDaylight-Project/Plugins/Runtime/Bhvr/BHVRAnalytics/Source/BHVRAnalytics/Private/BHVRAnalyticsModule.cpp

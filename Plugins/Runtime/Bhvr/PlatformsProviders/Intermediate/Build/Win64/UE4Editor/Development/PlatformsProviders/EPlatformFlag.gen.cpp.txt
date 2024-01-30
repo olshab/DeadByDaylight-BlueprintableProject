@@ -1,5 +1,0 @@
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\PlatformsProviders\Intermediate\Build\Win64\UE4Editor\Development\PlatformsProviders\Definitions.PlatformsProviders.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\PlatformsProviders\Source\PlatformsProviders/Public/EPlatformFlag.h
-C:\Users\Oleg\Desktop\DeadByDaylight-Project\Plugins\Runtime\Bhvr\PlatformsProviders\Intermediate\Build\Win64\UE4Editor\Inc\PlatformsProviders\EPlatformFlag.generated.h

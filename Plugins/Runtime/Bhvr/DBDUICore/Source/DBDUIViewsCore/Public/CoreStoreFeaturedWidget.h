@@ -3,12 +3,13 @@
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
 #include "StoreFeaturedViewInterface.h"
-#include "OnFeaturedCharacterClickedDelegate.h"
 #include "CoreStoreFeaturedWidget.generated.h"
 
+class UCoreStoreFeaturedMysteryBoxWidget;
 class UStoreCustomizationItemViewData;
 class UCoreStoreFeaturedCustomizationItemContainerWidget;
 class UCoreStoreFeaturedCharacterContainerWidget;
+class UCoreStoreFeaturedChapterPackWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UCoreStoreFeaturedWidget : public UCoreBaseUserWidget, public IStoreFeaturedViewInterface
@@ -19,15 +20,17 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<UStoreCustomizationItemViewData*> _featuredItems;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreStoreFeaturedCustomizationItemContainerWidget* CustomizationItemContainer;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreStoreFeaturedCharacterContainerWidget* CharacterContainer;
 
-private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FOnFeaturedCharacterClickedDelegate _featuredCharacterSelectedDelegate;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCoreStoreFeaturedMysteryBoxWidget* MysteryBox;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCoreStoreFeaturedChapterPackWidget* FeaturedChapterPack;
 
 public:
 	UCoreStoreFeaturedWidget();

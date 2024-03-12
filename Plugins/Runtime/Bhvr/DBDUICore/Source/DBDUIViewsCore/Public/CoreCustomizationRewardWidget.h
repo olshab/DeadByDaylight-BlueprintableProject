@@ -25,16 +25,16 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
 	TSubclassOf<UCorePriceTagWidget> PriceTagWidgetClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* RarityIMG;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* EventPointsImage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* CheckmarkImage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UVerticalBox* PriceTagsVerticalBox;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -53,17 +53,8 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void SetMilestoneTrackerOwnedVisuals(bool isOwned, bool useAnimation);
 
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void SetLimitedTimeText(const FString& limitedTimeText);
-
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void SetDiscountTimeText(const FString& discountTimeText);
-
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetCustomizationRewardData(const FCustomizationRewardViewData& customizationRewardViewData);
-
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void HideTimeTexts();
 
 	UFUNCTION(BlueprintCallable)
 	void DisplayEventPointIcon(bool show);

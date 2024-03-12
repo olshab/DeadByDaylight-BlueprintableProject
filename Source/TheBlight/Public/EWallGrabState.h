@@ -14,6 +14,5 @@ enum class EWallGrabState : uint8
 	Holding,
 	LethalCharge,
 	Cooldown,
-	Sliding,
 	Attacking,
 };

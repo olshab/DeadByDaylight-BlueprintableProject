@@ -5,7 +5,6 @@
 #include "CustomTransformation.h"
 #include "StoreItemViewData.h"
 #include "CustomizationRewardViewData.h"
-#include "SpecialEventInfoViewData.h"
 #include "EPlayerRole.h"
 #include "StoreCustomizationItemViewData.generated.h"
 
@@ -35,9 +34,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FString RarityPartInfo;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	FSpecialEventInfoViewData EventInfo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<FName> ParentBundleIds;

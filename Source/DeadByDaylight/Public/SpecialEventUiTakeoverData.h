@@ -10,7 +10,7 @@ struct FSpecialEventUiTakeoverData
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool UseRoleSelectionTakeover;
+	bool UseMainMenuTakeover;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool UseEventEntryPopupTakeover;

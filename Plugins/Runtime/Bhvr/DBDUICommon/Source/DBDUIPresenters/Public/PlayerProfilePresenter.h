@@ -4,7 +4,6 @@
 #include "ECurrencyType.h"
 #include "ESpecialEventStatus.h"
 #include "Presenter.h"
-#include "CombinedSpecialEventData.h"
 #include "Templates/SubclassOf.h"
 #include "ShopWalletUpdate.h"
 #include "PlayerProfilePresenter.generated.h"
@@ -46,6 +45,12 @@ private:
 	void OnUpdatePlayerProfileCurrencyFilter(const uint8 currencyFilter);
 
 	UFUNCTION(BlueprintCallable)
+	void OnUpdatePlayerCardAnimationMode() const;
+
+	UFUNCTION(BlueprintCallable)
+	void OnSpecialEventStatusChanged(FName specialEventId, ESpecialEventStatus specialEventStatus);
+
+	UFUNCTION(BlueprintCallable)
 	void OnResetPlayerProfileFilter();
 
 	UFUNCTION(BlueprintCallable)
@@ -58,13 +63,10 @@ private:
 	void OnPlayerProfileClicked();
 
 	UFUNCTION(BlueprintCallable)
-	void OnCurrentSpecialEventChanged(const FCombinedSpecialEventData& previousSpecialEvent, ESpecialEventStatus previousSpecialEventStatus, const FCombinedSpecialEventData& currentSpecialEvent, ESpecialEventStatus currentSpecialEventStatus);
-
-	UFUNCTION(BlueprintCallable)
 	void HidePlayerProfile();
 
 	UFUNCTION(BlueprintCallable)
-	FText GetPlayerName();
+	FText GetPlayerName() const;
 
 	UFUNCTION(BlueprintCallable)
 	void FocusPlayerProfile(const uint8 filter, const uint8 currencyFilter);

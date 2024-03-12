@@ -18,6 +18,9 @@ public:
 	FAITunableParameter HighCondemnedThreshold;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter MaxLockedCondemnThreshold;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FAITunableParameter SolveCondemnedBasicWeight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

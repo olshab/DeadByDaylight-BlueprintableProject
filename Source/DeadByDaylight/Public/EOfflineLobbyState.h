@@ -7,7 +7,7 @@ UENUM(BlueprintType)
 enum class EOfflineLobbyState : uint8
 {
 	None,
-	RoleSelection,
+	MainMenu,
 	OfflineLobby,
 	Store,
 	PartyLobby,

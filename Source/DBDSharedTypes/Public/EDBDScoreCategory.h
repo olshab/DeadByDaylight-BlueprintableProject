@@ -20,5 +20,6 @@ enum class EDBDScoreCategory : uint8
 	DBD_ScoreCat_Bonus,
 	DBD_ScoreCat_MatchIncentive,
 	DBD_ScoreCat_BonusEvents,
+	DBD_ScoreCat_LteIncentive,
 	Count,
 };

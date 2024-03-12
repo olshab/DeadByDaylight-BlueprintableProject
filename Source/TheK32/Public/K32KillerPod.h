@@ -31,10 +31,10 @@ public:
 	FOnAcquiredChanged OnAcquiredChanged;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidgetOptional))
 	UStaticMeshComponent* _overlapTestingMeshComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidgetOptional))
 	UMapActorComponent* _mapActorComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

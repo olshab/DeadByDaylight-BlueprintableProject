@@ -32,7 +32,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
 	TSubclassOf<UCoreTabWidget> CoreTabClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UGridPanel* TabContainer;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)

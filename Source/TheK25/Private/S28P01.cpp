@@ -1,6 +1,7 @@
 #include "S28P01.h"
 #include "Net/UnrealNetwork.h"
 
+class ADBDPlayer;
 class UChargeableComponent;
 
 void US28P01::OnRep_IsPerkActive() const
@@ -26,6 +27,11 @@ float US28P01::GetAuraRevealRange() const
 float US28P01::GetAuraRevealDuration() const
 {
 	return 0.0f;
+}
+
+void US28P01::Authority_OnS28P01InteractionStart(ADBDPlayer* player)
+{
+
 }
 
 void US28P01::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

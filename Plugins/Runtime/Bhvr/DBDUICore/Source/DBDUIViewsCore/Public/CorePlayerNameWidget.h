@@ -12,7 +12,7 @@ class DBDUIVIEWSCORE_API UCorePlayerNameWidget : public UCoreBaseUserWidget
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* PlayerNameTB;
 
 public:

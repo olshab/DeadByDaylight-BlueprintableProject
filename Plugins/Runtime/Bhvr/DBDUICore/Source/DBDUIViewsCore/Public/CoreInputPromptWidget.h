@@ -14,6 +14,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText _unfoundInputKeyText;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText _betaFeatureText;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FKey _inputKey;
@@ -27,6 +30,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetEnabled(bool isEnabled);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetBetaFeatureOverlayVisible(bool isVisible);
 
 protected:
 	UFUNCTION(BlueprintCallable)

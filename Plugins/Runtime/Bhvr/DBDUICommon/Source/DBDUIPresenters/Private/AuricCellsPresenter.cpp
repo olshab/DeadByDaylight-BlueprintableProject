@@ -1,6 +1,7 @@
 #include "AuricCellsPresenter.h"
+#include "PremiumPurchaseCompleteData.h"
 
-void UAuricCellsPresenter::OnPremiumTransactionCompleted(bool success)
+void UAuricCellsPresenter::OnPremiumTransactionCompleted(bool success, FName itemId, const FPremiumPurchaseCompleteData& purchaseCompleteData)
 {
 
 }

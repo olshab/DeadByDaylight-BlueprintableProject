@@ -2,5 +2,6 @@
 
 UAddon_K22Power_11::UAddon_K22Power_11()
 {
+	this->_survivorRemoveTwinMaxChargeAdditiveEffect = NULL;
 	this->_increaseRemoveTwinTime = 0.000000;
 }

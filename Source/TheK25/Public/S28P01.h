@@ -57,6 +57,9 @@ private:
 	UFUNCTION(BlueprintPure)
 	float GetAuraRevealDuration() const;
 
+	UFUNCTION(BlueprintCallable)
+	void Authority_OnS28P01InteractionStart(ADBDPlayer* player);
+
 public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 

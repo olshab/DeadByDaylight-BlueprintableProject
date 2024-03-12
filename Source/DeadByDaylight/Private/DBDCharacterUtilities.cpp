@@ -10,11 +10,6 @@ bool UDBDCharacterUtilities::IsWilliamBillOverbeck(const ADBDBasePlayer* targetP
 	return false;
 }
 
-bool UDBDCharacterUtilities::IsTheYerkes(const ADBDBasePlayer* targetPlayer)
-{
-	return false;
-}
-
 bool UDBDCharacterUtilities::IsTheWraith(const ADBDBasePlayer* targetPlayer)
 {
 	return false;
@@ -96,6 +91,11 @@ bool UDBDCharacterUtilities::IsTheHillBilly(const ADBDBasePlayer* targetPlayer)
 }
 
 bool UDBDCharacterUtilities::IsTheHag(const ADBDBasePlayer* targetPlayer)
+{
+	return false;
+}
+
+bool UDBDCharacterUtilities::IsTheGoodGuy(const ADBDBasePlayer* targetPlayer)
 {
 	return false;
 }

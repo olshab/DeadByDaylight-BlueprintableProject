@@ -48,13 +48,13 @@ public:
 	FOnPowerStateChanged OnPowerStateChanged;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UInteractor* _interactor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDrawPatrolPathInteraction* _drawPathInteraction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UKnightOrderComponent* _orderComponent;
 
 private:
@@ -146,7 +146,7 @@ public:
 
 private:
 	UFUNCTION(BlueprintCallable)
-	void OnRep_KnightHusk();
+	void OnRep_KnightHusk() const;
 
 	UFUNCTION(BlueprintCallable)
 	void OnOrderTargetChanged();

@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Perk.h"
+#include "Templates/SubclassOf.h"
 #include "Starstruck.generated.h"
 
 class ACamperPlayer;
@@ -21,6 +22,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Transient, Export)
 	TMap<TWeakObjectPtr<ACamperPlayer>, TWeakObjectPtr<UStatusEffect>> _camperExposedEffects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _exposedEffectClass;
 
 public:
 	UFUNCTION(BlueprintPure)

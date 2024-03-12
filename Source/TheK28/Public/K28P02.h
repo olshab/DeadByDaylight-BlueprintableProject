@@ -2,7 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "Perk.h"
+#include "Templates/SubclassOf.h"
 #include "K28P02.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UK28P02 : public UPerk
@@ -15,6 +18,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float LockerDetectionRadius;
+
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _timedRevealToKillerEffectClass;
 
 public:
 	UFUNCTION(BlueprintPure)

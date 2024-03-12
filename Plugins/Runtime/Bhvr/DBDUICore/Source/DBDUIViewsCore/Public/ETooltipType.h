@@ -15,6 +15,10 @@ enum class ETooltipType : uint8
 	Customization,
 	Label,
 	Loadout,
+	ObjectiveTracker,
 	PlayerLevel,
 	Rank,
+	ArchivePass,
+	LockedFeature,
+	NotEnoughCurrency,
 };

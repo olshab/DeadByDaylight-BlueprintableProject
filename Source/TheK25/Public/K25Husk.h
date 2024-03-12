@@ -13,10 +13,10 @@ class AK25Husk : public ADBDBasePlayer
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCustomizedSkeletalMesh* _customizedSkeletalMeshComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UAnimationMontageSlave* _montageFollower;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

@@ -23,10 +23,19 @@ public:
 	void UnselectCurrentTab();
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void ShowSubTab(const int32 subTabId);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetSubTabsData(const TArray<FTabWidgetData>& tabsData);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SelectSubTab(const int32 selectedKey);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	bool IsSubTabVisible(const int32 subTabId);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void HideSubTab(const int32 subTabId);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void ActivateSubTabContent(const int32 state);

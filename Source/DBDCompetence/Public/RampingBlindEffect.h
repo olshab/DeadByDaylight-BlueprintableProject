@@ -12,7 +12,7 @@ class DBDCOMPETENCE_API URampingBlindEffect : public UStatusEffect
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UBlindableComponent* _ownerBlindable;
 
 public:

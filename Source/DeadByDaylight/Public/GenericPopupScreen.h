@@ -12,7 +12,7 @@ class UGenericPopupScreen : public UBasePopupScreen
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UUMGGenericPopup* _popup;
 
 private:

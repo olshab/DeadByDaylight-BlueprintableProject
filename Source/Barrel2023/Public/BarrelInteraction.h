@@ -10,9 +10,6 @@ class BARREL2023_API UBarrelInteraction : public UChargeableInteractionDefinitio
 	GENERATED_BODY()
 
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	bool _isInteractionChargeComplete;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _facingTolerance;
 

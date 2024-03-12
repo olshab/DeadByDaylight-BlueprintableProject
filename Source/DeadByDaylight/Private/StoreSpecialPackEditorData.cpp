@@ -6,8 +6,13 @@ FStoreSpecialPackEditorData::FStoreSpecialPackEditorData()
 	this->Title = FText::GetEmpty();
 	this->Image = FSoftObjectPath{};
 	this->InclusionVersion = TEXT("");
+	this->IsPurchasable = false;
+	this->AvailableCurrencies = TSet<ECurrencyType>();
 	this->Discount = 0.0f;
 	this->SortOrder = 0;
 	this->DLCId = TEXT("");
 	this->Content = TArray<FStoreSpecialPackItem>();
+	this->AvailabilityDates = 0;
+	this->StartDate = FDateTime{};
+	this->EndDate = FDateTime{};
 }

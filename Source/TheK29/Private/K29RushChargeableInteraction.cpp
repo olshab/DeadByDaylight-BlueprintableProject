@@ -178,7 +178,7 @@ UK29RushChargeableInteraction::UK29RushChargeableInteraction()
 	this->_animTagFPV = TEXT("AnimTag_FPV");
 	this->_lagInSecondsUntilRushIsInvalid = 0.400000;
 	this->_rushDropForwardDistance = 50.000000;
-	this->_decisiveStrikeSkillCheckDelay = 3.500000;
+	this->_decisiveStrikeSkillCheckDelay = 4.000000;
 	this->_isLagChecked = false;
 	this->_survivorInteractionPreventingGrab = TArray<TSubclassOf<UInteractionDefinition>>();
 }

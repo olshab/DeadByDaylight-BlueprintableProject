@@ -70,6 +70,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ELoadoutItemType ItemType;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FText> SearchTags;
+
 public:
 	DEADBYDAYLIGHT_API FItemData();
 };

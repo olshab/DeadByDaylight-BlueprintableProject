@@ -11,5 +11,6 @@ void URenjirosBloodyGlove::Authority_OnBloodOrbOverlapBegin(const AActor* overla
 URenjirosBloodyGlove::URenjirosBloodyGlove()
 {
 	this->_revealTime = 0.000000;
+	this->_bloodOrbRevealToKillerStatusEffectClass = NULL;
 	this->_revealEffectPerCamper = TMap<ACamperPlayer*, UBloodOrbOverlapRevealToKiller*>();
 }

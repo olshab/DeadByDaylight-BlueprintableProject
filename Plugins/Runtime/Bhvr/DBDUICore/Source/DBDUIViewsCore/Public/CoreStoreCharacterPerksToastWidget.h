@@ -1,49 +1,53 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CoreBaseUserWidget.h"
 #include "EPlayerRole.h"
 #include "Input/Events.h"
-#include "CoreKeyListenerButtonWidget.h"
 #include "CoreStoreCharacterPerksToastWidget.generated.h"
 
-class UWidget;
 class UCoreMenuPowerWidget;
 class UMenuPowerViewData;
+class UWidget;
+class UDBDTextBlock;
 class UCoreMenuPerkWidget;
 class UCoreButtonWidget;
 class UCharacterPerkViewData;
 
 UCLASS(Blueprintable, EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreStoreCharacterPerksToastWidget : public UCoreKeyListenerButtonWidget
+class DBDUIVIEWSCORE_API UCoreStoreCharacterPerksToastWidget : public UCoreBaseUserWidget
 {
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UWidget* SafeArea;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UDBDTextBlock* Title;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool isOpen;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreMenuPowerWidget* CoreKillerPower;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreMenuPerkWidget* CorePerk_1;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreMenuPerkWidget* CorePerk_2;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreMenuPerkWidget* CorePerk_3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
+	TArray<UWidget*> _ignoreClickWidgets;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isOpen;
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void ToggleToastVisibility();
 
 private:
 	UFUNCTION(BlueprintCallable)
 	void ShowTooltip(UCoreButtonWidget* hoveredSlotWidget);
-
-public:
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void Show();
 
 protected:
 	UFUNCTION(BlueprintCallable)
@@ -61,8 +65,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetCharacterData(TArray<UCharacterPerkViewData*> characterUniquePerksViewData, EPlayerRole role);
 
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void OpenToast();
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void OpenToast(bool isOpen);
 
 private:
 	UFUNCTION()
@@ -70,13 +74,6 @@ private:
 
 	UFUNCTION(BlueprintCallable)
 	void HideTooltip(UCoreButtonWidget* unhoveredSlotWidget);
-
-public:
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void Hide();
-
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void CloseToast();
 
 public:
 	UCoreStoreCharacterPerksToastWidget();

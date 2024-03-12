@@ -2,6 +2,7 @@
 
 UAddon_TheBlight_19::UAddon_TheBlight_19()
 {
+	this->_timedRevealToKillerEffectClass = NULL;
 	this->_survivorInRangeDistance = 800.000000;
 	this->_survivorRevealTime = 5.000000;
 }

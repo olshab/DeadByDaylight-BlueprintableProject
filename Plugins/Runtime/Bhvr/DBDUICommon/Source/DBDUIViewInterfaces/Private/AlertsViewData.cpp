@@ -3,5 +3,5 @@
 FAlertsViewData::FAlertsViewData()
 {
 	this->AlertRewards = TArray<FRewardWrapperViewData>();
-	this->EventBackground = NULL;
+	this->AlertHeader = TEXT("");
 }

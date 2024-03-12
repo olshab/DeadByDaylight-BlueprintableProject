@@ -1,24 +1,26 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "SurvivorStatusInterface.h"
 #include "GameplayTagContainer.h"
-#include "DBDTunableRowHandle.h"
 #include "Components/ActorComponent.h"
 #include "TunableStat.h"
+#include "DBDTunableRowHandle.h"
+#include "CondemnedUIDataInterface.h"
 #include "Templates/SubclassOf.h"
 #include "ECondemnOrigin.h"
 #include "CondemnedComponent.generated.h"
 
-class ASlasherPlayer;
 class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
-class THEONRYO_API UCondemnedComponent : public UActorComponent, public ISurvivorStatusInterface
+class THEONRYO_API UCondemnedComponent : public UActorComponent, public ICondemnedUIDataInterface
 {
 	GENERATED_BODY()
 
 private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FTunableStat _condemnedRangeWhenTeleport;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _maxCondemnedLevel;
 
@@ -44,10 +46,10 @@ private:
 	FDBDTunableRowHandle _stacksOnPlayerHooked;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _condemnedStacksToAddOnBasicAttack;
+	FDBDTunableRowHandle _maxLockInStacksPerHook;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FTunableStat _timePerCondemnStack;
+	FTunableStat _condemnedStackPerSecond;
 
 	UPROPERTY(EditAnywhere)
 	TArray<FGameplayTag> _analyticScoreTag;
@@ -56,13 +58,13 @@ private:
 	float _condemnedLevel;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
+	float _lockedCondemnedLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
 	ECondemnOrigin _previousReasonForCondemn;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_HoldingVHS, meta=(AllowPrivateAccess=true))
 	bool _isHoldingVHS;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
-	bool _vhsOnlyAppliesToSingleTV;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UStatusEffect> _condemnKillerInstinctEffectClass;
@@ -87,7 +89,7 @@ private:
 	void OnRep_CondemnedLevel(const float previousValue);
 
 	UFUNCTION(BlueprintCallable)
-	void OnKillerSet(ASlasherPlayer* killer);
+	void OnLevelReadyToPlay();
 
 public:
 	UFUNCTION(BlueprintPure)
@@ -98,6 +100,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool IsCondemned() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetLockedCondemnedPercent() const;
 
 	UFUNCTION(BlueprintPure)
 	float GetCondemnedPercent() const;

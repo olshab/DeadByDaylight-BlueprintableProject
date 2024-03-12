@@ -6,10 +6,11 @@
 #include "KeyTupleBool.h"
 #include "ConsoleUserSettings.h"
 #include "UObject/NoExportTypes.h"
+#include "SavedSeenPopupData.h"
 #include "CharacterKeyTuple.h"
+#include "DailyRitualSaveData.h"
 #include "CharacterLoadoutPresetsList.h"
 #include "SavedStatsDataV7.h"
-#include "DailyRitualSaveData.h"
 #include "LegacySavedPlayerLoadoutData.h"
 #include "SavedFearMarketOfferingInstanceV7.h"
 #include "SavedSpecialEventDataV8.h"
@@ -162,6 +163,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
 	TSet<FName> SeenFeatures;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
+	TMap<FName, FSavedSeenPopupData> SeenPopupsData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
 	FLegacySavedBloodWebPersistentData BloodStoreKillers;

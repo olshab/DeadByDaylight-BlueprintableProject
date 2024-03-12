@@ -14,7 +14,7 @@ class AK34Dodson : public AActor
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USkeletalMeshComponent* _skeletalMesh;
 
 private:

@@ -19,7 +19,7 @@ void UPlayerVoidEnergy::OnLocallyObservedChanged(ADBDPlayer* player)
 
 }
 
-void UPlayerVoidEnergy::OnLocallyControlledChanged()
+void UPlayerVoidEnergy::OnLocallyControlledChanged(bool isLocallyControlled)
 {
 
 }

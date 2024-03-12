@@ -16,7 +16,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, DuplicateTransient)
 	AActor* _owningActor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, DuplicateTransient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, DuplicateTransient, meta=(BindWidgetOptional))
 	UPathFollowingComponent* _pathFollowingComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

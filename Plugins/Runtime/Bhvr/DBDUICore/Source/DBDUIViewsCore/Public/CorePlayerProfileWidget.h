@@ -1,17 +1,16 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/SoftObjectPtr.h"
+#include "PlayerCardViewData.h"
 #include "PlayerProfileViewInterface.h"
 #include "CoreBaseUserWidget.h"
 #include "PlayerProfileClickedDelegate.h"
-#include "PlayerCardViewData.h"
 #include "CorePlayerProfileWidget.generated.h"
 
-class UCorePlayerNameWidget;
-class UTexture2D;
 class UCoreButtonWidget;
 class UCoreWalletWidget;
+class UCorePlayerNameWidget;
+class UDBDButton;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIVIEWSCORE_API UCorePlayerProfileWidget : public UCoreBaseUserWidget, public IPlayerProfileViewInterface
@@ -19,14 +18,17 @@ class DBDUIVIEWSCORE_API UCorePlayerProfileWidget : public UCoreBaseUserWidget, 
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreButtonWidget* PlayerCardButton;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreWalletWidget* Wallet;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCorePlayerNameWidget* PlayerName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UDBDButton* PlayerCardHoverZone;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FPlayerProfileClickedDelegate _onPlayerProfileClickedDelegate;
@@ -48,7 +50,10 @@ protected:
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void SetBadgeBannerData(const TSoftObjectPtr<UTexture2D>& badge, const FPlayerCardViewData& banner, const bool showBanner);
+	void SetPlayerCardAnimation(const bool isAnimationPlaying);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetBadgeBannerData(const FPlayerCardViewData& badge, const FPlayerCardViewData& banner, const bool showBanner);
 
 private:
 	UFUNCTION(BlueprintCallable)
@@ -59,6 +64,12 @@ private:
 
 	UFUNCTION(BlueprintCallable)
 	void OnPlayerCardButtonHovered(UCoreButtonWidget* button);
+
+	UFUNCTION(BlueprintCallable)
+	void OnPlayerCardBannerUnhovered();
+
+	UFUNCTION(BlueprintCallable)
+	void OnPlayerCardBannerHovered();
 
 public:
 	UFUNCTION()

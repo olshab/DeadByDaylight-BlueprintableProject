@@ -37,6 +37,9 @@ public:
 	bool TerrorRadiusVisualFeedback;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
+	int32 FieldOfView;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
 	int32 Gamma;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
@@ -142,6 +145,9 @@ public:
 	bool BeginnerMode;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
+	bool FogCommunications;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
 	bool Subtitles;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
@@ -152,6 +158,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
 	bool IsAnonymousMode;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
+	bool AllowCopyrightedMusic;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame)
 	bool HideYourName;

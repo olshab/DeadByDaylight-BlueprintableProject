@@ -20,6 +20,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UStatusEffect> _modifyActionSpeedWhenOpeningGateOrHatchEffect;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _obsessionChanceStatusEffectClass;
+
 	UPROPERTY(EditAnywhere, EditFixedSize)
 	float _actionSpeedsRepairing;
 

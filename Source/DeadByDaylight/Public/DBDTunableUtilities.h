@@ -20,10 +20,10 @@ public:
 	static float GetTunableRowHandleValue(const FDBDTunableRowHandle& rowHandle);
 
 	UFUNCTION(BlueprintPure)
-	static float GetSlasherTunableValue(UObject* worldContextObject, FName valueName);
+	static float GetSlasherTunableValue(const UObject* worldContextObject, FName valueName);
 
 	UFUNCTION(BlueprintPure)
-	static float GetEndGameTunableValue(UObject* worldContextObject, FName valueName);
+	static float GetEndGameTunableValue(const UObject* worldContextObject, FName valueName);
 
 public:
 	UDBDTunableUtilities();

@@ -96,7 +96,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EInteractionAnimation _interactionType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UArmIKSensorComponent* _armIKSensorComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

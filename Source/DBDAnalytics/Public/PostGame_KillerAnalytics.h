@@ -35,12 +35,6 @@ public:
 	int32 SacrificeBonus;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 BonusEvent;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 MatchIncentive;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 EscapeesCount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -84,6 +78,27 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool UsedKeyboard;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GeneratorRepairTimestamp1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GeneratorRepairTimestamp2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GeneratorRepairTimestamp3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GeneratorRepairTimestamp4;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GeneratorRepairTimestamp5;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 GeneratorsMaxRegressionCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 GeneratorKicksCount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool UsedHapticsVibration;

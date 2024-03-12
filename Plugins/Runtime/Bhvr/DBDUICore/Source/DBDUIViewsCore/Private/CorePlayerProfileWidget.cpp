@@ -17,11 +17,22 @@ void UCorePlayerProfileWidget::OnPlayerCardButtonHovered(UCoreButtonWidget* butt
 
 }
 
+void UCorePlayerProfileWidget::OnPlayerCardBannerUnhovered()
+{
+
+}
+
+void UCorePlayerProfileWidget::OnPlayerCardBannerHovered()
+{
+
+}
+
 UCorePlayerProfileWidget::UCorePlayerProfileWidget()
 {
 	this->PlayerCardButton = NULL;
 	this->Wallet = NULL;
 	this->PlayerName = NULL;
+	this->PlayerCardHoverZone = NULL;
 	this->_playerCardEnabledOpacity = 1.000000;
 	this->_playerCardDisabledOpacity = 0.500000;
 	this->_playerProfileFocusOpacity = 1.000000;

@@ -12,10 +12,11 @@
 #include "S3KrakenSdkValidationConfig.h"
 #include "S3MatchConfig.h"
 #include "S3OnlineConfig.h"
+#include "S3SeenPopupsConfig.h"
 #include "HitValidationGameConfig.h"
 #include "AnimBudgeterGameConfig.h"
 #include "JwtGameConfig.h"
-#include "S3LoadingConfig.h"
+#include "HangTimesPerStep.h"
 #include "S3DisconnectionBotReplacementConfig.h"
 #include "S3MirrorsDefaultRetryPolicyConfig.h"
 #include "S3SecurityConfig.h"
@@ -89,6 +90,9 @@ public:
 	bool EnablePlayStationTrophiesIISSync;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool EnableDSQuestsUpdate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TMap<FString, bool> CrossPromoManagerPlatforms;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)
@@ -113,7 +117,7 @@ public:
 	FS3MatchConfig Match;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FS3LoadingConfig Loading;
+	TArray<FHangTimesPerStep> HangTimes;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TMap<FString, bool> MatchmakingCrossplayPlatforms;
@@ -137,6 +141,9 @@ public:
 	FS3DisconnectionBotReplacementConfig DisconnectionBotReplacement;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TMap<FString, FS3SeenPopupsConfig> SeenPopupsConfig;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TMap<FString, bool> SocialCrossfriendsPlatforms;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -150,6 +157,21 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool EnableConsumableQueryFromKraken;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool EnableLimitRegressionEvents;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool EnableConsoleSuspendSave;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool EnableLobbyLeaveSave;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool EnableLocalStartSnapping;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool EnableContainerAgressiveMemorySaving;
 
 public:
 	DEADBYDAYLIGHT_API FS3GameConfigsData();

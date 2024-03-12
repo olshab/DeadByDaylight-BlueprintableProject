@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GeneratorRepairInteraction.h"
+#include "GameplayTagContainer.h"
 #include "DBDTunableRowHandle.h"
 #include "GeneratorToolboxRepairInteraction.generated.h"
 
@@ -21,6 +22,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _repairSkillCheckChanceWhenEmpty;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FGameplayTag> _stateTagsPreventingUseOfToolbox;
 
 public:
 	UFUNCTION(BlueprintPure)

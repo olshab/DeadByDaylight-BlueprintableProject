@@ -6,6 +6,7 @@
 #include "DBDTunableRowHandle.h"
 #include "LacerationUIData.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "LacerationComponent.generated.h"
 
 class UStatusEffect;
@@ -21,6 +22,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	UStatusEffect* _onHitSpeedBoost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _lacerationOnHitSpeedBoostStatusEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FTunableStat _maxLaceration;

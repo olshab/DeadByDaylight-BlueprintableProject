@@ -2,7 +2,9 @@
 
 FStoreSpecialPackItem::FStoreSpecialPackItem()
 {
-	this->Id = TEXT("");
-	this->Type = EStoreSpecialPackItemType::Inventory;
+	this->Type = EStoreSpecialPackItemType::Customization;
+	this->CustomizationId = TEXT("");
+	this->CharacterId = TEXT("");
+	this->TomeId = TEXT("");
 	this->Amount = 0;
 }

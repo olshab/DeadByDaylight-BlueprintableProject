@@ -1,7 +1,13 @@
 #include "KillInteractionDefinition.h"
 #include "AnimationMontageDescriptor.h"
 
+class ASlasherPlayer;
 class ACamperPlayer;
+
+bool UKillInteractionDefinition::IsKillerAllowedToKillSurvivor_Implementation(const ASlasherPlayer* killer, const ACamperPlayer* survivor) const
+{
+	return false;
+}
 
 ACamperPlayer* UKillInteractionDefinition::GetOwningSurvivor() const
 {

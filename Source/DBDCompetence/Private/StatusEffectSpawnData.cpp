@@ -2,7 +2,6 @@
 
 FStatusEffectSpawnData::FStatusEffectSpawnData()
 {
-	this->DEPRECATED_EffectId = TEXT("");
 	this->EffectClass = NULL;
 	this->CustomParam = 0.0f;
 	this->ReceiverStrategy = EStatusEffectSpawnerReceiverStrategy::AllCharacter;

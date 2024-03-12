@@ -12,7 +12,7 @@ class USpiritHuskAnimInstance : public UAnimInstance
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	USkeletalMeshComponent* _killerMesh;
 
 public:

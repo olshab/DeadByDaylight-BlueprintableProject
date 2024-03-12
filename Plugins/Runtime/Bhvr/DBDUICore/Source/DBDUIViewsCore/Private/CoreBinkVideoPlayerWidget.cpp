@@ -13,6 +13,11 @@ void UCoreBinkVideoPlayerWidget::OnSubtitlesChanged(const TArray<FString>& subti
 
 }
 
+void UCoreBinkVideoPlayerWidget::OnSkipInputSwitcherTriggered()
+{
+
+}
+
 void UCoreBinkVideoPlayerWidget::OnMediaOpened(const FString& openedUrl)
 {
 
@@ -55,5 +60,6 @@ UCoreBinkVideoPlayerWidget::UCoreBinkVideoPlayerWidget()
 	this->VideoBinkSizeBox = NULL;
 	this->VideoBinkScaleBox = NULL;
 	this->VideoBinkImage = NULL;
+	this->SkipInputSwitcher = NULL;
 	this->_binkMediaPlayer = NULL;
 }

@@ -1,12 +1,5 @@
 #include "CharacterChaseVisualComponent.h"
 
-class ADBDPlayer;
-
-void UCharacterChaseVisualComponent::OnObservedCharacterChange(ADBDPlayer* player)
-{
-
-}
-
 void UCharacterChaseVisualComponent::OnAllChaseEnd()
 {
 

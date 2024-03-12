@@ -2,12 +2,13 @@
 #include "Engine/EngineTypes.h"
 #include "PostAttackData.h"
 #include "EAttackSubstate.h"
-#include "AttackSubstateRequestResult.h"
 #include "ActionPredictionKey.h"
+#include "AttackSubstateRequestResult.h"
 
 class ACharacter;
 class UAttackableComponent;
 class ADBDPlayer;
+class UDBDAttackSubstate;
 
 void UDBDAttack::Server_RequestStateChange_Implementation(const EAttackSubstate state)
 {
@@ -57,6 +58,11 @@ void UDBDAttack::Multicast_ClearTargets_Implementation()
 void UDBDAttack::Local_OnMovementChanged(ACharacter* character, TEnumAsByte<EMovementMode> prevMovementMode, uint8 previousCustomMode)
 {
 
+}
+
+UDBDAttackSubstate* UDBDAttack::GetAttackSubstate(const EAttackSubstate state) const
+{
+	return NULL;
 }
 
 void UDBDAttack::Client_ReceiveHitResult_Implementation(ADBDPlayer* target, bool isValid, FActionPredictionKey predictionKey)

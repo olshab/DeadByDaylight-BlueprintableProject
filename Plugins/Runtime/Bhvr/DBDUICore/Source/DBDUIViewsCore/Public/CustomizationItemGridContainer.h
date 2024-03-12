@@ -2,11 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
+#include "EFlagSize.h"
 #include "Templates/SubclassOf.h"
 #include "CustomizationItemGridContainer.generated.h"
 
+class UUniformGridPanel;
 class UCoreStoreCustomizationItemWidget;
-class UGridPanel;
 class UCoreSelectableButtonWidget;
 class UUserWidget;
 class UStoreCustomizationItemViewData;
@@ -41,15 +42,18 @@ protected:
 	int32 _layoutMask;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EFlagSize _flagSize;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 _rowCountToShowScrollBar;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _fillGridWithEmptyItems;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UGridPanel* GridContainer;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UUniformGridPanel* GridContainer;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDScrollBox* ScrollBox;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

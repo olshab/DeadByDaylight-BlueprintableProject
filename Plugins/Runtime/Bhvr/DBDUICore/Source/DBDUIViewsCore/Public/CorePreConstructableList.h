@@ -20,6 +20,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	TArray<UCoreBaseUserWidget*> _widgetList;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
+	TArray<UCoreBaseUserWidget*> _shownWidgetList;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UCoreBaseUserWidget> _userWidgetClass;
 

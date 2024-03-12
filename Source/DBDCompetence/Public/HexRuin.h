@@ -18,6 +18,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TMap<AGenerator*, FFastTimer> _curseActivationTimers;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	TArray<AGenerator*> _authority_blockedGeneratorsToStartRegression;
+
 	UPROPERTY(EditAnywhere)
 	float _regressionModifier;
 

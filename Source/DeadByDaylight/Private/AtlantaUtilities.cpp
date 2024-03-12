@@ -1,14 +1,13 @@
 #include "AtlantaUtilities.h"
 #include "Styling/SlateBrush.h"
 #include "EPlayerRole.h"
-#include "EOfferingCategory.h"
-#include "UObject/NoExportTypes.h"
-#include "Styling/SlateColor.h"
-#include "EItemRarity.h"
+#include "EEmblemQuality.h"
 #include "EAIDifficultyLevel.h"
 #include "ECurrencyType.h"
+#include "EOfferingCategory.h"
+#include "Styling/SlateColor.h"
+#include "EItemRarity.h"
 #include "EItemAvailability.h"
-#include "EEmblemQuality.h"
 #include "EInputInteractionType.h"
 
 class UTexture2D;
@@ -18,176 +17,6 @@ class UButton;
 class UPaperSprite;
 class ADBDPlayer;
 class UInteractionDefinition;
-
-bool UAtlantaUtilities::ShouldUseQuickRoleSwitch()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseOfflineMatchHistory()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaUI()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaStreamVideo()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaRituals()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaRank()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaQualitySettings()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaPurchasableOperations()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaOutlines()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaMatchmaking()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaLighting()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaKrakenContentVersion()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaItemAvailability()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaHudEditor()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaHudAttackJoystick()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaGameplayValues()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaFriendList()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaFreeTickets()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaFixedMaps()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaFearMarket()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaEntity()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaDreamworldFX()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaDailyRewards()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaCustomizedHudSettings()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaCurrencies()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaContent()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaCharacterProgression()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaCDNPatching()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaCDNBucketChangelist()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaCatalog()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaBundleFilterRules()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaBloodweb()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldUseAtlantaBackendBloodMarketData()
-{
-	return false;
-}
-
-bool UAtlantaUtilities::ShouldSupportMultipleActiveActivatablePerks()
-{
-	return false;
-}
 
 bool UAtlantaUtilities::SetImageSlateBrush(UImage* image, const FSlateBrush& brush, bool bMatchSize)
 {
@@ -234,17 +63,7 @@ UTexture2D* UAtlantaUtilities::LoadTextureByAsset(const FString& path)
 	return NULL;
 }
 
-bool UAtlantaUtilities::IsTutorialEditorDebuggingEnabled()
-{
-	return false;
-}
-
 bool UAtlantaUtilities::IsPlayerInteractingWithActor(ADBDPlayer* player, const AActor* actor)
-{
-	return false;
-}
-
-bool UAtlantaUtilities::IsInAtlantaTutorialLevel()
 {
 	return false;
 }
@@ -272,11 +91,6 @@ FText UAtlantaUtilities::GetPlayerRoleTextUppercase(const EPlayerRole playerRole
 FText UAtlantaUtilities::GetPlayerRoleText(const EPlayerRole playerRole)
 {
 	return FText::GetEmpty();
-}
-
-FColor UAtlantaUtilities::GetPaintColorByRarity(const EItemRarity rarity)
-{
-	return FColor{};
 }
 
 FText UAtlantaUtilities::GetOfferingCategoryText(const EOfferingCategory offeringCategory)
@@ -309,11 +123,6 @@ FText UAtlantaUtilities::GetEmblemQualityText(const EEmblemQuality emblemQuality
 	return FText::GetEmpty();
 }
 
-FColor UAtlantaUtilities::GetEmblemColorByQuality(const EEmblemQuality emblemQuality)
-{
-	return FColor{};
-}
-
 FText UAtlantaUtilities::GetDifficultyLevelText(const EAIDifficultyLevel difficultyLevel)
 {
 	return FText::GetEmpty();
@@ -342,21 +151,6 @@ FString UAtlantaUtilities::GetCurrencyUITexturePath(ECurrencyType currencyType)
 FSlateColor UAtlantaUtilities::GetCurrencyColor(ECurrencyType currencyType)
 {
 	return FSlateColor{};
-}
-
-float UAtlantaUtilities::GetControlsTunableByRole(EPlayerRole playerRole, FName tunableValueName)
-{
-	return 0.0f;
-}
-
-float UAtlantaUtilities::GetControlsTunable(FName tunableValueName)
-{
-	return 0.0f;
-}
-
-FColor UAtlantaUtilities::GetBackgroundColorByRarity(const EItemRarity rarity)
-{
-	return FColor{};
 }
 
 UInteractionDefinition* UAtlantaUtilities::GetAvailableInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType)

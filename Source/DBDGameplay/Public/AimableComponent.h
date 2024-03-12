@@ -21,7 +21,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float _maxAimDistance;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UAimDirectionProvider* _aimDirectionProvider;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

@@ -86,7 +86,7 @@ private:
 	void OnRep_IsAcquiredFromPool();
 
 	UFUNCTION(BlueprintCallable)
-	void OnEmpInteractionFinished(ADBDPlayer* interactingPlayer);
+	void OnEmpInteractionFinished(ADBDPlayer* interactingPlayer, bool hasInteractionStarted);
 
 	UFUNCTION(BlueprintCallable)
 	void OnEmpInteractionEntered(ADBDPlayer* interactingPlayer);

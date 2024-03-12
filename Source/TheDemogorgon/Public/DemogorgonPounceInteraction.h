@@ -1,9 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Templates/SubclassOf.h"
 #include "ChargeableInteractionDefinition.h"
 #include "DemogorgonPounceInteraction.generated.h"
 
+class UStatusEffect;
 class ASlasherPlayer;
 class UChargedAttackStateComponent;
 
@@ -13,6 +15,9 @@ class UDemogorgonPounceInteraction : public UChargeableInteractionDefinition
 	GENERATED_BODY()
 
 private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _demogorgonPounceFOVStatusEffectClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	UChargedAttackStateComponent* _chargedAttackState;
 

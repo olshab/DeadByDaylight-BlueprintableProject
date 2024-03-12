@@ -2,5 +2,5 @@
 
 UDriedCherryBlossom::UDriedCherryBlossom()
 {
-
+	this->_spiritDriedCherryBlossomStatusEffectClass = NULL;
 }

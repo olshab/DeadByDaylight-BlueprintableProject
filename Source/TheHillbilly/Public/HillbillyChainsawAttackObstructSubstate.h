@@ -1,11 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PounceAttackObstructSubstate.h"
+#include "BaseChainsawAttackObstructSubstate.h"
 #include "HillbillyChainsawAttackObstructSubstate.generated.h"
 
 UCLASS(Blueprintable)
-class THEHILLBILLY_API UHillbillyChainsawAttackObstructSubstate : public UPounceAttackObstructSubstate
+class UHillbillyChainsawAttackObstructSubstate : public UBaseChainsawAttackObstructSubstate
 {
 	GENERATED_BODY()
 

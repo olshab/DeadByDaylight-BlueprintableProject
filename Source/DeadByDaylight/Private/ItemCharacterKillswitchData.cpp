@@ -3,6 +3,7 @@
 FItemCharacterKillswitchData::FItemCharacterKillswitchData()
 {
 	this->CharacterFallback = FCharacterFallbackData{};
-	this->DisabledItems = TArray<FString>();
+	this->FallbacksByGameType = TMap<FString, FCharacterFallbackData>();
+	this->DisabledItems = TMap<FString, FDisabledItemData>();
 	this->DisabledItems_IsSet = false;
 }

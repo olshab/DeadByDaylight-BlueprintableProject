@@ -43,13 +43,13 @@ public:
 	float NormalDoorActivationAudibleRange;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UBoxComponent* _boxComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UAnimationMontageSlave* _montageFollower;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UMontagePlayer* _montagePlayer;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -58,22 +58,22 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	ADBDPlayer* _playerInLocker;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UInteractor* _mainInteractor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPrimitiveComponent* _frontInteractionZone;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UInteractionDefinition* _searchEmpty;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UInteractionDefinition* _searchPlayer;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UChildActorComponent* _killerInteractionActor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UInteractionDefinition* _enterSneak;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -110,6 +110,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetPlayerOpeningLocker(ADBDPlayer* player);
+
+	UFUNCTION(BlueprintPure=false, BlueprintCallable)
+	void SetPlayerInLockerVisibility(const bool isVisible) const;
 
 private:
 	UFUNCTION(BlueprintCallable)

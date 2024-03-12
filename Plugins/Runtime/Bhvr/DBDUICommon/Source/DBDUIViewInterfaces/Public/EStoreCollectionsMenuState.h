@@ -6,7 +6,6 @@
 UENUM(BlueprintType)
 enum class EStoreCollectionsMenuState : uint8
 {
-	Special,
-	Featured,
-	All,
+	List,
+	Customizations,
 };

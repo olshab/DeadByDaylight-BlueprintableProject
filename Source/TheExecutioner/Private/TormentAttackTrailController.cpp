@@ -35,5 +35,4 @@ ATormentAttackTrailController::ATormentAttackTrailController()
 	this->_spawnedAttackPointList = TArray<FSpawnedAttackPoint>();
 	this->_trailSpawnStarted = false;
 	this->_soundDistanceOnTrail = 0.000000;
-	this->_mobileTormentTrailRenderer = NULL;
 }

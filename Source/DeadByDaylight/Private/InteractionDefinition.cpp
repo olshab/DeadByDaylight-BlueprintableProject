@@ -75,11 +75,6 @@ bool UInteractionDefinition::IsInteractionPossible(const ADBDPlayer* player, EIn
 	return false;
 }
 
-bool UInteractionDefinition::IsInteractionDone_Implementation(const ADBDPlayer* player, EInputInteractionType interactionType) const
-{
-	return false;
-}
-
 bool UInteractionDefinition::IsInteractableInPlayerView(const ADBDPlayer* player) const
 {
 	return false;
@@ -371,7 +366,7 @@ UInteractionDefinition::UInteractionDefinition()
 	this->CanInteractWhileChainLinked = false;
 	this->CanInteractWhileShocked = false;
 	this->CanInteractWhileUnhookingSelf = false;
-	this->CanInteractWhileCarrying = true;
+	this->CanInteractWhileCarrying = false;
 	this->AllowNavigation = false;
 	this->AllowNavigationInput = true;
 	this->AllowRotation = false;

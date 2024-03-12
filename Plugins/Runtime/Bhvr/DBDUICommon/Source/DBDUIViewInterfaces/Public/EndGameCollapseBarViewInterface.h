@@ -19,7 +19,7 @@ public:
 	void StartEndGameScenario();
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetEndGameScenarioProgressionValue(const float amount);
+	void SetEndGameScenarioProgressionValue(const float amount, bool forceUpdate);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetEndGameScenarioProgressionMode(const bool isSlowMode);

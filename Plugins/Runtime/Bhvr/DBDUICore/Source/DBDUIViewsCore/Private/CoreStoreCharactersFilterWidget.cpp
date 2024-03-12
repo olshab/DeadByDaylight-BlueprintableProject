@@ -1,9 +1,8 @@
 #include "CoreStoreCharactersFilterWidget.h"
-#include "EItemFilterOption.h"
 
 class UCoreButtonWidget;
 
-void UCoreStoreCharactersFilterWidget::OnFilterOptionCheckBoxToggled(bool isToggled, EItemFilterOption itemFilterOption)
+void UCoreStoreCharactersFilterWidget::OnFilterOptionCheckBoxToggled()
 {
 
 }
@@ -16,6 +15,9 @@ void UCoreStoreCharactersFilterWidget::OnClearFiltersClicked(UCoreButtonWidget* 
 UCoreStoreCharactersFilterWidget::UCoreStoreCharactersFilterWidget()
 {
 	this->ClearFiltersButton = NULL;
+	this->SortButton = NULL;
 	this->CheckBoxesContainer = NULL;
-	this->FiltersCheckBoxArray = TArray<UCoreFilterButtonWidget*>();
+	this->_sortingOptions = 0;
+	this->_defaultSortingOption = ESortingOption::None;
+	this->_filtersCheckBoxArray = TArray<UCoreFilterButtonWidget*>();
 }

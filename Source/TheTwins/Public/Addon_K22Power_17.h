@@ -3,9 +3,11 @@
 #include "CoreMinimal.h"
 #include "DBDTunableRowHandle.h"
 #include "SpawnEffectsOnAllSurvivorsBaseAddon.h"
+#include "Templates/SubclassOf.h"
 #include "Addon_K22Power_17.generated.h"
 
 class AConjoinedTwin;
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UAddon_K22Power_17 : public USpawnEffectsOnAllSurvivorsBaseAddon
@@ -13,6 +15,9 @@ class UAddon_K22Power_17 : public USpawnEffectsOnAllSurvivorsBaseAddon
 	GENERATED_BODY()
 
 private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _twinDormantObliviousEffectClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _lingerDuration;
 

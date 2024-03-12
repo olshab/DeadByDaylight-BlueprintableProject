@@ -42,6 +42,7 @@ void UDailyRitualsContainerWidget::OnDailyRitualClaimButtonClicked(const FString
 UDailyRitualsContainerWidget::UDailyRitualsContainerWidget()
 {
 	this->DailyRitualTileWidgetClass = NULL;
+	this->OnboardingRitualTileWidgetClass = NULL;
 	this->Container = NULL;
 	this->NoRitualWarningText = NULL;
 	this->TilePadding = 50.000000;

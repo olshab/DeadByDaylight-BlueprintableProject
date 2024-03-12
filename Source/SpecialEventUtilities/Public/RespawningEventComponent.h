@@ -14,7 +14,7 @@ class SPECIALEVENTUTILITIES_API URespawningEventComponent : public UActorCompone
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	URespawnableStrategy* _respawnableStrategy;
 
 private:

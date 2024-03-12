@@ -6,6 +6,7 @@
 #include "KillInteractionDefinition.generated.h"
 
 class ADBDPlayer;
+class ASlasherPlayer;
 class ACamperPlayer;
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
@@ -60,6 +61,9 @@ protected:
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
 	void OnKillAudioActivation(const bool active, ADBDPlayer* interactingPlayer);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	bool IsKillerAllowedToKillSurvivor(const ASlasherPlayer* killer, const ACamperPlayer* survivor) const;
 
 	UFUNCTION(BlueprintPure)
 	ACamperPlayer* GetOwningSurvivor() const;

@@ -2,6 +2,7 @@
 
 UNavigationQueryFilter_Camper::UNavigationQueryFilter_Camper()
 {
+	this->IgnoreOnAttackCooldown = false;
 	this->SlasherAreaBoundsLimit = 3200.000000;
 	this->SlasherAreaPenetrationCost = 10000.000000;
 	this->SlasherInSightCost = 0.000000;

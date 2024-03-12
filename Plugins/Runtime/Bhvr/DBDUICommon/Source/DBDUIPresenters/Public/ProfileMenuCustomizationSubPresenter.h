@@ -2,10 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "SubPresenter.h"
-#include "EItemSorting.h"
+#include "ESortingOption.h"
 #include "UObject/ScriptInterface.h"
+#include "ESortingOrder.h"
 #include "ProfileMenuCustomizationSubPresenter.generated.h"
 
+class UStoreCustomizationItemViewData;
 class IProfileMenuCustomizationViewInterface;
 
 UCLASS(Blueprintable)
@@ -17,7 +19,16 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TScriptInterface<IProfileMenuCustomizationViewInterface> _profileMenuCustomizationWidget;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TArray<UStoreCustomizationItemViewData*> _itemsData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TArray<UStoreCustomizationItemViewData*> _displayedItemsData;
+
 private:
+	UFUNCTION(BlueprintCallable)
+	void OnSearchBarTextChanged(const FString& enteredText);
+
 	UFUNCTION(BlueprintCallable)
 	void OnRewardGridItemClicked(const int32 selectedIndex);
 
@@ -25,7 +36,7 @@ private:
 	void OnEquipButtonClicked();
 
 	UFUNCTION(BlueprintCallable)
-	void OnCustomizationSortingChanged(const EItemSorting itemSorting);
+	void OnCustomizationSortingChanged(const ESortingOption itemSorting, const ESortingOrder sortingOrder);
 
 public:
 	UProfileMenuCustomizationSubPresenter();

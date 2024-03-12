@@ -16,6 +16,9 @@ public:
 	FPowerChargeChangedDelegate OnPowerChargeChanged;
 
 private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
+	float _chargeRate;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_CurrentCharge, Transient, meta=(AllowPrivateAccess=true))
 	FSpeedBasedNetSyncedValue _currentCharge;
 

@@ -14,10 +14,10 @@ class DEADBYDAYLIGHT_API AReverseBearTrap : public AInteractable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	USkeletalMeshComponent* _rbtMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UAnimationMontageSlave* _animMontageSlave;
 
 private:

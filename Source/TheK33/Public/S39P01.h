@@ -32,6 +32,19 @@ private:
 	TSubclassOf<UStatusEffect> _revealSurvivorAurasEffectClass;
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetSurvivorAuraRevealTime() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetPerkCooldownTimeAtLevel() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetGeneratorAuraRevealTime() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetBloodAndGruntSuppressionTimeAtLevel() const;
+
+public:
 	US39P01();
 };
 

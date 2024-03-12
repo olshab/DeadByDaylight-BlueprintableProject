@@ -3,10 +3,11 @@
 #include "CoreMinimal.h"
 #include "SlashableInterface.h"
 #include "GameFramework/Character.h"
+#include "TunableStat.h"
+#include "ObjectStateProvider.h"
 #include "EZombieState.h"
 #include "DynamicGrassEffectorInterface.h"
 #include "PushableInterface.h"
-#include "TunableStat.h"
 #include "EZombieGender.h"
 #include "GenericTeamAgentInterface.h"
 #include "UObject/NoExportTypes.h"
@@ -34,7 +35,7 @@ class UPrimitiveComponent;
 class UFlashlightComponent;
 
 UCLASS(Blueprintable)
-class AZombieCharacter : public ACharacter, public IDynamicGrassEffectorInterface, public ISlashableInterface, public IPushableInterface, public IGenericTeamAgentInterface
+class AZombieCharacter : public ACharacter, public IDynamicGrassEffectorInterface, public ISlashableInterface, public IPushableInterface, public IGenericTeamAgentInterface, public IObjectStateProvider
 {
 	GENERATED_BODY()
 

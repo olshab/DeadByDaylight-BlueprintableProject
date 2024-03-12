@@ -25,9 +25,11 @@ public:
 	UFUNCTION(BlueprintPure)
 	bool IsObstructed() const;
 
+protected:
 	UFUNCTION(BlueprintPure)
 	bool IsInteractionPossibleInternal(const ADBDPlayer* player) const;
 
+public:
 	UFUNCTION(BlueprintPure)
 	bool IsBeingRepaired() const;
 
@@ -35,7 +37,6 @@ protected:
 	UFUNCTION(BlueprintPure)
 	AGenerator* GetOwningGenerator() const;
 
-public:
 	UFUNCTION(BlueprintPure)
 	float GetInteractionChargeSpeedMultiplier_Implementation(const ADBDPlayer* character) const;
 

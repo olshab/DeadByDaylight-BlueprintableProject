@@ -13,12 +13,12 @@ float UDBDTunableUtilities::GetTunableRowHandleValue(const FDBDTunableRowHandle&
 	return 0.0f;
 }
 
-float UDBDTunableUtilities::GetSlasherTunableValue(UObject* worldContextObject, FName valueName)
+float UDBDTunableUtilities::GetSlasherTunableValue(const UObject* worldContextObject, FName valueName)
 {
 	return 0.0f;
 }
 
-float UDBDTunableUtilities::GetEndGameTunableValue(UObject* worldContextObject, FName valueName)
+float UDBDTunableUtilities::GetEndGameTunableValue(const UObject* worldContextObject, FName valueName)
 {
 	return 0.0f;
 }

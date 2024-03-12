@@ -15,15 +15,6 @@ public:
 	float MinGeneratorRepairPercentToSetTrap;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float CheckKillerDistanceInterval;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float MinKillerApproachingSpeed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 MinKillerApproachingFastStreak;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EAITerrorLevel TerrorLevelToSetTrap;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

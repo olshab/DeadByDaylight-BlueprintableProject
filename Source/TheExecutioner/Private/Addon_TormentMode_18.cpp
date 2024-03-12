@@ -2,5 +2,7 @@
 
 UAddon_TormentMode_18::UAddon_TormentMode_18()
 {
-	this->_hemorrhageEffect = NULL;
+	this->_mangledEffectClass = NULL;
+	this->_hemorrhageEffectClass = NULL;
+	this->_mangledHemorrhageEffectLifetime = 0.000000;
 }

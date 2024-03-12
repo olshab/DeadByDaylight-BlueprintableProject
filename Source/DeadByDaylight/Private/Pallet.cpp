@@ -1,4 +1,5 @@
 #include "Pallet.h"
+#include "SpawnedActorReplicationComponent.h"
 #include "EPalletState.h"
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
@@ -123,4 +124,5 @@ APallet::APallet()
 	this->_navEvadeLoopComponent = CreateDefaultSubobject<UDBDNavEvadeLoopComponent>(TEXT("NavEvadeLoopComponent"));
 	this->_palletPulldownBlockerComponent = CreateDefaultSubobject<UPalletPulldownBlockerComponent>(TEXT("PalletPulldownBlockerComponent"));
 	this->_isDreamPallet = false;
+	this->_spawnedActorReplicationComponent = CreateDefaultSubobject<USpawnedActorReplicationComponent>(TEXT("SpawnedActorReplicationComponent"));
 }

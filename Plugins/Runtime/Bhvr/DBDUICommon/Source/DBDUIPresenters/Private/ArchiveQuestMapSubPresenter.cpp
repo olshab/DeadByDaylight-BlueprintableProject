@@ -27,6 +27,11 @@ void UArchiveQuestMapSubPresenter::OnQuestNodeHovered(EPlayerRole role)
 
 }
 
+void UArchiveQuestMapSubPresenter::OnPlayerCardUpdated(const FString& badgeId, const FString& bannerId)
+{
+
+}
+
 void UArchiveQuestMapSubPresenter::OnNodeSelected(const FName& nodeId, EPlayerRole role, const FVector2D& position)
 {
 

@@ -1,11 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "InventoryHandler.generated.h"
 
 UCLASS(Blueprintable)
-class DEADBYDAYLIGHT_API UInventoryHandler : public UObject
+class DEADBYDAYLIGHT_API UInventoryHandler : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 

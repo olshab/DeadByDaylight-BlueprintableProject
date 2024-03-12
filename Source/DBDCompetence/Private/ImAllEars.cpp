@@ -28,4 +28,5 @@ UImAllEars::UImAllEars()
 	this->_durationByLevel = 0.000000;
 	this->_useTerrorRadius = true;
 	this->_triggerOutsideRadius = 1200.000000;
+	this->_timedRevealToKillerEffect = NULL;
 }

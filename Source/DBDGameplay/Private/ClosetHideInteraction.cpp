@@ -29,7 +29,7 @@ bool UClosetHideInteraction::IsOccupied() const
 	return false;
 }
 
-bool UClosetHideInteraction::IsInteractingPlayerInsideCloset(ADBDPlayer* player) const
+bool UClosetHideInteraction::IsInteractingPlayerInsideCloset(const ADBDPlayer* player) const
 {
 	return false;
 }

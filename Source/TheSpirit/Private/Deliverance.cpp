@@ -9,5 +9,6 @@ UDeliverance::UDeliverance()
 {
 	this->_brokenEffectDurationPerLevel = 0.000000;
 	this->_selfUnhookAlwaysSucceedEffectClass = NULL;
+	this->_brokenEffectClass = NULL;
 	this->_selfUnhookAlwaysSucceedEffect = NULL;
 }

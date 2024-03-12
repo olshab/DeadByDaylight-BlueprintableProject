@@ -12,6 +12,7 @@ UEventEntryEventTabWidget::UEventEntryEventTabWidget()
 	this->ScrollBox = NULL;
 	this->MessageText = NULL;
 	this->AdditionalInformationText = NULL;
+	this->EventObjectiveTracker = NULL;
 	this->ArchivesButton = NULL;
 	this->_scrollLabelText = FText::GetEmpty();
 	this->_disableArchivesButton = false;

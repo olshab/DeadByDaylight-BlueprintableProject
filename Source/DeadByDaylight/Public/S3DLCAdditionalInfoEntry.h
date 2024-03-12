@@ -24,6 +24,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)
 	bool AvailableEndDate_IsSet;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsShownInGameStore;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)
+	bool IsShownInGameStore_IsSet;
+
 public:
 	DEADBYDAYLIGHT_API FS3DLCAdditionalInfoEntry();
 };

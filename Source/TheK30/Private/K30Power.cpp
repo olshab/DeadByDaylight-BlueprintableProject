@@ -12,7 +12,7 @@ void AK30Power::Server_OnSnappingStateChanged_Implementation(bool isSnapping)
 
 }
 
-void AK30Power::OnRep_KnightHusk()
+void AK30Power::OnRep_KnightHusk() const
 {
 
 }

@@ -1,4 +1,5 @@
 #include "CoreStoreFeaturedCustomizationItemContainerWidget.h"
+#include "StoreRedirectionData.h"
 
 class UStoreCustomizationItemViewData;
 class UCoreSelectableButtonWidget;
@@ -9,6 +10,11 @@ void UCoreStoreFeaturedCustomizationItemContainerWidget::SetItems_Implementation
 }
 
 void UCoreStoreFeaturedCustomizationItemContainerWidget::OnSelectedItemChanged(UCoreSelectableButtonWidget* selectedButton)
+{
+
+}
+
+void UCoreStoreFeaturedCustomizationItemContainerWidget::OnMoveToCharactersCustomizationPageRequested(const FStoreRedirectionData& redirectionData)
 {
 
 }

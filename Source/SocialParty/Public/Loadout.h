@@ -8,22 +8,9 @@ struct FLoadout
 {
 	GENERATED_BODY()
 
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName offering;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName item;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName addon1;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName addon2;
-
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	TArray<FName> _perks;
+	TArray<FName> data;
 
 public:
 	SOCIALPARTY_API FLoadout();

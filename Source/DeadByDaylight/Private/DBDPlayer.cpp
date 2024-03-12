@@ -64,7 +64,6 @@ class APawn;
 class AActor;
 class ADBDPlayerController;
 class UPrimitiveComponent;
-class UGameplayModifierContainer;
 class UItemModifier;
 class UItemAddon;
 class AInteractable;
@@ -96,7 +95,7 @@ void ADBDPlayer::TriggerAnimNotify(EAnimNotifyType animNotifyType)
 
 }
 
-void ADBDPlayer::SnapCharacter(bool snapPosition, FVector position, float stopSnapDistance, bool snapRotation, FRotator rotation, float time, bool useZCoord, bool sweepOnFinalSnap, bool snapRoll)
+void ADBDPlayer::SnapCharacter(bool snapPosition, const FVector& position, float stopSnapDistance, bool snapRotation, const FRotator& rotation, float time, bool useZCoord, bool sweepOnFinalSnap, bool snapRoll)
 {
 
 }
@@ -461,6 +460,11 @@ bool ADBDPlayer::IsHeadHidden() const
 	return false;
 }
 
+bool ADBDPlayer::IsForPreview() const
+{
+	return false;
+}
+
 bool ADBDPlayer::IsExhausted() const
 {
 	return false;
@@ -741,6 +745,11 @@ APlayerState* ADBDPlayer::GetAssociatedPlayerState_Implementation() const
 	return NULL;
 }
 
+ADBDPlayer* ADBDPlayer::GetAssociatedPlayer_Implementation() const
+{
+	return NULL;
+}
+
 FVector ADBDPlayer::GetActorLocationFromFeetLocation(const FVector feetLocation) const
 {
 	return FVector{};
@@ -839,11 +848,6 @@ void ADBDPlayer::Authority_SetDreamworldComponent(UCharacterDreamworldComponent*
 void ADBDPlayer::Authority_RequestStun(EStunType stunType, ADBDPlayer* stunner)
 {
 
-}
-
-UStatusEffect* ADBDPlayer::Authority_ImposeStatusEffect_DEPRECATED(FName statusEffectID, ADBDPlayer* originatingPlayer, float customParam, UGameplayModifierContainer* originatingEffect, bool shouldDisplay, float lifetime)
-{
-	return NULL;
 }
 
 void ADBDPlayer::Authority_HandleScoreEvent(FGameplayTag scoreTypeTag, FScoreEventData scoreEventData)

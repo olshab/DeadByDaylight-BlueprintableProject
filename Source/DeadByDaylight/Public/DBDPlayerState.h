@@ -10,10 +10,10 @@
 #include "EAIDifficultyLevel.h"
 #include "PlayerGameplayEventDelegate.h"
 #include "AIFinishedPlayingEvent.h"
+#include "PlayerStateData.h"
 #include "GameEventData.h"
 #include "EPlatformFlag.h"
 #include "CharacterStateData.h"
-#include "PlayerStateData.h"
 #include "AwardedScores.h"
 #include "AwardedScore.h"
 #include "UserGameStats.h"
@@ -28,6 +28,7 @@
 #include "EndOfMatchRPCData.h"
 #include "DBDPlayerState.generated.h"
 
+class UDSQuestEventsHandlerComponent;
 class AActor;
 class UDedicatedServerHandlerComponent;
 class UGameplayNotificationManager;
@@ -60,6 +61,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
 	UDedicatedServerHandlerComponent* DedicatedServerHandler;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
+	UDSQuestEventsHandlerComponent* DSQuestEventsHandler;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_DisplayData, Transient)
 	FCharacterStateData CamperData;
@@ -153,6 +157,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
 	int32 _disconnectedPlayerScore;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	bool _hasActiveDSQuestUpdate;
+
 protected:
 	UFUNCTION(BlueprintCallable)
 	void UpdateOngoingScores();
@@ -236,6 +243,9 @@ private:
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_SetInParadise();
 
+	UFUNCTION(BlueprintCallable, Client, Reliable)
+	void Client_SetHasActiveDSQuestUpdate(bool isEnabled);
+
 protected:
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_SetGameRole(EPlayerRole newRole);
@@ -265,11 +275,10 @@ private:
 	void Client_HandleEndOfMatch(bool success, const FEndOfMatchRPCData& response);
 
 	UFUNCTION(BlueprintCallable, Client, Reliable)
-	void Client_FetchCoreRituals(bool hasClaimableRitual);
+	void Client_FireQuestRepetitionValueChangeEvent(int32 repetition, const FString& questEventId);
 
-protected:
 	UFUNCTION(BlueprintCallable, Client, Reliable)
-	void Client_AtlantaUpdateInventoryItem(const FName& itemid, int32 newCount);
+	void Client_FetchCoreRituals(bool hasClaimableRitual);
 
 public:
 	UFUNCTION(BlueprintCallable)

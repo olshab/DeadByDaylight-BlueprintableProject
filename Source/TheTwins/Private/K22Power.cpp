@@ -47,6 +47,7 @@ AK22Power::AK22Power()
 {
 	this->_releaseConjoinedTwinChargeable = CreateDefaultSubobject<UChargeableComponent>(TEXT("ReleaseConjoinedTwinChargeable"));
 	this->_possessConjoinedTwinChargeable = CreateDefaultSubobject<UChargeableComponent>(TEXT("PossessConjoinedTwinChargeable"));
+	this->_killerDormantStealthStatusEffectClass = NULL;
 	this->_conjoinedTwin = NULL;
 	this->_conjoinedTwinParadise = NULL;
 	this->_powerCharge = CreateDefaultSubobject<UPowerChargeComponent>(TEXT("PowerChargeComponent"));

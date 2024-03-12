@@ -2,10 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "ItemAddon.h"
+#include "Templates/SubclassOf.h"
 #include "RenjirosBloodyGlove.generated.h"
 
-class ACamperPlayer;
 class UBloodOrbOverlapRevealToKiller;
+class ACamperPlayer;
+class UStatusEffect;
 class AActor;
 class ABloodOrb;
 
@@ -17,6 +19,9 @@ class URenjirosBloodyGlove : public UItemAddon
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _revealTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _bloodOrbRevealToKillerStatusEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	TMap<ACamperPlayer*, UBloodOrbOverlapRevealToKiller*> _revealEffectPerCamper;

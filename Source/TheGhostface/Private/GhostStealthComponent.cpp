@@ -83,6 +83,7 @@ UGhostStealthComponent::UGhostStealthComponent()
 	this->_stealthState = EGhostStealthState::AWAITING_ACTIVATION;
 	this->_cooldownTimer = CreateDefaultSubobject<UTimerObject>(TEXT("StealthCooldownTimer"));
 	this->_markers = TMap<ACharacter*, TWeakObjectPtr<UScreenIndicatorWorldMarkerComponent>>();
+	this->_ghostStealthMovementSpeedStatusEffectClass = NULL;
 	this->_markerMaxAngleOffset = 0.000000;
 	this->_useKillerInstinctWhenSpotted = true;
 	this->_sightRevealableComponent = NULL;

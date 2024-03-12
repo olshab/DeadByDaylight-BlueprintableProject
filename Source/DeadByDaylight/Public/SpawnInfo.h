@@ -25,6 +25,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UClass* AttachParentClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FName> Tags;
+
 public:
 	DEADBYDAYLIGHT_API FSpawnInfo();
 };

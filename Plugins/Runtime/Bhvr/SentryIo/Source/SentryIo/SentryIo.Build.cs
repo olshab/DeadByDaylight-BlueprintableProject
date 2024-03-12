@@ -10,6 +10,7 @@ public class SentryIo : ModuleRules {
 			"Core",
 			"CoreUObject",
 			"Engine",
+			"Sentry",
 		});
 	}
 }

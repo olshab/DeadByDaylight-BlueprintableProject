@@ -49,6 +49,4 @@ UActorSpawner::UActorSpawner()
 	this->Cost = 1.000000;
 	this->_toSpawn = NULL;
 	this->_spawnedActorOnAuthority = NULL;
-	this->_minBoundBox = NULL;
-	this->_maxBoundBox = NULL;
 }

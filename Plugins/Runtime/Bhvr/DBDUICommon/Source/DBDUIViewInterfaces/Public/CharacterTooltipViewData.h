@@ -29,12 +29,6 @@ public:
 	int32 Level;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	int32 Prestige;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	bool IsUnlocked;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool IsNewInStore;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

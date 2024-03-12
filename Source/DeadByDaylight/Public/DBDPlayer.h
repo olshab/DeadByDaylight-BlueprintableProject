@@ -11,8 +11,6 @@
 #include "ScoreEventData.h"
 #include "DBDGenericTeamAgentInterface.h"
 #include "PerkManagerOwnerInterface.h"
-#include "Components/SkinnedMeshComponent.h"
-#include "OnLocallyObservedChangedForPlayer.h"
 #include "DBDBasePlayer.h"
 #include "OnRunningAndMovingChanged.h"
 #include "Perception/AISightTargetInterface.h"
@@ -42,6 +40,7 @@
 #include "EInteractionAnimation.h"
 #include "EPawnType.h"
 #include "InteractionPlayerProperties.h"
+#include "Components/SkinnedMeshComponent.h"
 #include "DBDPlayer.generated.h"
 
 class USpringArmComponent;
@@ -71,6 +70,7 @@ class UPrimitiveComponent;
 class UCharacterInventoryComponent;
 class UBoxOcclusionQueryComponent;
 class UBoxComponent;
+class UPrimitivesRegistererComponent;
 class USoundCue;
 class ADBDPlayerController;
 class UDBDPlayerData;
@@ -88,7 +88,6 @@ class UPollableEventListener;
 class UDynamicCapsuleResizerComponent;
 class UAuthoritativeMovementComponent;
 class UInteractionDetectorComponent;
-class UPrimitivesRegistererComponent;
 class UClippableProviderComponent;
 class UContextualQuestComponent;
 class AController;
@@ -99,7 +98,6 @@ class UItemModifier;
 class UItemAddon;
 class AInteractable;
 class APlayerState;
-class UGameplayModifierContainer;
 class UInteractor;
 
 UCLASS(Blueprintable, Abstract)
@@ -213,9 +211,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)
 	FOnRunningAndMovingChanged OnRunningAndMovingChanged;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)
-	FOnLocallyObservedChangedForPlayer OnLocallyObservedChangedForPlayer;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
 	UCameraComponent* Camera;
 
@@ -226,7 +221,7 @@ public:
 	TSubclassOf<APlayerInteractable> Interactable;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UCharacterInventoryComponent* _characterInventoryComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -235,16 +230,16 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float _pitchOffsetForInteractionPriority;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UBoxOcclusionQueryComponent* _renderedPixelCounter;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UBoxComponent* _standingOcclusionBox;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UBoxComponent* _crouchingOcclusionBox;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UActivatorComponent* _activator;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -292,16 +287,16 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName CollectableAttachPoint;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UStateMachine* _stateMachine;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPlayerInteractionHandler* _interactionHandler;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPerkManager* _perkManager;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDPlayerData* _playerData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_Interactable, Transient)
@@ -319,22 +314,22 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<ADBDPlayer*> _hitTargets;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_DreamworldComponent, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_DreamworldComponent, meta=(BindWidgetOptional))
 	UCharacterDreamworldComponent* _dreamworldComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UCharacterChaseVisualComponent* _characterChaseVisualComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UCameraHandlerComponent* _cameraHandlerComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UReversibleActionSystemComponent* _reversibleActionSystemComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USceneComponent* _itemDropOffPosition;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UAIPerceptionStimuliSourceComponent* _perceptionStimuliComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -346,13 +341,13 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TMap<USceneComponent*, bool> _detectionZoneEnabledMap;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UChargeableComponent* _blindingChargeableComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _shouldUpdateStateMachineDriverOnPossessed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UBlindableComponent* _blindableComponent;
 
 private:
@@ -460,7 +455,7 @@ public:
 	void TriggerAnimNotify(EAnimNotifyType animNotifyType);
 
 	UFUNCTION(BlueprintCallable)
-	void SnapCharacter(bool snapPosition, FVector position, float stopSnapDistance, bool snapRotation, FRotator rotation, float time, bool useZCoord, bool sweepOnFinalSnap, bool snapRoll);
+	void SnapCharacter(bool snapPosition, const FVector& position, float stopSnapDistance, bool snapRotation, const FRotator& rotation, float time, bool useZCoord, bool sweepOnFinalSnap, bool snapRoll);
 
 	UFUNCTION(BlueprintPure)
 	bool ShouldPlayCarryAnim() const;
@@ -728,6 +723,9 @@ public:
 	bool IsHeadHidden() const;
 
 	UFUNCTION(BlueprintPure)
+	bool IsForPreview() const;
+
+	UFUNCTION(BlueprintPure)
 	bool IsExhausted() const;
 
 	UFUNCTION(BlueprintPure)
@@ -895,6 +893,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	APlayerState* GetAssociatedPlayerState() const;
 
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	ADBDPlayer* GetAssociatedPlayer() const;
+
 	UFUNCTION(BlueprintPure)
 	FVector GetActorLocationFromFeetLocation(const FVector feetLocation) const;
 
@@ -964,9 +965,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void Authority_RequestStun(EStunType stunType, ADBDPlayer* stunner);
-
-	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
-	UStatusEffect* Authority_ImposeStatusEffect_DEPRECATED(FName statusEffectID, ADBDPlayer* originatingPlayer, float customParam, UGameplayModifierContainer* originatingEffect, bool shouldDisplay, float lifetime);
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void Authority_HandleScoreEvent(FGameplayTag scoreTypeTag, FScoreEventData scoreEventData);

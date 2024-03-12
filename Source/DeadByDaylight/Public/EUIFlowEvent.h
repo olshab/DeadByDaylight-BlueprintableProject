@@ -7,13 +7,13 @@ UENUM(BlueprintType)
 enum class EUIFlowEvent : uint8
 {
 	None,
-	AtlantaRoleSelectionScreenReady,
+	AtlantaMainMenuScreenReady,
 	AtlantaNavigationScreenReady,
 	InGameHudReady,
 	LoadingScreenReady,
 	OfflineLobbyScreenReady,
 	OnlineLobbyScreenReady,
-	RoleSelectionScreenReady,
+	MainMenuScreenReady,
 	SplashScreenReady,
 	TallyScreenReady,
 	PartyLobbyScreenReady,

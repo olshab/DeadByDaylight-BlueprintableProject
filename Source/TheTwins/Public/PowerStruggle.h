@@ -2,7 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "Perk.h"
+#include "Templates/SubclassOf.h"
 #include "PowerStruggle.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UPowerStruggle : public UPerk
@@ -12,6 +15,9 @@ class UPowerStruggle : public UPerk
 private:
 	UPROPERTY(EditAnywhere)
 	float _wigglePercentToActivatePerk;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _revealPalletWhenKOEffectClass;
 
 public:
 	UPowerStruggle();

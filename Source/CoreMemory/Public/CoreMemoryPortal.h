@@ -10,6 +10,7 @@ class UChargeableComponent;
 class UInteractor;
 class USynchronizeCoreMemoryInteraction;
 class UStaticMeshComponent;
+class ADBDPlayer;
 class UCoreMemoryPortalFXComponent;
 class UPrimitiveComponent;
 
@@ -51,6 +52,10 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _synchronizeCoreMemoryInteractionSecondsToChargeKiller;
+
+private:
+	UFUNCTION(BlueprintCallable)
+	void OnInteractionStarted(ADBDPlayer* player);
 
 public:
 	ACoreMemoryPortal();

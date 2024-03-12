@@ -2,6 +2,5 @@
 
 UK33TailAttackInteraction::UK33TailAttackInteraction()
 {
-	this->_isChargeCompleted = false;
 	this->_cancelAttackMovementSlowdownCurve = NULL;
 }

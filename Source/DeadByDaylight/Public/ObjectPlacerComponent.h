@@ -16,13 +16,13 @@ class DEADBYDAYLIGHT_API UObjectPlacerComponent : public USceneComponent
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidgetOptional))
 	UObjectPlacementUpdateStrategy* _objectPlacementUpdateStrategy;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidgetOptional))
 	UObjectPlacementValidationStrategy* _objectPlacementValidationStrategy;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UStaticMeshComponent* _objectMesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

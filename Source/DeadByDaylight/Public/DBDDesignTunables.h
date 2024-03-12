@@ -1,14 +1,18 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EGameType.h"
 #include "UObject/NoExportTypes.h"
 #include "PerkLevelDefinition.h"
 #include "GameplayTagContainer.h"
 #include "UObject/SoftObjectPtr.h"
 #include "GameEventForwarderInfo.h"
+#include "EGameTypeModifierName.h"
 #include "DBDDesignTunables.generated.h"
 
+class UGameTypeModifierDefaults;
 class UDBDTextDesignTunables;
+class UMenuCameraDesignTunables;
 class UDBDCoreUMGDesignTunables;
 
 UCLASS(Blueprintable, Transient)
@@ -71,6 +75,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	UDBDCoreUMGDesignTunables* CoreUMGDesignTunables;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UGameTypeModifierDefaults* GameTypeModifierDefaults;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSoftObjectPtr<UMenuCameraDesignTunables> SoftMenuCameraDesignTunable;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UMenuCameraDesignTunables* MenuCameraDesignTunables;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool _overrideDefaultLobby;
@@ -81,9 +94,25 @@ private:
 	UPROPERTY(EditAnywhere)
 	TArray<FGameplayTag> _conspicuousActionEvents;
 
+private:
+	UFUNCTION(BlueprintCallable)
+	void OnPluginDataPathAdded(const FString& dataPath);
+
 public:
 	UFUNCTION(BlueprintPure)
 	float GetTunableValue(FName ID, bool warnIfRowMissing) const;
+
+	UFUNCTION(BlueprintCallable)
+	static FString GetStringGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject);
+
+	UFUNCTION(BlueprintCallable)
+	static int32 GetIntGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject);
+
+	UFUNCTION(BlueprintCallable)
+	static bool GetBoolGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject);
+
+	UFUNCTION(BlueprintCallable)
+	static TArray<FString> GetArrayGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject);
 
 public:
 	UDBDDesignTunables();

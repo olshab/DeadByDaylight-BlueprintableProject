@@ -35,6 +35,11 @@ void UCoreInputSwitcherWidget::SetEnabled(bool isEnabled)
 
 }
 
+void UCoreInputSwitcherWidget::SetChargeable(bool isChargeable, UCurveFloat* holdingAnimCurve, float duration)
+{
+
+}
+
 void UCoreInputSwitcherWidget::SetBackground(TSoftObjectPtr<UMaterialInstance> backgroundMaterial)
 {
 

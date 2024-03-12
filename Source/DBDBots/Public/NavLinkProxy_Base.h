@@ -24,6 +24,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 NbMaxLinkUsers;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ReachedRadius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ReachedHeight;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TMap<ADBDPlayer*, FMoveLinkPlayerInfo> _players;

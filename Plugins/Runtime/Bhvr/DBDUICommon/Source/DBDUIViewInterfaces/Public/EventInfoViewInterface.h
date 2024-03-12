@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "EventObjectiveTrackerViewData.h"
 #include "EventEntryPopupSkinUIData.h"
 #include "EventInfoViewInterface.generated.h"
 
@@ -18,6 +19,15 @@ class DBDUIVIEWINTERFACES_API IEventInfoViewInterface : public IInterface
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetEventObjectiveTrackerVisibility(const bool isVisible);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetEventObjectiveTrackerData(const FEventObjectiveTrackerViewData& viewData);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetArchivesButtonVisibility(bool isVisible);
+
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void Init(UEventTabViewData* viewData, const FEventEntryPopupSkinUIData& skinData);
 

@@ -12,7 +12,7 @@ class DBDUIVIEWSMOBILE_API UMobileBaseUserWidget : public UUserWidget
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UWidget* HighlightWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

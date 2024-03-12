@@ -69,16 +69,11 @@ private:
 	UFUNCTION(BlueprintCallable, Server, Reliable, WithValidation)
 	void Server_SetWallGrabState(const EWallGrabState newState);
 
-public:
-	UFUNCTION(BlueprintCallable)
-	void ResetDashTokens();
-
-private:
 	UFUNCTION(BlueprintCallable)
 	void OnRep_StateTimer();
 
 	UFUNCTION(BlueprintCallable)
-	void OnRep_DashTokens();
+	void OnRep_DashTokens() const;
 
 	UFUNCTION(BlueprintCallable)
 	void OnLevelReadyToPlay();
@@ -104,9 +99,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	float GetLookAngleDegrees() const;
-
-	UFUNCTION(BlueprintPure)
-	uint8 GetDashTokensRemaining() const;
 
 	UFUNCTION(BlueprintPure)
 	UBlightPowerState* GetCurrentPowerState() const;

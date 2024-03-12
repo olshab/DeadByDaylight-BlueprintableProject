@@ -9,4 +9,5 @@ FCamperLoadout::FCamperLoadout()
 	this->Item = FItemIdDropdown{};
 	this->AddonIDs = TArray<FDebugLoadoutAddon>();
 	this->Perks = TArray<FDebugLoadoutPerk>();
+	this->Offering = FOfferingDropdown{};
 }

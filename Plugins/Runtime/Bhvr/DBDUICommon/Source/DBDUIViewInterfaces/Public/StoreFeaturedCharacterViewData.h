@@ -1,10 +1,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "SoftRemoteContentCacheObjectPtr.h"
 #include "EPlayerRole.h"
 #include "StoreFeaturedCharacterViewData.generated.h"
-
-class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct FStoreFeaturedCharacterViewData
@@ -19,7 +18,7 @@ public:
 	EPlayerRole PlayerRole;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	UTexture2D* CharacterPortrait;
+	FSoftRemoteContentCacheObjectPtr CharacterPortrait;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FText CharacterName;

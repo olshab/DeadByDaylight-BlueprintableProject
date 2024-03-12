@@ -4,29 +4,30 @@
 #include "ESkillCheckCustomType.h"
 #include "OnHookStateChanged.h"
 #include "CharmAttachable.h"
-#include "EHealthType.h"
-#include "OnHookEscapeFailedCosmetic.h"
-#include "OnImmobilizeStateChanged.h"
-#include "NoiseIndicatorEmitterInterface.h"
 #include "EImmobilizedState.h"
-#include "OnHPSlotChanged.h"
 #include "DBDPlayer.h"
+#include "OnHPSlotChanged.h"
 #include "OnPickedUpEvent.h"
 #include "OnGuidedStateChanged.h"
+#include "OnImmobilizeStateChanged.h"
+#include "OnHookEscapeFailedCosmetic.h"
+#include "EHealthType.h"
 #include "EGender.h"
 #include "Engine/EngineTypes.h"
+#include "Templates/SubclassOf.h"
 #include "EAuthoritativeMovementFlag.h"
 #include "UObject/NoExportTypes.h"
 #include "EGuidedState.h"
 #include "CamperPlayer.generated.h"
 
-class UHookableComponent;
-class APlayerController;
-class AActor;
 class UStalkedComponent;
 class UInteractionDefinition;
 class UCameraAttachmentComponent;
+class AActor;
+class APlayerController;
+class UHookableComponent;
 class UScreamComponent;
+class UStatusEffect;
 class UCurveFloat;
 class USurviveTimerScoreEventComponent;
 class UCamperStillnessTrackerComponent;
@@ -57,7 +58,7 @@ class AReverseBearTrap;
 class UDBDClipRegionComponent;
 
 UCLASS(Blueprintable)
-class DEADBYDAYLIGHT_API ACamperPlayer : public ADBDPlayer, public ICharmAttachable, public INoiseIndicatorEmitterInterface
+class DEADBYDAYLIGHT_API ACamperPlayer : public ADBDPlayer, public ICharmAttachable
 {
 	GENERATED_BODY()
 
@@ -132,7 +133,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	APlayerController* _storedPlayerController;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UCamperStillnessTrackerComponent* _stillnessTracker;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -144,19 +145,19 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	AActor* _overlappingEscape;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USpherePlayerOverlapComponent* ProximityZone;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCapsuleComponent* SlashableZone;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCapsuleComponent* HookSlashableZone;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCamperSlashableComponent* _camperSlashable;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UMoriableComponent* _moriableComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -236,9 +237,6 @@ private:
 	UAkComponent* _attenuationAkComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	bool _isSkillCheckFailed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	bool _isBeingSacrificed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
@@ -255,6 +253,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_SprintEffect, Transient, Export, meta=(AllowPrivateAccess=true))
 	USurvivorHitSprintEffect* _sprintEffect;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _sprintOnHitEffectClass;
 
 public:
 	UFUNCTION(BlueprintCallable)
@@ -280,9 +281,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
 	void SetPlayerExposedVFX();
-
-	UFUNCTION(BlueprintCallable)
-	void SetIsSkillCheckFailed(bool isSkillCheckFailed);
 
 	UFUNCTION(BlueprintCallable)
 	void SetBeingCarried(bool isBeingCarried, ADBDPlayer* carrier);
@@ -324,7 +322,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void OnPickUpEnter(ADBDPlayer* picker, float transitionTime);
 
-protected:
 	UFUNCTION(BlueprintCallable)
 	void OnPickUpDenied();
 
@@ -532,9 +529,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool GetIsWiggleProgressionAllowed() const;
-
-	UFUNCTION(BlueprintCallable)
-	bool GetIsSkillCheckFailed();
 
 	UFUNCTION(BlueprintPure)
 	bool GetIsBeingDissolved() const;

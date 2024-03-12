@@ -19,4 +19,5 @@ FItemData::FItemData()
 	this->EventId = NAME_None;
 	this->CanUseAfterEventEnd = false;
 	this->ItemType = ELoadoutItemType::None;
+	this->SearchTags = TArray<FText>();
 }

@@ -3,10 +3,12 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "PriceTagViewData.h"
-#include "UObject/SoftObjectPtr.h"
+#include "SoftRemoteContentCacheObjectPtr.h"
+#include "StoreArchivePassViewData.h"
+#include "StoreArchiveFragmentViewData.h"
+#include "TimerFlagViewData.h"
 #include "StoreSpecialPackViewData.generated.h"
 
-class UTexture2D;
 class UStoreCustomizationItemViewData;
 class UStoreCharacterItemViewData;
 
@@ -23,7 +25,7 @@ public:
 	FString DisplayTitle;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TSoftObjectPtr<UTexture2D> PackImage;
+	FSoftRemoteContentCacheObjectPtr PackImage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FPriceTagViewData PriceTagData;
@@ -33,6 +35,15 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<UStoreCustomizationItemViewData*> CustomizationsData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FStoreArchivePassViewData ArchivePassData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FStoreArchiveFragmentViewData ArchiveFragmentData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FTimerFlagViewData TimerViewData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FDateTime ActivationStartDate;
@@ -48,6 +59,13 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool IsOwned;
+
+public:
+	UFUNCTION(BlueprintPure)
+	bool ContainsArchivePassFragments() const;
+
+	UFUNCTION(BlueprintPure)
+	bool ContainsArchivePass() const;
 
 public:
 	UStoreSpecialPackViewData();

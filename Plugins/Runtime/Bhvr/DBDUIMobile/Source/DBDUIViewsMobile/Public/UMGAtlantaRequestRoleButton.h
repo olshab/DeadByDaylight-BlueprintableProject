@@ -12,7 +12,7 @@ class DBDUIVIEWSMOBILE_API UUMGAtlantaRequestRoleButton : public UUMGBaseButtonW
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UWidgetSwitcher* IconSwitcher;
 
 protected:

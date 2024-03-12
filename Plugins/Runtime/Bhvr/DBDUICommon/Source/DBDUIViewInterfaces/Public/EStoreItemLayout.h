@@ -13,4 +13,6 @@ enum class EStoreItemLayout : uint8
 	PriceTags = 8,
 	EventCheckmarkTag = 16,
 	EventIconTag = 32,
+	UnavailableTag = 64,
+	NotificationTag = 128,
 };

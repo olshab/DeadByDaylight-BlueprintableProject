@@ -2,5 +2,5 @@
 
 ADBDBaseGameMode::ADBDBaseGameMode()
 {
-
+	this->DebugGameType = EGameType::Online;
 }

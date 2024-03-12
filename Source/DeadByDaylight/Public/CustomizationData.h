@@ -39,6 +39,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString CustomizationId;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FText> SearchTags;
+
 public:
 	DEADBYDAYLIGHT_API FCustomizationData();
 };

@@ -4,4 +4,5 @@ UCoreMemorySpawnFragmentOnEventBehaviour::UCoreMemorySpawnFragmentOnEventBehavio
 {
 	this->_spawnFragmentOnGameEvents = TArray<FGameplayTag>();
 	this->_onlyForKiller = false;
+	this->_onlyForSurvivors = false;
 }

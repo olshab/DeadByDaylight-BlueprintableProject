@@ -3,4 +3,5 @@
 FRewardViewData::FRewardViewData()
 {
 	this->Icon = NULL;
+	this->AnimationWidgetClass = NULL;
 }

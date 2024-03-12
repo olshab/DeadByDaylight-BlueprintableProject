@@ -15,4 +15,5 @@ enum class EAudioCustomizationCategory : uint8
 	AudioCharacterWeapon,
 	AudioCharacterAmbiance,
 	AudioCharacterState,
+	AudioCharacterCollection,
 };

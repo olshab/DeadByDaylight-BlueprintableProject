@@ -37,7 +37,7 @@ private:
 
 private:
 	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-	void Multicast_TriggerPerk(const TArray<AGenerator*>& explodingGenerators);
+	void Multicast_RemoveHighlights(const TArray<AGenerator*>& highlightedGenerators);
 
 	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
 	void Multicast_HighlightGenerator(AGenerator* generator);

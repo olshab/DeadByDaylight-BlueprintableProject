@@ -3,6 +3,16 @@
 #include "Components/SplineComponent.h"
 #include "AkComponent.h"
 
+USplineComponent* ASplineAudioEmitterActor::GetSplineComponent()
+{
+	return NULL;
+}
+
+UAkComponent* ASplineAudioEmitterActor::GetEmitterComponent()
+{
+	return NULL;
+}
+
 ASplineAudioEmitterActor::ASplineAudioEmitterActor()
 {
 	this->_root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));

@@ -12,6 +12,7 @@ FSkillCheckDefinition::FSkillCheckDefinition()
 	this->WarningSoundDelay = 0.0f;
 	this->IsAudioMuted = false;
 	this->IsJittering = false;
+	this->IsOffCenter = false;
 	this->IsSuccessZoneMirrorred = false;
 	this->IsInsane = false;
 	this->IsLocallyPredicted = false;

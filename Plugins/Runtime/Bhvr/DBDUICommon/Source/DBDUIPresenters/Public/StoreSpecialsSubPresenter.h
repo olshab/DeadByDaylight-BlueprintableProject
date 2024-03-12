@@ -1,12 +1,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "StoreRedirectionData.h"
 #include "StoreSubPresenter.h"
+#include "PremiumPurchaseCompleteData.h"
 #include "UObject/ScriptInterface.h"
 #include "StoreSpecialsSubPresenter.generated.h"
 
-class UStoreSpecialsItemViewData;
 class IStoreSpecialsViewInterface;
+class UStoreCustomizationItemViewData;
 
 UCLASS(Blueprintable)
 class DBDUIPRESENTERS_API UStoreSpecialsSubPresenter : public UStoreSubPresenter
@@ -18,17 +20,20 @@ private:
 	TScriptInterface<IStoreSpecialsViewInterface> _storeSpecialsWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	TArray<UStoreSpecialsItemViewData*> _cachedSpecialsItems;
+	TArray<UStoreCustomizationItemViewData*> _cachedSpecialsItems;
 
 private:
 	UFUNCTION(BlueprintCallable)
-	void OnPremiumTransactionCompleted(bool success);
+	void RequestMoveToCharactersPage(const FStoreRedirectionData& storeRedirectionData);
 
 	UFUNCTION(BlueprintCallable)
-	void OnAuricCellSpecialOtherOptions();
+	void OnPremiumTransactionCompleted(bool success, FName itemId, const FPremiumPurchaseCompleteData& purchaseCompleteData);
 
 	UFUNCTION(BlueprintCallable)
 	void OnAuricCellSpecialBuyAction(FName bundleId);
+
+	UFUNCTION(BlueprintCallable)
+	void OnArchivePassBannerClicked(const FName& archiveId);
 
 public:
 	UStoreSpecialsSubPresenter();

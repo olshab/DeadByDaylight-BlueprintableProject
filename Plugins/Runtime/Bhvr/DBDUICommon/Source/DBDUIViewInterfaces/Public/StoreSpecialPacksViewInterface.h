@@ -2,12 +2,13 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "EStoreSpecialPacksScreenState.h"
 #include "UObject/ScriptInterface.h"
 #include "StoreSpecialPacksViewInterface.generated.h"
 
+class IStoreSpecialPacksDetailsViewInterface;
+class IStoreHeritagePacksListViewInterface;
 class IStoreSpecialPacksListViewInterface;
-class IStoreSpecialPacksHeritageViewInterface;
-class IStoreChapterPacksListViewInterface;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UStoreSpecialPacksViewInterface : public UInterface
@@ -20,13 +21,22 @@ class DBDUIVIEWINTERFACES_API IStoreSpecialPacksViewInterface : public IInterfac
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetScreenState(EStoreSpecialPacksScreenState state, bool shouldAnimate);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	bool IsAnimating();
+
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreSpecialPacksListViewInterface> GetTabSpecialsInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreSpecialPacksHeritageViewInterface> GetTabHeritageInterface() const;
+	TScriptInterface<IStoreHeritagePacksListViewInterface> GetTabHeritageInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreChapterPacksListViewInterface> GetTabChaptersInterface() const;
+	TScriptInterface<IStoreSpecialPacksListViewInterface> GetTabChaptersInterface() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	TScriptInterface<IStoreSpecialPacksDetailsViewInterface> GetDetailsInterface() const;
 
 };

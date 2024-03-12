@@ -6,6 +6,7 @@ FHangAnalytics::FHangAnalytics()
 	this->HangSourcesInfo = TEXT("");
 	this->HangLogs = TEXT("");
 	this->LastLoadingProgression = 0.0f;
-	this->RecentFenceLogs = TEXT("");
+	this->AdditionalLogs = TEXT("");
 	this->MatchId = TEXT("");
+	this->HangSourcesName = TEXT("");
 }

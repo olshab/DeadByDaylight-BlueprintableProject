@@ -33,7 +33,6 @@ UCoreOnboardingTutorialButtonWidget::UCoreOnboardingTutorialButtonWidget()
 	this->UnavailablePressedSfx = NULL;
 	this->TitleText = NULL;
 	this->DescriptionText = NULL;
-	this->RewardsText = NULL;
 	this->RoleIcon = NULL;
 	this->StateSwitcher = NULL;
 	this->LockedImage = NULL;

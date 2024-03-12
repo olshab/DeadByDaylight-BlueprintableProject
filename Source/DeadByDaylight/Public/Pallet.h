@@ -17,6 +17,7 @@ class ADBDPlayer;
 class UPalletPulldownBlockerComponent;
 class UBoxComponent;
 class UPrimitiveComponent;
+class USpawnedActorReplicationComponent;
 class ACamperPlayer;
 class USkeletalMeshComponent;
 
@@ -26,8 +27,14 @@ class DEADBYDAYLIGHT_API APallet : public AInteractable, public IPalletPulldownB
 	GENERATED_BODY()
 
 public:
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPalletStateChangedCosmetic, EPalletState, newState);
+
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float PalletDownEvadeDoorFrontPointOffset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)
+	FOnPalletStateChangedCosmetic Cosmetic_OnPalletStateChanged;
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -87,6 +94,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool _isDreamPallet;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
+	USpawnedActorReplicationComponent* _spawnedActorReplicationComponent;
 
 public:
 	UFUNCTION(BlueprintCallable)

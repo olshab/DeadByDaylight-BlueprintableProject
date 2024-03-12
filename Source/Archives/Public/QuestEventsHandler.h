@@ -8,7 +8,6 @@
 #include "GameEventData.h"
 #include "QuestEventsHandler.generated.h"
 
-class UArchiveStoriesContainer;
 class UQuestEventEvaluatorBase;
 class ADBDPlayerState;
 
@@ -20,9 +19,6 @@ class ARCHIVES_API UQuestEventsHandler : public UActorComponent
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TArray<UQuestEventEvaluatorBase*> _evaluatorList;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	UArchiveStoriesContainer* _archiveStoriesContainer;
 
 private:
 	UFUNCTION(BlueprintCallable)

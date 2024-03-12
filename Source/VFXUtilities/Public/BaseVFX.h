@@ -9,8 +9,8 @@ class VFXUTILITIES_API ABaseVFX : public AActor
 {
 	GENERATED_BODY()
 
-private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _shouldLoadOnServer;
 
 public:

@@ -3,7 +3,7 @@
 #include "CoreMinimal.h"
 #include "CoreButtonSelector.h"
 #include "Templates/SubclassOf.h"
-#include "StoreFeaturedCharacterViewData.h"
+#include "EPlayerRole.h"
 #include "CoreStoreFeaturedCharacterContainerWidget.generated.h"
 
 class UHorizontalBox;
@@ -18,16 +18,12 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
 	TSubclassOf<UCoreStoreFeaturedCharacterWidget> CharacterTileClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UHorizontalBox* Root;
-
-public:
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetCharacters(const TArray<FStoreFeaturedCharacterViewData>& viewDataArray);
 
 private:
 	UFUNCTION(BlueprintCallable)
-	void OnTransitionRequested(int32 characterIndex);
+	void OnMoveToCharactersBioPageRequested(int32 characterIndex, EPlayerRole playerRole);
 
 public:
 	UCoreStoreFeaturedCharacterContainerWidget();

@@ -8,4 +8,5 @@ enum class EscapeStrategyType : uint8
 {
 	EscapeDoor,
 	EscapeHatch,
+	Count,
 };

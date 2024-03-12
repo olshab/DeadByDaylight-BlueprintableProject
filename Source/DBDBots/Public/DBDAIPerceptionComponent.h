@@ -36,6 +36,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float StimulusHalfFOV;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float OutOfChaseFullPeripheralVisionRange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float InChaseFullPeripheralVisionRange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DarknessMaxVisionRange;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TMap<UClass*, UObject*> _objOverridingSenses;

@@ -60,11 +60,6 @@ void ACamperPlayer::StartHealingTimer(float time)
 
 }
 
-void ACamperPlayer::SetIsSkillCheckFailed(bool isSkillCheckFailed)
-{
-
-}
-
 void ACamperPlayer::SetBeingCarried(bool isBeingCarried, ADBDPlayer* carrier)
 {
 
@@ -420,11 +415,6 @@ bool ACamperPlayer::GetIsWiggleProgressionAllowed() const
 	return false;
 }
 
-bool ACamperPlayer::GetIsSkillCheckFailed()
-{
-	return false;
-}
-
 bool ACamperPlayer::GetIsBeingDissolved() const
 {
 	return false;
@@ -668,11 +658,11 @@ ACamperPlayer::ACamperPlayer()
 	this->_camperEndGameComponent = CreateDefaultSubobject<UCamperEndGameComponent>(TEXT("CamperEndGameComponent"));
 	this->_noOcclusionAkComponent = NULL;
 	this->_attenuationAkComponent = NULL;
-	this->_isSkillCheckFailed = false;
 	this->_isBeingSacrificed = false;
 	this->_isWiggleProgressionAllowed = true;
 	this->_meshMover = CreateDefaultSubobject<UMoveComponentToComponent>(TEXT("MeshMover"));
 	this->_carriedMovementComponent = CreateDefaultSubobject<UCarriedMovementComponent>(TEXT("CarriedMovementComponent"));
 	this->_antiCampSelfUnhookMeterComponent = NULL;
 	this->_sprintEffect = NULL;
+	this->_sprintOnHitEffectClass = NULL;
 }

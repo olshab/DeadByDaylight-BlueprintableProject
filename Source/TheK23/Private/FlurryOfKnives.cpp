@@ -45,6 +45,7 @@ UFlurryOfKnives::UFlurryOfKnives()
 	this->_replicatedNumOfStacksReduction = 0;
 	this->_isSuperModeThrow = false;
 	this->_selfSlowEffect = NULL;
+	this->_selfSlowStatusEffectClass = NULL;
 	this->_throwRateModifierByKnivesThrown = NULL;
 	this->_coneOfFireAngleCurve = NULL;
 	this->_movementSpeedByKnivesThrown = NULL;

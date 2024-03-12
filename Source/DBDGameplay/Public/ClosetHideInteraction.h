@@ -34,7 +34,7 @@ public:
 	bool IsOccupied() const;
 
 	UFUNCTION(BlueprintPure)
-	bool IsInteractingPlayerInsideCloset(ADBDPlayer* player) const;
+	bool IsInteractingPlayerInsideCloset(const ADBDPlayer* player) const;
 
 	UFUNCTION(BlueprintPure)
 	ADBDPlayer* GetPlayerInCloset() const;

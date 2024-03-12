@@ -1,13 +1,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AuricCellsSpecialOtherOptionsActionDelegate.h"
 #include "CoreAuricCellsBundleWidget.h"
 #include "CoreAuricCellsSpecialOfferWidget.generated.h"
 
 class UDBDTextBlock;
-class UCoreKeyListenerButtonWidget;
-class UCoreButtonWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIVIEWSCORE_API UCoreAuricCellsSpecialOfferWidget : public UCoreAuricCellsBundleWidget
@@ -15,18 +12,8 @@ class DBDUIVIEWSCORE_API UCoreAuricCellsSpecialOfferWidget : public UCoreAuricCe
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FAuricCellsSpecialOtherOptionsActionDelegate _otherOptionsActionDelegate;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UCoreKeyListenerButtonWidget* OtherOptionsButton;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* TimeLeftTextBlock;
-
-protected:
-	UFUNCTION(BlueprintCallable)
-	void OnOtherOptionsClick(UCoreButtonWidget* selectedButton);
 
 public:
 	UCoreAuricCellsSpecialOfferWidget();

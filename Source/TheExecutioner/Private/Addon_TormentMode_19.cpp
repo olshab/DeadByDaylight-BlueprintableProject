@@ -2,5 +2,6 @@
 
 UAddon_TormentMode_19::UAddon_TormentMode_19()
 {
+	this->_undetectableInTormentTrailLingeringStatusEffectClass = NULL;
 	this->_lingerDuration = 0.000000;
 }

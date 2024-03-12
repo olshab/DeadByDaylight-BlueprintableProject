@@ -21,13 +21,13 @@ class THEDEMOGORGON_API ADemogorgonPortal : public AInteractable, public IDBDGen
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPrimitiveComponent* _portalAreaCollider;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UChargeableComponent* _destroyChargeable;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UChargeableComponent* _teleportChargeable;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -103,6 +103,9 @@ protected:
 public:
 	UFUNCTION(BlueprintPure)
 	bool IsTargeted() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetDestroyDuration() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void Authority_StopDestroyingPlayers();

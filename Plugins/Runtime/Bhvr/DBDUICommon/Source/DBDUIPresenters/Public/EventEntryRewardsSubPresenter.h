@@ -24,7 +24,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<UStoreCustomizationItemViewData*> _previewAreaRewardsData;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UEventEntryPresenter* _parentPresenter;
 
 protected:

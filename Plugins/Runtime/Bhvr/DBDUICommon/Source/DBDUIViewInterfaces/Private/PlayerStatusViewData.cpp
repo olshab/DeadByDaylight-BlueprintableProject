@@ -11,6 +11,7 @@ FPlayerStatusViewData::FPlayerStatusViewData()
 	this->IsBroken = false;
 	this->IsBot = false;
 	this->IsLocalPlayerAKiller = false;
+	this->IsActivityHidden = false;
 	this->ObsessionState = EObsessionUIState::Off;
 	this->DrainStage = 0;
 	this->ConnectionQualityStatus = EConnectionQuality::Good;

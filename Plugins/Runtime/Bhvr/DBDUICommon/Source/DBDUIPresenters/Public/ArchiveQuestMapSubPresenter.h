@@ -43,6 +43,9 @@ private:
 	void OnQuestNodeHovered(EPlayerRole role);
 
 	UFUNCTION(BlueprintCallable)
+	void OnPlayerCardUpdated(const FString& badgeId, const FString& bannerId);
+
+	UFUNCTION(BlueprintCallable)
 	void OnNodeSelected(const FName& nodeId, EPlayerRole role, const FVector2D& position);
 
 	UFUNCTION(BlueprintCallable)

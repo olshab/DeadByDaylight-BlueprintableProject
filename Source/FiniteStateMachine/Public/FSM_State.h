@@ -27,7 +27,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
 	TArray<UFSM_Transition*> _transitions;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UFiniteStateMachine* _stateMachine;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

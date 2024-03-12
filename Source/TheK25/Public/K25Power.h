@@ -33,10 +33,10 @@ class AK25Power : public ACollectable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UChargeableComponent* _k25ChainStrikeInteractionChargeableComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UChargeableComponent* _k25TeleportChargeableComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -79,6 +79,9 @@ protected:
 	TSubclassOf<AAnimationFollowerActor> _pillarAnimationActorClass;
 
 private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _chainsAttachedStatusEffectClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
 	UK25ProjectileLauncher* _k25ProjectileLauncher;
 

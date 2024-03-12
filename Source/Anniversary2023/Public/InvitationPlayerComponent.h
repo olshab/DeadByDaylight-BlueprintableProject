@@ -28,7 +28,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_InvitationChargesInt, Transient)
 	int32 _invitationChargesInt;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_CooldownTimer, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_CooldownTimer, Transient, meta=(BindWidgetOptional))
 	UTimerObject* _cooldownTimer;
 
 	UPROPERTY(EditAnywhere)

@@ -17,10 +17,6 @@ protected:
 	UPROPERTY(EditAnywhere)
 	FGameplayTag _pickupScoreEvent;
 
-private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	bool _isInteractionChargeComplete;
-
 public:
 	UCrownPickupInteraction();
 };

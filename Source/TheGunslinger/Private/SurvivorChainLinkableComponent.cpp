@@ -18,7 +18,7 @@ void USurvivorChainLinkableComponent::GetLifetimeReplicatedProps(TArray<FLifetim
 USurvivorChainLinkableComponent::USurvivorChainLinkableComponent()
 {
 	this->_velocityAdditiveStrategyClass = USurvivorReelVelocityAdditiveStrategy::StaticClass();
-	this->_immobilizationEffectName = NAME_None;
 	this->_immobilizationEffect = NULL;
+	this->_immobilizationStatusEffectClass = NULL;
 	this->_velocityAdditiveStrategy = NULL;
 }

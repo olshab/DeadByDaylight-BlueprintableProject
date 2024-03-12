@@ -10,7 +10,7 @@ class ASlasherPlayer;
 class UCurveFloat;
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class UK29RushChargesHandlerComponent : public UActorComponent
+class THEK29_API UK29RushChargesHandlerComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
@@ -36,6 +36,9 @@ private:
 
 	UFUNCTION(BlueprintCallable)
 	void OnKillerSet(ASlasherPlayer* killer);
+
+	UFUNCTION(BlueprintPure)
+	float GetRechargeDuration() const;
 
 public:
 	UFUNCTION(BlueprintPure)

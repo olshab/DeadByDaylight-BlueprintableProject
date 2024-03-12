@@ -28,6 +28,9 @@ private:
 	void Server_SetPlayerReady();
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)
+	void Server_SetMutatorComponentReady();
+
+	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_SetMapSpecificComponentReady();
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)

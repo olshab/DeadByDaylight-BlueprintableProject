@@ -7,7 +7,9 @@ UENUM(BlueprintType)
 enum class EGameLayer : uint8
 {
 	Default,
+	LowOverlay,
 	Overlay,
+	ToastNotifications,
 	UMGPopup,
 	HighOverlay,
 	Alerts,

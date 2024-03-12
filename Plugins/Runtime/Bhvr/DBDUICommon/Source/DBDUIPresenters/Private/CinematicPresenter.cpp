@@ -15,6 +15,11 @@ void UCinematicPresenter::OnSubtitlesUpdated(const TArray<FString>& subtitles)
 
 }
 
+void UCinematicPresenter::OnSkipButtonClicked()
+{
+
+}
+
 void UCinematicPresenter::OnPlaybackStarted()
 {
 

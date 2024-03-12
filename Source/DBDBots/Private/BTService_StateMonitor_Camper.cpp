@@ -7,4 +7,6 @@ UBTService_StateMonitor_Camper::UBTService_StateMonitor_Camper()
 	this->ChaseUnseenMinimumKillerRange = 600.000000;
 	this->ChaseSeenMinimumKillerRange = 1200.000000;
 	this->ChasedMinimumScore = 100.000000;
+	this->HeightAmplifier = 4.000000;
+	this->HeightAmplifierActivationHeight = 300.000000;
 }

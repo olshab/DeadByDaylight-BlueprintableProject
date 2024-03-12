@@ -28,13 +28,13 @@ public:
 	UAkAudioEvent* ClickedSfx;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreInputPromptWidget* InputPrompt;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* LabelTB;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* AdditionalIconIMG;
 
 private:
@@ -58,11 +58,23 @@ public:
 	void SetEnabled(bool isEnabled);
 
 	UFUNCTION(BlueprintCallable)
+	void SetChargeable(bool isChargeable, UCurveFloat* holdingAnimCurve, float duration);
+
+	UFUNCTION(BlueprintCallable)
+	void SetBetaFeatureOverlayVisible(bool isVisible);
+
+	UFUNCTION(BlueprintCallable)
 	void SetAdditionalIcon(TSoftObjectPtr<UTexture2D> iconTexture);
 
 protected:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnEnabledChanged(bool isEnabled);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void OnChargingTick(float progress);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void OnChargingComplete();
 
 public:
 	UFUNCTION(BlueprintPure)

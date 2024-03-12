@@ -1,7 +1,13 @@
 #include "K25UncontrolledProjectile.h"
 #include "Net/UnrealNetwork.h"
+#include "ECamperDamageState.h"
 
 void AK25UncontrolledProjectile::OnRep_TargetSurvivor()
+{
+
+}
+
+void AK25UncontrolledProjectile::Authority_OnDamageStateChanged(ECamperDamageState oldDamageState, ECamperDamageState currentDamageState)
 {
 
 }

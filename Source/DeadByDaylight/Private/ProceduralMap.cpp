@@ -20,4 +20,5 @@ FProceduralMap::FProceduralMap()
 	this->FixedLayoutSeed = TArray<int32>();
 	this->IsInNonViolentBuild = false;
 	this->IsLicensed = false;
+	this->AreEventSpawnersEnabled = false;
 }

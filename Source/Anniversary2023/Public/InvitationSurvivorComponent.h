@@ -19,10 +19,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UInteractionDefinition> _fragilePalletInteraction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(BindWidgetOptional))
 	UInteractionDefinition* _reverseBamboozle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(BindWidgetOptional))
 	UInteractionDefinition* _fragilePallet;
 
 public:

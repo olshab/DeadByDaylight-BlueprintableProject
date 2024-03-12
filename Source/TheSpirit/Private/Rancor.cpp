@@ -15,4 +15,6 @@ URancor::URancor()
 	this->_survivorRevealDuration = 0.000000;
 	this->_killerRevealToObsessionDuration = 0.000000;
 	this->_exposedStatusEffect = NULL;
+	this->_timedRevealKillerEffectClass = NULL;
+	this->_rancorEffectClass = NULL;
 }

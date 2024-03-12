@@ -5,6 +5,7 @@
 #include "SpecialBehaviourSpawnableComponent.generated.h"
 
 class UActorComponent;
+class ADBDPlayer;
 
 USTRUCT(BlueprintType)
 struct FSpecialBehaviourSpawnableComponent
@@ -23,6 +24,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool ShouldSpawnOnGameState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<TSoftClassPtr<ADBDPlayer>> ShouldSpawnOnPlayerClasses;
 
 public:
 	DEADBYDAYLIGHT_API FSpecialBehaviourSpawnableComponent();

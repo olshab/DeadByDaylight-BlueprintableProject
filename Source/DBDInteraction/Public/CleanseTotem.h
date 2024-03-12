@@ -1,11 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ChargeableInteractionDefinition.h"
+#include "BaseTotemInteraction.h"
 #include "CleanseTotem.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class UCleanseTotem : public UChargeableInteractionDefinition
+class UCleanseTotem : public UBaseTotemInteraction
 {
 	GENERATED_BODY()
 

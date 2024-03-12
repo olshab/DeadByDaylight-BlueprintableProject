@@ -25,7 +25,7 @@ void AK32Emp::OnRep_IsAcquiredFromPool()
 
 }
 
-void AK32Emp::OnEmpInteractionFinished(ADBDPlayer* interactingPlayer)
+void AK32Emp::OnEmpInteractionFinished(ADBDPlayer* interactingPlayer, bool hasInteractionStarted)
 {
 
 }

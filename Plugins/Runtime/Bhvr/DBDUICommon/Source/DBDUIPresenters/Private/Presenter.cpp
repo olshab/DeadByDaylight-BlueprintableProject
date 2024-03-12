@@ -40,7 +40,6 @@ UPresenter::UPresenter()
 {
 	this->_overrideWidgetInstantiationPhase = false;
 	this->_widgetInstantiationPhase = EPresenterPhase::Initialization;
-	this->RequestPresentationAtBeginPlay = true;
 	this->InitialVisibility = ESlateVisibility::Visible;
 	this->_widgetZOrder = 0;
 	this->_widget = NULL;
@@ -49,4 +48,5 @@ UPresenter::UPresenter()
 	this->_presentationRequirementFunctions = TArray<UPresenterRequirementFunction*>();
 	this->_filter = 0;
 	this->_currencyFilter = 0;
+	this->_lockedFeatureElements = TArray<TScriptInterface<ILockedFeatureElementViewInterface>>();
 }

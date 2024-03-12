@@ -10,7 +10,7 @@ class UFSM_NotCondition : public UFSM_Condition
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UFSM_Condition* _condition;
 
 public:

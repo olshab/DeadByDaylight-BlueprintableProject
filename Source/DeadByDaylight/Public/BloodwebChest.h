@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
+#include "EGameType.h"
 #include "EBloodchestType.h"
 #include "EItemRarity.h"
 #include "BloodwebChest.generated.h"
@@ -17,6 +18,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName EventID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EGameType GameType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EBloodchestType ChestType;

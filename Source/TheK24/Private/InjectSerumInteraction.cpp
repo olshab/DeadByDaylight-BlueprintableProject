@@ -20,5 +20,5 @@ void UInjectSerumInteraction::Authority_CureSurvivor(ACamperPlayer* camperPlayer
 
 UInjectSerumInteraction::UInjectSerumInteraction()
 {
-
+	this->_killerInstinctStatusEffectClass = NULL;
 }

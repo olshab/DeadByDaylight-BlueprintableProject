@@ -8,11 +8,6 @@ void UCoreStoreMenuWidget::OnRedeemCodeButtonClicked(UCoreButtonWidget* selected
 
 }
 
-void UCoreStoreMenuWidget::OnMenuTabSelectedAgain(UCoreSelectableButtonWidget* selectedButton)
-{
-
-}
-
 void UCoreStoreMenuWidget::OnMenuTabSelected(UCoreSelectableButtonWidget* selectedButton)
 {
 

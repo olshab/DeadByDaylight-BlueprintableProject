@@ -10,6 +10,11 @@ void UHookableComponent::Multicast_DebugSetHookDrainStage_Implementation(int32 d
 
 }
 
+int32 UHookableComponent::GetSacrificeStageIndex() const
+{
+	return 0;
+}
+
 int32 UHookableComponent::GetHookedCount() const
 {
 	return 0;
@@ -18,6 +23,11 @@ int32 UHookableComponent::GetHookedCount() const
 float UHookableComponent::GetDrainTimerPercentLeft() const
 {
 	return 0.0f;
+}
+
+int32 UHookableComponent::GetDrainStage() const
+{
+	return 0;
 }
 
 void UHookableComponent::Authority_DebugSetHookEscapeAutoSuccess(const bool success)

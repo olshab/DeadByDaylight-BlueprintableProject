@@ -11,6 +11,6 @@ enum class EFlowTransitionType : uint8
 	PartyLobby,
 	OfflineLobby,
 	Splash,
-	RoleSelection,
+	MainMenu,
 	None,
 };

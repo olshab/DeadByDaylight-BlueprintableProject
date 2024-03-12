@@ -48,6 +48,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EItemAvailability Availability;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FString EventBannerLabel;
+
 public:
 	DBDUIVIEWINTERFACES_API FLoadoutTooltipData();
 };

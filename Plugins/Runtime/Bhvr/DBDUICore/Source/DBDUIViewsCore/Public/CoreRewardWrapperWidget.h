@@ -29,13 +29,13 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
 	TSubclassOf<UCoreCustomizationRewardWidget> CustomizationRewardWidget;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPanelWidget* RewardContainer;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USizeBox* SizeBox;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UScaleBox* ScaleBox;
 
 private:
@@ -55,11 +55,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetIsClickable(bool isClickable);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetData(const FRewardWrapperViewData& viewData);
 
-	UFUNCTION(BlueprintCallable)
-	UCoreRewardWidget* GetRewardWidget();
+	UFUNCTION(BlueprintPure)
+	UCoreRewardWidget* GetRewardWidget() const;
 
 	UFUNCTION(BlueprintCallable)
 	void ClearData();

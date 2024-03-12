@@ -8,11 +8,14 @@
 #include "CoreStoreCharactersSelectionWidget.generated.h"
 
 class UCoreStoreCharacterItemWidget;
-class UUniformGridPanel;
-class UScrollBox;
+class UCoreSearchBarWidget;
+class UDBDScrollBox;
 class UCoreStoreCharactersFilterWidget;
-class UCorePreConstructableList;
+class UUniformGridPanel;
+class UCoreButtonWidget;
+class UCoreStoreCharacterPerksToastWidget;
 class UCoreSelectableButtonWidget;
+class UCorePreConstructableList;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIVIEWSCORE_API UCoreStoreCharactersSelectionWidget : public UCoreBaseUserWidget, public IStoreCharactersSelectionViewInterface
@@ -35,19 +38,31 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 _layoutMask;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UScrollBox* Scroll;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UUniformGridPanel* Container;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UCoreStoreCharactersFilterWidget* FiltersWidget;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
 	int32 _preConstructedItemsCount;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UDBDScrollBox* ScrollBox;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UUniformGridPanel* Container;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCoreStoreCharactersFilterWidget* FiltersWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCoreSearchBarWidget* SearchBar;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCoreButtonWidget* PerksToastButton;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCoreStoreCharacterPerksToastWidget* PerksToast;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
+	TArray<UCoreStoreCharacterItemWidget*> _allCharacterItems;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UCoreStoreCharacterItemWidget* _selectedItem;
 
 private:
@@ -55,6 +70,9 @@ private:
 	UCorePreConstructableList* _characterList;
 
 protected:
+	UFUNCTION(BlueprintCallable)
+	void OnPerkToastButtonClick(UCoreButtonWidget* buttonTarget);
+
 	UFUNCTION(BlueprintCallable)
 	void OnCharacterSelected(UCoreSelectableButtonWidget* buttonTarget, bool isSelected);
 

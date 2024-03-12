@@ -25,6 +25,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FCustomizationRewardViewData CustomizationRewardViewData;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FString EventThemeLabel;
+
 public:
 	DBDUIVIEWINTERFACES_API FRewardWrapperViewData();
 };

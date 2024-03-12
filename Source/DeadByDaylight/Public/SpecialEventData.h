@@ -4,12 +4,13 @@
 #include "ESpecialEventDependency.h"
 #include "DBDTableRowBase.h"
 #include "SpecialBehaviourSpawnableComponent.h"
+#include "SpecialEventEntryPopupData.h"
+#include "SpecialEventCommunityChallengeData.h"
 #include "SpecialEventObjectiveData.h"
 #include "SpecialEventSplashScreenData.h"
 #include "SpecialEventOfferingSequenceData.h"
 #include "ECurrencyType.h"
 #include "ESpecialEventGameMode.h"
-#include "SpecialEventEntryPopupData.h"
 #include "SpecialEventBloodwebData.h"
 #include "SpecialEventUiTakeoverData.h"
 #include "SpecialEventData.generated.h"
@@ -42,6 +43,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool UseSpecialEventLoadingScreen;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FSpecialEventCommunityChallengeData CommunityChallenge;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FSpecialEventObjectiveData> Objectives;

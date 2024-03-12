@@ -18,7 +18,7 @@ public:
 	bool IsKeyboardLabelVisible;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* InputNameTB;
 
 public:

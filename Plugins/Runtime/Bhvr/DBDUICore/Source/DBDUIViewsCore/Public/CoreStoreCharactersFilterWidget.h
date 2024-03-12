@@ -1,14 +1,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "StoreCharactersFilterViewInterface.h"
 #include "CoreBaseUserWidget.h"
+#include "StoreCharactersFilterViewInterface.h"
+#include "ESortingOption.h"
 #include "OnClearFiltersClickedDelegate.h"
 #include "OnStoreFiltersChangedDelegate.h"
-#include "EItemFilterOption.h"
 #include "CoreStoreCharactersFilterWidget.generated.h"
 
 class UCoreButtonWidget;
+class UCoreSortButtonWidget;
 class UPanelWidget;
 class UCoreFilterButtonWidget;
 
@@ -18,14 +19,23 @@ class DBDUIVIEWSCORE_API UCoreStoreCharactersFilterWidget : public UCoreBaseUser
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreButtonWidget* ClearFiltersButton;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCoreSortButtonWidget* SortButton;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPanelWidget* CheckBoxesContainer;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _sortingOptions;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ESortingOption _defaultSortingOption;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
-	TArray<UCoreFilterButtonWidget*> FiltersCheckBoxArray;
+	TArray<UCoreFilterButtonWidget*> _filtersCheckBoxArray;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
@@ -39,7 +49,7 @@ protected:
 	void ToggleWidgetVisibility();
 
 	UFUNCTION(BlueprintCallable)
-	void OnFilterOptionCheckBoxToggled(bool isToggled, EItemFilterOption itemFilterOption);
+	void OnFilterOptionCheckBoxToggled();
 
 	UFUNCTION(BlueprintCallable)
 	void OnClearFiltersClicked(UCoreButtonWidget* buttonTarget);

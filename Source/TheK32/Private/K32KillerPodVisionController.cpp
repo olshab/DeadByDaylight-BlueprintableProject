@@ -1,4 +1,5 @@
 #include "K32KillerPodVisionController.h"
+#include "Camera/CameraComponent.h"
 #include "UObject/NoExportTypes.h"
 #include "Net/UnrealNetwork.h"
 
@@ -87,5 +88,6 @@ AK32KillerPodVisionController::AK32KillerPodVisionController()
 {
 	this->_observerRotationSpeed = 10.000000;
 	this->_minTimeBetweenCameraRotationUpdateRPC = 0.050000;
+	this->_camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	this->_hasVisionFromKillerPod = false;
 }

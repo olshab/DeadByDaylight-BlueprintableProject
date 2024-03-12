@@ -22,7 +22,7 @@ public:
 	TSubclassOf<UCoreCurrencyLabelWidget> CoreCurrencyLabelWidgetClass;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UGridPanel* CurrencyContainer;
 
 private:

@@ -32,6 +32,9 @@ public:
 	void OnSubtitlesUpdated(const TArray<FString>& subtitles);
 
 	UFUNCTION(BlueprintCallable)
+	void OnSkipButtonClicked();
+
+	UFUNCTION(BlueprintCallable)
 	void OnPlaybackStarted();
 
 	UFUNCTION(BlueprintCallable)

@@ -27,5 +27,6 @@ void UHexUndying::Authority_OnCamperCleansedHexPerk(const FGameplayTag gameplayT
 
 UHexUndying::UHexUndying()
 {
+	this->_revealSurvivorEffectClass = NULL;
 	this->_revealAuraDistanceFromTotem = 0.000000;
 }

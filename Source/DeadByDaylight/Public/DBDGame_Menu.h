@@ -5,7 +5,6 @@
 #include "DBDGame_Menu.generated.h"
 
 class ALevelSequenceActor;
-class UAtlantaPartyFlowHandler;
 
 UCLASS(Blueprintable, NonTransient)
 class ADBDGame_Menu : public ADBDBaseGameMode
@@ -17,9 +16,6 @@ public:
 	bool StartWithSlasher;
 
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	UAtlantaPartyFlowHandler* _partyFlowHandler;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	ALevelSequenceActor* _sequenceFadeActor;
 

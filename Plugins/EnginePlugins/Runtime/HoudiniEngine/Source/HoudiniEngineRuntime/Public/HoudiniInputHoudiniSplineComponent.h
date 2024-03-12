@@ -24,7 +24,7 @@ public:
 	bool Reversed;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UHoudiniSplineComponent* CachedComponent;
 
 public:

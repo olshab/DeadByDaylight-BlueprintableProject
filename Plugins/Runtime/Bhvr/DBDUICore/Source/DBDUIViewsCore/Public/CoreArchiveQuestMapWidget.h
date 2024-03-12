@@ -25,7 +25,7 @@ class DBDUIVIEWSCORE_API UCoreArchiveQuestMapWidget : public UCoreTabContentWidg
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCanvasPanel* ChallengesContainer;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

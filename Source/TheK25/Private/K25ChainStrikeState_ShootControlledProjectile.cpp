@@ -4,4 +4,5 @@ UK25ChainStrikeState_ShootControlledProjectile::UK25ChainStrikeState_ShootContro
 {
 	this->_minimumThrottleTimeForInputServerCall = 0.010000;
 	this->_inputResetSpeed = 1.000000;
+	this->_minDistToLookAtChain = 200.000000;
 }

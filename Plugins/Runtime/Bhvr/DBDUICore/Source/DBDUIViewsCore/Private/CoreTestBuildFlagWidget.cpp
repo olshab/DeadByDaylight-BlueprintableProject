@@ -2,7 +2,8 @@
 
 UCoreTestBuildFlagWidget::UCoreTestBuildFlagWidget()
 {
-	this->HudTestFlagContainer = NULL;
-	this->HudTopLineTextfield = NULL;
-	this->HudBottomLineTextfield = NULL;
+	this->ContainerCanvasPanel = NULL;
+	this->TestFlagContainer = NULL;
+	this->TopLineTextfield = NULL;
+	this->BottomLineTextfield = NULL;
 }

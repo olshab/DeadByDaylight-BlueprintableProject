@@ -22,6 +22,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FText DisplayName;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool HasNewCustomizationSelected;
+
 public:
 	DBDUIVIEWINTERFACES_API FStoreCategoryViewData();
 };

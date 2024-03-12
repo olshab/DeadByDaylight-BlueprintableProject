@@ -11,6 +11,9 @@ struct FMatchIncentivesFetchedAnalytics: public FUniquelyIdentifiedAnalytic
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString GameMode;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 KillerPercentageIncentive;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

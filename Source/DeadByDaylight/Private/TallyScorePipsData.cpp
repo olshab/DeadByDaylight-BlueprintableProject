@@ -7,5 +7,4 @@ FTallyScorePipsData::FTallyScorePipsData()
 	this->Scores = TArray<FEmblemSlotData>();
 	this->PipsDelta = 0;
 	this->IsSlasher = false;
-	this->IsCustomMatch = false;
 }

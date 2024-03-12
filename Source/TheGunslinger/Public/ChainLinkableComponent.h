@@ -7,10 +7,11 @@
 #include "TagStateBool.h"
 #include "ChainLinkableComponent.generated.h"
 
-class UChainPlayerMovementStatusEffect;
+class UStatusEffect;
 class URiflePlayerLinker;
 class UBaseCameraTargetingStrategy;
 class UPlayerReelInputAccelerationConstraintStrategy;
+class UChainPlayerMovementStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class THEGUNSLINGER_API UChainLinkableComponent : public UActorComponent, public IChainLinkable
@@ -21,18 +22,18 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UBaseCameraTargetingStrategy> _cameraTargetingStrategyClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName _movementStatusEffectName;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName _linkedStatusEffectName;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UPlayerReelInputAccelerationConstraintStrategy* _inputAccelerationStrategy;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	URiflePlayerLinker* _chainLink;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _movementStatusEffectClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _linkedStatusEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
 	FTagStateBool _isLinkedLingering;

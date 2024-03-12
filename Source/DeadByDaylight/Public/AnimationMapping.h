@@ -23,9 +23,6 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	UAnimMontage* _montage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	bool _loadAttempted;
-
 public:
 	DEADBYDAYLIGHT_API FAnimationMapping();
 };

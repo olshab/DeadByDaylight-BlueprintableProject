@@ -191,6 +191,26 @@ USceneComponent* AMeatHook::GetCamperHookedSnapTransform_Implementation() const
 	return NULL;
 }
 
+float AMeatHook::GetAntiCampMaxXYCurveDistanceTime() const
+{
+	return 0.0f;
+}
+
+float AMeatHook::GetAntiCampMaxUpperZCurveDistanceTime() const
+{
+	return 0.0f;
+}
+
+float AMeatHook::GetAntiCampMaxLowerZCurveDistanceTime() const
+{
+	return 0.0f;
+}
+
+float AMeatHook::GetAntiCampGracePeriod() const
+{
+	return 0.0f;
+}
+
 void AMeatHook::DebugHookedSurvivor(ACamperPlayer* expectedSurvivor) const
 {
 
@@ -299,7 +319,6 @@ AMeatHook::AMeatHook()
 	this->_unhook = NULL;
 	this->_camperHookedSnapTransform = NULL;
 	this->_entity = NULL;
-	this->_preventDrainProgression = false;
 	this->_perceptionStimuliComponent = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("AIPerceptionStimuliSourceComponent"));
 	this->_interactingPlayer = NULL;
 	this->_cachedMapActor = NULL;

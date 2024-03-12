@@ -23,6 +23,15 @@ public:
 	int32 BloodwebPoints;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 BonusEvent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MatchIncentive;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 LteIncentive;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float GameDuration;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

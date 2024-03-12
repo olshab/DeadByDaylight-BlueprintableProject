@@ -20,10 +20,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _showTooltipOnHover;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* LevelBG;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* RankNumberImage;
 
 public:

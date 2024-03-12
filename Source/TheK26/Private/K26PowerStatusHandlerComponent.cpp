@@ -65,6 +65,6 @@ UK26PowerStatusHandlerComponent::UK26PowerStatusHandlerComponent()
 {
 	this->_interactionsDuringWhichTheCrowIsIgnored = TArray<TSubclassOf<UInteractionDefinition>>();
 	this->_statusIndicatorClass = NULL;
-	this->_k26KillerInstinctStatusEffectName = NAME_None;
+	this->_k26KillerInstinctStatusEffectClass = NULL;
 	this->_survivorStatusList = TArray<FK26SurvivorStatus>();
 }

@@ -11,9 +11,13 @@
 #include "RankTooltipViewData.h"
 #include "ETooltipHorizontalAlignment.h"
 #include "ETooltipVerticalAlignment.h"
+#include "LockedFeatureTooltipViewData.h"
+#include "EventObjectiveTrackerViewData.h"
+#include "NotEnoughCurrencyModalViewData.h"
 #include "LoadoutTooltipData.h"
 #include "CurrencyProgressionTooltipViewData.h"
 #include "CharacterTooltipViewData.h"
+#include "ArchivePassTooltipViewData.h"
 #include "CompendiumButtonData.h"
 #include "DBDTooltipManager.generated.h"
 
@@ -43,6 +47,15 @@ public:
 	void ShowPlayerLevelTooltip(const FCorePlayerLevelTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment);
 
 	UFUNCTION(BlueprintCallable)
+	void ShowObjectiveTrackerTooltip(const FEventObjectiveTrackerViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment);
+
+	UFUNCTION(BlueprintCallable)
+	void ShowNotEnoughCurrencyModal(const FNotEnoughCurrencyModalViewData& viewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, const ETooltipVerticalAlignment tooltipVerticalAlignment);
+
+	UFUNCTION(BlueprintCallable)
+	void ShowLockedFeatureTooltip(const FLockedFeatureTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, const ETooltipVerticalAlignment tooltipVerticalAlignment);
+
+	UFUNCTION(BlueprintCallable)
 	void ShowLoadoutTooltip(const FLoadoutTooltipData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment);
 
 	UFUNCTION(BlueprintCallable)
@@ -59,6 +72,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void ShowArchiveRewardNodeTooltip(const FArchiveRewardNodeTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment);
+
+	UFUNCTION(BlueprintCallable)
+	void ShowArchivePassTooltip(const FArchivePassTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, const ETooltipVerticalAlignment tooltipVerticalAlignment);
 
 	UFUNCTION(BlueprintCallable)
 	void ShowArchiveNodeTooltip(const FArchiveNodeViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment);

@@ -36,12 +36,6 @@ public:
 	int32 BoldnessBonus;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 BonusEvent;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 MatchIncentive;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString Outcome;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -49,6 +43,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 HookedCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 RepairCanceledBeforeRegressionStoppedCount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool UsedController;

@@ -12,7 +12,7 @@ class SIMPLESTATEMACHINE_API USimpleStateMachineBaseState : public UObject
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	USimpleStateMachine* _stateMachine;
 
 public:

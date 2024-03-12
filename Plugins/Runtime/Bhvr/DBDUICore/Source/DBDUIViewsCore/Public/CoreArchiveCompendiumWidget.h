@@ -25,10 +25,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FOnCompendiumClickedDelegate _onCompendiumClickedDelegate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UGridPanel* CompendiumGrid;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDScrollBox* CompendiumScroll;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

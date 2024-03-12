@@ -63,6 +63,7 @@ AK25Power::AK25Power()
 	this->_chainAnimationActorClass = NULL;
 	this->_chainAnimationMappingsTables = TArray<UDataTable*>();
 	this->_pillarAnimationActorClass = NULL;
+	this->_chainsAttachedStatusEffectClass = NULL;
 	this->_k25ProjectileLauncher = CreateDefaultSubobject<UK25ProjectileLauncher>(TEXT("K25ProjectileLauncher"));
 	this->_k25ProjectilePool = CreateDefaultSubobject<UAuthoritativeActorPoolComponent>(TEXT("K25ProjectilePool"));
 	this->_k25ChainPool = CreateDefaultSubobject<UAuthoritativeActorPoolComponent>(TEXT("K25ChainPool"));

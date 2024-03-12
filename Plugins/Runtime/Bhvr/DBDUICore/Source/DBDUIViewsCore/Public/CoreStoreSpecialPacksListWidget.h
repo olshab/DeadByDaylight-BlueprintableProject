@@ -6,9 +6,10 @@
 #include "Templates/SubclassOf.h"
 #include "CoreStoreSpecialPacksListWidget.generated.h"
 
-class UVerticalBox;
+class UCoreStoreSpecialPackItemWidget;
+class UDBDScrollBox;
+class UUniformGridPanel;
 class UCorePreConstructableList;
-class UCoreStoreSpecialPacksPackItemWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UCoreStoreSpecialPacksListWidget : public UCoreBaseUserWidget, public IStoreSpecialPacksListViewInterface
@@ -19,11 +20,17 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 _preConstructedItemsCount;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
-	TSubclassOf<UCoreStoreSpecialPacksPackItemWidget> _itemWidgetClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _numOfColumns;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UVerticalBox* Content;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSubclassOf<UCoreStoreSpecialPackItemWidget> _itemWidgetClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UUniformGridPanel* ContentGrid;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UDBDScrollBox* Scroll;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
@@ -31,7 +38,7 @@ private:
 
 private:
 	UFUNCTION(BlueprintCallable)
-	void OnItemBuyActionClicked(const FString& packId);
+	void OnItemClicked(const FString& packId);
 
 public:
 	UCoreStoreSpecialPacksListWidget();

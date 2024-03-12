@@ -2,7 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "Perk.h"
+#include "Templates/SubclassOf.h"
 #include "Appraisal.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UAppraisal : public UPerk
@@ -12,6 +15,9 @@ class UAppraisal : public UPerk
 private:
 	UPROPERTY(EditAnywhere)
 	float _chestSearchSpeedMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _fastChestSearchEffectClass;
 
 public:
 	UAppraisal();

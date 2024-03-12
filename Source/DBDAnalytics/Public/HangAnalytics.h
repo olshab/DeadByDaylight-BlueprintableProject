@@ -23,10 +23,13 @@ public:
 	float LastLoadingProgression;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString RecentFenceLogs;
+	FString AdditionalLogs;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString MatchId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString HangSourcesName;
 
 public:
 	DBDANALYTICS_API FHangAnalytics();

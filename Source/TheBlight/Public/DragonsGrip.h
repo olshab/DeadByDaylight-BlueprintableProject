@@ -2,11 +2,13 @@
 
 #include "CoreMinimal.h"
 #include "Perk.h"
+#include "Templates/SubclassOf.h"
 #include "DBDTunableRowHandle.h"
 #include "DragonsGrip.generated.h"
 
 class AGenerator;
 class ADBDPlayer;
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UDragonsGrip : public UPerk
@@ -16,6 +18,9 @@ class UDragonsGrip : public UPerk
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	AGenerator* _kickedGenerator;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _exposedStatusEffect;
 
 	UPROPERTY(EditAnywhere)
 	float _activationDuration;

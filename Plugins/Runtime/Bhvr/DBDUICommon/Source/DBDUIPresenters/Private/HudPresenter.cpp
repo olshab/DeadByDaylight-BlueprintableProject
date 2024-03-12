@@ -17,6 +17,11 @@ void UHudPresenter::OnLocallyObservedChanged()
 
 }
 
+bool UHudPresenter::IsVisibleForCurrentGameMode() const
+{
+	return false;
+}
+
 bool UHudPresenter::IsPendingPawnReady() const
 {
 	return false;

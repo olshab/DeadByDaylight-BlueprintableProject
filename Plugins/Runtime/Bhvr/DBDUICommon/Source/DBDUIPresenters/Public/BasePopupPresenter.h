@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/SoftObjectPtr.h"
 #include "EContext.h"
 #include "Presenter.h"
 #include "Templates/SubclassOf.h"
@@ -20,6 +21,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UUserWidget> PopupWidgetClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsWIP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<UUserWidget> WIPPopupWidgetClass;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))

@@ -10,8 +10,6 @@ FPostGame_KillerAnalytics::FPostGame_KillerAnalytics()
 	this->DeviousnessBonus = 0;
 	this->HunterBonus = 0;
 	this->SacrificeBonus = 0;
-	this->BonusEvent = 0;
-	this->MatchIncentive = 0;
 	this->EscapeesCount = 0;
 	this->SacrificedCount = 0;
 	this->KilledCount = 0;
@@ -27,5 +25,12 @@ FPostGame_KillerAnalytics::FPostGame_KillerAnalytics()
 	this->EGS_reachEnd = false;
 	this->UsedController = false;
 	this->UsedKeyboard = false;
+	this->GeneratorRepairTimestamp1 = 0.0f;
+	this->GeneratorRepairTimestamp2 = 0.0f;
+	this->GeneratorRepairTimestamp3 = 0.0f;
+	this->GeneratorRepairTimestamp4 = 0.0f;
+	this->GeneratorRepairTimestamp5 = 0.0f;
+	this->GeneratorsMaxRegressionCount = 0;
+	this->GeneratorKicksCount = 0;
 	this->UsedHapticsVibration = false;
 }

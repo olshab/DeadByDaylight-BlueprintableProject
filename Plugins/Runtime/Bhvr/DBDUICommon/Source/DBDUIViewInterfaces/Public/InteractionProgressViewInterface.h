@@ -17,7 +17,7 @@ class DBDUIVIEWINTERFACES_API IInteractionProgressViewInterface : public IInterf
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void UpdateInputProgress(const float progress, const float itemCharge, bool isBlocked);
+	void UpdateInputProgress(const float progress, const float itemCharge, bool isBlocked, float percentageStopDischarge);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetInputProgressPrompt(const FInteractionProgressViewData& data);

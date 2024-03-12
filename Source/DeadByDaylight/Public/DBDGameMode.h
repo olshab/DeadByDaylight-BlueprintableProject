@@ -4,15 +4,12 @@
 #include "DBDBaseMatchGameMode.h"
 #include "OnPlayersLoadoutsCreated.h"
 #include "Templates/SubclassOf.h"
-#include "EGameState.h"
 #include "DBDGameMode.generated.h"
 
 class UStatusEffect;
-class APlayerState;
 class APlayerController;
 class APlayerStart;
 class UNavmeshGeneratorComponent;
-class ADBDPlayerState;
 
 UCLASS(Blueprintable, NonTransient)
 class DEADBYDAYLIGHT_API ADBDGameMode : public ADBDBaseMatchGameMode
@@ -46,14 +43,6 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void SetPlayerCount(int32 playerAmount);
 
-public:
-	UFUNCTION(BlueprintCallable)
-	void RegisterOnPlayerStateChanged(APlayerState* playerState);
-
-	UFUNCTION(BlueprintCallable)
-	void OnPlayerGameStateChanged(ADBDPlayerState* playerState, EGameState playerGameState);
-
-protected:
 	UFUNCTION(BlueprintCallable)
 	void LevelLoaded(const FString& levelName);
 

@@ -25,6 +25,11 @@ void ALocker::SetPlayerOpeningLocker(ADBDPlayer* player)
 
 }
 
+void ALocker::SetPlayerInLockerVisibility(const bool isVisible) const
+{
+
+}
+
 void ALocker::OnSurvivorHealthChanged(ECamperDamageState before, ECamperDamageState after)
 {
 

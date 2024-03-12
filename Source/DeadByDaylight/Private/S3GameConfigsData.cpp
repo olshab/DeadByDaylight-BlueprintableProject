@@ -22,6 +22,7 @@ FS3GameConfigsData::FS3GameConfigsData()
 	this->EnableAntiMoveHack = false;
 	this->EnablePostIISCinematic = false;
 	this->EnablePlayStationTrophiesIISSync = false;
+	this->EnableDSQuestsUpdate = false;
 	this->CrossPromoManagerPlatforms = TMap<FString, bool>();
 	this->CrossPromoManagerPlatforms_IsSet = false;
 	this->FriendsList = FS3FriendsListGameConfig{};
@@ -30,7 +31,7 @@ FS3GameConfigsData::FS3GameConfigsData()
 	this->AnimBudgeter_IsSet = false;
 	this->Jwt = FJwtGameConfig{};
 	this->Match = FS3MatchConfig{};
-	this->Loading = FS3LoadingConfig{};
+	this->HangTimes = TArray<FHangTimesPerStep>();
 	this->MatchmakingCrossplayPlatforms = TMap<FString, bool>();
 	this->MirrorsDefaultRetryPolicy = FS3MirrorsDefaultRetryPolicyConfig{};
 	this->Online = FS3OnlineConfig{};
@@ -38,9 +39,15 @@ FS3GameConfigsData::FS3GameConfigsData()
 	this->KrakenSdkValidation = FS3KrakenSdkValidationConfig{};
 	this->ContentVersion = FS3ContentVersionConfig{};
 	this->DisconnectionBotReplacement = FS3DisconnectionBotReplacementConfig{};
+	this->SeenPopupsConfig = TMap<FString, FS3SeenPopupsConfig>();
 	this->SocialCrossfriendsPlatforms = TMap<FString, bool>();
 	this->SocialCrossprogressionPlatforms = TMap<FString, bool>();
 	this->EnableMoriPreviewButton = false;
 	this->EnableAntiCamping = false;
 	this->EnableConsumableQueryFromKraken = false;
+	this->EnableLimitRegressionEvents = false;
+	this->EnableConsoleSuspendSave = false;
+	this->EnableLobbyLeaveSave = false;
+	this->EnableLocalStartSnapping = false;
+	this->EnableContainerAgressiveMemorySaving = false;
 }

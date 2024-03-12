@@ -15,4 +15,6 @@ ABlightPower::ABlightPower()
 	this->_blightPowerToggle = CreateDefaultSubobject<UPowerToggleComponent>(TEXT("K21PowerToggle"));
 	this->_blightPowerActivateChargeable = CreateDefaultSubobject<UChargeableComponent>(TEXT("K21PowerActivateChargeable"));
 	this->_blightPowerStateComponent = NULL;
+	this->_inPowerEffect = NULL;
+	this->_outOfPowerEffect = NULL;
 }

@@ -19,6 +19,11 @@ void UK25P03::OnCamperUnhookedFromScourgeHook(const FGameEventData& gameEventDat
 
 }
 
+float UK25P03::GetMangledHemorrhageEffectLifetimeAtLevel() const
+{
+	return 0.0f;
+}
+
 float UK25P03::GetActionSpeedDebuffPercentageAtLevel() const
 {
 	return 0.0f;
@@ -31,4 +36,5 @@ UK25P03::UK25P03()
 	this->_K25P03SurvivorStateTwoEffect = NULL;
 	this->_numberOfSurvivorsWaitingForDamageStateChange = 0;
 	this->_state2ActionSpeedDebuffPercentage = 0.000000;
+	this->_mangledHemorrhageEffectLifetime = 0.000000;
 }

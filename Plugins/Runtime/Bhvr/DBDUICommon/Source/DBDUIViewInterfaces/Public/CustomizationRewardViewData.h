@@ -43,6 +43,9 @@ public:
 	bool IsEventItem;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FName EventId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FCustomizationTooltipViewData TooltipData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -61,10 +64,7 @@ public:
 	TArray<FPriceTagViewData> PriceTagData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	FString LimitedTimeText;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	FString DiscountTimeText;
+	FString InclusionVersion;
 
 public:
 	DBDUIVIEWINTERFACES_API FCustomizationRewardViewData();

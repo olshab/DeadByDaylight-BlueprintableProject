@@ -15,7 +15,7 @@ class THEK33_API AK33Husk : public APoseableHusk
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UMontagePlayer* _montagePlayer;
 
 private:

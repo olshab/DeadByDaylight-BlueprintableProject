@@ -18,7 +18,7 @@ class AGuardFlag : public AActor
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPrimitiveComponent* _flagPickupHitbox;
 
 private:

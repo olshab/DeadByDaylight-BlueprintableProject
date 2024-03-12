@@ -30,6 +30,9 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void OnRep_BlockedGenerators();
 
+	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+	void Multicast_DispatchBlockedEvent();
+
 	UFUNCTION(BlueprintCallable)
 	void LevelReadyToBlockedGenerators();
 

@@ -19,6 +19,12 @@ class DBDUIVIEWINTERFACES_API ICinematicViewInterface : public IInterface
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetSkipInputSwitcherVisibility(bool isVisible);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetSkipInputSwitcherEnabled(bool isEnabled);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetSize(FVector2D size);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

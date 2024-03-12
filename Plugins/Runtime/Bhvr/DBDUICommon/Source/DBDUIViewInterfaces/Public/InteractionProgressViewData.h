@@ -41,6 +41,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float PermanentProgress;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float PercentageStopDischarge;
+
 public:
 	DBDUIVIEWINTERFACES_API FInteractionProgressViewData();
 };

@@ -17,5 +17,4 @@ USubtitlesPresenter::USubtitlesPresenter()
 	this->DurationPerLine = 2.500000;
 	this->KeepSingleCharacter = true;
 	this->_entryQueue = TArray<FSubtitlesEntry>();
-	this->_navigationScreen = NULL;
 }

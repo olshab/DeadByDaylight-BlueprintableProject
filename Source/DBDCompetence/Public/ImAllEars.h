@@ -3,8 +3,11 @@
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "GameEventData.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayTagContainer.h"
 #include "ImAllEars.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class DBDCOMPETENCE_API UImAllEars : public UPerk
@@ -23,6 +26,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, EditFixedSize, meta=(AllowPrivateAccess=true))
 	float _triggerOutsideRadius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _timedRevealToKillerEffect;
 
 private:
 	UFUNCTION(Server, Reliable, WithValidation)

@@ -38,6 +38,7 @@ class URenderingFeaturesSequencer;
 class AClipManager;
 class AFadeManager;
 class ASearchable;
+class UHudStateComponent;
 class AGenerator;
 class ACamperPlayer;
 class ATotem;
@@ -257,6 +258,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
 	UActorPairQueryEvaluatorComponent* _actorPairQueryEvaluatorComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
+	UHudStateComponent* _hudStateComponent;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
 	UCharacterCollection* _characterCollection;
 
@@ -302,6 +306,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
 	bool _leaveSpectateRequested;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(AllowPrivateAccess=true))
+	int32 _eventTrackerObjectiveLevel;
+
 public:
 	UFUNCTION(BlueprintPure=false, BlueprintCallable)
 	void UpdateInGamePallets() const;
@@ -323,9 +330,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetDisplayMapName(bool display);
-
-	UFUNCTION(BlueprintCallable)
-	void SetBuiltLevelData(const FBuiltLevelData& builtLevelData);
 
 	UFUNCTION(BlueprintCallable)
 	void Server_UpdateGameRole();
@@ -599,6 +603,9 @@ public:
 	void BroadcastOnSetBuildLevelData();
 
 	UFUNCTION(BlueprintCallable)
+	void Authority_UnsetLevelReadyToPlay();
+
+	UFUNCTION(BlueprintCallable)
 	void Authority_SignalEscapeDoorActivated(bool newEscapeDoorActivated);
 
 	UFUNCTION(BlueprintCallable)
@@ -630,6 +637,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void Authority_SetEscapeDoorOpened(bool opened);
+
+	UFUNCTION(BlueprintCallable)
+	void Authority_SetBuiltLevelData(const FBuiltLevelData& builtLevelData);
 
 	UFUNCTION(BlueprintCallable)
 	void Authority_SetAllPlayerLoaded();

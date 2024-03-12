@@ -2,6 +2,8 @@
 
 #include "CoreMinimal.h"
 #include "SpecialEventMiscRewards.h"
+#include "EventTrackerObjective.h"
+#include "LTEData.h"
 #include "SpecialEventMilestoneRewards.h"
 #include "EventPeriod.h"
 #include "RewardResponseItem.h"
@@ -16,6 +18,12 @@ struct FSpecialEventsData
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString EventId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FLTEData LteData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)
+	bool LteData_IsSet;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FSpecialEventMiscRewards> MiscRewards;
@@ -46,6 +54,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)
 	bool EventPeriods_IsSet;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FEventTrackerObjective> EventTrackerObjectives;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)
+	bool EventTrackerObjectives_IsSet;
 
 public:
 	DEADBYDAYLIGHT_API FSpecialEventsData();

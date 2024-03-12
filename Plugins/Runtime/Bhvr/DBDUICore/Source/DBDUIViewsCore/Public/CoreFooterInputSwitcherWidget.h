@@ -16,6 +16,10 @@ protected:
 	UTexture2D* _iconTexture;
 
 public:
+	UFUNCTION(BlueprintCallable)
+	void SetBetaFeatureOverlayVisible(bool isVisible);
+
+public:
 	UCoreFooterInputSwitcherWidget();
 };
 

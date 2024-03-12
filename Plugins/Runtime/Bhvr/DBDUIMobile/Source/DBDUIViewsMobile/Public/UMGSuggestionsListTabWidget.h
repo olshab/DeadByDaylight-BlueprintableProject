@@ -12,10 +12,10 @@ class DBDUIVIEWSMOBILE_API UUMGSuggestionsListTabWidget : public UUMGFriendBaseT
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UUMGExpandableListWidget* PlayedWithFriendsExpandableList;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UUMGExpandableListWidget* SocialFriendsExpandableList;
 
 public:

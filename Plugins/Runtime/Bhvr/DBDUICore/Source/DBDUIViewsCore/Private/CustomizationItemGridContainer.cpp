@@ -42,6 +42,7 @@ UCustomizationItemGridContainer::UCustomizationItemGridContainer()
 	this->_columnCountInGrid = 5;
 	this->_customizationTileScale = 1.000000;
 	this->_layoutMask = 0;
+	this->_flagSize = EFlagSize::Short;
 	this->_rowCountToShowScrollBar = 3;
 	this->_fillGridWithEmptyItems = false;
 	this->GridContainer = NULL;

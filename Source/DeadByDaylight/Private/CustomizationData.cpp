@@ -10,4 +10,5 @@ FCustomizationData::FCustomizationData()
 	this->Availability = FItemAvailability{};
 	this->InclusionVersion = TEXT("");
 	this->CustomizationId = TEXT("");
+	this->SearchTags = TArray<FText>();
 }

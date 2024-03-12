@@ -40,6 +40,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TMap<FString, UTexture2D*> TooltipEventSkinUIDataMap;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TMap<FString, UTexture2D*> AlertRewardEventSkinUIDataMap;
+
 public:
 	UFUNCTION(BlueprintPure)
 	UMaterialInterface* GetTooltipRarityMaterial(EItemRarity rarity) const;
@@ -55,6 +58,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	TSoftObjectPtr<UTexture2D> GetCurrencyIcon(const ECurrencyType currencyType) const;
+
+	UFUNCTION(BlueprintPure)
+	UTexture2D* GetAlertRewardEventBackground(const FString& eventThemeLabel) const;
 
 public:
 	UUIDataManager();

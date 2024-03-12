@@ -32,10 +32,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UAkAudioEvent* ObsessionSfx;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* PlayerNameTextfield;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UOverlay* KillerStatusContainer;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

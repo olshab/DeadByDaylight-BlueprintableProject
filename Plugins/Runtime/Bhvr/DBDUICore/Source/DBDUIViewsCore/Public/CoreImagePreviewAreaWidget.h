@@ -2,12 +2,14 @@
 
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
-#include "ECustomizationCategory.h"
 #include "CustomizationItemPreviewAreaViewData.h"
+#include "ECustomizationCategory.h"
 #include "CoreImagePreviewAreaWidget.generated.h"
 
 class UDBDImage;
 class UDBDRichTextBlock;
+class UCorePlayerCardWidget;
+class UStoreCustomizationItemViewData;
 class UCustomizationItemGridContainer;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -16,16 +18,19 @@ class UCoreImagePreviewAreaWidget : public UCoreBaseUserWidget
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* PreviewArea;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCorePlayerCardWidget* AnimatedCardContainer;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* PreviewAreaBG;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDRichTextBlock* ItemContainerText;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCustomizationItemGridContainer* ItemContainer;
 
 public:
@@ -37,6 +42,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetData(const FCustomizationItemPreviewAreaViewData& viewData);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetAnimatedPreviewData(const UStoreCustomizationItemViewData* previewItemData);
 
 protected:
 	UFUNCTION(BlueprintCallable)

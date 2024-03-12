@@ -11,28 +11,28 @@ struct FCustomGamePresetData
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	TArray<uint8> _mapAvailabilities;
+	TArray<uint8> mapAvails;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	bool _arePerkAvailable;
+	bool perkAvail;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	bool _areOfferingAvailable;
+	bool offeringAvail;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	bool _areItemAvailable;
+	bool itemAvail;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	bool _areItemAddonAvailable;
+	bool itemAddonAvail;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	bool _areDlcContentAllowed;
+	bool dlcContentAllowed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	bool _isPrivateMatch;
+	bool privateMatch;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FCustomGameBotsData _botsData;
+	FCustomGameBotsData bots;
 
 public:
 	SOCIALPARTY_API FCustomGamePresetData();

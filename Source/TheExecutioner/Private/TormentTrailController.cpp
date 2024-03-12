@@ -24,5 +24,5 @@ void ATormentTrailController::GetLifetimeReplicatedProps(TArray<FLifetimePropert
 
 ATormentTrailController::ATormentTrailController()
 {
-	this->_mobileTormentTrailRenderer = NULL;
+
 }

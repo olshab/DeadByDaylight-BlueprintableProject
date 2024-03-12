@@ -3,8 +3,8 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "EDBDFeatureType.h"
-#include "DBDFeatureLockProgress.h"
 #include "EPlayerRole.h"
+#include "DBDFeatureLockProgress.h"
 #include "FeatureGateHelper.generated.h"
 
 UCLASS(Blueprintable)

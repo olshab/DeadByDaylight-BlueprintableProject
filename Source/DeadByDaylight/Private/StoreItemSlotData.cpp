@@ -30,4 +30,5 @@ FStoreItemSlotData::FStoreItemSlotData()
 	this->IsEnabled = false;
 	this->RemainingTimeItem = TEXT("");
 	this->RemainingTimeDiscount = TEXT("");
+	this->SearchTags = TArray<FText>();
 }

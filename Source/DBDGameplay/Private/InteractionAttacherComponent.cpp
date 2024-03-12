@@ -17,6 +17,9 @@ void UInteractionAttacherComponent::GetLifetimeReplicatedProps(TArray<FLifetimeP
 
 	DOREPLIFETIME(UInteractionAttacherComponent, _interactionDefinitions);
 	DOREPLIFETIME(UInteractionAttacherComponent, _chargeableComponents);
+	DOREPLIFETIME(UInteractionAttacherComponent, _restriction);
+	DOREPLIFETIME(UInteractionAttacherComponent, _secondsToCharge);
+	DOREPLIFETIME(UInteractionAttacherComponent, _clientWaitForOwnerInitialization);
 }
 
 UInteractionAttacherComponent::UInteractionAttacherComponent()
@@ -28,4 +31,5 @@ UInteractionAttacherComponent::UInteractionAttacherComponent()
 	this->_useChargeableInteraction = false;
 	this->_chargeableComponentID = NAME_None;
 	this->_chargeableComponentName = NAME_None;
+	this->_clientWaitForOwnerInitialization = false;
 }

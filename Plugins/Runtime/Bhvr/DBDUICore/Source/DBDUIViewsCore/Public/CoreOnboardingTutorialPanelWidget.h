@@ -25,7 +25,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)
 	FTutorialSelectedDelegate TutorialSelectedDelegate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UUserWidget* LoadingWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

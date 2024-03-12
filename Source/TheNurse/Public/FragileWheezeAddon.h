@@ -16,6 +16,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UStatusEffect> _mangledEffectClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _mangledEffectLifetime;
+
 public:
 	UFragileWheezeAddon();
 };

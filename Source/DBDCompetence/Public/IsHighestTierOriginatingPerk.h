@@ -23,6 +23,9 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void OnStatusEffectAddedOrRemoved(UStatusEffect* effect, bool valid);
 
+	UFUNCTION(BlueprintCallable)
+	void OnGameplayModifierContainerInitialized();
+
 public:
 	UIsHighestTierOriginatingPerk();
 };

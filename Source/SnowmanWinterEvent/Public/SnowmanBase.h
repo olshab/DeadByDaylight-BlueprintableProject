@@ -22,7 +22,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FDBDTunableRowHandle _timeToBeDestroyed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear, meta=(BindWidgetOptional))
 	USnowmanAttackableComponent* _snowmanAttackable;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

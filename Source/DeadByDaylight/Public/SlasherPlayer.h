@@ -26,7 +26,6 @@ class ACamperExposerInstance;
 class UKillerBloodFXComponent;
 class UStillnessTrackerComponent;
 class UMoriComponent;
-class UAimAssistComponent;
 class UHitValidatorConfigurator;
 class ULoudNoiseHUDIndicator;
 class USlasherHitsWhileCarryingTrackerComponent;
@@ -82,20 +81,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool ShowKillerPowerDebugInfo;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool HasDamagedGeneratorSinceHook;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)
 	FOnStalkModeChangedEvent OnStalkModeChangedEvent;
 
 protected:
-	UPROPERTY(EditAnywhere, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, meta=(BindWidgetOptional))
 	TWeakObjectPtr<UAkComponent> _audioComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDNavModifierComponent* _terrorNavModifierComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UKillerBloodFXComponent* _bloodFXComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -107,11 +103,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TMap<ADBDPlayer*, FTargetFocusTimer> _stalkTimers;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UStillnessTrackerComponent* _stillnessTracker;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
-	UAimAssistComponent* _aimAssistComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FDBDTimer _recentlyCloakedTimer;
@@ -225,6 +218,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	USlasherStunnableComponent* _slasherStunnableComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	bool _forceThirdPersonAnimations;
+
 public:
 	UFUNCTION(BlueprintPure)
 	bool WasRecentlyCloaked() const;
@@ -261,7 +257,7 @@ protected:
 
 public:
 	UFUNCTION(BlueprintCallable)
-	void SetChainsawSprinting(bool chainsawSprinting);
+	void SetForceThirdPersonAnimations(bool forceThirdPerson);
 
 	UFUNCTION(BlueprintCallable)
 	void SetCarriedCamper(ACamperPlayer* camper);
@@ -386,9 +382,6 @@ public:
 	bool IsCloaking() const;
 
 	UFUNCTION(BlueprintPure)
-	bool IsChainsawSprinting() const;
-
-	UFUNCTION(BlueprintPure)
 	bool IsCarrying() const;
 
 	UFUNCTION(BlueprintPure)
@@ -440,6 +433,9 @@ public:
 	EKillerCarryAnimWeight GetKillerCarryAnimWeight() const;
 
 	UFUNCTION(BlueprintPure)
+	bool GetIsForceThirdPersonAnimations() const;
+
+	UFUNCTION(BlueprintPure)
 	bool GetIsAttacking() const;
 
 	UFUNCTION(BlueprintCallable)
@@ -458,6 +454,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	float GetBlindedPercent() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	USceneComponent* GetAttackZonePivot();
 
 	UFUNCTION(BlueprintPure)
 	float GetAnimDirection() const;
@@ -495,9 +494,6 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	bool CanSlashAttack_BP() const;
 
-	UFUNCTION(BlueprintPure)
-	bool CanPickupSurvivor() const;
-
 	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
 	bool CanPerformKillerAbility(EKillerAbilities killerAbility) const;
 
@@ -527,18 +523,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void Authority_AllowKilling(int32 numKills);
-
-	UFUNCTION(BlueprintCallable)
-	void AttackInputReleased();
-
-	UFUNCTION(BlueprintCallable)
-	void AttackInputPressed();
-
-	UFUNCTION(BlueprintCallable)
-	void ActionKillerReleased();
-
-	UFUNCTION(BlueprintCallable)
-	void ActionKillerPressed();
 
 public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;

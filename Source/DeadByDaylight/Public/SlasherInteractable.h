@@ -12,7 +12,7 @@ class DEADBYDAYLIGHT_API ASlasherInteractable : public APlayerInteractable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UInteractor* _genericStunInteractor;
 
 public:

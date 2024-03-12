@@ -13,6 +13,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float _interpolationDistance;
 
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool _canBeDisabledByGameType;
+
 public:
 	UFogOverrideComponent();
 };

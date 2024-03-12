@@ -15,6 +15,13 @@ protected:
 	FMargin _tooltipMargin;
 
 public:
+	UFUNCTION(BlueprintCallable)
+	void OnShowTooltip();
+
+	UFUNCTION(BlueprintCallable)
+	void OnHideTooltip();
+
+public:
 	UTooltipWidget();
 };
 

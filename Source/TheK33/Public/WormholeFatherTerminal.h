@@ -12,7 +12,7 @@ class AWormholeFatherTerminal : public AInteractable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USceneComponent* _wormholeKeyCardAttachment;
 
 public:

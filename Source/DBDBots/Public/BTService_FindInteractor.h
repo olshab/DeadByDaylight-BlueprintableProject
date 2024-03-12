@@ -129,7 +129,7 @@ public:
 	float UnsafeActionRange;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UInteractor* _goalInteractor;
 
 public:

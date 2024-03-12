@@ -2,7 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "UObject/ScriptInterface.h"
 #include "CoreBaseViewInterface.generated.h"
+
+class ILockedFeatureElementViewInterface;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UCoreBaseViewInterface : public UInterface
@@ -20,5 +23,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void OnStartAsyncOperation();
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	TArray<TScriptInterface<ILockedFeatureElementViewInterface>> GetLockedFeatureElements();
 
 };

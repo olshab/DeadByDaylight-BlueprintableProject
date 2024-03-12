@@ -27,21 +27,21 @@ class UTwinPossessNegationEffectComponent;
 class UFirecrackerEffectHandlerComponent;
 
 UCLASS(Blueprintable)
-class AConjoinedTwin : public ADBDPlayer
+class THETWINS_API AConjoinedTwin : public ADBDPlayer
 {
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	URangeToActorsTrackerComponent* _restrictedPossessionAreaTracker;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UTwinOutlineUpdateStrategy* _twinOutlineUpdateStrategy;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UAkComponent* _twinLullabyAudioComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UKillerBlindingFXComponent* _twinBlindingFX;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

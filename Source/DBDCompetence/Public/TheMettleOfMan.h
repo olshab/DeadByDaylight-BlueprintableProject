@@ -27,6 +27,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<UStatusEffect> _enduranceHighlightEffectClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _revealToKillerEffectClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_NumTokenSoFar, Transient, meta=(AllowPrivateAccess=true))
 	int32 _numTokenSoFar;
 

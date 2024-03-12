@@ -8,7 +8,6 @@
 #include "SubtitlesPresenter.generated.h"
 
 class UUserWidget;
-class UNavigationScreen;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIPRESENTERS_API USubtitlesPresenter : public UPresenter
@@ -34,9 +33,6 @@ private:
 
 	UPROPERTY(EditAnywhere, Transient)
 	FTimerHandle _timerHandle;
-
-	UPROPERTY(EditAnywhere, Transient)
-	TWeakObjectPtr<UNavigationScreen> _navigationScreen;
 
 private:
 	UFUNCTION(BlueprintCallable)

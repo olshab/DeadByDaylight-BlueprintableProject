@@ -17,7 +17,7 @@ class DBDUIVIEWINTERFACES_API IStoreCharactersFilterViewInterface : public IInte
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetRarityFiltersVisibility(bool showRarityFilters);
+	void SetFiltersVisibility(bool showRarityFilters, bool showAvailabilityFilter);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetFiltersState(FStoreCharactersFiltersData newFiltersData);

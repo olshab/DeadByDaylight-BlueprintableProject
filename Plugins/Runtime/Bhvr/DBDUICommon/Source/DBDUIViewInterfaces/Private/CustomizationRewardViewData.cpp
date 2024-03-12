@@ -11,12 +11,12 @@ FCustomizationRewardViewData::FCustomizationRewardViewData()
 	this->IsEquipped = false;
 	this->IsUnbreakable = false;
 	this->IsEventItem = false;
+	this->EventId = NAME_None;
 	this->TooltipData = FCustomizationTooltipViewData{};
 	this->CustomizationCategory = ECustomizationCategory::None;
 	this->AssociatedCharacter = 0;
 	this->IsEnabled = false;
 	this->GrantsMilestonePointOnUnlock = false;
 	this->PriceTagData = TArray<FPriceTagViewData>();
-	this->LimitedTimeText = TEXT("");
-	this->DiscountTimeText = TEXT("");
+	this->InclusionVersion = TEXT("");
 }

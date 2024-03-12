@@ -31,6 +31,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FAITunableParameter PotentialTargetedLocationRange;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float BaseKnownInfoExpirationTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DistanceInfoExpirationTime;
+
 private:
 	UPROPERTY(EditAnywhere, Transient)
 	TMap<TWeakObjectPtr<ACharacter>, FAITrackedEnemyData> _trackedEnemiesData;

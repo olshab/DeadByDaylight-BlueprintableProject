@@ -52,6 +52,7 @@ void UAgonyComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
 UAgonyComponent::UAgonyComponent()
 {
 	this->_inAttackTrailDamageCooldown = false;
+	this->_inTormentTrailKillerInstinctStatusEffectClass = NULL;
 	this->_showAgonyFXEvents = TArray<FAgonyDisplayFxEvent>();
 	this->_hideAgonyFXEvents = TArray<FAgonyDisplayFxEvent>();
 }

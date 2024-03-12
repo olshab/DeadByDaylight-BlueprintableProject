@@ -47,6 +47,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FDBDTunableRowHandle _hatchetLaunchPitchMax;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _hatchetLaunchPositionOffsetFromCamera;
+
 protected:
 	UFUNCTION(BlueprintPure)
 	bool IsLaunchedHatchetFullyCharged() const;

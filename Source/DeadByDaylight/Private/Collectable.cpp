@@ -302,6 +302,7 @@ ACollectable::ACollectable()
 	this->HandPosition = EItemHandPosition::None;
 	this->DisableArmOverrideDuringInteractions = false;
 	this->HasUseInteraction = false;
+	this->RemoveInteractionsOnInteractorChange = true;
 	this->Category = ECollectableCategory::Common;
 	this->ItemID = NAME_None;
 	this->FromPlayerSpawn = false;

@@ -21,7 +21,7 @@ class THEONRYO_API AOnryoTelevision : public AInteractable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USceneComponent* _teleportPosition;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
@@ -109,6 +109,9 @@ protected:
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
 	void Cosmetic_OnStatusEffectZoneVFXActiveChanged(bool active);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnPoweredOnVfxRadiusChanged(float newPoweredOnVfxRadius);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
 	void Cosmetic_OnCamperCanInsertTapeChanged(const bool canInsertTape);

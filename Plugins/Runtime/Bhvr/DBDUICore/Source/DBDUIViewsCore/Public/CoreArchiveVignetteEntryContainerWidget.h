@@ -14,7 +14,7 @@ class DBDUIVIEWSCORE_API UCoreArchiveVignetteEntryContainerWidget : public UCore
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UProgressBar* JournalProgressBar;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

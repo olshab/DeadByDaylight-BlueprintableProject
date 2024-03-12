@@ -7,4 +7,5 @@ FButtonSequenceData::FButtonSequenceData()
 	this->Timeout = 0;
 	this->Platforms = TArray<FString>();
 	this->MinKeysForFailedAttempt = 0;
+	this->MinKeysForAttemptToLockInputs = 0;
 }

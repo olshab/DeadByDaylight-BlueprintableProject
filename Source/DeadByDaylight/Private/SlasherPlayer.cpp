@@ -81,7 +81,7 @@ void ASlasherPlayer::SetIsCloaked(bool isCloaked, bool forced)
 
 }
 
-void ASlasherPlayer::SetChainsawSprinting(bool chainsawSprinting)
+void ASlasherPlayer::SetForceThirdPersonAnimations(bool forceThirdPerson)
 {
 
 }
@@ -226,11 +226,6 @@ bool ASlasherPlayer::IsCloaking_Implementation() const
 	return false;
 }
 
-bool ASlasherPlayer::IsChainsawSprinting() const
-{
-	return false;
-}
-
 bool ASlasherPlayer::IsCarrying() const
 {
 	return false;
@@ -316,6 +311,11 @@ EKillerCarryAnimWeight ASlasherPlayer::GetKillerCarryAnimWeight_Implementation()
 	return EKillerCarryAnimWeight::Regular;
 }
 
+bool ASlasherPlayer::GetIsForceThirdPersonAnimations() const
+{
+	return false;
+}
+
 bool ASlasherPlayer::GetIsAttacking() const
 {
 	return false;
@@ -381,11 +381,6 @@ bool ASlasherPlayer::CanSlashAttack_BP_Implementation() const
 	return false;
 }
 
-bool ASlasherPlayer::CanPickupSurvivor() const
-{
-	return false;
-}
-
 bool ASlasherPlayer::CanPerformKillerAbility_Implementation(EKillerAbilities killerAbility) const
 {
 	return false;
@@ -436,26 +431,6 @@ void ASlasherPlayer::Authority_AllowKilling(int32 numKills)
 
 }
 
-void ASlasherPlayer::AttackInputReleased()
-{
-
-}
-
-void ASlasherPlayer::AttackInputPressed()
-{
-
-}
-
-void ASlasherPlayer::ActionKillerReleased()
-{
-
-}
-
-void ASlasherPlayer::ActionKillerPressed()
-{
-
-}
-
 void ASlasherPlayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
@@ -478,7 +453,6 @@ ASlasherPlayer::ASlasherPlayer()
 	this->KillerAbilities = TArray<EKillerAbilities>();
 	this->KillerSoundCuesComponent = CreateDefaultSubobject<UKillerSoundCuesComponent>(TEXT("Killer Sound Cues Component"));
 	this->ShowKillerPowerDebugInfo = false;
-	this->HasDamagedGeneratorSinceHook = false;
 	this->_audioComponent = NULL;
 	this->_terrorNavModifierComponent = CreateDefaultSubobject<UDBDNavModifierComponent>(TEXT("TerrorNavModifierComponent"));
 	this->_bloodFXComponent = CreateDefaultSubobject<UKillerBloodFXComponent>(TEXT("Killer Blood VFX Component"));
@@ -486,7 +460,6 @@ ASlasherPlayer::ASlasherPlayer()
 	this->_defaultAmountToSquish = 1.000000;
 	this->_stalkTimers = TMap<ADBDPlayer*, FTargetFocusTimer>();
 	this->_stillnessTracker = CreateDefaultSubobject<UStillnessTrackerComponent>(TEXT("StillnessTracker"));
-	this->_aimAssistComponent = NULL;
 	this->_predictedCamperHitMontages = TMap<ADBDPlayer*, FAnimationMontageDescriptor>();
 	this->_loudNoiseIndicator = NULL;
 	this->_hitsWhileCarryingTracker = CreateDefaultSubobject<USlasherHitsWhileCarryingTrackerComponent>(TEXT("HitsWhileCarryingTracker"));
@@ -517,4 +490,5 @@ ASlasherPlayer::ASlasherPlayer()
 	this->_squishFactorParameter = NAME_None;
 	this->_attackZonePivot = NULL;
 	this->_slasherStunnableComponent = CreateDefaultSubobject<USlasherStunnableComponent>(TEXT("SlasherStunnableComponent"));
+	this->_forceThirdPersonAnimations = false;
 }

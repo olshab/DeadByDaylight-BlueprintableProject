@@ -13,10 +13,10 @@ void UChainLinkableComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
 UChainLinkableComponent::UChainLinkableComponent()
 {
 	this->_cameraTargetingStrategyClass = UBaseCameraTargetingStrategy::StaticClass();
-	this->_movementStatusEffectName = NAME_None;
-	this->_linkedStatusEffectName = NAME_None;
 	this->_inputAccelerationStrategy = NULL;
 	this->_chainLink = NULL;
+	this->_movementStatusEffectClass = NULL;
+	this->_linkedStatusEffectClass = NULL;
 	this->_movementStatusEffect = NULL;
 	this->_cameraStrategy = NULL;
 }

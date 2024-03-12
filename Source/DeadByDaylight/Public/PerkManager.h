@@ -139,9 +139,6 @@ public:
 	UStatusEffect* Authority_ImposeStatusEffectOfClass(TSubclassOf<UStatusEffect> effectClass, ADBDPlayer* originatingPlayer, float customParam, UGameplayModifierContainer* originatingEffect, bool shouldDisplay, float lifetime);
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
-	UStatusEffect* Authority_ImposeStatusEffect_DEPRECATED(FName statusEffectID, ADBDPlayer* originatingPlayer, float customParam, UGameplayModifierContainer* originatingEffect, bool shouldDisplay, float lifetime);
-
-	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	UStatusEffect* Authority_ImposeNewStatusEffectOfClassOrChangeLifeTime(TSubclassOf<UStatusEffect> effectClass, ADBDPlayer* originatingPlayer, float lifeTime, float customParam, UGameplayModifierContainer* originatingEffect, bool shouldDisplay);
 
 public:

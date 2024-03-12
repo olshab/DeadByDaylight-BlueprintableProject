@@ -14,4 +14,5 @@ enum class ECurrencyType : uint8
 	LunarNewYearCoins,
 	HalloweenEventCurrency,
 	WinterEventCurrency,
+	SpringEventCurrency,
 };

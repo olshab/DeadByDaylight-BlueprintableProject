@@ -31,6 +31,9 @@ private:
 	UPROPERTY(EditAnywhere)
 	float _state2ActionSpeedDebuffPercentage;
 
+	UPROPERTY(EditAnywhere)
+	float _mangledHemorrhageEffectLifetime;
+
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnSurvivorRemoved(ACamperPlayer* survivor);
@@ -42,6 +45,9 @@ private:
 	void OnCamperUnhookedFromScourgeHook(const FGameEventData& gameEventData);
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetMangledHemorrhageEffectLifetimeAtLevel() const;
+
 	UFUNCTION(BlueprintPure)
 	float GetActionSpeedDebuffPercentageAtLevel() const;
 

@@ -13,7 +13,7 @@ class UBlightAnimInstance : public UKillerAnimInstance
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UBlightPowerStateComponent* _blightPowerStateComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

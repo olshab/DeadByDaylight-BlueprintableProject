@@ -6,10 +6,9 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Styling/SlateBrush.h"
 #include "EPlayerRole.h"
+#include "EOfferingCategory.h"
 #include "Styling/SlateColor.h"
 #include "EItemRarity.h"
-#include "EOfferingCategory.h"
-#include "UObject/NoExportTypes.h"
 #include "EItemAvailability.h"
 #include "EEmblemQuality.h"
 #include "EInputInteractionType.h"
@@ -29,108 +28,6 @@ class DEADBYDAYLIGHT_API UAtlantaUtilities : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseQuickRoleSwitch();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseOfflineMatchHistory();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaUI();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaStreamVideo();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaRituals();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaRank();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaQualitySettings();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaPurchasableOperations();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaOutlines();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaMatchmaking();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaLighting();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaKrakenContentVersion();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaItemAvailability();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaHudEditor();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaHudAttackJoystick();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaGameplayValues();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaFriendList();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaFreeTickets();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaFixedMaps();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaFearMarket();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaEntity();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaDreamworldFX();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaDailyRewards();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaCustomizedHudSettings();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaCurrencies();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaContent();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaCharacterProgression();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaCDNPatching();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaCDNBucketChangelist();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaCatalog();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaBundleFilterRules();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaBloodweb();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldUseAtlantaBackendBloodMarketData();
-
-	UFUNCTION(BlueprintPure)
-	static bool ShouldSupportMultipleActiveActivatablePerks();
-
 	UFUNCTION(BlueprintCallable)
 	static bool SetImageSlateBrush(UImage* image, const FSlateBrush& brush, bool bMatchSize);
 
@@ -158,14 +55,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	static UTexture2D* LoadTextureByAsset(const FString& path);
 
-	UFUNCTION(BlueprintPure)
-	static bool IsTutorialEditorDebuggingEnabled();
-
 	UFUNCTION(BlueprintCallable)
 	static bool IsPlayerInteractingWithActor(ADBDPlayer* player, const AActor* actor);
-
-	UFUNCTION(BlueprintPure)
-	static bool IsInAtlantaTutorialLevel();
 
 	UFUNCTION(BlueprintPure)
 	static FString GetStoreVersion();
@@ -181,9 +72,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	static FText GetPlayerRoleText(const EPlayerRole playerRole);
-
-	UFUNCTION(BlueprintPure)
-	static FColor GetPaintColorByRarity(const EItemRarity rarity);
 
 	UFUNCTION(BlueprintPure)
 	static FText GetOfferingCategoryText(const EOfferingCategory offeringCategory);
@@ -204,9 +92,6 @@ public:
 	static FText GetEmblemQualityText(const EEmblemQuality emblemQuality);
 
 	UFUNCTION(BlueprintPure)
-	static FColor GetEmblemColorByQuality(const EEmblemQuality emblemQuality);
-
-	UFUNCTION(BlueprintPure)
 	static FText GetDifficultyLevelText(const EAIDifficultyLevel difficultyLevel);
 
 	UFUNCTION(BlueprintPure)
@@ -223,15 +108,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	static FSlateColor GetCurrencyColor(ECurrencyType currencyType);
-
-	UFUNCTION(BlueprintCallable)
-	static float GetControlsTunableByRole(EPlayerRole playerRole, FName tunableValueName);
-
-	UFUNCTION(BlueprintCallable)
-	static float GetControlsTunable(FName tunableValueName);
-
-	UFUNCTION(BlueprintPure)
-	static FColor GetBackgroundColorByRarity(const EItemRarity rarity);
 
 	UFUNCTION(BlueprintPure)
 	static UInteractionDefinition* GetAvailableInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType);

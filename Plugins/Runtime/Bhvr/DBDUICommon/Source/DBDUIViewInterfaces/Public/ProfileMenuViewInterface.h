@@ -40,6 +40,9 @@ public:
 	void SetMenuState(EProfileMenuState menuState);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetIsFocused(const bool isFocused);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IProfileMenuStatsViewInterface> GetProfileMenuStatsInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

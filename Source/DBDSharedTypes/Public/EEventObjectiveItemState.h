@@ -12,4 +12,6 @@ enum class EEventObjectiveItemState : uint8
 	Cooldown,
 	Rewarded,
 	Lost,
+	CanPickUp,
+	Blocked,
 };

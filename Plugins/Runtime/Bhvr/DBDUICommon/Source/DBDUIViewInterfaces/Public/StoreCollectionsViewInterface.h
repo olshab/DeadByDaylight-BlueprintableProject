@@ -2,10 +2,12 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "EStoreCollectionsMenuState.h"
 #include "UObject/ScriptInterface.h"
 #include "StoreCollectionsViewInterface.generated.h"
 
 class IStoreCollectionsListViewInterface;
+class IStoreCollectionsCustomizationsViewInterface;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UStoreCollectionsViewInterface : public UInterface
@@ -19,12 +21,12 @@ class DBDUIVIEWINTERFACES_API IStoreCollectionsViewInterface : public IInterface
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreCollectionsListViewInterface> GetTabSpecialInterface() const;
+	void SetMenuState(EStoreCollectionsMenuState menuState);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreCollectionsListViewInterface> GetTabFeaturedInterface() const;
+	TScriptInterface<IStoreCollectionsListViewInterface> GetCollectionsListViewInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreCollectionsListViewInterface> GetTabAllInterface() const;
+	TScriptInterface<IStoreCollectionsCustomizationsViewInterface> GetCollectionsCustomizationsInterface() const;
 
 };

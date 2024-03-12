@@ -13,9 +13,6 @@ struct FSimpleSpawnEffectsOnAllSurvivorsAddonParams
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName _statusEffectIdDeprecated;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UStatusEffect> _effectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

@@ -54,6 +54,7 @@ AThrowingKnives::AThrowingKnives()
 	this->_superModeComponent = CreateDefaultSubobject<UTricksterSuperModeComponent>(TEXT("TricksterSuperModeComponent"));
 	this->_superModeChargePresentationComponent = CreateDefaultSubobject<UK23PowerProgressPresentationComponent>(TEXT("SuperModeChargePresentationComponent"));
 	this->_superModeChargeComponent = CreateDefaultSubobject<UPowerChargeComponent>(TEXT("SuperModeChargeComponent"));
+	this->_tricksterOutOfAmmoStatusEffectClass = NULL;
 	this->_knivesProvider = NULL;
 	this->_knivesLauncher = NULL;
 	this->_lacerationComponentClass = ULacerationComponent::StaticClass();

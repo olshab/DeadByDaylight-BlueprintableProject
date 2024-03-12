@@ -1,6 +1,21 @@
 #include "K34P01.h"
 #include "ETotemState.h"
 
+int32 UK34P01::GetStunnedOrBlindedTimesRequiredByLevel() const
+{
+	return 0;
+}
+
+int32 UK34P01::GetStunnedOrBlindedCount() const
+{
+	return 0;
+}
+
+float UK34P01::GetBlindedEffectTime() const
+{
+	return 0.0f;
+}
+
 void UK34P01::Client_UpdateHudIcon_Implementation(float percent)
 {
 

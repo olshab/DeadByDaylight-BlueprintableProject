@@ -30,6 +30,9 @@ public:
 	FBlackboardKeySelector BBInteractor;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FBlackboardKeySelector BBInputType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool FailIfAnotherOngoingInteraction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

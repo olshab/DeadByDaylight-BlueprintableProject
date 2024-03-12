@@ -1,0 +1,6 @@
+#include "K35KillerTeleportPointPlacementValidatorComponent.h"
+
+UK35KillerTeleportPointPlacementValidatorComponent::UK35KillerTeleportPointPlacementValidatorComponent()
+{
+	this->_objectPlacementValidationStrategyWithRestrictions = NULL;
+}

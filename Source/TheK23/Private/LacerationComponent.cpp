@@ -23,4 +23,5 @@ ULacerationComponent::ULacerationComponent()
 {
 	this->_laceration = 0.000000;
 	this->_onHitSpeedBoost = NULL;
+	this->_lacerationOnHitSpeedBoostStatusEffectClass = NULL;
 }

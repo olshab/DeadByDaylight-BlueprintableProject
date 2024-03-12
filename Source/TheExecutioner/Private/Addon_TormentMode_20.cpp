@@ -2,6 +2,8 @@
 
 UAddon_TormentMode_20::UAddon_TormentMode_20()
 {
+	this->_revealToKillerOutsideRangeInAgony = NULL;
+	this->_revealToKillerOutsideRangeNotInAgony = NULL;
 	this->_revealSurvivorsInAgony = true;
 	this->_revealSurvivorsNotInAgony = false;
 	this->_range = 0.000000;

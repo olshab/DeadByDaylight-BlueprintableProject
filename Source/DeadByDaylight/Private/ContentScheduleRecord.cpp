@@ -5,6 +5,8 @@ FContentScheduleRecord::FContentScheduleRecord()
 	this->Priority = 0;
 	this->Description = TEXT("");
 	this->Description_IsSet = false;
+	this->GameModes = TArray<FString>();
+	this->GameModes_IsSet = false;
 	this->LinkedEventId = TEXT("");
 	this->LinkedEventId_IsSet = false;
 	this->MapsThemeWeight = TMap<FString, float>();

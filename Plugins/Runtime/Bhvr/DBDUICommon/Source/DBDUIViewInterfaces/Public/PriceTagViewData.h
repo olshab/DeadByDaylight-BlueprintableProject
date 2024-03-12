@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "ECurrencyType.h"
+#include "NotEnoughCurrencyModalViewData.h"
 #include "PriceTagViewData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -24,6 +25,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool DisplayDiscountAsOriginalPrice;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FNotEnoughCurrencyModalViewData NotEnoughCurrencyViewData;
 
 public:
 	DBDUIVIEWINTERFACES_API FPriceTagViewData();

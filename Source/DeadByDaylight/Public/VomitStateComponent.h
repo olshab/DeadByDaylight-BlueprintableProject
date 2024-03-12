@@ -15,7 +15,13 @@ class DEADBYDAYLIGHT_API UVomitStateComponent : public UActorComponent
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FTagStateBool _isIdle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FTagStateBool _isCharging;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FTagStateBool _isVomiting;
 
 public:
 	UFUNCTION(BlueprintCallable)

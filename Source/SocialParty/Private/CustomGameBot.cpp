@@ -2,11 +2,11 @@
 
 FCustomGameBot::FCustomGameBot()
 {
-	this->_role = 0;
-	this->_difficulty = 0;
-	this->_characterIndex = 0;
-	this->_slotIndex = 0;
-	this->_botGUID = TEXT("");
-	this->_botName = TEXT("");
-	this->_loadout = FLoadout{};
+	this->role = 0;
+	this->diff = 0;
+	this->charIdx = 0;
+	this->slotIdx = 0;
+	this->GUID = TEXT("");
+	this->name = TEXT("");
+	this->loadout = FLoadout{};
 }

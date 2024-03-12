@@ -69,7 +69,7 @@ int32 UDBDUtilities::ResolveCharacterIdFromPlayerState(const ADBDPlayerState* pl
 	return 0;
 }
 
-void UDBDUtilities::PrintStringEmbiggened(UObject* WorldContextObject, const FString& InString, FLinearColor TextColor, float Duration, int32 Key, float Scale)
+void UDBDUtilities::PrintStringEmbiggened(const UObject* WorldContextObject, const FString& InString, FLinearColor TextColor, float Duration, int32 Key, float Scale)
 {
 
 }
@@ -194,7 +194,7 @@ float UDBDUtilities::GetSquaredDistanceToKiller(const AActor* actor)
 	return 0.0f;
 }
 
-float UDBDUtilities::GetSlasherTunableValue(UObject* WorldContextObject, FName valueName)
+float UDBDUtilities::GetSlasherTunableValue(const UObject* worldContextObject, FName valueName)
 {
 	return 0.0f;
 }
@@ -299,12 +299,12 @@ ADBDPlayerCameraManager* UDBDUtilities::GetLocalDBDCameraManager(UObject* worldC
 	return NULL;
 }
 
-int32 UDBDUtilities::GetInventoryCountForMultipleCharacters(UObject* worldContextObject, TArray<int32> characterIndexes, FName itemID)
+int32 UDBDUtilities::GetInventoryCountForMultipleCharacters(const UObject* worldContextObject, TArray<int32> characterIndexes, FName itemID)
 {
 	return 0;
 }
 
-int32 UDBDUtilities::GetInventoryCount(UObject* worldContextObject, int32 characterIndex, FName itemID)
+int32 UDBDUtilities::GetInventoryCount(const UObject* worldContextObject, int32 characterIndex, FName itemID)
 {
 	return 0;
 }
@@ -339,7 +339,7 @@ AActor* UDBDUtilities::GetFirstActorWithTag(FName tag, const TArray<AActor*>& ac
 	return NULL;
 }
 
-float UDBDUtilities::GetEndGameTunableValue(UObject* worldContextObject, FName valueName)
+float UDBDUtilities::GetEndGameTunableValue(const UObject* worldContextObject, FName valueName)
 {
 	return 0.0f;
 }

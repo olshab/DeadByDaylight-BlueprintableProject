@@ -8,6 +8,7 @@
 
 class UChargeableComponent;
 class AConjoinedTwin;
+class UStatusEffect;
 class UPowerChargeComponent;
 class UK22PowerChargePresentationItemProgressComponent;
 
@@ -17,13 +18,16 @@ class AK22Power : public ACollectable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UChargeableComponent* _releaseConjoinedTwinChargeable;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UChargeableComponent* _possessConjoinedTwinChargeable;
 
 private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _killerDormantStealthStatusEffectClass;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_ConjoinedTwin, Transient, meta=(AllowPrivateAccess=true))
 	AConjoinedTwin* _conjoinedTwin;
 

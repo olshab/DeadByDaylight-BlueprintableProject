@@ -16,6 +16,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float _inputResetSpeed;
 
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _minDistToLookAtChain;
+
 public:
 	UK25ChainStrikeState_ShootControlledProjectile();
 };

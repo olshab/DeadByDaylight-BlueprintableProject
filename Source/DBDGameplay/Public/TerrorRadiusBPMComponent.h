@@ -5,7 +5,7 @@
 #include "TerrorRadiusBPMComponent.generated.h"
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
-class DBDGAMEPLAY_API UTerrorRadiusBPMComponent : public UActorComponent
+class UTerrorRadiusBPMComponent : public UActorComponent
 {
 	GENERATED_BODY()
 

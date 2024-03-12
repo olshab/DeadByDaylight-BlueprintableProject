@@ -1,21 +1,42 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "PounceAttack.h"
-#include "GameplayTagContainer.h"
+#include "BaseChainsawAttack.h"
+#include "StatProperty.h"
 #include "HillbillyChainsawAttack.generated.h"
 
+class ADBDPlayer;
+
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
-class THEHILLBILLY_API UHillbillyChainsawAttack : public UPounceAttack
+class THEHILLBILLY_API UHillbillyChainsawAttack : public UBaseChainsawAttack
 {
 	GENERATED_BODY()
 
-protected:
-	UPROPERTY(EditAnywhere)
-	FGameplayTag _chainsawHitGameEventTag;
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FStatProperty _initialChainsawTurnRate;
 
-	UPROPERTY(EditAnywhere)
-	FGameplayTag _chainsawAttemptGameEventTag;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FStatProperty _chainsawTurnRate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FStatProperty _turnRateAdjustmentTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FStatProperty _overheatMaxSpeedOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FStatProperty _overheatMaxSpeedAdjustmentTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FStatProperty _attackZoneScaleFactor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FStatProperty _obstructionZoneScaleFactor;
+
+protected:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnAttackFinished(ADBDPlayer* player);
 
 public:
 	UHillbillyChainsawAttack();

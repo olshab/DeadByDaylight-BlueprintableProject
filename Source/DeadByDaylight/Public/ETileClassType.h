@@ -10,4 +10,5 @@ enum class ETileClassType : uint8
 	Normal,
 	Border,
 	Escape,
+	Count,
 };

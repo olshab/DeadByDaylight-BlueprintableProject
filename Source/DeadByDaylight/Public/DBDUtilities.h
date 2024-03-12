@@ -66,7 +66,7 @@ public:
 	static int32 ResolveCharacterIdFromPlayerState(const ADBDPlayerState* playerState);
 
 	UFUNCTION(BlueprintCallable)
-	static void PrintStringEmbiggened(UObject* WorldContextObject, const FString& InString, FLinearColor TextColor, float Duration, int32 Key, float Scale);
+	static void PrintStringEmbiggened(const UObject* WorldContextObject, const FString& InString, FLinearColor TextColor, float Duration, int32 Key, float Scale);
 
 	UFUNCTION(BlueprintPure)
 	static int64 PointerToInt(UObject* obj);
@@ -141,7 +141,7 @@ public:
 	static float GetSquaredDistanceToKiller(const AActor* actor);
 
 	UFUNCTION(BlueprintPure)
-	static float GetSlasherTunableValue(UObject* WorldContextObject, FName valueName);
+	static float GetSlasherTunableValue(const UObject* worldContextObject, FName valueName);
 
 	UFUNCTION(BlueprintPure)
 	static FVector GetSimilarVector(FVector vector, float maximumDeviation);
@@ -204,10 +204,10 @@ public:
 	static ADBDPlayerCameraManager* GetLocalDBDCameraManager(UObject* worldContextObject);
 
 	UFUNCTION(BlueprintPure)
-	static int32 GetInventoryCountForMultipleCharacters(UObject* worldContextObject, TArray<int32> characterIndexes, FName itemID);
+	static int32 GetInventoryCountForMultipleCharacters(const UObject* worldContextObject, TArray<int32> characterIndexes, FName itemID);
 
 	UFUNCTION(BlueprintPure)
-	static int32 GetInventoryCount(UObject* worldContextObject, int32 characterIndex, FName itemID);
+	static int32 GetInventoryCount(const UObject* worldContextObject, int32 characterIndex, FName itemID);
 
 	UFUNCTION(BlueprintPure)
 	static FCollisionResponseContainer GetImpactCollisionResponseContainer(const UPrimitiveComponent* primitive);
@@ -228,7 +228,7 @@ public:
 	static AActor* GetFirstActorWithTag(FName tag, const TArray<AActor*>& actorsArray);
 
 	UFUNCTION(BlueprintPure)
-	static float GetEndGameTunableValue(UObject* worldContextObject, FName valueName);
+	static float GetEndGameTunableValue(const UObject* worldContextObject, FName valueName);
 
 	UFUNCTION(BlueprintPure)
 	static float GetDistanceToNearestHookedSurvivor(const ADBDPlayer* player);

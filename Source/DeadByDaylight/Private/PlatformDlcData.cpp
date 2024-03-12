@@ -6,6 +6,7 @@ FPlatformDlcData::FPlatformDlcData()
 	this->UnlockDescription = FText::GetEmpty();
 	this->DisplayName = FText::GetEmpty();
 	this->Description = TEXT("");
+	this->IsHeritagePack = false;
 	this->UISortOrder = 0;
 	this->BannerImage = FSoftObjectPath{};
 	this->HeritageID = TEXT("");

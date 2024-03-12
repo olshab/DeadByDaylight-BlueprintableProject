@@ -9,6 +9,10 @@ class UCoreMemoryFragmentDespawnWithTimerBehaviour : public UCoreMemoryBehaviour
 {
 	GENERATED_BODY()
 
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _fragmentPhaseIdleTime;
+
 public:
 	UCoreMemoryFragmentDespawnWithTimerBehaviour();
 };

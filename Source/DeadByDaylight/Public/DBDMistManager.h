@@ -12,7 +12,7 @@ class DEADBYDAYLIGHT_API ADBDMistManager : public AActor
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDAggregateParticleSystemComponent* _particleSystemComp;
 
 public:

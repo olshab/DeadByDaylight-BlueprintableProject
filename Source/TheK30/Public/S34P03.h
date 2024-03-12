@@ -5,7 +5,6 @@
 #include "Templates/SubclassOf.h"
 #include "S34P03.generated.h"
 
-class AGenerator;
 class ADBDPlayer;
 class UStatusEffect;
 
@@ -15,27 +14,24 @@ class THEK30_API US34P03 : public UPerk
 	GENERATED_BODY()
 
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	TArray<AGenerator*> _generatorsInRange;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	TMap<ADBDPlayer*, UStatusEffect*> _activeStatusEffects;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	float _generatorRangeFromPlayer;
+	TSubclassOf<UStatusEffect> _repairSpeedModifierClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	TSubclassOf<UStatusEffect> _repairSpeedModifierClass;
+	TSubclassOf<UStatusEffect> _revealGeneratorAurasInRangeEffectClass;
 
 	UPROPERTY(EditAnywhere)
 	float _repairSpeedValues;
 
+	UPROPERTY(EditAnywhere)
+	float _generatorRanges;
+
 public:
 	UFUNCTION(BlueprintPure)
 	float GetRepairSpeedAtLevel() const;
-
-	UFUNCTION(BlueprintPure)
-	float GetGeneratorRangeFromPlayer() const;
 
 public:
 	US34P03();

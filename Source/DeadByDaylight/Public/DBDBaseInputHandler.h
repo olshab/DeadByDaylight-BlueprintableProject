@@ -16,7 +16,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	APawn* _pawn;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	USpringArmComponent* _cameraBoom;
 
 public:

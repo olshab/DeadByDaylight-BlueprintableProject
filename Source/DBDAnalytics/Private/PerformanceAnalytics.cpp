@@ -126,4 +126,8 @@ FPerformanceAnalytics::FPerformanceAnalytics()
 	this->IsSample = false;
 	this->GameFlowStep = TEXT("");
 	this->KrakenMatchId = TEXT("");
+	this->Characters = TArray<FString>();
+	this->Perks = TArray<FString>();
+	this->CustomizationItems = TArray<FString>();
+	this->GameType = TEXT("");
 }

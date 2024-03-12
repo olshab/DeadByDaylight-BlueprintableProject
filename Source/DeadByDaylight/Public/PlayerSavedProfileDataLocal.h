@@ -11,7 +11,9 @@
 #include "SavedStatsData.h"
 #include "PlayerSavedProfileCumulativeData.h"
 #include "CharacterCustomizationPresetsList.h"
+#include "LoadoutPresetsDataForGameType.h"
 #include "CharacterSavedProfileData.h"
+#include "SavedSeenPopupData.h"
 #include "SpecialEventSavedData.h"
 #include "ReleaseSavedData.h"
 #include "PlayerSavedProfileDataLocal.generated.h"
@@ -97,6 +99,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FCharacterLoadoutPresetsList> CharacterLoadoutPresets;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TMap<FString, FLoadoutPresetsDataForGameType> CharacterLoadoutPresetsPerGameType;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FPlayerSavedProfileCumulativeData _cumulativeData;
@@ -136,6 +141,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSet<FName> _seenFeatures;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TMap<FName, FSavedSeenPopupData> _seenPopupsData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TMap<FString, FReleaseSavedData> _releases;

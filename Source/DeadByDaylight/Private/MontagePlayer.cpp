@@ -75,10 +75,12 @@ UMontagePlayer::UMontagePlayer()
 {
 	this->_animationMappingsTable = NULL;
 	this->_playerSpecificMappingsTable = NULL;
+	this->_contextualAnimationMappings = TArray<FContextualAnimationMapping>();
 	this->_currentlyPlayingMontage = NULL;
 	this->_activeMontagesInfo = TArray<FMontageInstanceInfo>();
 	this->_outSectionName = NAME_None;
 	this->_timeBeforeOut = -1.000000;
 	this->_skeletalMeshComponent = NULL;
 	this->_montageToNameMap = TMap<UAnimMontage*, FName>();
+	this->_loadedMappingTables = TArray<UDataTable*>();
 }

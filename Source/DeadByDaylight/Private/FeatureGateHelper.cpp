@@ -1,7 +1,7 @@
 #include "FeatureGateHelper.h"
 #include "EDBDFeatureType.h"
-#include "DBDFeatureLockProgress.h"
 #include "EPlayerRole.h"
+#include "DBDFeatureLockProgress.h"
 
 class UObject;
 

@@ -19,7 +19,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FEventEntryPopupSkinUIData _skinData;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UEventEntryRewardsDisplayWidget* EventEntryRewardsDisplayWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)

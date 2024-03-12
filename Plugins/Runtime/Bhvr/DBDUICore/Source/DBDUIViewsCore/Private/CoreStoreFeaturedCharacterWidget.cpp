@@ -13,5 +13,5 @@ FStoreFeaturedCharacterViewData UCoreStoreFeaturedCharacterWidget::GetCharacterV
 
 UCoreStoreFeaturedCharacterWidget::UCoreStoreFeaturedCharacterWidget()
 {
-	this->TransitionButton = NULL;
+	this->MoveToCharactersBioPageButton = NULL;
 }

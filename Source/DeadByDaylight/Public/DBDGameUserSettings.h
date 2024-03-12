@@ -65,6 +65,9 @@ private:
 	bool TerrorRadiusVisualFeedback;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	int32 FieldOfView;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool HUDPlayerNamesVisibility;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
@@ -218,6 +221,9 @@ private:
 	bool BeginnerMode;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool FogCommunications;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool Subtitles;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
@@ -228,6 +234,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool IsAnonymousMode;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool AllowCopyrightedMusic;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool HideYourName;
@@ -268,6 +277,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool GetHUDKillerHookCountVisibility() const;
+
+	UFUNCTION(BlueprintPure)
+	int32 GetFieldOfView() const;
 
 	UFUNCTION(BlueprintCallable)
 	static UDBDGameUserSettings* GetDBDGameUserSettings();

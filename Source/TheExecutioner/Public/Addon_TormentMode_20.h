@@ -2,7 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "SpawnEffectsOnAllSurvivorsBaseAddon.h"
+#include "Templates/SubclassOf.h"
 #include "Addon_TormentMode_20.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UAddon_TormentMode_20 : public USpawnEffectsOnAllSurvivorsBaseAddon
@@ -10,6 +13,12 @@ class UAddon_TormentMode_20 : public USpawnEffectsOnAllSurvivorsBaseAddon
 	GENERATED_BODY()
 
 private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _revealToKillerOutsideRangeInAgony;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _revealToKillerOutsideRangeNotInAgony;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	bool _revealSurvivorsInAgony;
 

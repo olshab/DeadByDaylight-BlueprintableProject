@@ -20,13 +20,22 @@ public:
 	TArray<FName> SelectedCustomizationIds;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	int32 MaxSelectedCustomizations;
+	TArray<FName> EquippedCustomizationIds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	int32 SelectedSlotIndex;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<FStoreCategoryViewData> Categories;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	ECustomizationCategory SelectedCategory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TArray<int32> PresetIds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	int32 SelectedPresetId;
 
 public:
 	DBDUIVIEWINTERFACES_API FStoreCharactersCustomizationsViewData();

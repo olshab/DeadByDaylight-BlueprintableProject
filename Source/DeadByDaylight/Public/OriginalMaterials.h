@@ -13,10 +13,16 @@ struct FOriginalMaterials
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TArray<int32> OriginalMaterialIndex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TArray<UMaterialInterface*> OriginalMaterial;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)
 	UMeshComponent* MeshWithChangedMaterials;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	float OcclusionRefreshInterval;
 
 public:
 	DEADBYDAYLIGHT_API FOriginalMaterials();

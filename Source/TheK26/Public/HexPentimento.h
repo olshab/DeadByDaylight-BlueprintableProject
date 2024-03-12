@@ -5,6 +5,7 @@
 #include "Templates/SubclassOf.h"
 #include "HexPentimento.generated.h"
 
+class UStatusEffect;
 class ATotem;
 class URekindleTotemInteraction;
 
@@ -15,13 +16,13 @@ class THEK26_API UHexPentimento : public UHexPerk
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	TSet<FName> _statusEffectNames;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TSubclassOf<URekindleTotemInteraction> _rekindleInteractionClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TArray<ATotem*> _blockedTotems;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TArray<TSubclassOf<UStatusEffect>> _statusEffectClasses;
 
 public:
 	UHexPentimento();

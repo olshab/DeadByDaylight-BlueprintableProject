@@ -26,6 +26,13 @@ private:
 	TSubclassOf<UStatusEffect> _obliviousStatusEffect;
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetPerkAuraRevealDurationAtLevel() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetObliviousDurationAtLevel() const;
+
+public:
 	UK33P03();
 };
 

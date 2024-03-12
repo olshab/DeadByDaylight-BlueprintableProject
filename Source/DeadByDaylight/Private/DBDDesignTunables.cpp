@@ -1,8 +1,37 @@
 #include "DBDDesignTunables.h"
+#include "EGameType.h"
+#include "EGameTypeModifierName.h"
+
+class UObject;
+
+void UDBDDesignTunables::OnPluginDataPathAdded(const FString& dataPath)
+{
+
+}
 
 float UDBDDesignTunables::GetTunableValue(FName ID, bool warnIfRowMissing) const
 {
 	return 0.0f;
+}
+
+FString UDBDDesignTunables::GetStringGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject)
+{
+	return TEXT("");
+}
+
+int32 UDBDDesignTunables::GetIntGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject)
+{
+	return 0;
+}
+
+bool UDBDDesignTunables::GetBoolGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject)
+{
+	return false;
+}
+
+TArray<FString> UDBDDesignTunables::GetArrayGameTypeTunable(EGameType gameType, EGameTypeModifierName tunableName, const UObject* worldContextObject)
+{
+	return TArray<FString>();
 }
 
 UDBDDesignTunables::UDBDDesignTunables()
@@ -25,6 +54,9 @@ UDBDDesignTunables::UDBDDesignTunables()
 	this->GameEventForwarderInfos = TArray<FGameEventForwarderInfo>();
 	this->CoreUMGDesignTunableClass = NULL;
 	this->CoreUMGDesignTunables = NULL;
+	this->GameTypeModifierDefaults = NULL;
+	this->SoftMenuCameraDesignTunable = NULL;
+	this->MenuCameraDesignTunables = NULL;
 	this->_overrideDefaultLobby = false;
 	this->_lobbyOverrideName = NAME_None;
 	this->_conspicuousActionEvents = TArray<FGameplayTag>();

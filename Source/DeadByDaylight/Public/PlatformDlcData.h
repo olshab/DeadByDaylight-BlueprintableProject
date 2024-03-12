@@ -24,6 +24,9 @@ public:
 	FString Description;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsHeritagePack;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 UISortOrder;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

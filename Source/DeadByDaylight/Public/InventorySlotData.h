@@ -107,6 +107,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	ELoadoutPartState LoadoutPartState;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TArray<FText> SearchTags;
+
 public:
 	DEADBYDAYLIGHT_API FInventorySlotData();
 };

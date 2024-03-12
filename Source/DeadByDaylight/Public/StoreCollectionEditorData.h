@@ -3,6 +3,8 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "DBDTableRowBase.h"
+#include "StoreCollectionLimitedAvailabilityStart.h"
+#include "StoreCollectionLimitedAvailabilityEnd.h"
 #include "StoreCollectionEditorData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -23,35 +25,38 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText CollectionSubtitle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FDateTime ActiveFrom;
+	UPROPERTY(EditAnywhere)
+	FDateTime DateUpdated;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FDateTime ActiveUntil;
+	bool IsEnabled;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool HasLimitedAvailabilityStartDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FStoreCollectionLimitedAvailabilityStart LimitedAvailabilityStart;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool HasLimitedAvailabilityEndDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FStoreCollectionLimitedAvailabilityEnd LimitedAvailabilityEnd;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 SortOrder;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere)
 	FSoftObjectPath HeroImage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere)
 	FSoftObjectPath HeroVideo;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere)
 	TArray<FSoftObjectPath> AdditionalImages;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FString> Items;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 Flags;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FDateTime SpecialStartDate;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FDateTime SpecialEndDate;
 
 public:
 	DEADBYDAYLIGHT_API FStoreCollectionEditorData();

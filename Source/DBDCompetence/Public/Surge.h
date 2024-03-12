@@ -4,8 +4,6 @@
 #include "Perk.h"
 #include "Surge.generated.h"
 
-class AGenerator;
-
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class DBDCOMPETENCE_API USurge : public UPerk
 {
@@ -40,10 +38,6 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	float GetCooldownDurationAtLevel() const;
-
-private:
-	UFUNCTION(BlueprintCallable, Client, Unreliable)
-	void Client_TriggerEffects(const TArray<AGenerator*>& generators);
 
 public:
 	USurge();

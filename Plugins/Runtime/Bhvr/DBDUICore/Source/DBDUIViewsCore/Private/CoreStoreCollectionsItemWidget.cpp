@@ -1,19 +1,21 @@
 #include "CoreStoreCollectionsItemWidget.h"
+#include "ECollectionItemScaleType.h"
 
 class UStoreCollectionViewData;
 
-void UCoreStoreCollectionsItemWidget::SetupView_Implementation(UStoreCollectionViewData* collectionViewData)
+void UCoreStoreCollectionsItemWidget::SetData(UStoreCollectionViewData* collectionViewData, const ECollectionItemScaleType collectionItemScale)
+{
+
+}
+
+void UCoreStoreCollectionsItemWidget::OnBannerButtonClicked()
 {
 
 }
 
 UCoreStoreCollectionsItemWidget::UCoreStoreCollectionsItemWidget()
 {
-	this->TimerText = NULL;
-	this->CountText = NULL;
-	this->StoreCustomizationListBox = NULL;
-	this->_storeCustomizationItemWidgetClass = NULL;
-	this->_preConstructedItemsCount = 10;
-	this->_layoutMask = 0;
-	this->_itemList = NULL;
+	this->CountTB = NULL;
+	this->BannerButton = NULL;
+	this->_collectionViewData = NULL;
 }

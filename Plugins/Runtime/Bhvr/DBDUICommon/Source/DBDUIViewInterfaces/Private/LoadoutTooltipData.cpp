@@ -14,4 +14,5 @@ FLoadoutTooltipData::FLoadoutTooltipData()
 	this->IsPastEvent = false;
 	this->ItemType = EInventoryItemType::None;
 	this->Availability = EItemAvailability::Available;
+	this->EventBannerLabel = TEXT("");
 }

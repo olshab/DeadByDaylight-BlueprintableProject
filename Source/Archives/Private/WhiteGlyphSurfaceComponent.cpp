@@ -15,5 +15,5 @@ AGlyph* UWhiteGlyphSurfaceComponent::GetOwningGlyph() const
 
 UWhiteGlyphSurfaceComponent::UWhiteGlyphSurfaceComponent()
 {
-
+	this->_fragileObjectBP = NULL;
 }

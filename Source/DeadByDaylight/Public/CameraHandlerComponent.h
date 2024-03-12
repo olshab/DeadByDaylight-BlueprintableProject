@@ -5,6 +5,7 @@
 #include "EDBDCameraSocketID.h"
 #include "CameraHandlerComponent.generated.h"
 
+class UCameraComponent;
 class AActor;
 class USceneComponent;
 class UCurveFloat;
@@ -52,6 +53,9 @@ public:
 
 private:
 	UFUNCTION(BlueprintCallable)
+	void OnLevelReadyToPlay();
+
+	UFUNCTION(BlueprintCallable)
 	void OnFirstPersonViewChanged(bool isFirstPerson);
 
 public:
@@ -63,6 +67,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	AActor* GetCurrentCamera();
+
+	UFUNCTION(BlueprintPure)
+	UCameraComponent* GetCameraComponentBySocket(EDBDCameraSocketID socket) const;
 
 	UFUNCTION(BlueprintCallable)
 	void AddCameraToSocket(EDBDCameraSocketID mode, AActor* camera);

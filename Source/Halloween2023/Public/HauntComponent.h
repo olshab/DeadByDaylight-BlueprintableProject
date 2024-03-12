@@ -47,10 +47,10 @@ protected:
 	UPROPERTY(EditAnywhere)
 	TArray<FGameplayTag> _stateTagsPreventingInteraction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPlayersInZoneTracker* _slasherInZoneTracker;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPlayersInZoneTracker* _survivorsInZoneTracker;
 
 protected:

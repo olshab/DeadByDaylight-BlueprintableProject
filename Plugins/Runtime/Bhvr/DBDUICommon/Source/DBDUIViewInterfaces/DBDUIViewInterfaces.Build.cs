@@ -9,6 +9,7 @@ public class DBDUIViewInterfaces : ModuleRules {
 		PublicDependencyModuleNames.AddRange(new string[] {
 			"BinkMediaPlayer",
 			"Core",
+			"CoreCommonUIUtils",
 			"CoreUObject",
 			"DBDSharedTypes",
 			"DataTableUtilities",

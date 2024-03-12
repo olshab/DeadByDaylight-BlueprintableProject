@@ -13,7 +13,7 @@ class SPECIALEVENTUTILITIES_API UInteractionRespawnableTrigger : public URespawn
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	URespawningEventComponent* _respawningEventComponent;
 
 public:

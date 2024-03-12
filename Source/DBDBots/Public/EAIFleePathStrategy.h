@@ -12,4 +12,5 @@ enum class EAIFleePathStrategy : uint8
 	Loop,
 	AwayLOS,
 	Lure,
+	Reposition,
 };

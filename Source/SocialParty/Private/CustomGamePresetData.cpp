@@ -2,12 +2,12 @@
 
 FCustomGamePresetData::FCustomGamePresetData()
 {
-	this->_mapAvailabilities = TArray<uint8>();
-	this->_arePerkAvailable = false;
-	this->_areOfferingAvailable = false;
-	this->_areItemAvailable = false;
-	this->_areItemAddonAvailable = false;
-	this->_areDlcContentAllowed = false;
-	this->_isPrivateMatch = false;
-	this->_botsData = FCustomGameBotsData{};
+	this->mapAvails = TArray<uint8>();
+	this->perkAvail = false;
+	this->offeringAvail = false;
+	this->itemAvail = false;
+	this->itemAddonAvail = false;
+	this->dlcContentAllowed = false;
+	this->privateMatch = false;
+	this->bots = FCustomGameBotsData{};
 }

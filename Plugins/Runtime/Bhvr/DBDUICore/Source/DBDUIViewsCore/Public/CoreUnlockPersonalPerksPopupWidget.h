@@ -17,13 +17,13 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
 	TArray<UCoreMenuPerkWidget*> _perkArray;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreMenuPerkWidget* FirstPerk;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreMenuPerkWidget* SecondPerk;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreMenuPerkWidget* ThirdPerk;
 
 private:

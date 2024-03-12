@@ -6,6 +6,11 @@ void UCorruptIntervention::OnRep_BlockedGenerators()
 
 }
 
+void UCorruptIntervention::Multicast_DispatchBlockedEvent_Implementation()
+{
+
+}
+
 void UCorruptIntervention::LevelReadyToBlockedGenerators()
 {
 

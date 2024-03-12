@@ -24,13 +24,13 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UKillerNegateStunInteraction> _negateStunClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UBloodlustExposeInteraction* _bloodlustExposeInteraction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	URemoteDestroyInteraction* _remoteDestroyInteraction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_NegateStunInteraction, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_NegateStunInteraction, Transient, meta=(BindWidgetOptional))
 	UKillerNegateStunInteraction* _negateStunInteraction;
 
 protected:

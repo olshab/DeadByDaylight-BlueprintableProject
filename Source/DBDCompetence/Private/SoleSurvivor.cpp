@@ -11,6 +11,7 @@ USoleSurvivor::USoleSurvivor()
 {
 	this->_modifyActionSpeedWhenRepairingEffect = NULL;
 	this->_modifyActionSpeedWhenOpeningGateOrHatchEffect = NULL;
+	this->_obsessionChanceStatusEffectClass = NULL;
 	this->_actionSpeedsRepairing = 0.000000;
 	this->_actionSpeedsOpeningGateOrHatch = 0.000000;
 	this->_auraHideDistancePerDeadOrDisconnectedSurvivor = 0.000000;

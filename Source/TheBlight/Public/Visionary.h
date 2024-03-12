@@ -23,6 +23,10 @@ public:
 	UFUNCTION(BlueprintPure)
 	float GetCooldownAtLevel() const;
 
+private:
+	UFUNCTION(BlueprintCallable)
+	void Authority_OnIntroComplete();
+
 public:
 	UVisionary();
 };

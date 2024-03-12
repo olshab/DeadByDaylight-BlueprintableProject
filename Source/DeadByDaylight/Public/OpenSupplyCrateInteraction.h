@@ -16,9 +16,6 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	ASupplyCrateInteractable* _owningSupplyCrate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	bool _interactionWasComplete;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	UAnimSequence* _successExitTimeAnimSequenceReference;
 

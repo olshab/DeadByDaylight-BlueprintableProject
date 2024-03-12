@@ -25,5 +25,6 @@ USprintBurst::USprintBurst()
 {
 	this->_exhaustionDuration = 0.000000;
 	this->_sprintDuration = 0.000000;
+	this->_exhaustedEffectClass = NULL;
 	this->_exhaustedEffect = NULL;
 }

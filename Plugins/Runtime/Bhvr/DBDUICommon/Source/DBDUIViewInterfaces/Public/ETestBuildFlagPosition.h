@@ -7,4 +7,6 @@ UENUM(BlueprintType)
 enum class ETestBuildFlagPosition : uint8
 {
 	Hud,
+	MainMenu,
+	Lobby,
 };

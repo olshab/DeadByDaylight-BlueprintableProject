@@ -17,7 +17,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EK31DroneStateID _droneState;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UK31DroneStateController* _droneStateController;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

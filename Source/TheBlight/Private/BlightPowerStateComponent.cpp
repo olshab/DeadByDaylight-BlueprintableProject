@@ -15,17 +15,12 @@ bool UBlightPowerStateComponent::Server_SetWallGrabState_Validate(const EWallGra
 	return true;
 }
 
-void UBlightPowerStateComponent::ResetDashTokens()
-{
-
-}
-
 void UBlightPowerStateComponent::OnRep_StateTimer()
 {
 
 }
 
-void UBlightPowerStateComponent::OnRep_DashTokens()
+void UBlightPowerStateComponent::OnRep_DashTokens() const
 {
 
 }
@@ -73,11 +68,6 @@ EWallGrabState UBlightPowerStateComponent::GetPowerState() const
 float UBlightPowerStateComponent::GetLookAngleDegrees() const
 {
 	return 0.0f;
-}
-
-uint8 UBlightPowerStateComponent::GetDashTokensRemaining() const
-{
-	return 0;
 }
 
 UBlightPowerState* UBlightPowerStateComponent::GetCurrentPowerState() const

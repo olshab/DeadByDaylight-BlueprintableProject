@@ -67,6 +67,9 @@ public:
 	bool HasUseInteraction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool RemoveInteractionsOnInteractorChange;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECollectableCategory Category;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -97,10 +100,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _beingConsumedByEntity;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UInteractor* _itemInteractor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDSkeletalMeshComponentBudgeted* _mesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

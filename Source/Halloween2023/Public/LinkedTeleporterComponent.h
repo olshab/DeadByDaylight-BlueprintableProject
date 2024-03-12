@@ -36,7 +36,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)
 	FOnTeleportInteractWithPlayer Cosmetic_OnPlayerCooldownOver;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Transient, meta=(BindWidgetOptional))
 	ULinkedTeleporterComponent* _linkedTeleporter;
 
 private:

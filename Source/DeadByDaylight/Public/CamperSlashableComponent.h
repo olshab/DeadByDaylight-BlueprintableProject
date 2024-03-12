@@ -15,10 +15,10 @@ class DEADBYDAYLIGHT_API UCamperSlashableComponent : public UActorComponent, pub
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCapsuleComponent* _slashableZone;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCapsuleComponent* _hookSlashableZone;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

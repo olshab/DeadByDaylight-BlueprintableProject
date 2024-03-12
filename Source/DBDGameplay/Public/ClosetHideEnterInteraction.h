@@ -6,7 +6,6 @@
 #include "ClosetHideEnterInteraction.generated.h"
 
 class ACamperPlayer;
-class ADBDPlayer;
 class UStatusEffect;
 class ALocker;
 
@@ -29,9 +28,6 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void EjectSurvivorFromLocker(ACamperPlayer* survivor, ALocker* locker);
-
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void AdjustActorLocation(ADBDPlayer* player);
 
 public:
 	UClosetHideEnterInteraction();

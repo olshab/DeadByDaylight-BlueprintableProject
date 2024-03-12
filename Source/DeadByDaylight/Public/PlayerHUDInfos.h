@@ -4,10 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "EPlayerRole.h"
 #include "DBDTableRowBase.h"
-#include "UObject/SoftObjectPtr.h"
 #include "PlayerHUDInfos.generated.h"
-
-class UUmgPlayerHud;
 
 USTRUCT(BlueprintType)
 struct FPlayerHUDInfos: public FDBDTableRowBase
@@ -17,9 +14,6 @@ struct FPlayerHUDInfos: public FDBDTableRowBase
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EPlayerRole Role;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSoftClassPtr<UUmgPlayerHud> HUDClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FSoftObjectPath TouchInterfaceName;

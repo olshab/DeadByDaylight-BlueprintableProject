@@ -2,9 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "ItemAddon.h"
+#include "Templates/SubclassOf.h"
 #include "TwinBaseAddon.generated.h"
 
 class AConjoinedTwin;
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UTwinBaseAddon : public UItemAddon
@@ -13,7 +15,7 @@ class UTwinBaseAddon : public UItemAddon
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FName _statusEffectID;
+	TSubclassOf<UStatusEffect> _statusEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _customParam;

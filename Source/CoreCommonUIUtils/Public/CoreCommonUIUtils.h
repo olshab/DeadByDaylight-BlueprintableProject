@@ -4,6 +4,8 @@
 #include "Components/SlateWrapperTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "EItemRarity.h"
+#include "ERemainingTimeFormat.h"
+#include "UObject/NoExportTypes.h"
 #include "CoreCommonUIUtils.generated.h"
 
 class UWidget;
@@ -26,6 +28,12 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	static FText GetTextBasedOnRarity(const EItemRarity rarity);
+
+	UFUNCTION(BlueprintPure)
+	static FText GetRemainingTimeText(const FDateTime& endDateTime, ERemainingTimeFormat timeFormat, const int32 numberOfDigits);
+
+	UFUNCTION(BlueprintCallable)
+	static float GetNextUpdateRate(const FDateTime& endTime);
 
 	UFUNCTION(BlueprintPure)
 	static float GetDPIScale();

@@ -6,9 +6,15 @@ class URiflePlayerLinker;
 class UInstancedStaticMeshComponent;
 class USplineComponent;
 class UCurveFloat;
+class ADBDPlayer;
 class URifleChainTensionComponent;
 
 void ARifleChain::UpdateChainMesh(UInstancedStaticMeshComponent* mesh, USplineComponent* spline, float alpha)
+{
+
+}
+
+void ARifleChain::UnbindFromLinkedPlayer()
 {
 
 }
@@ -53,6 +59,11 @@ FVector ARifleChain::GetChainEnd() const
 	return FVector{};
 }
 
+void ARifleChain::BindToLinkedPlayer(ADBDPlayer* linkedPlayer)
+{
+
+}
+
 ARifleChain::ARifleChain()
 {
 	this->_chainCenterAkComponent = NULL;
@@ -62,4 +73,5 @@ ARifleChain::ARifleChain()
 	this->_sphereTraceRadius = 4.000000;
 	this->_timeBetweenTrace = 0.100000;
 	this->_harpoon = NULL;
+	this->_linkedPlayer = NULL;
 }

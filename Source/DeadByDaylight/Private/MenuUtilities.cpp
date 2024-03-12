@@ -1,6 +1,12 @@
 #include "MenuUtilities.h"
 
 class ADBDMenuPlayer;
+class UObject;
+
+ADBDMenuPlayer* UMenuUtilities::GetLocalPlayerCharacter(const UObject* contextObject)
+{
+	return NULL;
+}
 
 TArray<ADBDMenuPlayer*> UMenuUtilities::GetAllMenuCharacters()
 {

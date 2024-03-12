@@ -3,7 +3,7 @@
 
 class AGenerator;
 
-void UEruption::Multicast_TriggerPerk_Implementation(const TArray<AGenerator*>& explodingGenerators)
+void UEruption::Multicast_RemoveHighlights_Implementation(const TArray<AGenerator*>& highlightedGenerators)
 {
 
 }

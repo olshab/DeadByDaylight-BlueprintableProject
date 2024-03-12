@@ -13,6 +13,9 @@ private:
 	TMap<FString, bool> CharactersFirstBloodweb;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, meta=(AllowPrivateAccess=true))
+	bool BloodwebCenterButtonUnlocked;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, meta=(AllowPrivateAccess=true))
 	TMap<FString, bool> ArchiveStoryHasBeenSeenStatus;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, meta=(AllowPrivateAccess=true))

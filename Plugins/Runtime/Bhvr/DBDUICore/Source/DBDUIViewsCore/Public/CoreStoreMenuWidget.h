@@ -51,9 +51,6 @@ protected:
 	void OnRedeemCodeButtonClicked(UCoreButtonWidget* selectedButton);
 
 	UFUNCTION(BlueprintCallable)
-	void OnMenuTabSelectedAgain(UCoreSelectableButtonWidget* selectedButton);
-
-	UFUNCTION(BlueprintCallable)
 	void OnMenuTabSelected(UCoreSelectableButtonWidget* selectedButton);
 
 	UFUNCTION(BlueprintCallable)

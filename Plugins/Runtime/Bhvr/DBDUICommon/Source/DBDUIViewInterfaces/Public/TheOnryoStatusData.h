@@ -17,6 +17,9 @@ public:
 	float CondemnedProgress;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float LockedProgress;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsFullCondemned;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

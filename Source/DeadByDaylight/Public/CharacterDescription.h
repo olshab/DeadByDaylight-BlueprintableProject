@@ -26,6 +26,9 @@ public:
 	int32 CharacterIndex;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName CharacterCodename;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EPlayerRole Role;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -81,6 +84,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSoftClassPtr<APawn> MenuPawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsDefaultItemSpawnableInParadise;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName DefaultItem;

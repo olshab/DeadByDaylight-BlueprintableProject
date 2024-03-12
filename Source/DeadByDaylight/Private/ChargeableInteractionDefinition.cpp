@@ -40,7 +40,7 @@ void UChargeableInteractionDefinition::OnSkillCheckResponseAesthetic(bool succes
 
 }
 
-bool UChargeableInteractionDefinition::IsChargeComplete(const ADBDPlayer* currentlyInteractingPlayer) const
+bool UChargeableInteractionDefinition::IsChargeComplete() const
 {
 	return false;
 }
@@ -179,6 +179,10 @@ UChargeableInteractionDefinition::UChargeableInteractionDefinition()
 	this->ProgressPips = TArray<float>();
 	this->HideProgressBar = false;
 	this->ShowItemIcon = false;
+	this->AddChargeOnInteractionUpdateTick = false;
+	this->ResetChargeOnInteractionFinished = false;
+	this->ResetChargeOnInteractionChargeCompleted = false;
+	this->ToggleCrouchSlashableCapsule = false;
 	this->_chargeableComponent = NULL;
 	this->_tutorialChargeableMultiplier = 1.000000;
 	this->ShowSpeedProficiencyForMultipleInteractors = false;

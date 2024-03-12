@@ -32,7 +32,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _passThroughSurvivors;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UPoolableProjectileComponent* _poolableProjectile;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)

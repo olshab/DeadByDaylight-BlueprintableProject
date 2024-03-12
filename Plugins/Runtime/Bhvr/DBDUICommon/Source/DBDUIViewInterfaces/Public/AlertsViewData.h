@@ -2,10 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "RewardWrapperViewData.h"
-#include "UObject/SoftObjectPtr.h"
 #include "AlertsViewData.generated.h"
-
-class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct FAlertsViewData
@@ -17,7 +14,7 @@ public:
 	TArray<FRewardWrapperViewData> AlertRewards;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSoftObjectPtr<UTexture2D> EventBackground;
+	FString AlertHeader;
 
 public:
 	DBDUIVIEWINTERFACES_API FAlertsViewData();

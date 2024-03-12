@@ -78,6 +78,11 @@
 			]
 		},
 		{
+			"Name": "DBDPluginContentManagerModule",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		},
+		{
 			"Name": "DBDAnimation",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
@@ -228,11 +233,6 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "TheCannibal",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
 			"Name": "TheClown",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
@@ -375,6 +375,11 @@
 			"LoadingPhase": "Default"
 		},
 		{
+			"Name": "TheK35",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
 			"Name": "TheLegion",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
@@ -418,6 +423,14 @@
 		},
 		{
 			"Name": "TheS38",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"DeadByDaylight"
+			]
+		},
+		{
+			"Name": "TheS40",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
@@ -477,12 +490,17 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "Activation",
+			"Name": "Spring2024",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "CampaignEvents",
+			"Name": "Mutators",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "Activation",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -518,11 +536,6 @@
 		},
 		{
 			"Name": "DBDVideoPlayer",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "DynamicContent",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -627,17 +640,7 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "ProvingGround",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
 			"Name": "PurchasableItems",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "RetentionRewardsUtilities",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -662,16 +665,6 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "Sentry",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "SharedAuthenticationUtilities",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
 			"Name": "SimpleStateMachine",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
@@ -688,11 +681,6 @@
 		},
 		{
 			"Name": "StatSystem",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "SubscriptionSubsystem",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
@@ -887,6 +875,20 @@
 		{
 			"Name": "SentryIo",
 			"Enabled": true
+		},
+		{
+			"Name": "Sentry",
+			"Enabled": true,
+			"WhitelistPlatforms": [
+				"Win64",
+				"Linux",
+				"LinuxAArch64"
+			],
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Linux",
+				"LinuxAArch64"
+			]
 		},
 		{
 			"Name": "BhvrCheatMenu",

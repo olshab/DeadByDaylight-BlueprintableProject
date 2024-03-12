@@ -2,8 +2,9 @@
 
 #include "CoreMinimal.h"
 #include "EStoreMenuState.h"
+#include "ECurrencyType.h"
+#include "UObject/SoftObjectPtr.h"
 #include "Presenter.h"
-#include "Templates/SubclassOf.h"
 #include "StoreMenuPresenter.generated.h"
 
 class UStoreSpecialPacksSubPresenter;
@@ -14,6 +15,7 @@ class UStoreSpecialsSubPresenter;
 class UUserWidget;
 class UStoreFeaturedSubPresenter;
 class UStoreSubPresenter;
+class UMatchmakingMonitor;
 class USubPresenter;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -23,7 +25,7 @@ class DBDUIPRESENTERS_API UStoreMenuPresenter : public UPresenter
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<UUserWidget> StoreMenuWidgetClass;
+	TSoftClassPtr<UUserWidget> StoreMenuWidgetClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName DisplayStandName;
@@ -45,7 +47,10 @@ private:
 	UStoreSpecialPacksSubPresenter* _storeSpecialPacksSubPresenter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	UStoreCharactersSubPresenter* _storeCharactersSubPresenter;
+	UStoreCharactersSubPresenter* _storeKillersSubPresenter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	UStoreCharactersSubPresenter* _storeSurvivorsSubPresenter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	UStoreSubPresenter* _activeSubPresenter;
@@ -53,7 +58,16 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	UShopManager* _shopManager;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	UMatchmakingMonitor* _matchmakingMonitor;
+
 private:
+	UFUNCTION(BlueprintCallable)
+	void ShowArchivePassPopup(const FName& archiveId);
+
+	UFUNCTION(BlueprintCallable)
+	void ResetBackActionLabel() const;
+
 	UFUNCTION(BlueprintCallable)
 	void OpenRedeemCodePopup();
 
@@ -67,16 +81,19 @@ private:
 	void OnStartSubPresenterAsyncOperation(USubPresenter* subPresenter);
 
 	UFUNCTION(BlueprintCallable)
-	void OnMoveToCharactersPageRequested(int32 characterIndex);
+	void OnNotEnoughCurrencyModalButtonClicked(const ECurrencyType currencyType);
 
 	UFUNCTION(BlueprintCallable)
-	void OnMenuTabSelected(EStoreMenuState menuState, bool alreadySelected);
+	void OnMenuTabSelected(EStoreMenuState menuState);
+
+	UFUNCTION(BlueprintCallable)
+	void OnBackActionLabelChangeRequested(const FText& newLabel) const;
 
 	UFUNCTION(BlueprintCallable)
 	void OnBackAction();
 
 	UFUNCTION(BlueprintCallable)
-	void OnAllStoreDataLoadComplete(bool success);
+	void OnAsyncLoadSuccess();
 
 public:
 	UStoreMenuPresenter();

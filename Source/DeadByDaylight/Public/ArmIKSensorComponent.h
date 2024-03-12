@@ -15,7 +15,7 @@ class DEADBYDAYLIGHT_API UArmIKSensorComponent : public UActorComponent
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	USkeletalMeshComponent* _mesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, EditFixedSize)

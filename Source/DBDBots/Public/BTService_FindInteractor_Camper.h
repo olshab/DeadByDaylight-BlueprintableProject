@@ -22,6 +22,21 @@ public:
 	TArray<TSubclassOf<UStatusEffect>> IgnoreWhenTargetStatusEffects;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float RequiredAttentionMovementFrequency;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AttentionMovementFrequencyLerp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AttentionValidTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AttentionValidDistance;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AttentionCooldownReduction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FAITunableParameter AllyDangerStateGoalWeight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -38,6 +53,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FAITunableParameter MaxKillerProximityWeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter AttentionWeight;
 
 public:
 	UBTService_FindInteractor_Camper();

@@ -159,7 +159,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float _demogorgonTeleportDuration;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UChargedAttackStateComponent* _demogorgonChargedAttackStateComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -168,7 +168,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float _demogorgonChargingPercent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UOniDemonModeAttackStateComponent* _oniAttackState;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -186,10 +186,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EAttackSubstate _attackSubstate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UEvilWithinComponent* _evilWithinComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UArmIKSensorComponent* _armIKSensorComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

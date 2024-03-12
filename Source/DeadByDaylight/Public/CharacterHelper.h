@@ -27,7 +27,7 @@ public:
 	static void GetOutfitComposition(FCustomizationItemData& returnHead, FCustomizationItemData& returnTorso, FCustomizationItemData& returnLegsWeapon, const FString& outfitId);
 
 	UFUNCTION(BlueprintCallable)
-	static TArray<FCharacterDescription> GetCharactersByRole(const EPlayerRole role, const bool sortArray);
+	static TArray<FCharacterDescription> GetCharactersByRole(const UObject* worldContextObject, const EPlayerRole role, const bool sortArray);
 
 	UFUNCTION(BlueprintCallable)
 	static void GetAllOutfitComponentsOfCharacter(TArray<FCustomizationItemData>& returnHeads, TArray<FCustomizationItemData>& returnTorsos, TArray<FCustomizationItemData>& returnLegsWeapons, const FString& characterId, const bool sortArrays);

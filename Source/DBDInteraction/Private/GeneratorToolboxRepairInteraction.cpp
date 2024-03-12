@@ -15,4 +15,5 @@ FString UGeneratorToolboxRepairInteraction::GetInteractionTextWhenEmpty() const
 UGeneratorToolboxRepairInteraction::UGeneratorToolboxRepairInteraction()
 {
 	this->_interactionTextWhenEmpty = FText::GetEmpty();
+	this->_stateTagsPreventingUseOfToolbox = TArray<FGameplayTag>();
 }

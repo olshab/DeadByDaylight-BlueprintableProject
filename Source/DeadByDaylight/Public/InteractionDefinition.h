@@ -522,7 +522,7 @@ public:
 	UFUNCTION(BlueprintPure)
 	bool IsInteractionPossible(const ADBDPlayer* player, EInputInteractionType interactionType, bool performClientCheck, bool performHeightCheck, bool isBotPredictionCheck) const;
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	bool IsInteractionDone(const ADBDPlayer* player, EInputInteractionType interactionType) const;
 
 	UFUNCTION(BlueprintPure)

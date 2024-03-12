@@ -30,6 +30,7 @@ UTheMettleOfMan::UTheMettleOfMan()
 	this->_revealOutsideRange = 0.000000;
 	this->_mustBeInjured = false;
 	this->_enduranceHighlightEffectClass = NULL;
+	this->_revealToKillerEffectClass = NULL;
 	this->_numTokenSoFar = 0;
 	this->_currentPhase = ETheMettleOfManPhase::Uninitialized;
 	this->_revealToKillerEffect = NULL;

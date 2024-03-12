@@ -14,4 +14,5 @@ enum class ETileType : uint8
 	Maze,
 	Landmark,
 	Signature,
+	Count,
 };

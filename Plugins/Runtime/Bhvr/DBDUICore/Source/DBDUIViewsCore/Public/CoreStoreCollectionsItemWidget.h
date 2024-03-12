@@ -1,55 +1,43 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ECollectionItemScaleType.h"
 #include "CoreBaseUserWidget.h"
-#include "Templates/SubclassOf.h"
 #include "CoreStoreCollectionsItemWidget.generated.h"
 
 class UStoreCollectionViewData;
-class UCoreStoreCustomizationItemWidget;
 class UDBDTextBlock;
-class UHorizontalBox;
-class UCorePreConstructableList;
+class UDBDButton;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UCoreStoreCollectionsItemWidget : public UCoreBaseUserWidget
 {
 	GENERATED_BODY()
 
+public:
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FBannerClickedDelegate, const UStoreCollectionViewData*, collectionViewData);
+
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UDBDTextBlock* TimerText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UDBDTextBlock* CountTB;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UDBDTextBlock* CountText;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UHorizontalBox* StoreCustomizationListBox;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
-	TSubclassOf<UCoreStoreCustomizationItemWidget> _storeCustomizationItemWidgetClass;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
-	int32 _preConstructedItemsCount;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 _layoutMask;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UDBDButton* BannerButton;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	UCorePreConstructableList* _itemList;
-
-protected:
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void ToggleExpanded();
+	UStoreCollectionViewData* _collectionViewData;
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetupView(UStoreCollectionViewData* collectionViewData);
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetupVisuals(UStoreCollectionViewData* collectionViewData, const ECollectionItemScaleType collectionItemScale);
+
+	UFUNCTION(BlueprintCallable)
+	void SetData(UStoreCollectionViewData* collectionViewData, const ECollectionItemScaleType collectionItemScale);
 
 protected:
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-	void SetExpanded(bool expanded);
+	UFUNCTION(BlueprintCallable)
+	void OnBannerButtonClicked();
 
 public:
 	UCoreStoreCollectionsItemWidget();

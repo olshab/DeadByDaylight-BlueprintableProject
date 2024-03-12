@@ -27,6 +27,11 @@ bool ADemogorgonPortal::IsTargeted() const
 	return false;
 }
 
+float ADemogorgonPortal::GetDestroyDuration() const
+{
+	return 0.0f;
+}
+
 void ADemogorgonPortal::Authority_StopDestroyingPlayers()
 {
 

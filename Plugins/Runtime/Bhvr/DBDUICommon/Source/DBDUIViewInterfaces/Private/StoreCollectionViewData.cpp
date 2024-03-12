@@ -1,6 +1,11 @@
 #include "StoreCollectionViewData.h"
 
-bool UStoreCollectionViewData::IsSpecialActive() const
+bool UStoreCollectionViewData::IsSpecial() const
+{
+	return false;
+}
+
+bool UStoreCollectionViewData::IsCollectionHidden() const
 {
 	return false;
 }
@@ -25,11 +30,13 @@ UStoreCollectionViewData::UStoreCollectionViewData()
 	this->CollectionId = TEXT("");
 	this->DisplayTitle = TEXT("");
 	this->DisplaySubtitle = TEXT("");
+	this->VisibleBeforeStartDate = false;
+	this->VisibleAfterEndDate = false;
 	this->SortOrder = 0;
 	this->HeroVideo = NULL;
 	this->AdditionalImages = TArray<FSoftRemoteContentCacheObjectPtr>();
 	this->IsNew = false;
-	this->IsFeatured = false;
-	this->IsSpecial = false;
 	this->Items = TArray<UStoreCustomizationItemViewData*>();
+	this->AvailableItemsCount = 0;
+	this->OwnedItemsCount = 0;
 }

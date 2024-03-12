@@ -1,7 +1,5 @@
 #include "Surge.h"
 
-class AGenerator;
-
 float USurge::GetZoneRadius() const
 {
 	return 0.0f;
@@ -20,11 +18,6 @@ bool USurge::GetHasCooldown() const
 float USurge::GetCooldownDurationAtLevel() const
 {
 	return 0.0f;
-}
-
-void USurge::Client_TriggerEffects_Implementation(const TArray<AGenerator*>& generators)
-{
-
 }
 
 USurge::USurge()

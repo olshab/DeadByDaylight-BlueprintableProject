@@ -5,10 +5,13 @@ FTile2Data::FTile2Data()
 	this->TileName = TEXT("");
 	this->MinimumSpacing = 0;
 	this->MaximumSpacing = 0;
+	this->DiagonalSpacing = false;
+	this->TypeSpacing = false;
 	this->MaximumCount = 0;
-	this->Dimension = FVector2D{};
+	this->Dimension = FIntPoint{};
 	this->AvailableEscapeTypes = TArray<EscapeStrategyType>();
 	this->Type = ETileType::None;
+	this->TileClassType = ETileClassType::None;
 	this->Density = EDensity::Unspecified;
 	this->Path = EPathType::None;
 	this->Number = 0;
@@ -20,7 +23,4 @@ FTile2Data::FTile2Data()
 	this->QuadrantSpawnType = EQuadrantSpawnType::L_Shape;
 	this->BasementType = EBasementType::None;
 	this->AvailableGameplayElementTypes = TArray<EGameplayElementType>();
-	this->DiagonalSpacing = false;
-	this->TypeSpacing = false;
-	this->TileClassType = ETileClassType::None;
 }

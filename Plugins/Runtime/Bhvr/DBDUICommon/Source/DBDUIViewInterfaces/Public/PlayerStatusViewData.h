@@ -43,6 +43,9 @@ public:
 	bool IsLocalPlayerAKiller;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsActivityHidden;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EObsessionUIState ObsessionState;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

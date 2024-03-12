@@ -64,6 +64,7 @@ enum class EOfferingEffectType : uint8
 	WormholeThemeSelectionModifier,
 	SpecialEvent,
 	SpecialEventTallyBonus,
+	SpecialEventActionSpeed,
 	ObjectSubsitution,
 	ObjectAddition,
 };

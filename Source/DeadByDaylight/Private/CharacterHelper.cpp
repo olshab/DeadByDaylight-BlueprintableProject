@@ -6,6 +6,7 @@
 #include "CustomizationItemData.h"
 
 class ADBDPlayerState;
+class UObject;
 
 FCharmIdSlot UCharacterHelper::SetCharmSlot(ADBDPlayerState* playerState, const FName& charmId, int32 slotIndex)
 {
@@ -22,7 +23,7 @@ void UCharacterHelper::GetOutfitComposition(FCustomizationItemData& returnHead, 
 
 }
 
-TArray<FCharacterDescription> UCharacterHelper::GetCharactersByRole(const EPlayerRole role, const bool sortArray)
+TArray<FCharacterDescription> UCharacterHelper::GetCharactersByRole(const UObject* worldContextObject, const EPlayerRole role, const bool sortArray)
 {
 	return TArray<FCharacterDescription>();
 }

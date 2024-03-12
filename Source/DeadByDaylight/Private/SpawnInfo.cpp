@@ -7,4 +7,5 @@ FSpawnInfo::FSpawnInfo()
 	this->AttachSocket = NAME_None;
 	this->AttachParentName = TEXT("");
 	this->AttachParentClass = NULL;
+	this->Tags = TArray<FName>();
 }

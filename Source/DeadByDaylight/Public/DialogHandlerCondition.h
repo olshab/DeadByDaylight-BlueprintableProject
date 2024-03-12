@@ -6,6 +6,8 @@
 #include "GameEventData.h"
 #include "DialogHandlerCondition.generated.h"
 
+class ADBDGameState;
+
 UCLASS(Blueprintable)
 class DEADBYDAYLIGHT_API UDialogHandlerCondition : public UObject
 {
@@ -13,7 +15,7 @@ class DEADBYDAYLIGHT_API UDialogHandlerCondition : public UObject
 
 public:
 	UFUNCTION(BlueprintImplementableEvent)
-	bool IsTrue(const FGameplayTag gameEventType, const FGameEventData& gameEventData);
+	bool IsTrue(const FGameplayTag gameEventType, const FGameEventData& gameEventData, ADBDGameState* gameState);
 
 public:
 	UDialogHandlerCondition();

@@ -19,7 +19,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FTunableStat _chargeTime;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UK26PowerStatusHandlerComponent* _k26PowerStatusHandlerComponent;
 
 private:

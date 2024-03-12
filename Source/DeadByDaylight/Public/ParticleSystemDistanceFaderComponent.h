@@ -12,7 +12,7 @@ class DEADBYDAYLIGHT_API UParticleSystemDistanceFaderComponent : public UActorCo
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UParticleSystemComponent* ParticleSystemComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

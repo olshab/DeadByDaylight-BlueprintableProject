@@ -11,13 +11,14 @@ struct FStoreCharactersFiltersData
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool IsFavorite;
+	bool IsAvailable;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsOwned;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TMap<EItemRarity, bool> RarityFiltersMap;
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	TMap<EItemRarity, bool> _rarityFiltersMap;
 
 public:
 	DBDUIVIEWINTERFACES_API FStoreCharactersFiltersData();

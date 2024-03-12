@@ -13,6 +13,7 @@ void UHexRuin::Authority_SetupCurseOnAllGenerators()
 UHexRuin::UHexRuin()
 {
 	this->_curseActivationTimers = TMap<AGenerator*, FFastTimer>();
+	this->_authority_blockedGeneratorsToStartRegression = TArray<AGenerator*>();
 	this->_regressionModifier = 0.000000;
 	this->_ruinStatusEffectClass = NULL;
 	this->_gameplayModifierHandles = TMap<AGenerator*, uint64>();

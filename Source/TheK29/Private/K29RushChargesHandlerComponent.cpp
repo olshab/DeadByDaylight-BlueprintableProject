@@ -17,6 +17,11 @@ void UK29RushChargesHandlerComponent::OnKillerSet(ASlasherPlayer* killer)
 
 }
 
+float UK29RushChargesHandlerComponent::GetRechargeDuration() const
+{
+	return 0.0f;
+}
+
 float UK29RushChargesHandlerComponent::GetPercentageRemainingUntilNextCharge() const
 {
 	return 0.0f;

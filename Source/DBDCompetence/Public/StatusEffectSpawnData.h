@@ -15,9 +15,6 @@ struct FStatusEffectSpawnData
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString DEPRECATED_EffectId;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UStatusEffect> EffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

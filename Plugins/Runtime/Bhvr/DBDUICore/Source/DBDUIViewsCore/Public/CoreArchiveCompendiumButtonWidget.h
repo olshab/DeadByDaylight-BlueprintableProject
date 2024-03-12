@@ -24,10 +24,10 @@ public:
 	ETooltipVerticalAlignment VerticalAlignment;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* TomeProgressStyleTexture;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* VolumeIndex;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

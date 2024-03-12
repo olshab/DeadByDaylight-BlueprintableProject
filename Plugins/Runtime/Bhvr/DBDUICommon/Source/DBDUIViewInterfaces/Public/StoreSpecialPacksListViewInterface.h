@@ -5,6 +5,7 @@
 #include "StoreSpecialPacksListViewInterface.generated.h"
 
 class UStoreSpecialPackViewData;
+class UStoreChapterPackViewData;
 
 UINTERFACE(Blueprintable)
 class DBDUIVIEWINTERFACES_API UStoreSpecialPacksListViewInterface : public UInterface
@@ -18,6 +19,9 @@ class DBDUIVIEWINTERFACES_API IStoreSpecialPacksListViewInterface : public IInte
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetData(const TArray<UStoreSpecialPackViewData*>& data);
+	void SetSpecialPacksData(const TArray<UStoreSpecialPackViewData*>& data);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetChapterPacksData(const TArray<UStoreChapterPackViewData*>& data);
 
 };

@@ -12,4 +12,5 @@ enum class EQuadrantSpawnType : uint8
 	Rect_Y,
 	Rect,
 	None,
+	Count,
 };

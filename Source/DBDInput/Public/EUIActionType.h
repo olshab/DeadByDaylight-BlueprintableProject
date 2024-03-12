@@ -20,4 +20,9 @@ enum class EUIActionType : uint8
 	FaceButtonTop,
 	Scroll,
 	Options,
+	Extra1,
+	Extra2,
+	Extra3,
+	Extra4,
+	Select,
 };

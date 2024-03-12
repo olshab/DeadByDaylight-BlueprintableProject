@@ -25,9 +25,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool IsSlasher;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	bool IsCustomMatch;
-
 public:
 	DEADBYDAYLIGHT_API FTallyScorePipsData();
 };

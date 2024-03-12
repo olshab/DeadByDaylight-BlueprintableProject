@@ -2,5 +2,5 @@
 
 UBlackBox::UBlackBox()
 {
-
+	this->_dreamworldSingleGateBlockerStatusEffectClass = NULL;
 }

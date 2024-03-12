@@ -13,6 +13,11 @@ void UIsHighestTierOriginatingPerk::OnStatusEffectAddedOrRemoved(UStatusEffect* 
 
 }
 
+void UIsHighestTierOriginatingPerk::OnGameplayModifierContainerInitialized()
+{
+
+}
+
 UIsHighestTierOriginatingPerk::UIsHighestTierOriginatingPerk()
 {
 	this->_applicableEffects = TArray<UStatusEffect*>();

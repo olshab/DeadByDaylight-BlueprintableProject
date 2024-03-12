@@ -26,6 +26,16 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	float _blindedEffectTime;
 
+public:
+	UFUNCTION(BlueprintPure)
+	int32 GetStunnedOrBlindedTimesRequiredByLevel() const;
+
+	UFUNCTION(BlueprintPure)
+	int32 GetStunnedOrBlindedCount() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetBlindedEffectTime() const;
+
 private:
 	UFUNCTION(BlueprintCallable, Client, Unreliable)
 	void Client_UpdateHudIcon(float percent);

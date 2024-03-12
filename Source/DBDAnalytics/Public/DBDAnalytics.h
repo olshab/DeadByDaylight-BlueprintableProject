@@ -10,10 +10,6 @@ class UDBDAnalytics : public UBHVRAnalytics
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable)
-	static void RecordGameProgress(const FString& InProgressType);
-
-public:
 	UDBDAnalytics();
 };
 

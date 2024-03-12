@@ -48,7 +48,7 @@ void UCoreButtonWidget::SetClickable(bool isClickable)
 
 }
 
-void UCoreButtonWidget::SetChargeable(bool isChargeable)
+void UCoreButtonWidget::SetChargeable(bool isChargeable, UCurveFloat* holdingAnimCurve, float duration)
 {
 
 }
@@ -96,6 +96,11 @@ void UCoreButtonWidget::OnInternalHovered()
 void UCoreButtonWidget::OnInternalClicked()
 {
 
+}
+
+bool UCoreButtonWidget::IsPressed() const
+{
+	return false;
 }
 
 bool UCoreButtonWidget::IsEnabled() const

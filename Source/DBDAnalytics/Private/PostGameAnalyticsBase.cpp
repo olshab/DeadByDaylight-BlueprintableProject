@@ -6,6 +6,9 @@ FPostGameAnalyticsBase::FPostGameAnalyticsBase()
 	this->KrakenMatchId = TEXT("");
 	this->GameMode = TEXT("");
 	this->BloodwebPoints = 0;
+	this->BonusEvent = 0;
+	this->MatchIncentive = 0;
+	this->LteIncentive = 0;
 	this->GameDuration = 0.0f;
 	this->CharacterName = TEXT("");
 	this->Rank = 0;

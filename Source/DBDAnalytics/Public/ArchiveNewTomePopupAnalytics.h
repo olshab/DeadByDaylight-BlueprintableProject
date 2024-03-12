@@ -17,6 +17,9 @@ public:
 	FString ButtonId;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 VideoProgress;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool WasVideoWatchUntilEnd;
 
 public:

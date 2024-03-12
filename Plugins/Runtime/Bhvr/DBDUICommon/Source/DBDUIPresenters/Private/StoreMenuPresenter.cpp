@@ -1,7 +1,18 @@
 #include "StoreMenuPresenter.h"
 #include "EStoreMenuState.h"
+#include "ECurrencyType.h"
 
 class USubPresenter;
+
+void UStoreMenuPresenter::ShowArchivePassPopup(const FName& archiveId)
+{
+
+}
+
+void UStoreMenuPresenter::ResetBackActionLabel() const
+{
+
+}
 
 void UStoreMenuPresenter::OpenRedeemCodePopup()
 {
@@ -23,12 +34,17 @@ void UStoreMenuPresenter::OnStartSubPresenterAsyncOperation(USubPresenter* subPr
 
 }
 
-void UStoreMenuPresenter::OnMoveToCharactersPageRequested(int32 characterIndex)
+void UStoreMenuPresenter::OnNotEnoughCurrencyModalButtonClicked(const ECurrencyType currencyType)
 {
 
 }
 
-void UStoreMenuPresenter::OnMenuTabSelected(EStoreMenuState menuState, bool alreadySelected)
+void UStoreMenuPresenter::OnMenuTabSelected(EStoreMenuState menuState)
+{
+
+}
+
+void UStoreMenuPresenter::OnBackActionLabelChangeRequested(const FText& newLabel) const
 {
 
 }
@@ -38,7 +54,7 @@ void UStoreMenuPresenter::OnBackAction()
 
 }
 
-void UStoreMenuPresenter::OnAllStoreDataLoadComplete(bool success)
+void UStoreMenuPresenter::OnAsyncLoadSuccess()
 {
 
 }
@@ -52,7 +68,9 @@ UStoreMenuPresenter::UStoreMenuPresenter()
 	this->_storeSpecialsSubPresenter = NULL;
 	this->_storeCollectionsSubPresenter = NULL;
 	this->_storeSpecialPacksSubPresenter = NULL;
-	this->_storeCharactersSubPresenter = NULL;
+	this->_storeKillersSubPresenter = NULL;
+	this->_storeSurvivorsSubPresenter = NULL;
 	this->_activeSubPresenter = NULL;
 	this->_shopManager = NULL;
+	this->_matchmakingMonitor = NULL;
 }

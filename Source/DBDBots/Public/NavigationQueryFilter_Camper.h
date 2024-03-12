@@ -11,6 +11,9 @@ class DBDBOTS_API UNavigationQueryFilter_Camper : public UNavigationQueryFilter_
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IgnoreOnAttackCooldown;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float SlasherAreaBoundsLimit;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

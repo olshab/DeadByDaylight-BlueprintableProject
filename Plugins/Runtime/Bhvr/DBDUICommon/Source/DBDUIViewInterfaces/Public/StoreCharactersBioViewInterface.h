@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "CharacterBioViewData.h"
 #include "StoreCharactersBioViewInterface.generated.h"
 
 UINTERFACE(Blueprintable)
@@ -15,7 +16,7 @@ class DBDUIVIEWINTERFACES_API IStoreCharactersBioViewInterface : public IInterfa
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void SetData(const FText& characterBio);
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetData(const FCharacterBioViewData& characterBioViewData);
 
 };

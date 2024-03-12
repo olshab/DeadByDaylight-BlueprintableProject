@@ -23,7 +23,7 @@ int32 USubtitlesManager::Post2DAkEventWithSubtitles(const TArray<FAkEventWithSub
 	return 0;
 }
 
-void USubtitlesManager::On3DEventFinished(EAkCallbackType callbackType, UAkCallbackInfo* callbackInfo)
+void USubtitlesManager::On3DEventCallback(EAkCallbackType callbackType, UAkCallbackInfo* callbackInfo)
 {
 
 }

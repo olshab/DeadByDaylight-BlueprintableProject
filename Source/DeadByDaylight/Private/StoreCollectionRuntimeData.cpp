@@ -4,16 +4,20 @@ FStoreCollectionRuntimeData::FStoreCollectionRuntimeData()
 {
 	this->CollectionId = TEXT("");
 	this->InclusionVersion = TEXT("");
-	this->CollectionTitleByCulture = TMap<FString, FString>();
-	this->CollectionSubtitleByCulture = TMap<FString, FString>();
-	this->ActiveFrom = FDateTime{};
-	this->ActiveTo = FDateTime{};
+	this->UpdatedDate = FDateTime{};
+	this->CollectionTitle = TMap<FString, FString>();
+	this->CollectionSubtitle = TMap<FString, FString>();
+	this->LimitedAvailabilityStartDate = FDateTime{};
+	this->LimitedAvailabilityStartDate_IsSet = false;
+	this->VisibleBeforeStartDate = false;
+	this->VisibleBeforeStartDate_IsSet = false;
+	this->LimitedAvailabilityEndDate = FDateTime{};
+	this->LimitedAvailabilityEndDate_IsSet = false;
+	this->VisibleAfterEndDate = false;
+	this->VisibleAfterEndDate_IsSet = false;
 	this->SortOrder = 0;
-	this->HeroImage = TEXT("");
-	this->HeroVideo = TEXT("");
-	this->AdditionalImages = TArray<FString>();
-	this->ItemIds = TArray<FString>();
-	this->Flags = EStoreCollectionFlags::None;
-	this->SpecialStartDate = FDateTime{};
-	this->SpecialEndDate = FDateTime{};
+	this->HeroImage = FStoreCollectionMediaData{};
+	this->HeroVideo = FStoreCollectionMediaData{};
+	this->AdditionalImages = TArray<FStoreCollectionMediaData>();
+	this->Items = TArray<FString>();
 }

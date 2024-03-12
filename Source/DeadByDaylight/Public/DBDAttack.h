@@ -106,6 +106,10 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void Local_OnMovementChanged(ACharacter* character, TEnumAsByte<EMovementMode> prevMovementMode, uint8 previousCustomMode);
 
+public:
+	UFUNCTION(BlueprintPure)
+	UDBDAttackSubstate* GetAttackSubstate(const EAttackSubstate state) const;
+
 private:
 	UFUNCTION(BlueprintCallable, Client, Reliable)
 	void Client_ReceiveHitResult(ADBDPlayer* target, bool isValid, FActionPredictionKey predictionKey);

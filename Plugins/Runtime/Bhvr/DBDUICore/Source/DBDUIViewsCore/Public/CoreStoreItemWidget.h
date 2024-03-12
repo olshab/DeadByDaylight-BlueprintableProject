@@ -7,15 +7,18 @@
 #include "CoreSelectableButtonWidget.h"
 #include "EStoreItemLayout.h"
 #include "ETooltipHorizontalAlignment.h"
+#include "EFlagSize.h"
 #include "CoreStoreItemWidget.generated.h"
 
-class UVerticalBox;
-class UScaleBox;
-class UDBDImage;
 class UWidget;
 class UCorePriceTagWidget;
+class UCoreTimerFlagWidget;
+class UVerticalBox;
+class UDBDImage;
+class UScaleBox;
 class UCoreOnHoverBorderWidget;
 class UTextBlock;
+class UCorePreConstructableList;
 class UStoreItemViewData;
 class UCoreButtonWidget;
 
@@ -32,7 +35,19 @@ protected:
 	FMargin _priceTagPadding;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	FMargin _timerFlagPadding;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
 	TSubclassOf<UCorePriceTagWidget> _priceTagWidgetClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSubclassOf<UCoreTimerFlagWidget> _timerFlagWidgetClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _preConstructedPriceTagCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _preConstructedTimerFlagCount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ETooltipHorizontalAlignment _tooltipHorizontalAlignment;
@@ -40,25 +55,40 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ETooltipVerticalAlignment _tooltipVerticalAlignment;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UDBDImage* ItemIcon;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UDBDImage* ItemIMG;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UScaleBox* LayoutScale;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UWidget* SelectedOverlay;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreOnHoverBorderWidget* OnHoverBorder;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UVerticalBox* TimerFlagVerticalBox;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UVerticalBox* PriceTagsVerticalBox;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
-	UTextBlock* OwnedTagText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UTextBlock* UnavailableTagTB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UCorePreConstructableList* _priceTagsList;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UCorePreConstructableList* _timerFlagsList;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	EFlagSize _flagSize;
 
 public:
+	UFUNCTION(BlueprintCallable)
+	void SetTimerFlagSize(EFlagSize flagSize);
+
 	UFUNCTION(BlueprintCallable)
 	void SetStoreItemLayout(int32 layoutMask);
 
@@ -70,6 +100,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SetScale(float scale);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetNotificationTag(const bool isNew);
 
 protected:
 	UFUNCTION(BlueprintCallable)
@@ -83,6 +116,18 @@ protected:
 
 	UFUNCTION(BlueprintPure)
 	bool IsTagVisible(EStoreItemLayout tag) const;
+
+	UFUNCTION(BlueprintCallable)
+	UCoreTimerFlagWidget* CreateTimerFlagWidget();
+
+	UFUNCTION(BlueprintCallable)
+	UCorePriceTagWidget* CreatePriceTagWidget();
+
+	UFUNCTION(BlueprintCallable)
+	void ClearTimerFlagWidgets();
+
+	UFUNCTION(BlueprintCallable)
+	void ClearPriceTagWidgets();
 
 public:
 	UCoreStoreItemWidget();

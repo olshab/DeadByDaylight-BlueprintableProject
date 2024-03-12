@@ -16,5 +16,6 @@ UCoreProfileMenuWidget::UCoreProfileMenuWidget()
 {
 	this->TabsContainer = NULL;
 	this->BackInputSwitcher = NULL;
+	this->SettingsInputSwitcher = NULL;
 	this->ScrollPrompt = NULL;
 }

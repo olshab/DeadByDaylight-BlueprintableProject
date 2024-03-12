@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "ECurrencyType.h"
 #include "StoreSpecialPackRuntimeItem.h"
+#include "UObject/NoExportTypes.h"
 #include "StoreSpecialPackRuntimeData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -11,6 +12,9 @@ struct FStoreSpecialPackRuntimeData
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsValid;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FString Id;
 
@@ -27,7 +31,19 @@ public:
 	TMap<ECurrencyType, uint32> DiscountedCost;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TMap<ECurrencyType, float> Discount;
+	float Discount;
+
+	UPROPERTY(EditAnywhere, Transient)
+	FDateTime StartDate;
+
+	UPROPERTY(EditAnywhere, Transient)
+	FDateTime EndDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsOwned;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsNew;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FString Image;

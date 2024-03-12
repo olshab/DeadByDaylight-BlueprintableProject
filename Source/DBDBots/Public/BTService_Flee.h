@@ -28,6 +28,9 @@ public:
 	FBlackboardKeySelector BBEvadePointCrossingDest;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FBlackboardKeySelector BBIgnoreHostileStimulusInCooldown;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UPathStrategySelector> PathStrategySelectorClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

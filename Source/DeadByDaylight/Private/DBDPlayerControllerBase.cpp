@@ -1,6 +1,7 @@
 #include "DBDPlayerControllerBase.h"
 #include "PlayerSavedProfileDataShared.h"
 #include "Net/UnrealNetwork.h"
+#include "PlayerFinishedPlayingData.h"
 #include "PlayerLoadoutData.h"
 
 void ADBDPlayerControllerBase::Server_UpdateReplicatedPips_Implementation(int32 pipsToAdd)
@@ -168,7 +169,7 @@ void ADBDPlayerControllerBase::Client_GameEnded_Implementation()
 
 }
 
-void ADBDPlayerControllerBase::Client_FinishedPlaying_Implementation()
+void ADBDPlayerControllerBase::Client_FinishedPlaying_Implementation(FPlayerFinishedPlayingData finishedPlayingData)
 {
 
 }

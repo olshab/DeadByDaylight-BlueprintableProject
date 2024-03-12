@@ -47,6 +47,9 @@ private:
 	void OnLocallyObservedChanged();
 
 	UFUNCTION(BlueprintCallable)
+	bool IsVisibleForCurrentGameMode() const;
+
+	UFUNCTION(BlueprintCallable)
 	bool IsPendingPawnReady() const;
 
 	UFUNCTION(BlueprintCallable)

@@ -1,15 +1,11 @@
 #include "CoreAlertsWidget.h"
 #include "AlertsViewData.h"
+#include "RewardWrapperViewData.h"
 
 class UCoreButtonWidget;
-class UUITweenInstance;
+class UAkAudioEvent;
 
 void UCoreAlertsWidget::ShowRewardTooltip(UCoreButtonWidget* rewardWidget)
-{
-
-}
-
-void UCoreAlertsWidget::ShowRewardNameVisibility(UUITweenInstance* tween)
 {
 
 }
@@ -19,17 +15,7 @@ void UCoreAlertsWidget::ShowAlertRewards(const FAlertsViewData& alertsViewData)
 
 }
 
-void UCoreAlertsWidget::SetRewardsDescription(const FString& rewardsDescription)
-{
-
-}
-
-void UCoreAlertsWidget::RewardAlertSequenceCompleted(UUITweenInstance* tween)
-{
-
-}
-
-void UCoreAlertsWidget::OnRewardItemsFadeOutCompleted(UUITweenInstance* tween)
+void UCoreAlertsWidget::RewardAlertSequenceCompleted()
 {
 
 }
@@ -39,22 +25,27 @@ void UCoreAlertsWidget::HideRewardTooltip(UCoreButtonWidget* rewardWidget)
 
 }
 
+UAkAudioEvent* UCoreAlertsWidget::GetDisplayRewardSound(const FRewardWrapperViewData& rewardData) const
+{
+	return NULL;
+}
+
 void UCoreAlertsWidget::EndRewardDisplayRequested()
 {
 
 }
 
-void UCoreAlertsWidget::EndOfRewardDisplay(UUITweenInstance* tween)
+void UCoreAlertsWidget::EndInterSequenceAnimation()
 {
 
 }
 
-void UCoreAlertsWidget::DisplayNextRewardSequence(UUITweenInstance* tween)
+void UCoreAlertsWidget::EndEndSequenceAnimation()
 {
 
 }
 
-void UCoreAlertsWidget::DisplayNextReward(UUITweenInstance* tween)
+void UCoreAlertsWidget::DisplayNextRewardSequence()
 {
 
 }
@@ -62,24 +53,21 @@ void UCoreAlertsWidget::DisplayNextReward(UUITweenInstance* tween)
 UCoreAlertsWidget::UCoreAlertsWidget()
 {
 	this->RewardWidgetClass = NULL;
-	this->AlertRewardContainer = NULL;
-	this->RewardsDescriptionText = NULL;
-	this->EventIMG = NULL;
-	this->RewardName = NULL;
+	this->Container = NULL;
+	this->BackgroundImage = NULL;
+	this->RewardClaimedText = NULL;
+	this->NumberRewardsText = NULL;
 	this->HorizontalAlignment = ETooltipHorizontalAlignment::Default;
 	this->VerticalAlignment = ETooltipVerticalAlignment::Default;
-	this->_fadeInRewardDuration = 0.000000;
-	this->_fadeRewardDelay = 0.000000;
-	this->_fadeInRewardEasing = EEasingType::Linear;
-	this->_sequenceDelay = 0.000000;
-	this->_sequenceFadeOutDuration = 0.000000;
-	this->_finalSequenceDelay = 0.000000;
-	this->_finalSequenceFadeOutDuration = 0.000000;
-	this->_rewardScalingDuration = 0.000000;
-	this->_rewardScalingDelay = 0.000000;
-	this->_rewardScalingIdleDuration = 0.000000;
-	this->_rewardScalingEasing = EEasingType::Linear;
-	this->_sequenceShiftDuration = 0.000000;
-	this->_sequenceShiftDelay = 0.000000;
-	this->_sequenceShiftEasing = EEasingType::Linear;
+	this->SoundEffectCurrency = NULL;
+	this->SoundEffectCommon = NULL;
+	this->SoundEffectUncommon = NULL;
+	this->SoundEffectRare = NULL;
+	this->SoundEffectVeryRare = NULL;
+	this->SoundEffectUltraRare = NULL;
+	this->SoundEffectLegendary = NULL;
+	this->SoundEffectCharacter = NULL;
+	this->SoundEffectSpecialEvent = NULL;
+	this->SoundEffectProgression = NULL;
+	this->SoundEffectDisappear = NULL;
 }

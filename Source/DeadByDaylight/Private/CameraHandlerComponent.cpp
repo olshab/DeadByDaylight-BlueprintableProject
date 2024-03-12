@@ -5,6 +5,7 @@
 class USceneComponent;
 class UParticleSystemComponent;
 class AActor;
+class UCameraComponent;
 
 void UCameraHandlerComponent::SetSocketID(EDBDCameraSocketID mode)
 {
@@ -17,6 +18,11 @@ void UCameraHandlerComponent::SetAttachmentComponent(USceneComponent* attachment
 }
 
 void UCameraHandlerComponent::PlayVFXOnCurrentCamera(UParticleSystemComponent* component)
+{
+
+}
+
+void UCameraHandlerComponent::OnLevelReadyToPlay()
 {
 
 }
@@ -37,6 +43,11 @@ float UCameraHandlerComponent::GetDesiredFOV() const
 }
 
 AActor* UCameraHandlerComponent::GetCurrentCamera()
+{
+	return NULL;
+}
+
+UCameraComponent* UCameraHandlerComponent::GetCameraComponentBySocket(EDBDCameraSocketID socket) const
 {
 	return NULL;
 }

@@ -2,7 +2,7 @@
 
 FSpecialEventUiTakeoverData::FSpecialEventUiTakeoverData()
 {
-	this->UseRoleSelectionTakeover = false;
+	this->UseMainMenuTakeover = false;
 	this->UseEventEntryPopupTakeover = false;
 	this->UseArchivesTakeover = false;
 	this->UseStoreShrineTakeover = false;

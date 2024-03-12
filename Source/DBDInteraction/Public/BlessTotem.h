@@ -1,14 +1,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ChargeableInteractionDefinition.h"
+#include "BaseTotemInteraction.h"
 #include "DBDTunableRowHandle.h"
 #include "BlessTotem.generated.h"
 
-class ATotem;
-
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class UBlessTotem : public UChargeableInteractionDefinition
+class UBlessTotem : public UBaseTotemInteraction
 {
 	GENERATED_BODY()
 
@@ -16,9 +14,12 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, EditFixedSize, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _blessHexTotemSpeedPenalty;
 
-private:
-	UFUNCTION(BlueprintPure)
-	ATotem* GetTotem() const;
+protected:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnInteractionStarted();
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnInteractionFinished();
 
 public:
 	UBlessTotem();

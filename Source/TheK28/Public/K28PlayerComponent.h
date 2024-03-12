@@ -15,7 +15,7 @@ class UK28PlayerComponent : public UActorComponent
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_DayNightComponent, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_DayNightComponent, meta=(BindWidgetOptional))
 	TWeakObjectPtr<UK28DayNightComponent> _dayNightComponent;
 
 private:

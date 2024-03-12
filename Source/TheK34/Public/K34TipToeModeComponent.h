@@ -145,7 +145,7 @@ public:
 	bool CanEnterTipToeMode() const;
 
 	UFUNCTION(BlueprintCallable)
-	void Authority_SetIsInTipToeMode(bool isInTipToeMode);
+	void Authority_SetIsInTipToeMode(const bool isInTipToeMode, const bool triggerExitEvent);
 
 	UFUNCTION(BlueprintCallable)
 	void Authority_ReduceDuration(const float reductionPercentage);

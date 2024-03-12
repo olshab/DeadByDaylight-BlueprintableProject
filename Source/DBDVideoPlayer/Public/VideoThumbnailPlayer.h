@@ -21,10 +21,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	UMediaPlayer* MediaPlayer;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UMediaSoundComponent* SoundComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UUserWidget* VideoPlayerWidget;
 
 private:

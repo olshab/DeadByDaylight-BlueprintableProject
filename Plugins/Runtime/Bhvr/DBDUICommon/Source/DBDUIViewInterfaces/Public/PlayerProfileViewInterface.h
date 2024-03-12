@@ -4,6 +4,7 @@
 #include "UObject/Interface.h"
 #include "ECurrencyType.h"
 #include "CurrencyLabelViewData.h"
+#include "EPlayerCardAnimationMode.h"
 #include "PlayerCardViewData.h"
 #include "PlayerProfileViewInterface.generated.h"
 
@@ -31,6 +32,9 @@ public:
 	void ShowUI();
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void ShowPlayerCard();
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetWalletVisibility(const bool isVisible);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -44,6 +48,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetPlayerCardBannerOpacity(float opacity);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetPlayerCardAnimationMode(const EPlayerCardAnimationMode playerCardAnimationMode);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetPlayerCard(const FPlayerCardViewData& badge, const FPlayerCardViewData& banner);

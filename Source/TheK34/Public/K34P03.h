@@ -38,6 +38,15 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool HasAnyGeneratorsInRange() const;
 
+	UFUNCTION(BlueprintPure)
+	float GetHasteLingerTimeAtLevel() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetHasteEffectAmount() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetGeneratorRangeFromPlayer() const;
+
 public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 

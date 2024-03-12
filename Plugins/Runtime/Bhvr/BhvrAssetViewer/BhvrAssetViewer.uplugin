@@ -1,0 +1,23 @@
+{
+  "FileVersion": "3",
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "BhvrAssetViewer",
+  "Description": "",
+  "Category": "DBD Tools",
+  "CreatedBy": "Behaviour Interactive",
+  "CreatedByURL": "http://www.bhvr.com/",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": false,
+  "CanContainContent": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "BhvrAssetViewer",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

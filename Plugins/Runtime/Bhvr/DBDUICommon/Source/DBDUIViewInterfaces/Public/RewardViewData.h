@@ -5,6 +5,7 @@
 #include "RewardViewData.generated.h"
 
 class UTexture2D;
+class UUserWidget;
 
 USTRUCT(BlueprintType)
 struct FRewardViewData
@@ -14,6 +15,9 @@ struct FRewardViewData
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	TSoftObjectPtr<UTexture2D> Icon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TSoftClassPtr<UUserWidget> AnimationWidgetClass;
 
 public:
 	DBDUIVIEWINTERFACES_API FRewardViewData();

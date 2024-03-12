@@ -8,8 +8,8 @@ enum class ECondemnOrigin : uint8
 {
 	None,
 	Addon,
-	BasicAttack,
 	PlayerHook,
 	Teleport,
 	VHS,
+	TurnOffTV,
 };

@@ -5,32 +5,32 @@
 #include "AIPointOfInterestTargetInterface.h"
 #include "PlayerFloatTuple.h"
 #include "GameplayTagContainer.h"
-#include "NoiseIndicatorEmitterInterface.h"
+#include "GeneratorRepairedBySurvivorEvent.h"
 #include "Interactable.h"
 #include "GeneratorRepairedEvent.h"
 #include "UObject/NoExportTypes.h"
-#include "GeneratorRepairedBySurvivorEvent.h"
-#include "DamageData.h"
 #include "DBDTunableRowHandle.h"
 #include "OnAkPostEventCallback.h"
 #include "Generator.generated.h"
 
-class ACamperPlayer;
-class UChargeableComponent;
-class UCurveLinearColor;
-class UInteractionDefinition;
-class UCoopRepairTracker;
-class UAIPerceptionStimuliSourceComponent;
+class UGeneratorDamageComponent;
 class ADBDPlayer;
 class UAkComponent;
 class UObject;
+class ACamperPlayer;
+class UChargeableComponent;
+class UDischargeUntilThresholdIsReachedComponent;
+class UInteractionDefinition;
+class UCurveLinearColor;
+class UAIPerceptionStimuliSourceComponent;
+class UCoopRepairTracker;
 class UAkAudioEvent;
-class AActor;
 class UInteractor;
 class USkeletalMeshComponent;
+class AActor;
 
 UCLASS(Blueprintable)
-class DEADBYDAYLIGHT_API AGenerator : public AInteractable, public IAIPointOfInterestTargetInterface, public INoiseIndicatorEmitterInterface
+class DEADBYDAYLIGHT_API AGenerator : public AInteractable, public IAIPointOfInterestTargetInterface
 {
 	GENERATED_BODY()
 
@@ -60,6 +60,9 @@ public:
 	FOnIsDamagedChangedEvent OnIsDamagedChanged;
 
 protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UGeneratorDamageComponent* _generatorDamageComponent;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool FireLevelScoreEventOnFix;
 
@@ -70,11 +73,14 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
 	UAIPerceptionStimuliSourceComponent* _perceptionStimuliComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	UDischargeUntilThresholdIsReachedComponent* _regressChargeUntilThresholdIsReached;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FDBDTunableRowHandle _regressionSpeedWhileDamaged;
+
 	UPROPERTY(EditAnywhere)
 	FGameplayTag _repairSemanticTag;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_DamageData, Transient, meta=(AllowPrivateAccess=true))
-	FDamageData _damageData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_IsBlocked, Transient, meta=(AllowPrivateAccess=true))
 	bool _isBlocked;
@@ -106,11 +112,11 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
 	TArray<UInteractionDefinition*> _damagingInteractions;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _intenseImmediateDamageThreshold;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TArray<ADBDPlayer*> _authority_cachedInteractingPlayersOnCompletion;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FDBDTunableRowHandle _defaultImmediateRegressionPercentage;
 
 protected:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -123,6 +129,11 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void TriggerSkillCheck(ADBDPlayer* instigatingPlayer);
 
+private:
+	UFUNCTION(BlueprintCallable)
+	void StopDischarge();
+
+public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void SpawnBloodEffectToSocket(const FName name);
 
@@ -174,7 +185,7 @@ private:
 	void OnRep_IsBlocked();
 
 	UFUNCTION(BlueprintCallable)
-	void OnRep_DamageData();
+	void OnRegressionStateChanged(const bool regressing, ADBDPlayer* lastDamageChangeSource);
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -184,15 +195,9 @@ protected:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnEscapeDoorActivated();
 
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
-	void OnDamageCosmetic(bool intense);
-
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnChargeChanged(UChargeableComponent* chargeableComponent, float percent);
-
-	UFUNCTION(BlueprintCallable)
-	void OnChargeApplied(float individualChargeAmount, float totalChargeAmount, AActor* chargeInstigator, bool wasCoop, float deltaTime);
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -214,21 +219,10 @@ private:
 	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
 	void Multicast_OnRepaired(const bool showGeneratorCloneLoudNoise, const bool isAutoCompleted, const int32 updatedRemainingGeneratorCount);
 
-	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-	void Multicast_DamageCosmetic(bool intense, const TArray<ADBDPlayer*>& repairers);
-
 public:
 	UFUNCTION(BlueprintPure)
 	bool IsRepaired() const;
 
-	UFUNCTION(BlueprintPure)
-	bool IsRegressing() const;
-
-protected:
-	UFUNCTION(BlueprintPure)
-	bool IsIntenseDamage() const;
-
-public:
 	UFUNCTION(BlueprintPure)
 	bool IsBlocked() const;
 
@@ -261,6 +255,9 @@ public:
 	UFUNCTION(BlueprintPure)
 	bool GetIsAutoCompleted() const;
 
+	UFUNCTION(BlueprintPure)
+	UGeneratorDamageComponent* GetGeneratorDamageComponent() const;
+
 	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
 	UChargeableComponent* GetGeneratorChargeComponent() const;
 
@@ -277,9 +274,6 @@ private:
 	void DisableInaccessibleInteractors();
 
 protected:
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
-	void Cosmetic_MakeSurvivorScream(const ADBDPlayer* screamingSurvivor);
-
 	UFUNCTION(BlueprintPure)
 	bool CanSurvivorReactToBlockingEntity(const ACamperPlayer* survivor) const;
 
@@ -307,17 +301,8 @@ private:
 	void Authority_OnChargeApplied(float individualChargeAmount, float totalChargeAmount, AActor* chargeInstigator, bool wasCoop, float deltaTime);
 
 public:
-	UFUNCTION(BlueprintPure, BlueprintAuthorityOnly)
-	bool Authority_HasRepairedDamage(const ADBDPlayer* player) const;
-
-	UFUNCTION(BlueprintPure)
-	TArray<ADBDPlayer*> Authority_GetRepairingCampers() const;
-
-	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
-	void Authority_Damage(ADBDPlayer* damagedBy, const float immediateRegressionPercent, bool ignoreBlocked);
-
-	UFUNCTION(BlueprintCallable)
-	void Authority_CancelRepairInteractions();
+	UFUNCTION(BlueprintPure=false, BlueprintCallable)
+	void Authority_CancelRepairInteractions(const TArray<ADBDPlayer*>& repairers) const;
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void Authority_AddTimedBlockingSource(const UObject* source, const float blockingTime);

@@ -9,6 +9,7 @@ FPerkProperties::FPerkProperties()
 	this->TeachableOnBloodweblevel = 0;
 	this->AtlantaTeachableLevel = 0;
 	this->PerkCategory = TArray<EPerkCategory>();
+	this->PerkArchetype = EPerkArchetype::Default;
 	this->PerkBlueprint = NULL;
 	this->PerkLevelRarity = TArray<EItemRarity>();
 	this->PerkLevelTunables = TArray<FPerkLevelText>();

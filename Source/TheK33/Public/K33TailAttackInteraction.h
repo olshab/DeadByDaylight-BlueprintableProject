@@ -12,10 +12,6 @@ class UK33TailAttackInteraction : public UChargeableInteractionDefinition
 {
 	GENERATED_BODY()
 
-protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool _isChargeCompleted;
-
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _interactionViewPitchMax;

@@ -382,6 +382,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString KrakenMatchId;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FString> Characters;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FString> Perks;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FString> CustomizationItems;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString GameType;
+
 public:
 	DBDANALYTICS_API FPerformanceAnalytics();
 };

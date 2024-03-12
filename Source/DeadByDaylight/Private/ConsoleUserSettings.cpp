@@ -10,6 +10,7 @@ FConsoleUserSettings::FConsoleUserSettings()
 	this->LargeText = false;
 	this->BloodwebInteractionBehaviour = false;
 	this->TerrorRadiusVisualFeedback = false;
+	this->FieldOfView = 0;
 	this->Gamma = 0;
 	this->HUDPlayerNamesVisibility = false;
 	this->HUDScoreEventsVisibility = false;
@@ -45,10 +46,12 @@ FConsoleUserSettings::FConsoleUserSettings()
 	this->ColorBlindMode = 0;
 	this->ColorBlindModeIntensity = 0;
 	this->BeginnerMode = false;
+	this->FogCommunications = false;
 	this->Subtitles = false;
 	this->SubtitlesBackgroundOpacity = 0;
 	this->SubtitlesSize = 0;
 	this->IsAnonymousMode = false;
+	this->AllowCopyrightedMusic = false;
 	this->HideYourName = false;
 	this->HideOtherNames = false;
 	this->HiddenMatchmakingDelay = false;

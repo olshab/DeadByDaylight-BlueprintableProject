@@ -9,6 +9,7 @@ FAICamperDodgeTunableRowData::FAICamperDodgeTunableRowData()
 	this->RequireInSight = false;
 	this->RequireAttackState = false;
 	this->Duration = 0.0f;
+	this->ReactionTime = 0.0f;
 	this->Range = 0.0f;
 	this->AttackPlusSurvivorHalfWidth = 0.0f;
 	this->FieldOfView = 0.0f;

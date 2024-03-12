@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "ERemoteContentDownloadStrategy.h"
 #include "RemoteContentCacheEntry.generated.h"
 
 USTRUCT(BlueprintType)
@@ -21,6 +22,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	FSoftObjectPath PackagedObjectPath;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ERemoteContentDownloadStrategy DownloadStrategy;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))

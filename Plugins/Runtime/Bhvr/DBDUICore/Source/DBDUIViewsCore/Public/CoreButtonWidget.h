@@ -78,10 +78,10 @@ public:
 	EAnalogCursorStickiness AnalogCursorStickiness;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDButton* HitzoneButton;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* LabelTB;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -120,7 +120,7 @@ public:
 	void SetClickable(bool isClickable);
 
 	UFUNCTION(BlueprintCallable)
-	void SetChargeable(bool isChargeable);
+	void SetChargeable(bool isChargeable, UCurveFloat* holdingAnimCurve, float duration);
 
 	UFUNCTION(BlueprintCallable)
 	void SetBackground(TSoftObjectPtr<UMaterialInstance> backgroundMaterial);
@@ -172,9 +172,18 @@ protected:
 	void OnClicked();
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void OnChargingTick(float progress);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void OnChargingComplete();
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnAlignmentChanged(ETextJustify::Type newAlignment);
 
 public:
+	UFUNCTION(BlueprintPure)
+	bool IsPressed() const;
+
 	UFUNCTION(BlueprintPure)
 	bool IsEnabled() const;
 

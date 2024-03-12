@@ -17,6 +17,9 @@ private:
 
 protected:
 	UFUNCTION(BlueprintCallable)
+	void SetItemSeen(const FString& itemId);
+
+	UFUNCTION(BlueprintCallable)
 	void OnSubTabSelected(int32 subTabId);
 
 public:

@@ -5,7 +5,7 @@
 #include "AkDurationCallbackInfo.generated.h"
 
 UCLASS(Blueprintable)
-class UAkDurationCallbackInfo : public UAkEventCallbackInfo
+class AKAUDIO_API UAkDurationCallbackInfo : public UAkEventCallbackInfo
 {
 	GENERATED_BODY()
 

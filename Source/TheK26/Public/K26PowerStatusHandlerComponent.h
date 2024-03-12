@@ -8,9 +8,10 @@
 #include "K26PowerStatusHandlerComponent.generated.h"
 
 class ACamperPlayer;
+class ASlasherPlayer;
+class UStatusEffect;
 class UInteractionDefinition;
 class AActor;
-class ASlasherPlayer;
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
 class UK26PowerStatusHandlerComponent : public UActorComponent
@@ -35,7 +36,7 @@ private:
 	TSubclassOf<AActor> _statusIndicatorClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FName _k26KillerInstinctStatusEffectName;
+	TSubclassOf<UStatusEffect> _k26KillerInstinctStatusEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
 	TArray<FK26SurvivorStatus> _survivorStatusList;

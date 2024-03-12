@@ -11,4 +11,5 @@ enum class EDensity : uint8
 	Moderate,
 	Heavy,
 	Empty,
+	Count,
 };

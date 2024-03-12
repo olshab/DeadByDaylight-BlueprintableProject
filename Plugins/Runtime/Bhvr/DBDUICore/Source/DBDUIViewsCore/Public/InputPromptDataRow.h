@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
 #include "InputCoreTypes.h"
+#include "UObject/SoftObjectPtr.h"
 #include "InputPromptDataRow.generated.h"
 
 class UTexture2D;
@@ -20,7 +21,7 @@ public:
 	FKey InputKey;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UTexture2D* PromptTexture;
+	TSoftObjectPtr<UTexture2D> PromptTexture;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool ShowLabel;

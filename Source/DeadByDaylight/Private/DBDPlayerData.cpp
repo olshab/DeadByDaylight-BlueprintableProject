@@ -8,6 +8,11 @@ void UDBDPlayerData::Server_SetPlayerReady_Implementation()
 
 }
 
+void UDBDPlayerData::Server_SetMutatorComponentReady_Implementation()
+{
+
+}
+
 void UDBDPlayerData::Server_SetMapSpecificComponentReady_Implementation()
 {
 

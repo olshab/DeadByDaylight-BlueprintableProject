@@ -3,6 +3,8 @@
 FSpecialEventsData::FSpecialEventsData()
 {
 	this->EventId = TEXT("");
+	this->LteData = FLTEData{};
+	this->LteData_IsSet = false;
 	this->MiscRewards = TArray<FSpecialEventMiscRewards>();
 	this->MiscRewards_IsSet = false;
 	this->OwnerRewards = TArray<FRewardResponseItem>();
@@ -13,4 +15,6 @@ FSpecialEventsData::FSpecialEventsData()
 	this->MilestoneRewards_IsSet = false;
 	this->EventPeriods = TArray<FEventPeriod>();
 	this->EventPeriods_IsSet = false;
+	this->EventTrackerObjectives = TArray<FEventTrackerObjective>();
+	this->EventTrackerObjectives_IsSet = false;
 }

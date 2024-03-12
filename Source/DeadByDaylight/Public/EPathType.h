@@ -15,4 +15,5 @@ enum class EPathType : uint8
 	OrientationOnly,
 	Unspecified,
 	OrientedCrossroads,
+	Count,
 };

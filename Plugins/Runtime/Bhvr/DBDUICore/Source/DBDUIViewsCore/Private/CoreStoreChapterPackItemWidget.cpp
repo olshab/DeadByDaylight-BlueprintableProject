@@ -3,12 +3,27 @@
 class UStoreChapterPackViewData;
 class UCoreButtonWidget;
 
+void UCoreStoreChapterPackItemWidget::SetExpanded_Implementation(bool expanded)
+{
+
+}
+
 void UCoreStoreChapterPackItemWidget::SetData_Implementation(UStoreChapterPackViewData* data)
 {
 
 }
 
 void UCoreStoreChapterPackItemWidget::OnPremiumBuyButtonClicked(UCoreButtonWidget* button)
+{
+
+}
+
+void UCoreStoreChapterPackItemWidget::OnCustomizationClicked(UCoreButtonWidget* button)
+{
+
+}
+
+void UCoreStoreChapterPackItemWidget::OnCharacterClicked(UCoreButtonWidget* button)
 {
 
 }

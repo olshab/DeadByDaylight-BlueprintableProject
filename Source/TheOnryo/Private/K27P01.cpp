@@ -14,4 +14,5 @@ void UK27P01::Authority_OnSurvivorUnhookedOffScourgeHook(const FGameEventData& g
 UK27P01::UK27P01()
 {
 	this->_survivorAuraRevealDuration = 0.000000;
+	this->_timedRevealToKillerEffectClass = NULL;
 }

@@ -8,4 +8,5 @@ FSlasherLoadout::FSlasherLoadout()
 	this->Perks = TArray<FDebugLoadoutPerk>();
 	this->PowerAddonIDs = TArray<FDebugLoadoutAddon>();
 	this->Slasher = FCharacterCustomizationDropdown{};
+	this->Offering = FOfferingDropdown{};
 }

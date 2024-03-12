@@ -5,9 +5,10 @@
 #include "EStoryNodeState.h"
 #include "ENodeStatusChange.h"
 #include "CoreButtonWidget.h"
-#include "EItemRarity.h"
 #include "ETooltipHorizontalAlignment.h"
+#include "EItemRarity.h"
 #include "ArchiveNodeViewData.h"
+#include "UObject/SoftObjectPtr.h"
 #include "ECurrencyType.h"
 #include "CoreArchiveQuestNodeWidget.generated.h"
 
@@ -15,6 +16,7 @@ class UDBDImage;
 class UOverlay;
 class UDBDRichTextBlock;
 class UAkAudioEvent;
+class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class DBDUIVIEWSCORE_API UCoreArchiveQuestNodeWidget : public UCoreButtonWidget
@@ -29,19 +31,19 @@ public:
 	ETooltipVerticalAlignment VerticalAlignment;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDImage* Icon;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UOverlay* VignetteTextIndicatorOverlay;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UOverlay* VignetteImageIndicatorOverlay;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UOverlay* VignetteCurrencyAmountOverlay;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDRichTextBlock* VignetteCurrencyAmountText;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -73,6 +75,9 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void ShowRewardNodeTooltip();
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetIcon(bool isReward, const TSoftObjectPtr<UTexture2D>& iconTexture);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void SetCustomizationRewardRarity(EItemRarity rarity);

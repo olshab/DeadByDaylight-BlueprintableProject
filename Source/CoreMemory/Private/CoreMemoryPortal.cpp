@@ -7,6 +7,13 @@
 #include "CoreMemoryPortalFXComponent.h"
 #include "SynchronizeCoreMemoryInteraction.h"
 
+class ADBDPlayer;
+
+void ACoreMemoryPortal::OnInteractionStarted(ADBDPlayer* player)
+{
+
+}
+
 ACoreMemoryPortal::ACoreMemoryPortal()
 {
 	this->_coreMemoryPortalStaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CoreMemoryStaticMeshComponent"));

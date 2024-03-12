@@ -26,6 +26,13 @@ private:
 	UStatusEffect* _hasteEffect;
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetHasteDurationAtLevel() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetHasteAmount() const;
+
+public:
 	UK33P02();
 };
 

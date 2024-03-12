@@ -10,7 +10,7 @@ class AGenerator;
 class ADBDGameState;
 
 UCLASS(Blueprintable)
-class UEscapeRequirementTracker : public UObject
+class DEADBYDAYLIGHT_API UEscapeRequirementTracker : public UObject
 {
 	GENERATED_BODY()
 

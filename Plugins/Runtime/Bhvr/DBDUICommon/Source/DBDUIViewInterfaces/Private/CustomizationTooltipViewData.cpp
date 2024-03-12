@@ -23,4 +23,5 @@ FCustomizationTooltipViewData::FCustomizationTooltipViewData()
 	this->IsEnabled = false;
 	this->CustomizationDisabledMessage = FText::GetEmpty();
 	this->EventBannerLabel = TEXT("");
+	this->OutfitParts = NULL;
 }

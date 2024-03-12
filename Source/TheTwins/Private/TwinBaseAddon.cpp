@@ -9,6 +9,6 @@ void UTwinBaseAddon::Authority_OnTwinSet(AConjoinedTwin* twin)
 
 UTwinBaseAddon::UTwinBaseAddon()
 {
-	this->_statusEffectID = NAME_None;
+	this->_statusEffectClass = NULL;
 	this->_customParam = 0.000000;
 }

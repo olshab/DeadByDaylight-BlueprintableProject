@@ -11,25 +11,25 @@ struct FCustomGameBot
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	uint8 _role;
+	uint8 role;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	uint8 _difficulty;
+	uint8 diff;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	int32 _characterIndex;
+	int32 charIdx;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	int32 _slotIndex;
+	int32 slotIdx;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FString _botGUID;
+	FString GUID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FString _botName;
+	FString name;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FLoadout _loadout;
+	FLoadout loadout;
 
 public:
 	SOCIALPARTY_API FCustomGameBot();

@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "CoreMemoryBehaviourBase.h"
 #include "CoreMemoryFragmentSpawnData.h"
+#include "ETileSpawnPointType.h"
 #include "CoreMemorySpawnFragmentsOnRandPlayerSpawnBehaviour.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -13,6 +14,9 @@ class UCoreMemorySpawnFragmentsOnRandPlayerSpawnBehaviour : public UCoreMemoryBe
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FCoreMemoryFragmentSpawnData _fragmentSpawnData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	ETileSpawnPointType _tileSpawnPointType;
 
 public:
 	UCoreMemorySpawnFragmentsOnRandPlayerSpawnBehaviour();

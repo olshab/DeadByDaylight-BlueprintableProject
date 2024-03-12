@@ -60,8 +60,8 @@ private:
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_StopMontage(float timestamp, const FMontageStopDefinition montageStopDefinition);
 
-	UFUNCTION(BlueprintCallable, Server, Reliable)
-	void Server_StartSnapping(float timestamp, const FSnappingData data, int32 snappingCallCount);
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_StartSnapping(float timestamp, const FSnappingData data, int32 snappingCallCount, uint64 clientTimeSync);
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void Server_ShowAllIncreaseMovementSpeedModifier(const float clientMaxSpeedMultiplierScalar, const float clientcomputedMaxSpeedMultiplierScalar, const TArray<FMaxSpeedValidate>& clientModifiers);

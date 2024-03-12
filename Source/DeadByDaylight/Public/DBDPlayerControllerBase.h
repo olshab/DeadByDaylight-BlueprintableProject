@@ -4,6 +4,7 @@
 #include "PlayerSavedProfileDataShared.h"
 #include "GameFramework/PlayerController.h"
 #include "OnPlayerStateChanged.h"
+#include "PlayerFinishedPlayingData.h"
 #include "PlayerLoadoutData.h"
 #include "DBDPlayerControllerBase.generated.h"
 
@@ -107,7 +108,7 @@ public:
 
 private:
 	UFUNCTION(BlueprintCallable, Client, Reliable)
-	void Client_FinishedPlaying();
+	void Client_FinishedPlaying(FPlayerFinishedPlayingData finishedPlayingData);
 
 public:
 	UFUNCTION(BlueprintCallable, Client, Reliable)

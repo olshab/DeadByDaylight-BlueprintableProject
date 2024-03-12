@@ -1,12 +1,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "QuestEventEvaluatorBase.h"
 #include "GameplayTagContainer.h"
+#include "SpendTimeWithGameplayTagQEEvaluator.h"
 #include "SpendTimeWithStateTagQEEvaluator.generated.h"
 
 UCLASS(Blueprintable)
-class USpendTimeWithStateTagQEEvaluator : public UQuestEventEvaluatorBase
+class USpendTimeWithStateTagQEEvaluator : public USpendTimeWithGameplayTagQEEvaluator
 {
 	GENERATED_BODY()
 

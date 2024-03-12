@@ -7,7 +7,6 @@
 #include "Engine/NetSerialization.h"
 #include "TormentTrailController.generated.h"
 
-class AMobileTormentTrailRenderer;
 class ATormentTrailPoint;
 
 UCLASS(Blueprintable)
@@ -18,9 +17,6 @@ class ATormentTrailController : public ATrailControllerBase
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, meta=(AllowPrivateAccess=true))
 	FReplicatedTrailPointList _trailPointList;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	AMobileTormentTrailRenderer* _mobileTormentTrailRenderer;
 
 private:
 	UFUNCTION(BlueprintCallable, Server, Reliable, WithValidation)

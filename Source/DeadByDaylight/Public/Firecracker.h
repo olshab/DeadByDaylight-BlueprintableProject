@@ -16,7 +16,7 @@ class DEADBYDAYLIGHT_API AFirecracker : public AInteractable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USphereComponent* _effectArea;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

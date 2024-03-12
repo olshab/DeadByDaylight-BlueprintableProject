@@ -11,7 +11,7 @@ class COMPETENCE_API USingleModifierCondition : public UEventDrivenModifierCondi
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_Condition, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing=OnRep_Condition, Transient, meta=(BindWidgetOptional))
 	UEventDrivenModifierCondition* _condition;
 
 protected:

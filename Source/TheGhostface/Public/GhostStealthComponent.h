@@ -4,17 +4,19 @@
 #include "NonTunableStat.h"
 #include "GhostStealthUIData.h"
 #include "DBDTunableRowHandle.h"
-#include "Components/ActorComponent.h"
 #include "TunableStat.h"
+#include "Components/ActorComponent.h"
+#include "Templates/SubclassOf.h"
 #include "EGhostStealthState.h"
 #include "GhostStealthComponent.generated.h"
 
 class UScreenIndicatorWorldMarkerComponent;
+class ADBDPlayer;
+class UStalkerComponent;
+class UStatusEffect;
 class UTimerObject;
 class USightRevealableComponent;
 class ACharacter;
-class ADBDPlayer;
-class UStalkerComponent;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class THEGHOSTFACE_API UGhostStealthComponent : public UActorComponent, public IGhostStealthUIData
@@ -57,6 +59,9 @@ private:
 
 	UPROPERTY(EditAnywhere, Transient, Export)
 	TMap<ACharacter*, TWeakObjectPtr<UScreenIndicatorWorldMarkerComponent>> _markers;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _ghostStealthMovementSpeedStatusEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FTunableStat _cooldownDuration;

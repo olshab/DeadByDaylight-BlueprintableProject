@@ -31,6 +31,11 @@ TSoftObjectPtr<UTexture2D> UUIDataManager::GetCurrencyIcon(const ECurrencyType c
 	return NULL;
 }
 
+UTexture2D* UUIDataManager::GetAlertRewardEventBackground(const FString& eventThemeLabel) const
+{
+	return NULL;
+}
+
 UUIDataManager::UUIDataManager()
 {
 	this->RarityMaterialMap = TMap<EItemRarity, FRarityMaterialData>();
@@ -39,4 +44,5 @@ UUIDataManager::UUIDataManager()
 	this->ProgressionUIDataMap = TMap<EProgressionType, FCurrencyProgressionUIData>();
 	this->ArchiveTomeSkinDataMap = TMap<EArchiveMenuState, FArchiveTomeSkinData>();
 	this->TooltipEventSkinUIDataMap = TMap<FString, UTexture2D*>();
+	this->AlertRewardEventSkinUIDataMap = TMap<FString, UTexture2D*>();
 }

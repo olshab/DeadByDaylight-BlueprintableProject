@@ -32,4 +32,5 @@ FInventorySlotData::FInventorySlotData()
 	this->IsEnabled = false;
 	this->IsSharablePerk = false;
 	this->LoadoutPartState = ELoadoutPartState::None;
+	this->SearchTags = TArray<FText>();
 }

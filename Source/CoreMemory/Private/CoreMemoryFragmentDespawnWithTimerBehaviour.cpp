@@ -2,5 +2,5 @@
 
 UCoreMemoryFragmentDespawnWithTimerBehaviour::UCoreMemoryFragmentDespawnWithTimerBehaviour()
 {
-
+	this->_fragmentPhaseIdleTime = 3.000000;
 }

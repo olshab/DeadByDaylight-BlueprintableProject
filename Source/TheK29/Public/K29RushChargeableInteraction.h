@@ -23,18 +23,18 @@ class UInteractionDefinition;
 class ACamperPlayer;
 
 UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class UK29RushChargeableInteraction : public UChargeableInteractionDefinition
+class THEK29_API UK29RushChargeableInteraction : public UChargeableInteractionDefinition
 {
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UK29RushChargesHandlerComponent* _rushChargesHandlerComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UK29PowerStatusHandlerComponent* _powerStatusHandlerComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
 	UK29PathingCalculatorComponent* _pathingCalculatorComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

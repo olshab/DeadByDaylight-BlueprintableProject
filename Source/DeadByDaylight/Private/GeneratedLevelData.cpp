@@ -32,6 +32,7 @@ FGeneratedLevelData::FGeneratedLevelData()
 	this->FinisherMoriSpawnPoints = TArray<USceneComponent*>();
 	this->SteamPipeSpawners = TArray<USceneComponent*>();
 	this->SteamPipeButtonSpawners = TArray<USceneComponent*>();
+	this->BasementSeanceSpawners = TArray<USceneComponent*>();
 	this->SpecialEventId = NAME_None;
 	this->UseForcedMap = false;
 	this->UsePremadeMap = false;

@@ -27,6 +27,7 @@ FPlayerSavedProfileDataLocal::FPlayerSavedProfileDataLocal()
 	this->AutoDeclineFriendInvites = false;
 	this->CharacterCustomizationPresets = TArray<FCharacterCustomizationPresetsList>();
 	this->CharacterLoadoutPresets = TArray<FCharacterLoadoutPresetsList>();
+	this->CharacterLoadoutPresetsPerGameType = TMap<FString, FLoadoutPresetsDataForGameType>();
 	this->_cumulativeData = FPlayerSavedProfileCumulativeData{};
 	this->_savedPlayerStats = TArray<FSavedStatsData>();
 	this->_hasBeenGivenKillerTutorialEndReward = false;
@@ -40,6 +41,7 @@ FPlayerSavedProfileDataLocal::FPlayerSavedProfileDataLocal()
 	this->_specialEvent = TMap<FName, FSpecialEventSavedData>();
 	this->_seenCinematics = TSet<FName>();
 	this->_seenFeatures = TSet<FName>();
+	this->_seenPopupsData = TMap<FName, FSavedSeenPopupData>();
 	this->_releases = TMap<FString, FReleaseSavedData>();
 	this->_hasBeginnerTooltipsBeenDisabledAtLevel = false;
 }

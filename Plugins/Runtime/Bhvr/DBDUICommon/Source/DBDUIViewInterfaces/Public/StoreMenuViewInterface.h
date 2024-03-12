@@ -37,18 +37,24 @@ public:
 	void SetMenuState(EStoreMenuState state);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetBackButtonLabel(const FText& label);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	TScriptInterface<IStoreCharactersViewInterface> GetStoreSurvivorsInterface() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreSpecialsViewInterface> GetStoreSpecialsInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreSpecialPacksViewInterface> GetStoreSpecialPacksInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	TScriptInterface<IStoreCharactersViewInterface> GetStoreKillersInterface() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreFeaturedViewInterface> GetStoreFeaturedInterface() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	TScriptInterface<IStoreCollectionsViewInterface> GetStoreCollectionsInterface() const;
-
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	TScriptInterface<IStoreCharactersViewInterface> GetStoreCharactersInterface() const;
 
 };

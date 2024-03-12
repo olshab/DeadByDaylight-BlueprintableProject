@@ -7,6 +7,7 @@
 #include "EItemRarity.h"
 #include "EPerkCategory.h"
 #include "UObject/SoftObjectPtr.h"
+#include "EPerkArchetype.h"
 #include "PerkProperties.generated.h"
 
 class UPerk;
@@ -37,6 +38,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<EPerkCategory> PerkCategory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EPerkArchetype PerkArchetype;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSoftClassPtr<UPerk> PerkBlueprint;

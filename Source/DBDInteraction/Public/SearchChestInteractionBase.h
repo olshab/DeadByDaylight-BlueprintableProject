@@ -27,9 +27,6 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	ASearchable* _owningChest;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
-	bool _onLastInteractionWasComplete;
-
 private:
 	UFUNCTION(BlueprintCallable)
 	void FireChestScoreEvent(const ADBDPlayer* player);

@@ -34,5 +34,6 @@ FKey UCoreInputPromptWidget::GetInputKey()
 UCoreInputPromptWidget::UCoreInputPromptWidget()
 {
 	this->_unfoundInputKeyText = FText::GetEmpty();
+	this->_betaFeatureText = FText::GetEmpty();
 	this->_isEnabled = true;
 }

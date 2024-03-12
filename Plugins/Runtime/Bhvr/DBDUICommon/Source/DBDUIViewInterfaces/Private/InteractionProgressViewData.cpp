@@ -11,4 +11,5 @@ FInteractionProgressViewData::FInteractionProgressViewData()
 	this->ItemIcon = NULL;
 	this->Proficiencies = TArray<FStatusEffectViewData>();
 	this->PermanentProgress = 0.0f;
+	this->PercentageStopDischarge = 0.0f;
 }

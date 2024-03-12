@@ -20,5 +20,7 @@ UBasePopupPresenter::UBasePopupPresenter()
 {
 	this->ObservedContext = EContext::None;
 	this->PopupWidgetClass = NULL;
+	this->IsWIP = false;
+	this->WIPPopupWidgetClass = NULL;
 	this->_viewData = NULL;
 }

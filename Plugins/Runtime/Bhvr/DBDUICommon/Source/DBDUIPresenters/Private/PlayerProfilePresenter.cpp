@@ -1,6 +1,5 @@
 #include "PlayerProfilePresenter.h"
 #include "ESpecialEventStatus.h"
-#include "CombinedSpecialEventData.h"
 #include "ECurrencyType.h"
 #include "ShopWalletUpdate.h"
 
@@ -44,6 +43,16 @@ void UPlayerProfilePresenter::OnUpdatePlayerProfileCurrencyFilter(const uint8 cu
 
 }
 
+void UPlayerProfilePresenter::OnUpdatePlayerCardAnimationMode() const
+{
+
+}
+
+void UPlayerProfilePresenter::OnSpecialEventStatusChanged(FName specialEventId, ESpecialEventStatus specialEventStatus)
+{
+
+}
+
 void UPlayerProfilePresenter::OnResetPlayerProfileFilter()
 {
 
@@ -64,17 +73,12 @@ void UPlayerProfilePresenter::OnPlayerProfileClicked()
 
 }
 
-void UPlayerProfilePresenter::OnCurrentSpecialEventChanged(const FCombinedSpecialEventData& previousSpecialEvent, ESpecialEventStatus previousSpecialEventStatus, const FCombinedSpecialEventData& currentSpecialEvent, ESpecialEventStatus currentSpecialEventStatus)
-{
-
-}
-
 void UPlayerProfilePresenter::HidePlayerProfile()
 {
 
 }
 
-FText UPlayerProfilePresenter::GetPlayerName()
+FText UPlayerProfilePresenter::GetPlayerName() const
 {
 	return FText::GetEmpty();
 }

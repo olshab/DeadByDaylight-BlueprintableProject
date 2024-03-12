@@ -53,7 +53,7 @@ bool UK34TipToeModeComponent::CanEnterTipToeMode() const
 	return false;
 }
 
-void UK34TipToeModeComponent::Authority_SetIsInTipToeMode(bool isInTipToeMode)
+void UK34TipToeModeComponent::Authority_SetIsInTipToeMode(const bool isInTipToeMode, const bool triggerExitEvent)
 {
 
 }

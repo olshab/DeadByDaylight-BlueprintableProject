@@ -6,6 +6,21 @@ bool UK34P03::HasAnyGeneratorsInRange() const
 	return false;
 }
 
+float UK34P03::GetHasteLingerTimeAtLevel() const
+{
+	return 0.0f;
+}
+
+float UK34P03::GetHasteEffectAmount() const
+{
+	return 0.0f;
+}
+
+float UK34P03::GetGeneratorRangeFromPlayer() const
+{
+	return 0.0f;
+}
+
 void UK34P03::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);

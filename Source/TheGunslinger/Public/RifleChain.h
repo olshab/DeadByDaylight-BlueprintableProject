@@ -8,8 +8,8 @@
 #include "Engine/EngineTypes.h"
 #include "RifleChain.generated.h"
 
-class ADBDPlayer;
 class UCurveFloat;
+class ADBDPlayer;
 class UAkComponent;
 class IGunslingerHarpoon;
 class UAkAudioEvent;
@@ -36,7 +36,7 @@ public:
 	FOnIsCollidingChanged OnIsCollidingChanged;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UAkComponent* _chainCenterAkComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -58,10 +58,18 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	TScriptInterface<IGunslingerHarpoon> _harpoon;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	ADBDPlayer* _linkedPlayer;
+
 public:
 	UFUNCTION(BlueprintCallable)
 	void UpdateChainMesh(UInstancedStaticMeshComponent* mesh, USplineComponent* spline, float alpha);
 
+protected:
+	UFUNCTION(BlueprintCallable)
+	void UnbindFromLinkedPlayer();
+
+public:
 	UFUNCTION(BlueprintCallable)
 	int32 SpawnChainPoints(FVector start, FVector stop, UCurveFloat* influenceCurve, float pointYPosition, float pointZPosition, bool useOffset, USplineComponent* spline);
 
@@ -71,6 +79,11 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnReelBackToRifle();
 
+protected:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void OnLinkedPlayerPerspectiveChanged(ADBDPlayer* player);
+
+public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnLaunch();
 
@@ -97,6 +110,10 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	FVector GetChainEnd() const;
+
+protected:
+	UFUNCTION(BlueprintCallable)
+	void BindToLinkedPlayer(ADBDPlayer* linkedPlayer);
 
 public:
 	ARifleChain();

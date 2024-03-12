@@ -1,11 +1,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "EHatchState.h"
-#include "NoiseIndicatorEmitterInterface.h"
-#include "Interactable.h"
 #include "DBDTunableRowHandle.h"
 #include "GameplayTagContainer.h"
+#include "EHatchState.h"
+#include "Interactable.h"
 #include "GameEventData.h"
 #include "Hatch.generated.h"
 
@@ -14,7 +13,7 @@ class UAnimationMontageSlave;
 class USceneComponent;
 
 UCLASS(Blueprintable)
-class DEADBYDAYLIGHT_API AHatch : public AInteractable, public INoiseIndicatorEmitterInterface
+class DEADBYDAYLIGHT_API AHatch : public AInteractable
 {
 	GENERATED_BODY()
 

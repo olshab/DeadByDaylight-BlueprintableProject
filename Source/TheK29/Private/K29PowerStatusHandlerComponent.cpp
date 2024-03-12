@@ -50,6 +50,11 @@ void UK29PowerStatusHandlerComponent::Multicast_DropSurvivor_Implementation(ACam
 
 }
 
+bool UK29PowerStatusHandlerComponent::IsInfectionIncreasingForSurvivor(const ACamperPlayer* survivor)
+{
+	return false;
+}
+
 int32 UK29PowerStatusHandlerComponent::GetMaxInfectionLevel()
 {
 	return 0;

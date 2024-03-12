@@ -16,9 +16,10 @@ enum class ELevelLoadingSteps : uint8
 	WaitingForLoadoutAndTheme,
 	WaitingForPIAToBeSpawnedAndInitialized,
 	WaitingForNavmeshComputation,
+	WaitingForMutatorsComponentLogic,
 	SetGameLoadedAndReadyToPlay,
 	WaitingForIntroToBeDone,
 	LoadingCompleted,
 	FirstLoadingStep = 1,
-	Count = 12,
+	Count = 13,
 };

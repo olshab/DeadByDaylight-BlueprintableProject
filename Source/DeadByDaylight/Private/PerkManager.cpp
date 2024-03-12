@@ -188,11 +188,6 @@ UStatusEffect* UPerkManager::Authority_ImposeStatusEffectOfClass(TSubclassOf<USt
 	return NULL;
 }
 
-UStatusEffect* UPerkManager::Authority_ImposeStatusEffect_DEPRECATED(FName statusEffectID, ADBDPlayer* originatingPlayer, float customParam, UGameplayModifierContainer* originatingEffect, bool shouldDisplay, float lifetime)
-{
-	return NULL;
-}
-
 UStatusEffect* UPerkManager::Authority_ImposeNewStatusEffectOfClassOrChangeLifeTime(TSubclassOf<UStatusEffect> effectClass, ADBDPlayer* originatingPlayer, float lifeTime, float customParam, UGameplayModifierContainer* originatingEffect, bool shouldDisplay)
 {
 	return NULL;

@@ -1,21 +1,7 @@
 #include "DBDGameMode.h"
-#include "EGameState.h"
 #include "NavmeshGeneratorComponent.h"
 
-class APlayerState;
-class ADBDPlayerState;
-
 void ADBDGameMode::SetPlayerCount(int32 playerAmount)
-{
-
-}
-
-void ADBDGameMode::RegisterOnPlayerStateChanged(APlayerState* playerState)
-{
-
-}
-
-void ADBDGameMode::OnPlayerGameStateChanged(ADBDPlayerState* playerState, EGameState playerGameState)
 {
 
 }

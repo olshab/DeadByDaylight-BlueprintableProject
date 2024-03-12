@@ -27,10 +27,10 @@ class THEK31_API AK31Power : public ACollectable
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UK31PowerChargePresentationItemProgressComponent* _powerChargePresentationItemProgressComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UK31PowerChargePresentationPowerFadeComponent* _powerChargePresentationPowerFadeComponent;
 
 private:

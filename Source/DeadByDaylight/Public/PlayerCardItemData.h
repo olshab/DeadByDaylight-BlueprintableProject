@@ -16,6 +16,9 @@ public:
 	FString SecondaryIconPath;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FString AnimationFilePath;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FString AnimationLinkageId;
 
 public:

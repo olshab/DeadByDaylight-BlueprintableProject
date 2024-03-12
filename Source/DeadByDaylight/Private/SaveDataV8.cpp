@@ -48,6 +48,7 @@ FSaveDataV8::FSaveDataV8()
 	this->Releases = TArray<FSavedReleaseDataV8>();
 	this->SeenCinematics = TSet<FName>();
 	this->SeenFeatures = TSet<FName>();
+	this->SeenPopupsData = TMap<FName, FSavedSeenPopupData>();
 	this->BloodStoreKillers = FLegacySavedBloodWebPersistentData{};
 	this->BloodStoreSurvivors = FLegacySavedBloodWebPersistentData{};
 	this->OnBoardingCompleted = TArray<FKeyTupleBool>();

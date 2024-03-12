@@ -1,12 +1,7 @@
 #include "CoreStoreFeaturedCharacterContainerWidget.h"
-#include "StoreFeaturedCharacterViewData.h"
+#include "EPlayerRole.h"
 
-void UCoreStoreFeaturedCharacterContainerWidget::SetCharacters_Implementation(const TArray<FStoreFeaturedCharacterViewData>& viewDataArray)
-{
-
-}
-
-void UCoreStoreFeaturedCharacterContainerWidget::OnTransitionRequested(int32 characterIndex)
+void UCoreStoreFeaturedCharacterContainerWidget::OnMoveToCharactersBioPageRequested(int32 characterIndex, EPlayerRole playerRole)
 {
 
 }

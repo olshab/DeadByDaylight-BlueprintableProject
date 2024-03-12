@@ -5,16 +5,22 @@
 #include "Templates/SubclassOf.h"
 #include "Addon_TormentMode_18.generated.h"
 
-class UHemorrhageStatusEffect;
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UAddon_TormentMode_18 : public UItemAddon
 {
 	GENERATED_BODY()
 
-protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<UHemorrhageStatusEffect> _hemorrhageEffect;
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _mangledEffectClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _hemorrhageEffectClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	float _mangledHemorrhageEffectLifetime;
 
 public:
 	UAddon_TormentMode_18();

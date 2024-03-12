@@ -15,4 +15,5 @@ enum class ELeaveLobbyReason : uint8
 	eDLCInstalled,
 	eTrialExtensionExpired,
 	ePartyManagementError,
+	eGameTypeExpired,
 };

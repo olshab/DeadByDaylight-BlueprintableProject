@@ -64,6 +64,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsLicensed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool AreEventSpawnersEnabled;
+
 public:
 	DEADBYDAYLIGHT_API FProceduralMap();
 };

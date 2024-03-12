@@ -9,6 +9,13 @@ class DEADBYDAYLIGHT_API UHookableComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+public:
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDrainStateChangeFX, int32, drainState);
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, BlueprintAssignable)
+	FOnDrainStateChangeFX Cosmetic_OnDrainStateChanged;
+
 private:
 	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
 	void Multicast_SetDrainTimerPercentLeft(float percentTime);
@@ -18,10 +25,16 @@ private:
 
 public:
 	UFUNCTION(BlueprintPure)
+	int32 GetSacrificeStageIndex() const;
+
+	UFUNCTION(BlueprintPure)
 	int32 GetHookedCount() const;
 
 	UFUNCTION(BlueprintPure)
 	float GetDrainTimerPercentLeft() const;
+
+	UFUNCTION(BlueprintPure)
+	int32 GetDrainStage() const;
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly)
 	void Authority_DebugSetHookEscapeAutoSuccess(const bool success);

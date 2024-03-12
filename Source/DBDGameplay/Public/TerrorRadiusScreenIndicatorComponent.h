@@ -7,7 +7,7 @@
 #include "TerrorRadiusScreenIndicatorComponent.generated.h"
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
-class DBDGAMEPLAY_API UTerrorRadiusScreenIndicatorComponent : public UScreenIndicatorWorldMarkerComponent
+class UTerrorRadiusScreenIndicatorComponent : public UScreenIndicatorWorldMarkerComponent
 {
 	GENERATED_BODY()
 

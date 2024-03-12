@@ -25,6 +25,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 MinKeysForFailedAttempt;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MinKeysForAttemptToLockInputs;
+
 public:
 	INPUTUTILITIES_API FButtonSequenceData();
 };

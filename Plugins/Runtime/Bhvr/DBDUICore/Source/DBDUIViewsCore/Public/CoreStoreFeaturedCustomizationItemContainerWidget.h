@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "StoreRedirectionData.h"
 #include "CoreButtonSelector.h"
 #include "Templates/SubclassOf.h"
 #include "EEasingType.h"
@@ -21,13 +22,13 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
 	TSubclassOf<UCoreStoreFeaturedCustomizationItemWidget> ItemTileClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCanvasPanel* Root;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreInputSwitcherWidget* LeftArrow;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UCoreInputSwitcherWidget* RightArrow;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -71,6 +72,9 @@ public:
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnSelectedItemChanged(UCoreSelectableButtonWidget* selectedButton);
+
+	UFUNCTION(BlueprintCallable)
+	void OnMoveToCharactersCustomizationPageRequested(const FStoreRedirectionData& redirectionData);
 
 	UFUNCTION(BlueprintCallable)
 	void OnMoveCompleted();

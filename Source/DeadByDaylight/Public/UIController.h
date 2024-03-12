@@ -4,7 +4,6 @@
 #include "UObject/NoExportTypes.h"
 #include "UIController.generated.h"
 
-class UMobileBaseUserWidget;
 class UGFxObject;
 
 UCLASS(Blueprintable)
@@ -15,9 +14,6 @@ class DEADBYDAYLIGHT_API UUIController : public UObject
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
 	UGFxObject* m_UIControllerObj;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export, meta=(AllowPrivateAccess=true))
-	UMobileBaseUserWidget* _atlantaLoadingWidget;
 
 public:
 	UUIController();

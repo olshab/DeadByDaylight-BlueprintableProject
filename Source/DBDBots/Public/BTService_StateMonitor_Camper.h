@@ -106,6 +106,12 @@ public:
 	float ChasedMinimumScore;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HeightAmplifier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HeightAmplifierActivationHeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FAITunableParameter ChasedScoreKillerAtMinimumDistance;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -137,6 +143,33 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FAITunableParameter ChasedScoreKillerChaseTarget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreDistanceWhenUnknownLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScorePredictedTargetMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreKillerMaxDirectionAngle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreKillerDirectionMaxMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreSurvivorVisibilityTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreMaxMultiplierWhenSurvivorVisible;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreKillerRangedAndDashDistancePenalty;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreChaseTargetMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter PressureScoreMaxScore;
 
 public:
 	UBTService_StateMonitor_Camper();

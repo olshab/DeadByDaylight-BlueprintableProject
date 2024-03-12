@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "DBDTableRowBase.h"
+#include "ECurrencyType.h"
 #include "StoreSpecialPackItem.h"
 #include "StoreSpecialPackEditorData.generated.h"
 
@@ -25,6 +26,12 @@ public:
 	FString InclusionVersion;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsPurchasable;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSet<ECurrencyType> AvailableCurrencies;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Discount;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -35,6 +42,15 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FStoreSpecialPackItem> Content;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 AvailabilityDates;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FDateTime StartDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FDateTime EndDate;
 
 public:
 	DEADBYDAYLIGHT_API FStoreSpecialPackEditorData();

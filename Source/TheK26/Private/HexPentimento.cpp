@@ -2,7 +2,7 @@
 
 UHexPentimento::UHexPentimento()
 {
-	this->_statusEffectNames = TSet<FName>();
 	this->_rekindleInteractionClass = NULL;
 	this->_blockedTotems = TArray<ATotem*>();
+	this->_statusEffectClasses = TArray<TSubclassOf<UStatusEffect>>();
 }

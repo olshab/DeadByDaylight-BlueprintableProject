@@ -15,11 +15,13 @@ void UPowerChargeComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
+	DOREPLIFETIME(UPowerChargeComponent, _chargeRate);
 	DOREPLIFETIME(UPowerChargeComponent, _currentCharge);
 	DOREPLIFETIME(UPowerChargeComponent, _forceFullCharge);
 }
 
 UPowerChargeComponent::UPowerChargeComponent()
 {
+	this->_chargeRate = 0.000000;
 	this->_forceFullCharge = false;
 }

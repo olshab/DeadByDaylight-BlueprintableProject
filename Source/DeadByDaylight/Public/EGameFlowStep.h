@@ -14,5 +14,5 @@ enum class EGameFlowStep : uint8
 	SplashScreen,
 	PartyLobby,
 	Store,
-	RoleSelection,
+	MainMenu,
 };

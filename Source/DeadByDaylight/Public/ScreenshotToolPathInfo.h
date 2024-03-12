@@ -13,6 +13,9 @@ private:
 	bool IncludeDLCFolder;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool IncludeCharacterFolder;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FString Path;
 
 public:

@@ -8,6 +8,9 @@ UDBDAIPerceptionComponent::UDBDAIPerceptionComponent()
 	this->UseSimulatedCameraLocationForStimulusReceiverLocation = false;
 	this->CameraOffset = 170.000000;
 	this->StimulusHalfFOV = 40.000000;
+	this->OutOfChaseFullPeripheralVisionRange = 50.000000;
+	this->InChaseFullPeripheralVisionRange = 650.000000;
+	this->DarknessMaxVisionRange = 1800.000000;
 	this->_objOverridingSenses = TMap<UClass*, UObject*>();
 	this->_originalSenseConfigs = TArray<UAISenseConfig*>();
 	this->_detectedHostileStimuli = TArray<FAIDetectedStimulus>();

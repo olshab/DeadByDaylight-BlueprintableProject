@@ -2,15 +2,17 @@
 
 #include "CoreMinimal.h"
 #include "Collectable.h"
-#include "EWallGrabState.h"
 #include "TunableStat.h"
 #include "DBDTunableRowHandle.h"
+#include "Templates/SubclassOf.h"
+#include "EWallGrabState.h"
 #include "BlightPower.generated.h"
 
 class UPowerChargeComponent;
 class UChargeableComponent;
 class UBlightPowerStateComponent;
 class UPowerToggleComponent;
+class UStatusEffect;
 
 UCLASS(Blueprintable)
 class ABlightPower : public ACollectable
@@ -37,10 +39,13 @@ private:
 	FTunableStat _blightPowerMaxCharge;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _blightPowerDechargeRate;
+	FDBDTunableRowHandle _blightPowerRechargeRate;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _blightPowerRechargeRate;
+	TSubclassOf<UStatusEffect> _inPowerEffect;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _outOfPowerEffect;
 
 private:
 	UFUNCTION(BlueprintCallable)

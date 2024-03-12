@@ -21,7 +21,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool _isPoseableHusk;
 
-	UPROPERTY(EditAnywhere, Transient, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, Transient, meta=(BindWidgetOptional))
 	TWeakObjectPtr<USkeletalMeshComponent> _masterMesh;
 
 public:

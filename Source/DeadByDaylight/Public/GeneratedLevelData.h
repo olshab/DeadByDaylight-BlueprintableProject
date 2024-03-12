@@ -107,6 +107,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
 	TArray<USceneComponent*> SteamPipeButtonSpawners;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
+	TArray<USceneComponent*> BasementSeanceSpawners;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName SpecialEventId;
 

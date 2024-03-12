@@ -34,5 +34,4 @@ void UQuestEventsHandler::DBD_InGameAddProgressionToCurrentQuest(const int32 amo
 UQuestEventsHandler::UQuestEventsHandler()
 {
 	this->_evaluatorList = TArray<UQuestEventEvaluatorBase*>();
-	this->_archiveStoriesContainer = NULL;
 }

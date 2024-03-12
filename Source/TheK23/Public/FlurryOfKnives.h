@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Templates/SubclassOf.h"
 #include "ChargeableInteractionDefinition.h"
 #include "DBDTunableRowHandle.h"
 #include "TunableStat.h"
@@ -23,6 +24,9 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Export, meta=(AllowPrivateAccess=true))
 	UStatusEffect* _selfSlowEffect;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _selfSlowStatusEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _flurryOfKnivesEnterDuration;

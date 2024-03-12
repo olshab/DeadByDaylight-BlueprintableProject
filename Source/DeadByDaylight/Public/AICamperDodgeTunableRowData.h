@@ -34,6 +34,9 @@ public:
 	float Duration;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ReactionTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Range;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

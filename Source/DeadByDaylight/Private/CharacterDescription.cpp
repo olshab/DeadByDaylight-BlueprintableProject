@@ -3,6 +3,7 @@
 FCharacterDescription::FCharacterDescription()
 {
 	this->CharacterIndex = 0;
+	this->CharacterCodename = NAME_None;
 	this->Role = EPlayerRole::VE_None;
 	this->Difficulty = ECharacterDifficulty::VE_None;
 	this->DisplayName = FText::GetEmpty();
@@ -22,6 +23,7 @@ FCharacterDescription::FCharacterDescription()
 	this->PlatformExclusiveFlag = 0;
 	this->GamePawn = NULL;
 	this->MenuPawn = NULL;
+	this->IsDefaultItemSpawnableInParadise = false;
 	this->DefaultItem = NAME_None;
 	this->DefaultPerk = NAME_None;
 	this->Gender = EGender::VE_Male;

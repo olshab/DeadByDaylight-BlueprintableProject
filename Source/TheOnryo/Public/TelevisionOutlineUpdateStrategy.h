@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "OutlineUpdateStrategy.h"
-#include "DBDTunableRowHandle.h"
+#include "TunableStat.h"
 #include "UObject/NoExportTypes.h"
 #include "TelevisionOutlineUpdateStrategy.generated.h"
 
@@ -13,10 +13,13 @@ class UTelevisionOutlineUpdateStrategy : public UOutlineUpdateStrategy
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FDBDTunableRowHandle _distanceToRevealAura;
+	FTunableStat _distanceToRevealAura;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FLinearColor _survivorAuraColor;
+	FLinearColor _survivorAuraNearColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FLinearColor _survivorAuraTapeTargetColor;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FLinearColor _slasherPoweredColor;

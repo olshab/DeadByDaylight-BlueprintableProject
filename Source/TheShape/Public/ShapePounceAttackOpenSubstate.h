@@ -15,6 +15,10 @@ private:
 	TArray<FDBDTunableRowHandle> _tierDurations;
 
 public:
+	UFUNCTION(BlueprintPure)
+	float GetShapePounceAttackOpenDuration() const;
+
+public:
 	UShapePounceAttackOpenSubstate();
 };
 

@@ -20,6 +20,9 @@ public:
 	void StartAnim();
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	void SetIsOnboardingRitualsExperimentActive(bool isOnboardingRitualsExperimentActive);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetDailyRitualsData(const TArray<FDailyRitualViewData>& dailyRitualsData, bool isAfterTrial);
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)

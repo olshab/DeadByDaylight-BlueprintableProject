@@ -362,10 +362,7 @@ UDBDGameInstance::UDBDGameInstance()
 	this->PlayerProfileLoadFailed = false;
 	this->NewsContentManager = NULL;
 	this->ContentScheduleManager = NULL;
-	this->CDNPatchManager = NULL;
 	this->CharacterProgressionManager = NULL;
-	this->CharacterXPManager = NULL;
-	this->AtlRitualsManager = NULL;
 	this->AuthOrEACErrorAdditionalInfo = TEXT("");
 	this->HasServerLeftMatch = false;
 	this->HasWrittenGameEndStats = false;
@@ -415,7 +412,6 @@ UDBDGameInstance::UDBDGameInstance()
 	this->_isAdditionalContentInstalled = false;
 	this->_isCloudInventoryInitialized = false;
 	this->_resultOfferingAndPerkEffects = NULL;
-	this->_inventoryHandler = NULL;
 	this->_cinematicManager = NULL;
 	this->_softBanManager = NULL;
 	this->_consentManager = NULL;
@@ -423,7 +419,6 @@ UDBDGameInstance::UDBDGameInstance()
 	this->_regionFinder = NULL;
 	this->_decalSpawnerCollection = NULL;
 	this->_characterClippingPrimitiveCollection = NULL;
-	this->_atlantaTooltipManager = NULL;
 	this->LastProviderErrorCode = 0;
 	this->_disconnectError = EDisconnectErrors::None;
 	this->_dateTimerUpdater = NULL;

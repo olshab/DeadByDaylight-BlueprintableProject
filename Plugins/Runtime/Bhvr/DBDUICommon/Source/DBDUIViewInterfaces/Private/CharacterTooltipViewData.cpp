@@ -8,8 +8,6 @@ FCharacterTooltipViewData::FCharacterTooltipViewData()
 	this->PackId = FText::GetEmpty();
 	this->PackTitle = FText::GetEmpty();
 	this->Level = 0;
-	this->Prestige = 0;
-	this->IsUnlocked = false;
 	this->IsNewInStore = false;
 	this->IsOwned = false;
 	this->IsAvailableInStore = false;

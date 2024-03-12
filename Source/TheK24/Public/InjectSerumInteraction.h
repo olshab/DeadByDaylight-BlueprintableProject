@@ -1,12 +1,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Templates/SubclassOf.h"
 #include "ChargeableInteractionDefinition.h"
 #include "DBDTunableRowHandle.h"
 #include "GameplayTagContainer.h"
 #include "TunableStat.h"
 #include "InjectSerumInteraction.generated.h"
 
+class UStatusEffect;
 class ASlasherPlayer;
 class ACamperPlayer;
 
@@ -14,6 +16,10 @@ UCLASS(Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
 class UInjectSerumInteraction : public UChargeableInteractionDefinition
 {
 	GENERATED_BODY()
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<UStatusEffect> _killerInstinctStatusEffectClass;
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
@@ -24,10 +30,6 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FDBDTunableRowHandle _serumApplyHeal;
-
-protected:
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
-	void OnSurvivorCured_Cosmetic();
 
 private:
 	UFUNCTION(BlueprintCallable)

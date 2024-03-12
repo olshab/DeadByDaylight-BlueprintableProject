@@ -6,4 +6,5 @@ FRewardWrapperViewData::FRewardWrapperViewData()
 	this->CharacterRewardViewData = FCharacterRewardViewData{};
 	this->CurrencyProgressionRewardViewData = FCurrencyProgressionRewardViewData{};
 	this->CustomizationRewardViewData = FCustomizationRewardViewData{};
+	this->EventThemeLabel = TEXT("");
 }

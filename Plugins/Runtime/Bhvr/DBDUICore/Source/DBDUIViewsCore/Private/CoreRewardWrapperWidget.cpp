@@ -23,12 +23,12 @@ void UCoreRewardWrapperWidget::SetIsClickable(bool isClickable)
 
 }
 
-void UCoreRewardWrapperWidget::SetData(const FRewardWrapperViewData& viewData)
+void UCoreRewardWrapperWidget::SetData_Implementation(const FRewardWrapperViewData& viewData)
 {
 
 }
 
-UCoreRewardWidget* UCoreRewardWrapperWidget::GetRewardWidget()
+UCoreRewardWidget* UCoreRewardWrapperWidget::GetRewardWidget() const
 {
 	return NULL;
 }

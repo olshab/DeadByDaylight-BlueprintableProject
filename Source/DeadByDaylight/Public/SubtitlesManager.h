@@ -29,7 +29,7 @@ public:
 
 private:
 	UFUNCTION(BlueprintCallable)
-	void On3DEventFinished(EAkCallbackType callbackType, UAkCallbackInfo* callbackInfo);
+	void On3DEventCallback(EAkCallbackType callbackType, UAkCallbackInfo* callbackInfo);
 
 public:
 	UFUNCTION(BlueprintPure, BlueprintCosmetic)

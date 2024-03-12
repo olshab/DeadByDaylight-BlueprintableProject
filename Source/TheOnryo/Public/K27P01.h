@@ -3,7 +3,10 @@
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "GameEventData.h"
+#include "Templates/SubclassOf.h"
 #include "K27P01.generated.h"
+
+class UStatusEffect;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
 class UK27P01 : public UPerk
@@ -13,6 +16,9 @@ class UK27P01 : public UPerk
 private:
 	UPROPERTY(EditAnywhere)
 	float _survivorAuraRevealDuration;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TSubclassOf<UStatusEffect> _timedRevealToKillerEffectClass;
 
 public:
 	UFUNCTION(BlueprintPure)

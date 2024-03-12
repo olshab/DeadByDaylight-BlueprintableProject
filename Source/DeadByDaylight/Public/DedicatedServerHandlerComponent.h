@@ -4,9 +4,8 @@
 #include "GameplayTagContainer.h"
 #include "DailyRitualInstance.h"
 #include "Components/ActorComponent.h"
-#include "GameEventData.h"
 #include "EDBDScoreTypes.h"
-#include "AtlantaRitualSet.h"
+#include "GameEventData.h"
 #include "DedicatedServerHandlerComponent.generated.h"
 
 class AActor;
@@ -17,9 +16,6 @@ class DEADBYDAYLIGHT_API UDedicatedServerHandlerComponent : public UActorCompone
 	GENERATED_BODY()
 
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	FAtlantaRitualSet _atlantaRituals;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	TArray<FDailyRitualInstance> _coreRituals;
 

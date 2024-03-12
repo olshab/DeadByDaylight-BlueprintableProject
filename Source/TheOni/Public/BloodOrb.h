@@ -20,10 +20,10 @@ protected:
 	UPROPERTY(EditAnywhere)
 	FFloatInterval _randomMoveDelayInterval;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	USceneComponent* _absorbReference;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDOutlineComponent* _outlineComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

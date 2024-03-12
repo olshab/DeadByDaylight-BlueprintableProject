@@ -7,4 +7,5 @@ FPriceTagViewData::FPriceTagViewData()
 	this->DiscountValue = 0;
 	this->IsAffordable = false;
 	this->DisplayDiscountAsOriginalPrice = false;
+	this->NotEnoughCurrencyViewData = FNotEnoughCurrencyModalViewData{};
 }

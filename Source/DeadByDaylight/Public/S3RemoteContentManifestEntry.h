@@ -21,6 +21,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString PackagedPath;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString DownloadStrategy;
+
 public:
 	DEADBYDAYLIGHT_API FS3RemoteContentManifestEntry();
 };

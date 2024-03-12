@@ -2,7 +2,7 @@
 #include "Net/UnrealNetwork.h"
 #include "PowerChargeComponent.h"
 
-void UHillbillyChainsawOverheatComponent::OnRep_IsChainsawOverheating()
+void UHillbillyChainsawOverheatComponent::OnRep_IsChainsawOverheating() const
 {
 
 }
@@ -12,22 +12,12 @@ void UHillbillyChainsawOverheatComponent::OnLevelReadyToPlay()
 
 }
 
-void UHillbillyChainsawOverheatComponent::OnHeatChargeUpdate(const float currentCharge, const float previosCharge)
-{
-
-}
-
 bool UHillbillyChainsawOverheatComponent::IsChainsawOverheating() const
 {
 	return false;
 }
 
-void UHillbillyChainsawOverheatComponent::Authority_OnHeatChargeFull()
-{
-
-}
-
-void UHillbillyChainsawOverheatComponent::Authority_OnHeatChargeEmpty()
+void UHillbillyChainsawOverheatComponent::Authority_OnHeatChargeFull() const
 {
 
 }
@@ -36,10 +26,13 @@ void UHillbillyChainsawOverheatComponent::GetLifetimeReplicatedProps(TArray<FLif
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
+	DOREPLIFETIME(UHillbillyChainsawOverheatComponent, _overheatTimer);
 	DOREPLIFETIME(UHillbillyChainsawOverheatComponent, _isChainsawOverheating);
 }
 
 UHillbillyChainsawOverheatComponent::UHillbillyChainsawOverheatComponent()
 {
+	this->_overheatTimer = NULL;
 	this->_chainsawHeatCharge = CreateDefaultSubobject<UPowerChargeComponent>(TEXT("ChainsawOverheatCharge"));
+	this->_overheatStatusEffectClass = NULL;
 }

@@ -21,12 +21,13 @@ FCharacterSlotData::FCharacterSlotData()
 	this->PurchaseDataList = TArray<FPurchaseCurrencyData>();
 	this->ItemsOwned = 0;
 	this->TotalItems = 0;
+	this->NewItemsCount = 0;
 	this->ShowNew = false;
 	this->IsDlcLockedKiller = false;
 	this->EventInfo = FSpecialEventUIInfo{};
 	this->IsEnabled = false;
+	this->DisabledItemOption = EDisabledItemOption::Available;
 	this->HasNonSelectedPerks = false;
-	this->FreeTicketAffectedData = FAtlantaFreeTicketAffectedUIData{};
 	this->PlayerRole = EPlayerRole::VE_None;
 	this->RemainingTimeItem = TEXT("");
 	this->RemainingTimeDiscount = TEXT("");

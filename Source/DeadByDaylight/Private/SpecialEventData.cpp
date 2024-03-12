@@ -9,6 +9,7 @@ FSpecialEventData::FSpecialEventData()
 	this->EventThemeLabel = TEXT("");
 	this->IsTrackedOnline = false;
 	this->UseSpecialEventLoadingScreen = false;
+	this->CommunityChallenge = FSpecialEventCommunityChallengeData{};
 	this->Objectives = TArray<FSpecialEventObjectiveData>();
 	this->LobbyName = TEXT("");
 	this->ShopName = TEXT("");

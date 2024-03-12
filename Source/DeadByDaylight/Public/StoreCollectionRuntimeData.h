@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EStoreCollectionFlags.h"
+#include "StoreCollectionMediaData.h"
 #include "StoreCollectionRuntimeData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -17,41 +17,53 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	FString InclusionVersion;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TMap<FString, FString> CollectionTitleByCulture;
+	UPROPERTY(EditAnywhere, Transient)
+	FDateTime UpdatedDate;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TMap<FString, FString> CollectionSubtitleByCulture;
+	TMap<FString, FString> CollectionTitle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TMap<FString, FString> CollectionSubtitle;
 
 	UPROPERTY(EditAnywhere, Transient)
-	FDateTime ActiveFrom;
+	FDateTime LimitedAvailabilityStartDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, SkipSerialization)
+	bool LimitedAvailabilityStartDate_IsSet;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool VisibleBeforeStartDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, SkipSerialization)
+	bool VisibleBeforeStartDate_IsSet;
 
 	UPROPERTY(EditAnywhere, Transient)
-	FDateTime ActiveTo;
+	FDateTime LimitedAvailabilityEndDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, SkipSerialization)
+	bool LimitedAvailabilityEndDate_IsSet;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool VisibleAfterEndDate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, SkipSerialization)
+	bool VisibleAfterEndDate_IsSet;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	int32 SortOrder;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	FString HeroImage;
+	FStoreCollectionMediaData HeroImage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	FString HeroVideo;
+	FStoreCollectionMediaData HeroVideo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TArray<FString> AdditionalImages;
+	TArray<FStoreCollectionMediaData> AdditionalImages;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	TArray<FString> ItemIds;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
-	EStoreCollectionFlags Flags;
-
-	UPROPERTY(EditAnywhere, Transient)
-	FDateTime SpecialStartDate;
-
-	UPROPERTY(EditAnywhere, Transient)
-	FDateTime SpecialEndDate;
+	TArray<FString> Items;
 
 public:
 	DEADBYDAYLIGHT_API FStoreCollectionRuntimeData();

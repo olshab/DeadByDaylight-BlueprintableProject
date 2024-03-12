@@ -24,7 +24,10 @@ public:
 	FAITunableParameter CloseItemDistThreshold;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FAITunableParameter CloseItemWeightBonus;
+	FAITunableParameter CloseItemWeightMultiplier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITunableParameter ItemGoalWeightMultiplier;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float EmptyItemChargeThreshold;

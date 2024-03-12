@@ -3,7 +3,6 @@
 #include "CoreMinimal.h"
 #include "CustomTransformation.h"
 #include "UObject/SoftObjectPtr.h"
-#include "Templates/SubclassOf.h"
 #include "ItemUIData.generated.h"
 
 class UTexture2D;
@@ -31,7 +30,10 @@ private:
 	FString SecondaryIcon;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-	TSubclassOf<UUserWidget> animationWidgetRef;
+	TSoftClassPtr<UUserWidget> AnimatedWidgetRef;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FString AnimationFilePath;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
 	FString AnimationLinkageId;

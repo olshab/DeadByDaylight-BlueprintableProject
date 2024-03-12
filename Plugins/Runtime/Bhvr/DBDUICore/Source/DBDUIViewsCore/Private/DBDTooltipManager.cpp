@@ -1,15 +1,19 @@
 #include "DBDTooltipManager.h"
+#include "EventObjectiveTrackerViewData.h"
+#include "NotEnoughCurrencyModalViewData.h"
 #include "CorePlayerLevelTooltipViewData.h"
+#include "LockedFeatureTooltipViewData.h"
 #include "RankTooltipViewData.h"
-#include "ArchiveNodeViewData.h"
-#include "ArchiveRewardNodeTooltipViewData.h"
-#include "CustomizationTooltipViewData.h"
 #include "Layout/Geometry.h"
-#include "CurrencyProgressionTooltipViewData.h"
 #include "ETooltipHorizontalAlignment.h"
 #include "ETooltipVerticalAlignment.h"
 #include "LoadoutTooltipData.h"
+#include "ArchiveNodeViewData.h"
+#include "ArchiveRewardNodeTooltipViewData.h"
+#include "CustomizationTooltipViewData.h"
+#include "CurrencyProgressionTooltipViewData.h"
 #include "CharacterTooltipViewData.h"
+#include "ArchivePassTooltipViewData.h"
 #include "CompendiumButtonData.h"
 
 void UDBDTooltipManager::ShowRankTooltip(const FRankTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, const ETooltipVerticalAlignment tooltipVerticalAlignment)
@@ -18,6 +22,21 @@ void UDBDTooltipManager::ShowRankTooltip(const FRankTooltipViewData& tooltipView
 }
 
 void UDBDTooltipManager::ShowPlayerLevelTooltip(const FCorePlayerLevelTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment)
+{
+
+}
+
+void UDBDTooltipManager::ShowObjectiveTrackerTooltip(const FEventObjectiveTrackerViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment)
+{
+
+}
+
+void UDBDTooltipManager::ShowNotEnoughCurrencyModal(const FNotEnoughCurrencyModalViewData& viewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, const ETooltipVerticalAlignment tooltipVerticalAlignment)
+{
+
+}
+
+void UDBDTooltipManager::ShowLockedFeatureTooltip(const FLockedFeatureTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, const ETooltipVerticalAlignment tooltipVerticalAlignment)
 {
 
 }
@@ -48,6 +67,11 @@ void UDBDTooltipManager::ShowCharacterTooltip(const FCharacterTooltipViewData& t
 }
 
 void UDBDTooltipManager::ShowArchiveRewardNodeTooltip(const FArchiveRewardNodeTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, ETooltipVerticalAlignment tooltipVerticalAlignment)
+{
+
+}
+
+void UDBDTooltipManager::ShowArchivePassTooltip(const FArchivePassTooltipViewData& tooltipViewData, const FGeometry& triggerGeometry, const ETooltipHorizontalAlignment tooltipHorizontalAlignment, const ETooltipVerticalAlignment tooltipVerticalAlignment)
 {
 
 }

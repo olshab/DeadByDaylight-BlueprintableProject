@@ -25,5 +25,6 @@ enum class EGameplayElementType : uint8
 	SteamPipe,
 	SteamPipeButton,
 	EventSpawner,
+	BasementSeance,
 	Count,
 };

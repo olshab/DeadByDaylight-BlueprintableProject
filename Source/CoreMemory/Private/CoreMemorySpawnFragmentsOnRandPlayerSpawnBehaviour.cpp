@@ -2,5 +2,5 @@
 
 UCoreMemorySpawnFragmentsOnRandPlayerSpawnBehaviour::UCoreMemorySpawnFragmentsOnRandPlayerSpawnBehaviour()
 {
-
+	this->_tileSpawnPointType = ETileSpawnPointType::Unspecified;
 }

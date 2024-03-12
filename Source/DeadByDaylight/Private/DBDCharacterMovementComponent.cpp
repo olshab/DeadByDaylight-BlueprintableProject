@@ -15,9 +15,14 @@ void UDBDCharacterMovementComponent::Server_StopMontage_Implementation(float tim
 
 }
 
-void UDBDCharacterMovementComponent::Server_StartSnapping_Implementation(float timestamp, const FSnappingData data, int32 snappingCallCount)
+void UDBDCharacterMovementComponent::Server_StartSnapping_Implementation(float timestamp, const FSnappingData data, int32 snappingCallCount, uint64 clientTimeSync)
 {
 
+}
+
+bool UDBDCharacterMovementComponent::Server_StartSnapping_Validate(float timestamp, const FSnappingData data, int32 snappingCallCount, uint64 clientTimeSync)
+{
+	return true;
 }
 
 void UDBDCharacterMovementComponent::Server_ShowAllIncreaseMovementSpeedModifier_Implementation(const float clientMaxSpeedMultiplierScalar, const float clientcomputedMaxSpeedMultiplierScalar, const TArray<FMaxSpeedValidate>& clientModifiers)

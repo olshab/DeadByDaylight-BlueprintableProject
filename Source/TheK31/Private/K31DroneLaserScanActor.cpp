@@ -37,6 +37,7 @@ void AK31DroneLaserScanActor::ActivateDroneLaserScan()
 AK31DroneLaserScanActor::AK31DroneLaserScanActor()
 {
 	this->LaserScanMeshMaterial = NULL;
+	this->LaserScanMeshMaterialUndetectable = NULL;
 	this->StaticCapturesLightAngle = 45.000000;
 	this->DynamicCapturesLightAngle = 15.000000;
 	this->DepthCaptureNearPlaneOffset = 30.000000;
@@ -48,4 +49,5 @@ AK31DroneLaserScanActor::AK31DroneLaserScanActor()
 	this->YDepthCaptureComponentStatic = CreateDefaultSubobject<UGMShadowDepthCaptureComponent>(TEXT("YDepthCaptureComponentStatic"));
 	this->NegXDepthCaptureComponentStatic = CreateDefaultSubobject<UGMShadowDepthCaptureComponent>(TEXT("NegXDepthCaptureComponentStatic"));
 	this->NegYDepthCaptureComponentStatic = CreateDefaultSubobject<UGMShadowDepthCaptureComponent>(TEXT("NegYDepthCaptureComponentStatic"));
+	this->_defaultLaserScanMeshMaterial = NULL;
 }

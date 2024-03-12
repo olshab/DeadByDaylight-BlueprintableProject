@@ -16,6 +16,9 @@ public:
 	bool IncludeDLCFolder;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IncludeCharacterFolder;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<FString> Directories;
 
 public:

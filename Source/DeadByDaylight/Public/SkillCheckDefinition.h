@@ -40,6 +40,9 @@ public:
 	bool IsJittering;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsOffCenter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
 	bool IsSuccessZoneMirrorred;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)

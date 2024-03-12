@@ -24,10 +24,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FArchiveRiftTierItemUnlockAnimationComplete _unlockAnimationCompleteDelegate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UGridPanel* FreeRewardsContainer;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UGridPanel* PremiumRewardsContainer;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, Export)

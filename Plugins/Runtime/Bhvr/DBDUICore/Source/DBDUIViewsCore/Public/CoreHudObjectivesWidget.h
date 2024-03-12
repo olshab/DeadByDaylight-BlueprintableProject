@@ -14,7 +14,7 @@ class DBDUIVIEWSCORE_API UCoreHudObjectivesWidget : public UCoreBaseHudWidget, p
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDTextBlock* SpecialSpacer;
 
 public:

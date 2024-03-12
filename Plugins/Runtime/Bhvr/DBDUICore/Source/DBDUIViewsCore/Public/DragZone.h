@@ -29,7 +29,7 @@ public:
 	UBorder* DebugPreview;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
 	UDBDButton* HitzoneButton;
 
 private:

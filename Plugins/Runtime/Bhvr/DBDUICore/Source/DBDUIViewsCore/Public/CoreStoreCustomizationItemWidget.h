@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "StoreRedirectionData.h"
 #include "CoreStoreItemWidget.h"
 #include "CoreStoreCustomizationItemWidget.generated.h"
 
@@ -18,6 +19,9 @@ protected:
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void SetStoreCustomizationItemData(UStoreCustomizationItemViewData* data);
+
+	UFUNCTION(BlueprintPure)
+	FStoreRedirectionData MakeStoreRedirectionData() const;
 
 public:
 	UCoreStoreCustomizationItemWidget();

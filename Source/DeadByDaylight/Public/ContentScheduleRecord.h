@@ -19,6 +19,12 @@ public:
 	bool Description_IsSet;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FString> GameModes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)
+	bool GameModes_IsSet;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString LinkedEventId;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, SkipSerialization)

@@ -27,7 +27,7 @@ private:
 	float _perkCooldown;
 
 public:
-	UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
 	void Multicast_OnPerkTriggered(ADBDPlayer* triggerer);
 
 public:
